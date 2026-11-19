@@ -1,6 +1,425 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A4")
 (title_block (title "MAIN - Interfaccia candidata"))
 (lib_symbols 
+	(symbol "Comparator:LM2903"
+		(pin_names
+			(offset 0.127)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 3.81 3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM2903"
+			(at 6.35 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SOP-8/TSSOP-8/VSSOP-8"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_locked" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cmp open collector"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LM2903_1_1"
+			(polyline
+				(pts
+					(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.302 -0.508) (xy 2.794 -0.508) (xy 3.302 0) (xy 2.794 0.508) (xy 2.286 0) (xy 2.794 -0.508)
+					(xy 2.286 -0.508)
+				)
+				(stroke
+					(width 0.127)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin input line
+				(at -7.62 2.54 0)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 -2.54 0)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin open_collector line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "LM2903_2_1"
+			(polyline
+				(pts
+					(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.302 -0.508) (xy 2.794 -0.508) (xy 3.302 0) (xy 2.794 0.508) (xy 2.286 0) (xy 2.794 -0.508)
+					(xy 2.286 -0.508)
+				)
+				(stroke
+					(width 0.127)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin input line
+				(at -7.62 2.54 0)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 -2.54 0)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin open_collector line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "LM2903_3_1"
+			(pin power_in line
+				(at -2.54 7.62 270)
+				(length 3.81)
+				(name "V+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -2.54 -7.62 90)
+				(length 3.81)
+				(name "V-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
+	(symbol "Device:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
 	(symbol "Device:R"
 		(pin_numbers
 			(hide yes)
@@ -416,4 +835,115 @@
 (label "MAIN_LOGIC_SUPPLY" (at 127 101.6 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e41349d3-b454-45b4-884a-3766c88310e9"))
 (wire (pts (xy 127 115.57) (xy 127 121.92)) (stroke (width 0) (type default)) (uuid "7f7a203e-6267-4d28-8892-6edfb6174021"))
 (label "PTT_SENSE" (at 127 121.92 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "24d3f980-aa76-43ad-9477-40652c2cc324"))
+(symbol (lib_id "Device:R") (at 35.56 139.7 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "62b18b0d-5b52-470a-938f-af06e0c0cefe")
+(property "Reference" "R102" (at 43.18 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100k" (at 43.18 142.23999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "dccd171b-404d-4a3b-82de-481e8b0f49cf")) (pin "2" (uuid "1366acde-87b5-469e-aede-7ec77f053671"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R102") (unit 1)))))
+(wire (pts (xy 35.56 135.89) (xy 35.56 130.81)) (stroke (width 0) (type default)) (uuid "fcc83f95-46a3-4a43-86b5-e60abafe6285"))
+(label "PTT_SENSE" (at 35.56 130.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5e916c4a-b5c2-40df-a463-b2e78dff1c5e"))
+(wire (pts (xy 35.56 143.51) (xy 35.56 148.59)) (stroke (width 0) (type default)) (uuid "b97f23d6-cb9c-4f3b-925f-342a7dd453eb"))
+(label "PTT_SCALED" (at 35.56 148.59 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "11bf4468-2355-4ecb-b7fa-bab5ff78101c"))
+(symbol (lib_id "Device:R") (at 63.5 139.7 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "3c25eecb-f245-4beb-b4cc-9fda1e90ebd5")
+(property "Reference" "R103" (at 71.12 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100k" (at 71.12 142.23999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "21a127ee-e62d-4918-a3df-007f92a85aab")) (pin "2" (uuid "84e2eec3-cb21-4488-98fa-1e80dda2fddd"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R103") (unit 1)))))
+(wire (pts (xy 63.5 135.89) (xy 63.5 130.81)) (stroke (width 0) (type default)) (uuid "48b0e2b6-d1bd-4ee4-b438-1dae4e375888"))
+(label "PTT_SCALED" (at 63.5 130.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6af450fb-cd23-4a64-be0b-d02b032a2dae"))
+(wire (pts (xy 63.5 143.51) (xy 63.5 148.59)) (stroke (width 0) (type default)) (uuid "28571721-cc23-43a0-bacd-bd90ecc9a3fe"))
+(label "CONTROL_RETURN" (at 63.5 148.59 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c28fb597-3ba0-49ba-a658-b063f81f013c"))
+(symbol (lib_id "Device:R") (at 91.44 139.7 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "63cce7e8-dbcd-469a-aa53-b355d5d2046b")
+(property "Reference" "R104" (at 99.06 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "86.6k" (at 99.06 142.23999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "907c6f1b-51fb-4016-adbc-00efc83d3a36")) (pin "2" (uuid "0c0aeb3c-5d4c-472b-b480-03de2be22505"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R104") (unit 1)))))
+(wire (pts (xy 91.44 135.89) (xy 91.44 130.81)) (stroke (width 0) (type default)) (uuid "a7585166-305a-4bda-abf9-19212721239b"))
+(label "MAIN_LOGIC_SUPPLY" (at 91.44 130.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "db5c1668-a862-4bc6-a22e-cdc7053aa641"))
+(wire (pts (xy 91.44 143.51) (xy 91.44 148.59)) (stroke (width 0) (type default)) (uuid "d551c461-97c3-4b5b-9511-003e35295326"))
+(label "PTT_HIGH_REF" (at 91.44 148.59 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "4f0dcab1-270f-4e9c-88d2-fd5c6e4b8c4e"))
+(symbol (lib_id "Device:R") (at 119.38 139.7 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1c9dff0d-3ac8-4f64-9fdc-239414bc487d")
+(property "Reference" "R105" (at 127.0 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "8.45k" (at 127.0 142.23999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "1ea92ddc-a60b-4364-8c07-a0fc33501c0e")) (pin "2" (uuid "e983eba2-57ce-4b13-9909-78824e5ba299"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R105") (unit 1)))))
+(wire (pts (xy 119.38 135.89) (xy 119.38 130.81)) (stroke (width 0) (type default)) (uuid "9db3d543-3fd7-49bf-b741-09dd11054415"))
+(label "PTT_HIGH_REF" (at 119.38 130.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "aa8ddfbe-efa5-4f20-9de4-2221c5e98ee6"))
+(wire (pts (xy 119.38 143.51) (xy 119.38 148.59)) (stroke (width 0) (type default)) (uuid "ab6b4ef9-6869-42d8-83b5-3df057895390"))
+(label "PTT_LOW_REF" (at 119.38 148.59 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a2682095-c36b-47cd-bf46-ddce677065fa"))
+(symbol (lib_id "Device:R") (at 147.32 139.7 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2476d398-92f8-41b2-87fc-534c9b37b237")
+(property "Reference" "R106" (at 154.94 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "4.02k" (at 154.94 142.23999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "b7c98d8c-f1d5-4c4c-b0e3-df57e30fdafe")) (pin "2" (uuid "424b3ca7-47e2-4a11-b511-3f8128c4a797"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R106") (unit 1)))))
+(wire (pts (xy 147.32 135.89) (xy 147.32 130.81)) (stroke (width 0) (type default)) (uuid "f0c1cc39-e1e6-48e6-9014-45370120cf57"))
+(label "PTT_LOW_REF" (at 147.32 130.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "47f95e15-f314-48cb-99b7-e76dd51d06a8"))
+(wire (pts (xy 147.32 143.51) (xy 147.32 148.59)) (stroke (width 0) (type default)) (uuid "401d082a-9a45-409d-992c-5d9037972b23"))
+(label "CONTROL_RETURN" (at 147.32 148.59 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "78c8c461-012a-4187-9d61-6d5526e17fc4"))
+(symbol (lib_id "Device:R") (at 175.26 139.7 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2f94e5a2-7ccc-463f-a830-64e8e2132035")
+(property "Reference" "R107" (at 182.88 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10k" (at 182.88 142.23999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "56e9e53a-0038-4e78-955d-903e22e6aa3e")) (pin "2" (uuid "35ab0e5a-1040-49a9-95d2-0ef02affc770"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R107") (unit 1)))))
+(wire (pts (xy 175.26 135.89) (xy 175.26 130.81)) (stroke (width 0) (type default)) (uuid "86733682-d8fa-4463-80e9-d477d086ba4f"))
+(label "MAIN_LOGIC_SUPPLY" (at 175.26 130.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "867452db-3caa-40a9-afe8-4f10af8ad512"))
+(wire (pts (xy 175.26 143.51) (xy 175.26 148.59)) (stroke (width 0) (type default)) (uuid "2ddeb1ec-4a19-42d8-a997-edc5407b4d29"))
+(label "PTT_WINDOW_VALID" (at 175.26 148.59 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8f6b2658-25bd-4286-9539-f20330ff3c71"))
+(symbol (lib_id "Device:C") (at 203.2 139.7 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "3c02fe94-6a9a-47a0-b68d-fc71204be088")
+(property "Reference" "C101" (at 210.82 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10n" (at 210.82 142.23999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "77f77f79-48df-4d30-9aaa-1f96e5742f33")) (pin "2" (uuid "409366e1-fb9c-482f-9b20-cb812b88678a"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C101") (unit 1)))))
+(wire (pts (xy 203.2 135.89) (xy 203.2 130.81)) (stroke (width 0) (type default)) (uuid "60cdf576-b754-4ac5-82d9-f80f4d0dbcdd"))
+(label "PTT_SCALED" (at 203.2 130.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d097c21f-5e6e-4534-8c50-76257c58abca"))
+(wire (pts (xy 203.2 143.51) (xy 203.2 148.59)) (stroke (width 0) (type default)) (uuid "a7227e2a-e42b-456d-a877-a6403abb02d3"))
+(label "CONTROL_RETURN" (at 203.2 148.59 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f6a2c4d7-96e2-419c-996f-60a40e579163"))
+(symbol (lib_id "Device:C") (at 233.68 139.7 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "75812e7d-8de5-4fe3-8d98-6bb64e040c64")
+(property "Reference" "C102" (at 241.3 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100n" (at 241.3 142.23999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "e3e74872-0624-42e4-b477-121ea9c5147c")) (pin "2" (uuid "06f6134a-a906-45f9-a4d6-08c3cf1c8171"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C102") (unit 1)))))
+(wire (pts (xy 233.68 135.89) (xy 233.68 130.81)) (stroke (width 0) (type default)) (uuid "80926da2-339c-4dce-88ee-f13419cf8121"))
+(label "MAIN_LOGIC_SUPPLY" (at 233.68 130.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ed365883-9982-4e9f-a084-0b162ad57b43"))
+(wire (pts (xy 233.68 143.51) (xy 233.68 148.59)) (stroke (width 0) (type default)) (uuid "d4ed3f22-33fc-45f0-a498-9b58a8534872"))
+(label "CONTROL_RETURN" (at 233.68 148.59 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f9445f41-bb61-4126-b5a9-58daf38150d2"))
+(symbol (lib_id "Comparator:LM2903") (at 55.88 172.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "43c7f432-eb01-44fc-aab7-9dbb223b0f96")
+(property "Reference" "U101" (at 55.88 167.64 0) (effects (font (size 1.27 1.27))))
+(property "Value" "LM2903P" (at 55.88 177.8 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_DIP:DIP-8_W7.62mm" (at 55.88 172.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "3" (uuid "234dac3f-769b-42cb-a3a4-1428bc77a751"))
+(pin "2" (uuid "2c3ebcbd-81fd-4b29-a6d4-845e5e56db2e"))
+(pin "1" (uuid "81331bf1-1439-49c1-aa89-022b858825a9"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "U101") (unit 1)))))
+(wire (pts (xy 48.26 170.18) (xy 38.1 170.18)) (stroke (width 0) (type default)) (uuid "12236bb8-8b0d-42b1-a5d5-c5c47d263711"))
+(label "PTT_SCALED" (at 38.1 170.18 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "db4965d3-4bfb-40d0-8cdf-d69a79919a24"))
+(wire (pts (xy 48.26 175.26) (xy 38.1 175.26)) (stroke (width 0) (type default)) (uuid "5d504976-a472-45cc-9994-73360ec8b1ad"))
+(label "PTT_LOW_REF" (at 38.1 175.26 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1cc2f888-f5d6-4627-b776-0b7a2cbacb47"))
+(wire (pts (xy 63.5 172.72) (xy 73.66 172.72)) (stroke (width 0) (type default)) (uuid "fd42a905-5110-413f-901c-40a5197d8c0f"))
+(label "PTT_WINDOW_VALID" (at 73.66 172.72 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cdbce353-b5ac-42e3-a182-8ae61674706a"))
+(symbol (lib_id "Comparator:LM2903") (at 142.24 172.72 0) (unit 2) (in_bom yes) (on_board yes) (dnp no) (uuid "d38aabf3-6932-4a84-b667-e4175e47d60c")
+(property "Reference" "U101" (at 142.24 167.64 0) (effects (font (size 1.27 1.27))))
+(property "Value" "LM2903P" (at 142.24 177.8 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_DIP:DIP-8_W7.62mm" (at 142.24 172.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "5" (uuid "5c244a81-2ad2-4ace-bb7c-6ba522b4afde"))
+(pin "6" (uuid "82d0eb93-6699-4d7e-9476-5753ec05f513"))
+(pin "7" (uuid "3cf10b6f-47e7-45c0-a72d-d102480d4da9"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "U101") (unit 2)))))
+(wire (pts (xy 134.62 170.18) (xy 124.46 170.18)) (stroke (width 0) (type default)) (uuid "4a4a7498-d097-4349-96e7-e4f98c1e1d99"))
+(label "PTT_HIGH_REF" (at 124.46 170.18 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "890e23a6-eae0-45c4-9825-966399e06043"))
+(wire (pts (xy 134.62 175.26) (xy 124.46 175.26)) (stroke (width 0) (type default)) (uuid "41d99d63-a4f5-4f20-9604-5015542875ab"))
+(label "PTT_SCALED" (at 124.46 175.26 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "70f4b533-0cba-4d69-9777-631600473eff"))
+(wire (pts (xy 149.86 172.72) (xy 160.02 172.72)) (stroke (width 0) (type default)) (uuid "ec2d972d-9f47-45b5-b344-8638c23e5a8d"))
+(label "PTT_WINDOW_VALID" (at 160.02 172.72 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6da6dabf-d33b-4958-ad07-5294a53f1b4f"))
+(symbol (lib_id "Comparator:LM2903") (at 218.44 172.72 0) (unit 3) (in_bom yes) (on_board yes) (dnp no) (uuid "514f0547-ad9d-4c10-8bfb-280aa77d64ca")
+(property "Reference" "U101" (at 218.44 167.64 0) (effects (font (size 1.27 1.27))))
+(property "Value" "LM2903P" (at 218.44 177.8 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_DIP:DIP-8_W7.62mm" (at 218.44 172.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "8" (uuid "33e31758-bd7c-4084-8c34-004b036acbf2"))
+(pin "4" (uuid "b1316c47-3819-4754-8969-fcc96f22c22f"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "U101") (unit 3)))))
+(wire (pts (xy 215.9 165.1) (xy 215.9 160.02)) (stroke (width 0) (type default)) (uuid "12687fde-041d-450a-b054-0dbfd2f154c6"))
+(label "MAIN_LOGIC_SUPPLY" (at 215.9 160.02 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "7359f549-f3e7-4442-adde-68cbe9e339f2"))
+(wire (pts (xy 215.9 180.34) (xy 215.9 185.42)) (stroke (width 0) (type default)) (uuid "57b13351-ee6d-42f9-8ff4-9838ab4e44f7"))
+(label "CONTROL_RETURN" (at 215.9 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0855af11-378e-42d1-8060-f15de1828f6e"))
 )
