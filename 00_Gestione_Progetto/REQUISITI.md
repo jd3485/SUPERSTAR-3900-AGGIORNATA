@@ -3,7 +3,7 @@
 | ID | Requisito approvato | Verifica prevista |
 |---|---|---|
 | REQ-01 | Replica funzionale del Connex 3900 export, sei bande e 271 canali, AM/FM/USB/LSB/CW | Confronto con documentazione storica e verifica della mappa |
-| REQ-02 | LCD con indicazione della frequenza | Verifica contro sintonia di riferimento |
+| REQ-02 | Su uno o più LCD devono essere leggibili numero di canale, frequenza, SWR (ROS), potenza RF e modulazione. Numero e formato dei display da scegliere in fase di progettazione. | Confronto di canale e frequenza con la mappa di sintonia e delle letture SWR, potenza e modulazione con strumenti di riferimento durante prove autorizzate |
 | REQ-03 | Accordatore manuale e misuratore di modulazione e potenza | Prova strumentale autorizzata |
 | REQ-04 | Alimentazione sia AC sia DC | Prova elettrica autorizzata per ogni ingresso |
 | REQ-05 | Eco, Roger beep e PA | Verifica audio e comportamento della commutazione |

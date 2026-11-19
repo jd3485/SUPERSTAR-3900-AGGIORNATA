@@ -10,6 +10,8 @@ I master nativi MAIN e FRONT contengono i connettori candidati J101/J201 e sei r
 
 La mappa candidata delle 240 frequenze base e del LO nominale è in [KiCad/Sintonia](../KiCad/Sintonia/README.md). Numerazione del Connex ed estensioni ancora da confermare.
 
+Requisito LCD approvato: visualizzare numero di canale, frequenza, SWR, potenza RF e modulazione. Uno o più moduli ammessi, sempre nel rispetto del vincolo THT.
+
 ## Prossimo lavoro
 
 Progettare il ricevitore a finestra, la protezione e l’interblocco PTT su MAIN. Dimensionare alimentazione e ritorni del FRONT, scegliere interfaccia dati in funzione di EMC e topologia, poi collegare gli endpoint reali. Completare il riscontro storico delle posizioni extra e degli scostamenti di modo.

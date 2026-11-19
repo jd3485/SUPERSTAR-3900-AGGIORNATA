@@ -7,7 +7,7 @@ MAIN ospita i circuiti RF/IF, alimentazione, modulazione e protezioni. FRONT osp
 | 1 | FRONT_SUPPLY | Alimentazione da MAIN a FRONT |
 | 2 | FRONT_RETURN | Ritorno di alimentazione |
 | 3 | CONTROL_TO_MAIN | Comandi FRONT → MAIN |
-| 4 | CONTROL_TO_FRONT | Stato e misure MAIN → FRONT |
+| 4 | CONTROL_TO_FRONT | Stato di sintonia e dati per visualizzare SWR, potenza RF e modulazione MAIN → FRONT |
 | 5 | CONTROL_RETURN | Riferimento dei segnali da definire con topologia delle masse |
 | 6 | PTT_SENSE | Linea analogica supervisionata FRONT → MAIN, subordinata agli interblocchi MAIN |
 
