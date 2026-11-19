@@ -1,6 +1,169 @@
-(kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A4")
+(kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A3")
 (title_block (title "MAIN - Interfaccia candidata"))
 (lib_symbols 
+	(symbol "Device:L"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "L"
+			(at -1.27 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "L"
+			(at 1.905 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "inductor choke coil reactor magnetic"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "L_0_1"
+			(arc
+				(start 0 2.54)
+				(mid 0.6323 1.905)
+				(end 0 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 1.27)
+				(mid 0.6323 0.635)
+				(end 0 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 0)
+				(mid 0.6323 -0.635)
+				(end 0 -1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 -1.27)
+				(mid 0.6323 -1.905)
+				(end 0 -2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "L_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
 	(symbol "Device:D_Schottky"
 		(pin_numbers
 			(hide yes)
@@ -1299,4 +1462,45 @@
 (label "MAIN_PROTECTED_DC" (at 177.8 31.75 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "26575ca7-0878-4f3b-a0ae-c4f6885e6746"))
 (wire (pts (xy 177.8 44.45) (xy 177.8 49.53)) (stroke (width 0) (type default)) (uuid "a1cac0c3-e575-47f7-a00d-1871d5c4ef1e"))
 (label "CONTROL_RETURN" (at 177.8 49.53 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "dc492c82-2fc4-41c6-8e7d-7ff540101d2d"))
+(symbol (lib_id "Device:C") (at 76.2 220.98 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7421ee71-6d05-42a9-ad59-8887109e7d34")
+(property "Reference" "C110" (at 83.82000000000001 218.44 0) (effects (font (size 1.27 1.27))))
+(property "Value" "270p" (at 83.82000000000001 223.51999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "3847e2f8-3f6c-4b7c-89d6-f60454b8a9e2")) (pin "2" (uuid "16bc3518-4086-44cd-994e-d9cd1642df1a"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C110") (unit 1)))))
+(symbol (lib_id "Device:L") (at 101.6 233.68 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c829375c-d960-4498-a8db-b431c2a56ef8")
+(property "Reference" "L101" (at 109.22 231.14000000000001 0) (effects (font (size 1.27 1.27))))
+(property "Value" "240n" (at 109.22 236.22 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "c6326925-9432-4271-9dac-df57fb240403")) (pin "2" (uuid "937ab2fa-10a6-4352-a19e-863d52896f6f"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "L101") (unit 1)))))
+(symbol (lib_id "Device:C") (at 127 220.98 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "af2daa3c-d1ba-43d8-b86f-8b97e3c9db11")
+(property "Reference" "C111" (at 134.62 218.44 0) (effects (font (size 1.27 1.27))))
+(property "Value" "82p" (at 134.62 223.51999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "2e57c36f-4b1b-431d-b308-85291336043f")) (pin "2" (uuid "5766708e-1ce1-411c-88f4-489a17745ca5"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C111") (unit 1)))))
+(symbol (lib_id "Device:L") (at 152.4 233.68 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d63dfbee-f806-4ec1-9d79-15d950707e5d")
+(property "Reference" "L102" (at 160.02 231.14000000000001 0) (effects (font (size 1.27 1.27))))
+(property "Value" "240n" (at 160.02 236.22 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "872366f0-127c-45a1-a21a-fa7178a4f00b")) (pin "2" (uuid "d6418639-b50d-49df-bcfb-fdfd17231b7b"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "L102") (unit 1)))))
+(symbol (lib_id "Device:C") (at 177.8 220.98 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b7c0cb06-89fb-43f5-9831-4df2886c55d3")
+(property "Reference" "C112" (at 185.42000000000002 218.44 0) (effects (font (size 1.27 1.27))))
+(property "Value" "270p" (at 185.42000000000002 223.51999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "c9c3dccc-66dd-4505-b375-7322da8aeb87")) (pin "2" (uuid "814f7979-7881-4fbb-ae1d-9615d7a6abaa"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C112") (unit 1)))))
+(wire (pts (xy 45.72 220.98) (xy 72.39 220.98)) (stroke (width 0) (type default)) (uuid "c81116ca-7b15-4191-b1c3-601e26313bf5"))
+(wire (pts (xy 80.01 220.98) (xy 101.6 220.98)) (stroke (width 0) (type default)) (uuid "845d69fe-b7dc-4e7f-971e-d74669e1f8c6"))
+(wire (pts (xy 101.6 220.98) (xy 123.19 220.98)) (stroke (width 0) (type default)) (uuid "cafe46b2-1ac6-4502-88ff-09d58b1aa709"))
+(wire (pts (xy 130.81 220.98) (xy 152.4 220.98)) (stroke (width 0) (type default)) (uuid "db5ef9b9-68da-4819-80ce-8a91fe981b6a"))
+(wire (pts (xy 152.4 220.98) (xy 173.99 220.98)) (stroke (width 0) (type default)) (uuid "983724ec-2ab3-40ff-994a-30244f1acdb9"))
+(wire (pts (xy 181.61 220.98) (xy 203.2 220.98)) (stroke (width 0) (type default)) (uuid "9d025e3b-fb1d-43c7-a82c-ca35be215541"))
+(wire (pts (xy 101.6 220.98) (xy 101.6 229.87)) (stroke (width 0) (type default)) (uuid "fb94ec2d-17f3-4aed-a507-afd886416582"))
+(wire (pts (xy 101.6 237.49) (xy 101.6 245.11)) (stroke (width 0) (type default)) (uuid "a42b8c59-6460-4ec5-aa92-5a40965bef4b"))
+(junction (at 101.6 220.98) (diameter 0) (color 0 0 0 0) (uuid "d4582512-19b5-40e1-9a86-70c06b0bc2a4"))
+(wire (pts (xy 152.4 220.98) (xy 152.4 229.87)) (stroke (width 0) (type default)) (uuid "e83efb75-a2da-408a-a4ae-d3f820f06293"))
+(wire (pts (xy 152.4 237.49) (xy 152.4 245.11)) (stroke (width 0) (type default)) (uuid "74f7961f-dc06-44a3-8d3d-2d1047a3d88c"))
+(junction (at 152.4 220.98) (diameter 0) (color 0 0 0 0) (uuid "fb9d5090-93ed-4380-983c-cea12527a689"))
+(wire (pts (xy 101.6 245.11) (xy 152.4 245.11)) (stroke (width 0) (type default)) (uuid "6e585a12-2070-424e-8b14-ec36f3161b39"))
+(label "RX_RF_RETURN" (at 101.6 245.11 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d75227fc-bff0-4cd3-9018-3553de11bc3c"))
+(label "RX_FILTER_IN" (at 45.72 220.98 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c6c4e03a-4ac1-4915-9725-6b66b30dfd31"))
+(label "RX_FILTER_OUT" (at 203.2 220.98 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f4129e8c-ed36-4971-af73-c6f374cd1de9"))
 )
