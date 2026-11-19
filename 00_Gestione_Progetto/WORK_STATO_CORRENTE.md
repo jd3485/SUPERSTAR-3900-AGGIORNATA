@@ -94,6 +94,12 @@ Per L103 il candidato Fastron SMCC-R39K-02 ha valore 390 nH ±10%, Q minimo 45 a
 
 Lo script KiCad/RX/terminazione_if.py considera L ±10%, C ±5%, resistenze ±1%, Q ipotetici 10/25/45 alla IF e due casi di capacità parassita. Con il carico di prova 2 kΩ in parallelo a 10 pF e sorgente 50 Ω stima 1,094–1,569 dB di perdita verso R110 e return loss minimo 26,13 dB. Sono risultati del modello a una frequenza; restano da misurare risposta in banda e comportamento con il mixer reale. Prossimo passo: verificare la vista del lato piedini e il disegno meccanico A06 di U110 prima del trasferimento su rame. [Datasheet Mini-Circuits SBL-1+](https://www.minicircuits.com/pdfs/SBL-1%2B.pdf).
 
+## Mixer RX sulla PCB MAIN candidata
+
+U110 SBL-1+ ha un’impronta locale A06 a otto fori metallizzati. Vista lato componenti, pin 1 all’origine, pin 2 a y = −5,08 mm, pin 3 a x = +5,08 mm. La vista inferiore OEM è stata ribaltata rispetto all’asse orizzontale. Inviluppo massimo 20,32 × 10,16 mm, terminali nominali Ø0,79 mm. Foro finito candidato Ø1,10 mm e piazzola 1,90 mm da qualificare con tolleranze e processo. [Disegno del fabbricante e piedinatura](https://www.minicircuits.com/WebStore/dashboardPdf?model=SBL-1%2B).
+
+Pin 3 e 4 uniti sul rame al diplexer, pin 2/5/6/7 collegati al ritorno RX. Pin 1 RF e pin 8 LO attendono i rispettivi stadi. La netlist logica è invariata e i pad THT presenti corrispondono alla netlist. MAIN contiene 49 impronte. ERC 10 segnalazioni, DRC un errore di contorno, zero pad scollegati fra le impronte presenti e 13 impronte mancanti. Restano da verificare ritorni RF distribuiti, disponibilità OEM e montaggio. Prossimo blocco: preselettore RX verso il pin 1, previa verifica delle bobine e delle relative impronte.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.

@@ -3068,6 +3068,7 @@
 (label "RX_FILTER_IN" (at 45.72 220.98 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c6c4e03a-4ac1-4915-9725-6b66b30dfd31"))
 (label "RX_FILTER_OUT" (at 203.2 220.98 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f4129e8c-ed36-4971-af73-c6f374cd1de9"))
 (symbol (lib_id "Connex_RF:SBL-1+") (at 297.18 232.41 0) (unit 1) (in_bom yes) (on_board yes) (uuid "519ecb8c-ca23-4478-abf0-66d6a12c4ff2") (property "Reference" "U110" (at 297.18 218.44 0) (effects (font (size 1 1)))) (property "Value" "SBL-1+" (at 297.18 246.38 0) (effects (font (size 1 1))))
+(property "Footprint" "Connex_RF:Mini-Circuits_A06" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "b85a0f13-9f72-43a4-a8c7-1542cc867191"))
 (pin "8" (uuid "5785143a-bff0-46df-9ab7-3221351a2cf7"))
 (pin "3" (uuid "512c9a5f-e028-47e5-b216-efd563aa2db2"))
