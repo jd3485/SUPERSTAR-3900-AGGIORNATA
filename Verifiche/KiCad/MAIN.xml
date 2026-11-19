@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T02:00:55+0100</date>
+    <date>2026-11-19T02:03:52+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -190,7 +190,7 @@
       <tstamps>0c1236b6-b15d-497c-8682-e2d43a81454f</tstamps>
     </comp>
     <comp ref="C116">
-      <value>5p total</value>
+      <value>54p total</value>
       <fields>
         <field name="Footprint"/>
         <field name="Datasheet"/>
@@ -397,6 +397,21 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b9b178cb-57f0-495d-8d94-38b0d788ef26</tstamps>
     </comp>
+    <comp ref="L105">
+      <value>4.4u</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c94dbd55-4954-4b0d-8078-95a52f1e4c2d</tstamps>
+    </comp>
     <comp ref="Q101">
       <value>2N3904BU</value>
       <fields>
@@ -547,7 +562,7 @@
       <tstamps>5c0db121-cfdb-4a08-80ca-16170fac4ed4</tstamps>
     </comp>
     <comp ref="R112">
-      <value>1.8k</value>
+      <value>49.9</value>
       <fields>
         <field name="Footprint"/>
         <field name="Datasheet"/>
@@ -930,22 +945,26 @@
       <node ref="L104" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="R117" pin="2" pintype="passive"/>
     </net>
-    <net code="7" name="/AM_MCF_COUPLE" class="Default">
+    <net code="7" name="/AM_IF_TERMINATED" class="Default">
+      <node ref="L105" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R112" pin="1" pintype="passive"/>
+    </net>
+    <net code="8" name="/AM_MCF_COUPLE" class="Default">
       <node ref="C115" pin="1" pintype="passive"/>
       <node ref="FL101" pin="INNER" pinfunction="INNER" pintype="passive"/>
       <node ref="FL102" pin="INNER" pinfunction="INNER" pintype="passive"/>
     </net>
-    <net code="8" name="/AM_MCF_IN" class="Default">
+    <net code="9" name="/AM_MCF_IN" class="Default">
       <node ref="C114" pin="1" pintype="passive"/>
       <node ref="FL101" pin="DOT" pinfunction="DOT" pintype="passive"/>
       <node ref="L104" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="9" name="/AM_MCF_OUT" class="Default">
+    <net code="10" name="/AM_MCF_OUT" class="Default">
       <node ref="C116" pin="1" pintype="passive"/>
       <node ref="FL102" pin="DOT" pinfunction="DOT" pintype="passive"/>
-      <node ref="R112" pin="1" pintype="passive"/>
+      <node ref="L105" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="10" name="/CONTROL_RETURN" class="Default">
+    <net code="11" name="/CONTROL_RETURN" class="Default">
       <node ref="C101" pin="2" pintype="passive"/>
       <node ref="C102" pin="2" pintype="passive"/>
       <node ref="C103" pin="2" pintype="passive"/>
@@ -957,22 +976,22 @@
       <node ref="U101" pin="4" pinfunction="V-" pintype="power_in"/>
       <node ref="U102" pin="2" pinfunction="GND" pintype="power_in"/>
     </net>
-    <net code="11" name="/CONTROL_TO_FRONT" class="Default">
+    <net code="12" name="/CONTROL_TO_FRONT" class="Default">
       <node ref="J101" pin="4" pinfunction="Pin_4" pintype="passive"/>
     </net>
-    <net code="12" name="/CONTROL_TO_MAIN" class="Default">
+    <net code="13" name="/CONTROL_TO_MAIN" class="Default">
       <node ref="J101" pin="3" pinfunction="Pin_3" pintype="passive"/>
     </net>
-    <net code="13" name="/EXTERNAL_DC_PROTECTED" class="Default">
+    <net code="14" name="/EXTERNAL_DC_PROTECTED" class="Default">
       <node ref="D102" pin="2" pinfunction="A" pintype="passive"/>
     </net>
-    <net code="14" name="/FRONT_RETURN" class="Default">
+    <net code="15" name="/FRONT_RETURN" class="Default">
       <node ref="J101" pin="2" pinfunction="Pin_2" pintype="passive"/>
     </net>
-    <net code="15" name="/FRONT_SUPPLY" class="Default">
+    <net code="16" name="/FRONT_SUPPLY" class="Default">
       <node ref="J101" pin="1" pinfunction="Pin_1" pintype="passive"/>
     </net>
-    <net code="16" name="/MAIN_LOGIC_SUPPLY" class="Default">
+    <net code="17" name="/MAIN_LOGIC_SUPPLY" class="Default">
       <node ref="C102" pin="1" pintype="passive"/>
       <node ref="C104" pin="1" pintype="passive"/>
       <node ref="R101" pin="1" pintype="passive"/>
@@ -982,62 +1001,62 @@
       <node ref="U101" pin="8" pinfunction="V+" pintype="power_in"/>
       <node ref="U102" pin="3" pinfunction="VO" pintype="power_out"/>
     </net>
-    <net code="17" name="/MAIN_PROTECTED_DC" class="Default">
+    <net code="18" name="/MAIN_PROTECTED_DC" class="Default">
       <node ref="C103" pin="1" pintype="passive"/>
       <node ref="C105" pin="1" pintype="passive"/>
       <node ref="D101" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="D102" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="U102" pin="1" pinfunction="VI" pintype="power_in"/>
     </net>
-    <net code="18" name="/PTT_HIGH_REF" class="Default">
+    <net code="19" name="/PTT_HIGH_REF" class="Default">
       <node ref="R104" pin="2" pintype="passive"/>
       <node ref="R105" pin="1" pintype="passive"/>
       <node ref="U101" pin="5" pinfunction="+" pintype="input"/>
     </net>
-    <net code="19" name="/PTT_LOW_REF" class="Default">
+    <net code="20" name="/PTT_LOW_REF" class="Default">
       <node ref="R105" pin="2" pintype="passive"/>
       <node ref="R106" pin="1" pintype="passive"/>
       <node ref="U101" pin="2" pinfunction="-" pintype="input"/>
     </net>
-    <net code="20" name="/PTT_SCALED" class="Default">
+    <net code="21" name="/PTT_SCALED" class="Default">
       <node ref="C101" pin="1" pintype="passive"/>
       <node ref="R102" pin="2" pintype="passive"/>
       <node ref="R103" pin="1" pintype="passive"/>
       <node ref="U101" pin="3" pinfunction="+" pintype="input"/>
       <node ref="U101" pin="6" pinfunction="-" pintype="input"/>
     </net>
-    <net code="21" name="/PTT_SENSE" class="Default">
+    <net code="22" name="/PTT_SENSE" class="Default">
       <node ref="J101" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="R101" pin="2" pintype="passive"/>
       <node ref="R102" pin="1" pintype="passive"/>
     </net>
-    <net code="22" name="/PTT_WINDOW_VALID" class="Default">
+    <net code="23" name="/PTT_WINDOW_VALID" class="Default">
       <node ref="R107" pin="2" pintype="passive"/>
       <node ref="U101" pin="1" pintype="open_collector"/>
       <node ref="U101" pin="7" pintype="open_collector"/>
     </net>
-    <net code="23" name="/RX_FILTER_IN" class="Default">
+    <net code="24" name="/RX_FILTER_IN" class="Default">
       <node ref="C110" pin="1" pintype="passive"/>
     </net>
-    <net code="24" name="/RX_FILTER_OUT" class="Default">
+    <net code="25" name="/RX_FILTER_OUT" class="Default">
       <node ref="C112" pin="2" pintype="passive"/>
       <node ref="U110" pin="1" pinfunction="RF" pintype="passive"/>
     </net>
-    <net code="25" name="/RX_IF_10695" class="Default">
+    <net code="26" name="/RX_IF_10695" class="Default">
       <node ref="C113" pin="1" pintype="passive"/>
       <node ref="L103" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U110" pin="3" pinfunction="IF_A" pintype="passive"/>
       <node ref="U110" pin="4" pinfunction="IF_B" pintype="passive"/>
     </net>
-    <net code="26" name="/RX_IF_LOWPASS" class="Default">
+    <net code="27" name="/RX_IF_LOWPASS" class="Default">
       <node ref="C119" pin="1" pintype="passive"/>
       <node ref="L103" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R110" pin="1" pintype="passive"/>
     </net>
-    <net code="27" name="/RX_LO_DRIVE" class="Default">
+    <net code="28" name="/RX_LO_DRIVE" class="Default">
       <node ref="U110" pin="8" pinfunction="LO" pintype="passive"/>
     </net>
-    <net code="28" name="/RX_RF_RETURN" class="Default">
+    <net code="29" name="/RX_RF_RETURN" class="Default">
       <node ref="C114" pin="2" pintype="passive"/>
       <node ref="C115" pin="2" pintype="passive"/>
       <node ref="C116" pin="2" pintype="passive"/>
@@ -1057,17 +1076,17 @@
       <node ref="U110" pin="6" pinfunction="GND6" pintype="passive"/>
       <node ref="U110" pin="7" pinfunction="GND7" pintype="passive"/>
     </net>
-    <net code="29" name="Net-(C110-Pad2)" class="Default">
+    <net code="30" name="Net-(C110-Pad2)" class="Default">
       <node ref="C110" pin="2" pintype="passive"/>
       <node ref="C111" pin="1" pintype="passive"/>
       <node ref="L101" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="30" name="Net-(C111-Pad2)" class="Default">
+    <net code="31" name="Net-(C111-Pad2)" class="Default">
       <node ref="C111" pin="2" pintype="passive"/>
       <node ref="C112" pin="1" pintype="passive"/>
       <node ref="L102" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="31" name="Net-(C113-Pad2)" class="Default">
+    <net code="32" name="Net-(C113-Pad2)" class="Default">
       <node ref="C113" pin="2" pintype="passive"/>
       <node ref="R111" pin="1" pintype="passive"/>
     </net>
