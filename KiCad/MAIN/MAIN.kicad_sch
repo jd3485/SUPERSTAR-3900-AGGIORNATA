@@ -1,0 +1,285 @@
+(kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A4")
+(title_block (title "MAIN - Interfaccia candidata"))
+(lib_symbols 
+	(symbol "Connector_Generic:Conn_01x06"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x06"
+			(at 0 -10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Conn_01x06_1_1"
+			(rectangle
+				(start -1.27 6.35)
+				(end 1.27 -8.89)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 5.207)
+				(end 0 4.953)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -7.493)
+				(end 0 -7.747)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 5.08 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -7.62 0)
+				(length 3.81)
+				(name "Pin_6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	))
+(symbol (lib_id "Connector_Generic:Conn_01x06") (at 127 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "63babc60-42f5-4559-a351-21fb39963c04")
+(property "Reference" "J101" (at 132.08 71.12 0) (effects (font (size 1.27 1.27))))
+(property "Value" "Conn_01x06" (at 135.89 73.66 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 127 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "67d43fe2-9ba9-4299-9048-35b1012c879b"))
+(pin "2" (uuid "acec56eb-ffea-40db-8d74-038a634f684e"))
+(pin "3" (uuid "56d89879-6bf6-4e7f-9cb1-41ae98b893b1"))
+(pin "4" (uuid "b45666ed-22c6-4293-b24c-79d76f6e9870"))
+(pin "5" (uuid "878f29d7-1bcd-4ea8-9ddd-3652f9cc740e"))
+(pin "6" (uuid "e8f49644-7d58-4e1c-bedc-f147eb0c5fa5"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "J101") (unit 1)))))
+(wire (pts (xy 101.60 71.12) (xy 121.92 71.12)) (stroke (width 0) (type default)) (uuid "0ef6a16f-3063-4cfb-aa28-91ff67434254"))
+(label "FRONT_SUPPLY" (at 101.60 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e4f18652-98a5-4725-b8b7-4a93d473b481"))
+(wire (pts (xy 101.60 73.66) (xy 121.92 73.66)) (stroke (width 0) (type default)) (uuid "7431a88a-4d92-43f0-9574-8e6717abc6de"))
+(label "FRONT_RETURN" (at 101.60 73.66 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d0c1700d-b932-4481-9854-ef89242b96ac"))
+(wire (pts (xy 101.60 76.20) (xy 121.92 76.20)) (stroke (width 0) (type default)) (uuid "e181d474-7866-42ac-8d94-1cf905b50dea"))
+(label "CONTROL_TO_MAIN" (at 101.60 76.20 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "42d2414b-c7a2-43bb-95c9-2db11ddbc018"))
+(wire (pts (xy 101.60 78.74) (xy 121.92 78.74)) (stroke (width 0) (type default)) (uuid "efd447be-589a-4262-8d55-4e3ce3578308"))
+(label "CONTROL_TO_FRONT" (at 101.60 78.74 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "bd896583-70a4-4d99-aae8-d35729083233"))
+(wire (pts (xy 101.60 81.28) (xy 121.92 81.28)) (stroke (width 0) (type default)) (uuid "b922fa9f-5362-4355-8b2c-af796081def1"))
+(label "CONTROL_RETURN" (at 101.60 81.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "003f2190-8421-44d7-9f43-457ddafe0e43"))
+(wire (pts (xy 101.60 83.82) (xy 121.92 83.82)) (stroke (width 0) (type default)) (uuid "c3007b35-8e11-4a5e-b881-ea060e0275ce"))
+(label "TX_REQUEST" (at 101.60 83.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5a51d7cf-fde3-4bb9-ba1e-98bf2a57341d"))
+)

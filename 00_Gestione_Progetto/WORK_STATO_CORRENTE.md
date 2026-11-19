@@ -1,17 +1,17 @@
 # Stato operativo
 
-## Ultima integrazione
+## Ultima integrazione su main al momento della proposta
 
-Direttiva operativa in AGENTS.md, commit `5f38bb41559fe174d6b2d6a6b25da10d438e366f`. Bootstrap documentale su main. Nessun commit CAD verificato, nessuna CI di progetto eseguita. I gate FAST/FULL/Required e l'integrazione V8 sono previsti dalla direttiva quando applicabili.
+Bootstrap operativo a commit 34d1c309c6b1b58e1b32f2193e49a19d2ce8a4c5. Nessuna run Actions per quel commit.
 
-## Stato delle schede
+## Modifica candidata
 
-MAIN e FRONT non iniziate. Nessun master, PCB, netlist, ERC, DRC, BOM qualificata o prova fisica registrati.
+I master nativi MAIN e FRONT contengono i connettori candidati J101/J201 e sei reti locali corrispondenti. Netlist XML esportate da KiCad CLI 9.0.2 e confrontate. ERC eseguito con sei errori a singolo terminale per master. Nessuna impronta, PCB, BOM definitiva, DRC o prova fisica.
 
 ## Prossimo lavoro
 
-Tracciare in GitHub i requisiti approvati, distinguendo le proposte preliminari dalle decisioni. Definire interfacce e architettura MAIN/FRONT e avviare i master KiCad a partire dai sottosistemi verificabili. Il vincolo 100% THT e produzione OEM attiva è già approvato.
+Dimensionare alimentazione e ritorni del FRONT, scegliere interfaccia dati in funzione di EMC e topologia, poi collegare gli endpoint reali. In parallelo la mappa storica dei canali va ricostruita da fonti verificabili.
 
 ## Autorizzazioni
 
-Restano in vigore NO FAB, NO GERBER DI PRODUZIONE, NO ORDINI PCB, NO TX, NO BATTERIA e NO VEICOLO.
+NO FAB, NO GERBER DI PRODUZIONE, NO ORDINI PCB, NO TX, NO BATTERIA, NO VEICOLO.
