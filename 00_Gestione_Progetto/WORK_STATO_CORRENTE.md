@@ -60,6 +60,10 @@ Confronto delle due netlist esportate: corrispondenza dei sei pin e connessioni 
 
 SW201 è stato sostituito in FRONT da J202 per il contatto esterno. R202 passa sul lato segnale. I quattro componenti del master FRONT attuale sono posizionati e collegati. DRC con parità: zero pad scollegati, zero difformità, contorno assente. ERC: quattro reti di alimentazione/dati aperte. Dettagli su tensioni, corto nel microfono e limiti del collegamento in KiCad/INTERFACCIA_MAIN_FRONT.md. Prossima integrazione: interfaccia microfonica audio e gestione della richiesta PTT all'avvio.
 
+## Rilevamento del rilascio PTT su MAIN
+
+Aggiunti e collegati nello schema e sulla PCB U103, R120–R123 e C121. MAIN ospita 17 impronte. Confrontata la netlist precedente e verificati pin/pad/reti. Calcolo statico del rilascio e dei guasti in KiCad/INTERFACCIA_MAIN_FRONT.md. ERC MAIN: 10 errori. DRC con parità: zero pad scollegati tra le impronte presenti, manca il contorno e restano 34 impronte del master da trasferire. La memoria di armamento al rilascio e il reset per alimentazione insufficiente restano da progettare.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.

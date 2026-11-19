@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T09:13:52+0100</date>
+    <date>2026-11-19T09:23:37+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -265,6 +265,22 @@
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>a49605fe-f7c8-4f62-a83c-0f6c4d1642db</tstamps>
+    </comp>
+    <comp ref="C121">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6a9612f5-26f3-42e0-9424-00616005488a</tstamps>
     </comp>
     <comp ref="D101">
       <value>1N5819RLG</value>
@@ -661,6 +677,70 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>fb80e48c-138f-4862-8485-eb5c53434972</tstamps>
     </comp>
+    <comp ref="R120">
+      <value>6.81k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e159ea32-6f62-429c-ab8b-62be63e3d5f4</tstamps>
+    </comp>
+    <comp ref="R121">
+      <value>1.40k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7c36f8ff-b8db-4984-98c5-939c2c0704aa</tstamps>
+    </comp>
+    <comp ref="R122">
+      <value>1.80k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>58b28864-af93-4f5e-a9cf-0b46e083dff4</tstamps>
+    </comp>
+    <comp ref="R123">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b116c666-0243-4f78-bf66-86384602e53e</tstamps>
+    </comp>
     <comp ref="U101">
       <value>LM2903P</value>
       <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
@@ -692,6 +772,22 @@
       <property name="ki_fp_filters" value="TO?220*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>587aff61-0092-45cd-ad77-d3064a3f7fa2</tstamps>
+    </comp>
+    <comp ref="U103">
+      <value>LM2903P</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <fields>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Comparator" part="LM2903" description="Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SOP-8/TSSOP-8/VSSOP-8"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cmp open collector"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7f45efdb-c6a1-4251-b3b8-8737bf7d7684 538992cb-de41-499e-bc19-632a4e2fbe59 4a66052d-7b33-436f-b89e-89aa2daa12d5</tstamps>
     </comp>
     <comp ref="U110">
       <value>SBL-1+</value>
@@ -965,11 +1061,14 @@
       <node ref="C103" pin="2" pintype="passive"/>
       <node ref="C104" pin="2" pintype="passive"/>
       <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="C121" pin="2" pintype="passive"/>
       <node ref="J101" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="R103" pin="2" pintype="passive"/>
       <node ref="R106" pin="2" pintype="passive"/>
+      <node ref="R122" pin="2" pintype="passive"/>
       <node ref="U101" pin="4" pinfunction="V-" pintype="power_in"/>
       <node ref="U102" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U103" pin="4" pinfunction="V-" pintype="power_in"/>
     </net>
     <net code="12" name="/CONTROL_TO_FRONT" class="Default">
       <node ref="J101" pin="4" pinfunction="Pin_4" pintype="passive"/>
@@ -989,12 +1088,16 @@
     <net code="17" name="/MAIN_LOGIC_SUPPLY" class="Default">
       <node ref="C102" pin="1" pintype="passive"/>
       <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="C121" pin="1" pintype="passive"/>
       <node ref="R101" pin="1" pintype="passive"/>
       <node ref="R104" pin="1" pintype="passive"/>
       <node ref="R107" pin="1" pintype="passive"/>
       <node ref="R113" pin="1" pintype="passive"/>
+      <node ref="R120" pin="1" pintype="passive"/>
+      <node ref="R123" pin="1" pintype="passive"/>
       <node ref="U101" pin="8" pinfunction="V+" pintype="power_in"/>
       <node ref="U102" pin="3" pinfunction="VO" pintype="power_out"/>
+      <node ref="U103" pin="8" pinfunction="V+" pintype="power_in"/>
     </net>
     <net code="18" name="/MAIN_PROTECTED_DC" class="Default">
       <node ref="C103" pin="1" pintype="passive"/>
@@ -1013,45 +1116,62 @@
       <node ref="R106" pin="1" pintype="passive"/>
       <node ref="U101" pin="2" pinfunction="-" pintype="input"/>
     </net>
-    <net code="21" name="/PTT_SCALED" class="Default">
+    <net code="21" name="/PTT_RELEASE_HIGH" class="Default">
+      <node ref="R120" pin="2" pintype="passive"/>
+      <node ref="R121" pin="1" pintype="passive"/>
+      <node ref="U103" pin="5" pinfunction="+" pintype="input"/>
+    </net>
+    <net code="22" name="/PTT_RELEASE_LOW" class="Default">
+      <node ref="R121" pin="2" pintype="passive"/>
+      <node ref="R122" pin="1" pintype="passive"/>
+      <node ref="U103" pin="2" pinfunction="-" pintype="input"/>
+    </net>
+    <net code="23" name="/PTT_RELEASE_VALID" class="Default">
+      <node ref="R123" pin="2" pintype="passive"/>
+      <node ref="U103" pin="1" pintype="open_collector"/>
+      <node ref="U103" pin="7" pintype="open_collector"/>
+    </net>
+    <net code="24" name="/PTT_SCALED" class="Default">
       <node ref="C101" pin="1" pintype="passive"/>
       <node ref="R102" pin="2" pintype="passive"/>
       <node ref="R103" pin="1" pintype="passive"/>
       <node ref="U101" pin="3" pinfunction="+" pintype="input"/>
       <node ref="U101" pin="6" pinfunction="-" pintype="input"/>
+      <node ref="U103" pin="3" pinfunction="+" pintype="input"/>
+      <node ref="U103" pin="6" pinfunction="-" pintype="input"/>
     </net>
-    <net code="22" name="/PTT_SENSE" class="Default">
+    <net code="25" name="/PTT_SENSE" class="Default">
       <node ref="J101" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="R101" pin="2" pintype="passive"/>
       <node ref="R102" pin="1" pintype="passive"/>
     </net>
-    <net code="23" name="/PTT_WINDOW_VALID" class="Default">
+    <net code="26" name="/PTT_WINDOW_VALID" class="Default">
       <node ref="R107" pin="2" pintype="passive"/>
       <node ref="U101" pin="1" pintype="open_collector"/>
       <node ref="U101" pin="7" pintype="open_collector"/>
     </net>
-    <net code="24" name="/RX_FILTER_IN" class="Default">
+    <net code="27" name="/RX_FILTER_IN" class="Default">
       <node ref="C110" pin="1" pintype="passive"/>
     </net>
-    <net code="25" name="/RX_FILTER_OUT" class="Default">
+    <net code="28" name="/RX_FILTER_OUT" class="Default">
       <node ref="C112" pin="2" pintype="passive"/>
       <node ref="U110" pin="1" pinfunction="RF" pintype="passive"/>
     </net>
-    <net code="26" name="/RX_IF_10695" class="Default">
+    <net code="29" name="/RX_IF_10695" class="Default">
       <node ref="C113" pin="1" pintype="passive"/>
       <node ref="L103" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U110" pin="3" pinfunction="IF_A" pintype="passive"/>
       <node ref="U110" pin="4" pinfunction="IF_B" pintype="passive"/>
     </net>
-    <net code="27" name="/RX_IF_LOWPASS" class="Default">
+    <net code="30" name="/RX_IF_LOWPASS" class="Default">
       <node ref="C119" pin="1" pintype="passive"/>
       <node ref="L103" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R110" pin="1" pintype="passive"/>
     </net>
-    <net code="28" name="/RX_LO_DRIVE" class="Default">
+    <net code="31" name="/RX_LO_DRIVE" class="Default">
       <node ref="U110" pin="8" pinfunction="LO" pintype="passive"/>
     </net>
-    <net code="29" name="/RX_RF_RETURN" class="Default">
+    <net code="32" name="/RX_RF_RETURN" class="Default">
       <node ref="C114" pin="2" pintype="passive"/>
       <node ref="C115" pin="2" pintype="passive"/>
       <node ref="C116" pin="2" pintype="passive"/>
@@ -1071,17 +1191,17 @@
       <node ref="U110" pin="6" pinfunction="GND6" pintype="passive"/>
       <node ref="U110" pin="7" pinfunction="GND7" pintype="passive"/>
     </net>
-    <net code="30" name="Net-(C110-Pad2)" class="Default">
+    <net code="33" name="Net-(C110-Pad2)" class="Default">
       <node ref="C110" pin="2" pintype="passive"/>
       <node ref="C111" pin="1" pintype="passive"/>
       <node ref="L101" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="31" name="Net-(C111-Pad2)" class="Default">
+    <net code="34" name="Net-(C111-Pad2)" class="Default">
       <node ref="C111" pin="2" pintype="passive"/>
       <node ref="C112" pin="1" pintype="passive"/>
       <node ref="L102" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="32" name="Net-(C113-Pad2)" class="Default">
+    <net code="35" name="Net-(C113-Pad2)" class="Default">
       <node ref="C113" pin="2" pintype="passive"/>
       <node ref="R111" pin="1" pintype="passive"/>
     </net>
