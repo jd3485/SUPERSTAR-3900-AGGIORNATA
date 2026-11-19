@@ -38,6 +38,12 @@ REQ-12 e REQ-13 introducono alta sensibilità RX e buona modulazione. Priorità:
 
 REQ-12: bilancio di rumore preliminare e analisi di sensibilità in KiCad/RX. Nello scenario nominale il percorso passivo dà 14,09 dB di NF, un front-end candidato da 12 dB di guadagno e 2 dB di NF dà 5,70 dB. Ipotesi senza misure. CAD invariato in questo ciclo.
 
+Il vincolo REQ-14 stabilisce la destinazione PCBWay delle due schede nude e il montaggio THT manuale a cura dell'utente.
+
+REQ-12, limite dovuto al solo mixer. Assumendo 1,394 dB di perdite prima del preamplificatore e +1 dBm di compressione tipica all'ingresso SBL-1+, la potenza equivalente all'antenna per un singolo tono in banda è +2,39 dBm in passivo, −3,61 dBm con 6 dB di guadagno e −9,61 dBm con 12 dB. Calcolo: Pantenna = Pmixer + perdite − guadagno. La compressione propria del preamplificatore e il blocco IF possono anticipare il limite. Il J310 InterFET in TO-92 è candidato da caratterizzare per polarizzazione, adattamento, rumore e IIP3. Aperta la conferma OEM di produzione del codice ordinabile. Nessuna modifica al master in base a queste sole stime.
+
+Fonti: [SBL-1+](https://www.minicircuits.com/pdfs/SBL-1+.pdf), [catalogo InterFET](https://interfet.com/oscillators/).
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
