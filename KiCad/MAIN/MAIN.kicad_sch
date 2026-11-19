@@ -1,6 +1,234 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A1")
 (title_block (title "MAIN - Interfaccia candidata"))
-(lib_symbols 
+(lib_symbols (symbol "Connex_RF:TC4427AEPA" (exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -7.62 8.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TC4427AEPA"
+			(at 1.27 8.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 0.508 -15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/20001423J.pdf"
+			(at 0.508 -13.208 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.5A Dual High-Speed Power MOSFET Drivers, 4.5...18V supply, TTL/CMOS compatible inputs, non-inverting drivers, PDIP-8"
+			(at 0 -11.176 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "ESD push-pull"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "DIP*W7.62mm*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "TC4427AEPA_0_1"
+			(rectangle
+				(start -7.62 -7.62)
+				(end 7.62 7.62)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "TC4427AEPA_1_1"
+			(pin input line
+				(at -10.16 2.54 0)
+				(length 2.54)
+				(name "IN_A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -2.54 0)
+				(length 2.54)
+				(name "IN_B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at -7.62 0 0)
+				(length 2.54)
+				(hide yes)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 10.16 270)
+				(length 2.54)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -10.16 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 7.62 0 180)
+				(length 2.54)
+				(hide yes)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 10.16 2.54 180)
+				(length 2.54)
+				(name "OUT_A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 10.16 -2.54 180)
+				(length 2.54)
+				(name "OUT_B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) 
 	(symbol "Device:D"
 		(pin_numbers
 			(hide yes)
@@ -4113,4 +4341,66 @@
 (wire (pts (xy 660.40 534.67) (xy 681.99 534.67)) (stroke (width 0) (type default)) (uuid "5480af76-942a-4001-8eaf-c4c420a9f054"))
 (wire (pts (xy 689.61 534.67) (xy 711.20 534.67)) (stroke (width 0) (type default)) (uuid "721c007d-0aa6-427a-b5d4-f00f12d7ce26"))
 (label "AM_LO_DRIVE" (at 711.20 534.67 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "236b459a-5385-4daa-ba42-8ca73a92104e"))
+(symbol (lib_id "Connex_RF:TC4427AEPA") (at 734.06 354.33 0) (unit 1) (in_bom yes) (on_board yes) (uuid "1b788df8-53d8-47c3-b287-508776e42698")(property "Reference" "U113" (at 747.06 346.33 0) (effects (font (size 1.27 1.27))))(property "Value" "TC4427AEPA" (at 752.06 342.33 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_DIP:DIP-8_W7.62mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "c826ed6c-bc1f-48da-946d-338398636ce8"))(pin "2" (uuid "980a791f-ea02-4ea7-9fba-0e602207a2af"))(pin "3" (uuid "1d7c9724-e347-4213-bccd-f9aa7bab466d"))(pin "4" (uuid "20220a69-3118-40e4-985e-72cfd2ba9f68"))(pin "5" (uuid "97b0f8ce-7f29-411c-83e5-60d8bc321959"))(pin "6" (uuid "9efefbfe-c435-4adf-b785-df28663caba2"))(pin "7" (uuid "acd9cbdd-08a2-414c-9b60-5efe61507f1c"))(pin "8" (uuid "75c0011a-797d-4949-baa8-43af0270fa6c"))(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "U113") (unit 1)))))
+(wire (pts (xy 723.90 351.79) (xy 692.15 351.79)) (stroke (width 0) (type default)) (uuid "6c561da0-5263-4485-a1eb-a9999a38d1d1"))
+(label "AM_LO_CLOCK" (at 692.15 351.79 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5274686f-0751-4238-8e85-2115a5bb5128"))
+(wire (pts (xy 723.90 356.87) (xy 692.15 356.87)) (stroke (width 0) (type default)) (uuid "2ea4d9f7-1441-4feb-b9ee-93ecb1306cc0"))
+(label "RX_RF_RETURN" (at 692.15 356.87 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "325ed331-4d7e-406d-a245-4ca93380dc81"))
+(wire (pts (xy 734.06 344.17) (xy 734.06 335.28)) (stroke (width 0) (type default)) (uuid "6daefa42-e788-46db-b24e-ad41267585d0"))
+(label "AM_LO_5V" (at 734.06 335.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "351fba87-ce81-46e5-a7ae-f1700a6f2af5"))
+(wire (pts (xy 734.06 364.49) (xy 734.06 373.38)) (stroke (width 0) (type default)) (uuid "36bdb204-389b-49c4-9ddc-95c9f77b431f"))
+(label "RX_RF_RETURN" (at 734.06 373.38 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2bd87918-c22b-4f15-b1a8-f76aaed6f68a"))
+(wire (pts (xy 744.22 351.79) (xy 754.38 351.79)) (stroke (width 0) (type default)) (uuid "39bb4c07-311a-402e-94f0-9196ac34d260"))
+(label "AM_LO_PUSH_PULL" (at 754.38 351.79 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "693098e2-14c7-4dc8-b68c-dc2d11a51157"))
+(no_connect (at 744.22 356.87) (uuid "de188a56-9380-4d05-9d32-5fab5d0dd927"))
+(symbol (lib_id "Device:R") (at 541.02 356.87 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "dc368f5c-4460-4f8d-b2a2-6cba2647957e")
+(property "Reference" "R150" (at 548.64 351.79 0) (effects (font (size 1.27 1.27))))
+(property "Value" "60.4" (at 548.64 361.95 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "22ddfc08-53c0-4357-9e01-429f77572ef8")) (pin "2" (uuid "04c0ac23-bb1e-4dcb-8e72-900c4890b855"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R150") (unit 1)))))
+(wire (pts (xy 541.02 353.06) (xy 541.02 342.90)) (stroke (width 0) (type default)) (uuid "cc86569f-9b76-4e3d-898b-6b03f6f80d45"))
+(label "AM_LO_PUSH_PULL" (at 541.02 342.90 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1b9d0a2f-2b29-4ca5-a99f-901147922cb6"))
+(wire (pts (xy 541.02 360.68) (xy 541.02 370.84)) (stroke (width 0) (type default)) (uuid "6b068b69-e0e1-4efb-b1f1-a3f16773f483"))
+(label "AM_LO_SOURCE_50R" (at 541.02 370.84 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "07229b5e-74ab-4e38-ace6-ccca6b8b1a31"))
+(symbol (lib_id "Device:R") (at 575.31 356.87 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "497b283f-ddac-4daa-802d-f7fe1edb9959")
+(property "Reference" "R151" (at 582.93 351.79 0) (effects (font (size 1.27 1.27))))
+(property "Value" "196" (at 582.93 361.95 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "265718f9-f8f0-403b-a391-3b20ba86c901")) (pin "2" (uuid "926a1b55-006d-4240-a118-6edc4a321d38"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R151") (unit 1)))))
+(wire (pts (xy 575.31 353.06) (xy 575.31 342.90)) (stroke (width 0) (type default)) (uuid "92a34c17-2123-4588-bc00-779d288be8ba"))
+(label "AM_LO_SOURCE_50R" (at 575.31 342.90 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "38c06461-15af-49bd-8b19-8bdcdc0c009c"))
+(wire (pts (xy 575.31 360.68) (xy 575.31 370.84)) (stroke (width 0) (type default)) (uuid "a4ec34e1-7b52-467c-b3da-752b2563b774"))
+(label "RX_RF_RETURN" (at 575.31 370.84 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1dbe5736-f846-4671-be3e-d0302038fdf5"))
+(symbol (lib_id "Device:R") (at 609.60 356.87 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e72454fa-070e-4be4-a2e4-bdff7959cb7b")
+(property "Reference" "R152" (at 617.22 351.79 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10k" (at 617.22 361.95 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "68638039-e816-40f6-819a-00e47e1b77ba")) (pin "2" (uuid "3ae5f136-77fd-4156-9292-3d55a7ec9316"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R152") (unit 1)))))
+(wire (pts (xy 609.60 353.06) (xy 609.60 342.90)) (stroke (width 0) (type default)) (uuid "d7678456-d893-472c-901d-f93445b3de02"))
+(label "AM_LO_CLOCK" (at 609.60 342.90 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "861c1e84-5ecc-4e5a-aaca-3a0a76bf1ca0"))
+(wire (pts (xy 609.60 360.68) (xy 609.60 370.84)) (stroke (width 0) (type default)) (uuid "9263665a-b7c3-4c04-8c01-f9674ca9907f"))
+(label "RX_RF_RETURN" (at 609.60 370.84 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d4882074-eaef-4458-8b70-b87569e45de5"))
+(symbol (lib_id "Device:C") (at 643.89 356.87 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "312d5fd7-9a7e-4d81-92d2-37b9bc031736")
+(property "Reference" "C144" (at 651.51 351.79 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100n" (at 651.51 361.95 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "2430ff27-71d0-4ca0-8855-c8690b74fe95")) (pin "2" (uuid "7204d63c-683f-4786-a204-e151705b446d"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C144") (unit 1)))))
+(wire (pts (xy 643.89 353.06) (xy 643.89 342.90)) (stroke (width 0) (type default)) (uuid "e6bfd54d-b1a4-4d6f-afed-caea8fc350f9"))
+(label "AM_LO_5V" (at 643.89 342.90 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5212144f-0d58-4aba-856d-bb4105d226b9"))
+(wire (pts (xy 643.89 360.68) (xy 643.89 370.84)) (stroke (width 0) (type default)) (uuid "e113b7d9-ae64-4ae8-8143-9d420cd69e6f"))
+(label "RX_RF_RETURN" (at 643.89 370.84 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8e7dfa73-4a10-4a4f-90c0-e5d9a133beb4"))
+(symbol (lib_id "Device:C") (at 678.18 356.87 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a9f60c55-46b9-412a-91fe-3531e984fc42")
+(property "Reference" "C145" (at 685.80 351.79 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1u" (at 685.80 361.95 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "591c4c1d-f257-406c-b9a2-8885755246e9")) (pin "2" (uuid "3418803b-06d7-4369-8dc4-e1b66bf8db85"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C145") (unit 1)))))
+(wire (pts (xy 678.18 353.06) (xy 678.18 342.90)) (stroke (width 0) (type default)) (uuid "c2c1cc24-90de-4f5b-bf7c-8ae5adb3d60d"))
+(label "AM_LO_5V" (at 678.18 342.90 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "73462589-7683-43c6-afce-f99ab263b282"))
+(wire (pts (xy 678.18 360.68) (xy 678.18 370.84)) (stroke (width 0) (type default)) (uuid "5f505afb-6c60-4780-b082-ba3ee4251451"))
+(label "RX_RF_RETURN" (at 678.18 370.84 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5448ed47-187a-408e-bce3-8ac2c1421dcc"))
 )

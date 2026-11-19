@@ -1,5 +1,15 @@
 # Stato operativo
 
+## Driver LO AM, stato candidato della PR #1
+
+MAIN comprende ora U113, R150–R152 e C144–C145, collegati nello schema e posizionati e instradati sulla PCB (121 impronte THT). Il TC4427AEPA in PDIP-8 converte il futuro clock logico a 10,695 MHz in un’onda rettangolare. R150 da 60,4 Ω in serie e R151 da 196 Ω in derivazione precedono il blocco DC C143 e fissano livello e impedenza. R152 da 10 kΩ porta a zero l’ingresso in assenza di clock. Il canale B ha ingresso a massa e uscita lasciata aperta. I pin 1 e 8 sono NC secondo il datasheet. C144 da 100 nF e C145 da 1 µF chiudono il bypass del ramo locale AM_LO_5V sul ritorno RX_RF_RETURN. Restano da progettare la sorgente del clock, la distribuzione dei 5 V a basso rumore e il ritorno verso il regolatore.
+
+Il modello KiCad/RX/driver_lo_am.py usa il filtro e l’ibrido già in netlist. Ipotesi nominali: 5 V, resistenza di uscita simmetrica 7 Ω, duty cycle 50%, fronti lineari da 8 ns. Risultato: 50,15 Ω, fondamentale a vuoto 4,68 Vpp, potenze I/Q +7,82/+7,21 dBm. Con 4,75–5,25 V, resistenza 4–15 Ω, fronti 4–20 ns e duty 45–55%, gli scenari campionati con passivi nominali danno I +6,12…+8,55 dBm, Q +5,51…+7,94 dBm. Questi intervalli sono ipotesi di sensibilità, non limiti garantiti. Da combinare con tolleranze dei passivi, carichi reali dei mixer e parassiti. Qualificare consumo dinamico, dissipazione, distorsione del duty, emissioni del clock e iniezione nel ricevitore prima del congelamento.
+
+Microchip indica la famiglia TC4427A in produzione e documenta il suffisso EPA, PDIP 8 a passo 2,54 mm, file da 7,62 mm. Pin/pad verificati, stato commerciale del codice specifico da riconfermare alla chiusura BOM. [Pagina OEM](https://www.microchip.com/en-us/product/tc4427a) · [Datasheet e codici d’ordine](https://ww1.microchip.com/downloads/en/DeviceDoc/20001423J.pdf)
+
+Verifica KiCad locale: nessun pad scollegato o errore di parità su entrambe le schede, DRC ancora aperto per entrambi i contorni assenti. ERC MAIN 12 errori, inclusi i due pin di alimentazione del driver, FRONT 4 errori. Prossimo blocco: valutare la generazione del clock dal piano di frequenza e la chiusura del percorso di alimentazione RF. Nessuna prova fisica.
+
 ## Filtro e dimensionamento del pilotaggio LO · PR #1
 
 MAIN candidata: 115 impronte THT. C143 interrompe la continua del driver; L110/C141/L111/C142/L112 costituiscono un passa-basso del quinto ordine davanti all’ibrido I/Q. Le induttanze successive sono montate su assi ortogonali. La sorgente attiva a monte di C143 resta aperta. Pin, pad e net precedenti conservati. DRC con parità su MAIN e FRONT: solo contorno mancante, zero pad scollegati; ERC rispettivamente 11 e 4 errori. Il nuovo errore identifica la sorgente LO da integrare.

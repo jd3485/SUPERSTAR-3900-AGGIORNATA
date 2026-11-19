@@ -4,7 +4,7 @@ from itertools import product, islice
 import numpy as np
 
 
-def mixer_losses(signs, harmonic=1):
+def mixer_losses(signs, harmonic=1, source_resistance=50):
     w = 2 * np.pi * 10.695e6 * harmonic
     n = len(signs)
     y = np.zeros((n, 6, 6), complex)
@@ -32,7 +32,7 @@ def mixer_losses(signs, harmonic=1):
     series(4, 5, coil(1e-6, 11))
     series(5, 0, coil(330e-9, 12))
     block = 1 / (1j * w * 10e-9 * (1 + .05 * signs[:, 15]))
-    source_y = 1 / (50 + block + coil(330e-9, 10))
+    source_y = 1 / (source_resistance + block + coil(330e-9, 10))
     y[:, 4, 4] += source_y
     current = np.zeros((n, 6, 1), complex)
     current[:, 4, 0] = 2 * source_y  # 1 V RMS di riferimento su carico adattato.
