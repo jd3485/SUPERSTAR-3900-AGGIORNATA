@@ -52,3 +52,7 @@ Per il collaudo autorizzato registrare il livello RF minimo all'ingresso a 50 Ω
 | CW | Tempi di salita e discesa dell'inviluppo, transitori di manipolazione e stabilità della portante |
 
 Fissare soglie numeriche e condizioni ripetibili prima del congelamento dei blocchi interessati. Il requisito qualitativo è approvato; prestazioni raggiunte e margini saranno documentati con evidenze della fase applicabile.
+
+## Fabbricazione e montaggio
+
+**REQ-14 – PCB nude e saldatura manuale.** MAIN e FRONT sono destinate alla fabbricazione da PCBWay come circuiti stampati nudi. L’utente installerà e salderà personalmente i componenti THT. Per ogni impronta verificare il foro finito rispetto alla sezione massima del terminale, la piazzola e l’accesso del saldatore nella sequenza di montaggio. Indicare sulla serigrafia riferimenti, polarità, pin 1 e orientamento dei connettori. Verificare fori e distanze rispetto alle capacità del processo PCBWay scelto prima del rilascio. Ordini e file di produzione restano subordinati ad autorizzazione separata.
