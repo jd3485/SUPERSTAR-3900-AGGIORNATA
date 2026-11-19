@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T01:52:58+0100</date>
+    <date>2026-11-19T01:54:27+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -33,7 +33,7 @@
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -48,7 +48,7 @@
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -63,7 +63,7 @@
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -78,7 +78,7 @@
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -93,7 +93,7 @@
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -108,7 +108,7 @@
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -123,7 +123,7 @@
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -138,11 +138,26 @@
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b7c0cb06-89fb-43f5-9831-4df2886c55d3</tstamps>
+    </comp>
+    <comp ref="C113">
+      <value>160p</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>38b907c0-4f6c-462a-ad09-67f11a6d2ede</tstamps>
     </comp>
     <comp ref="D101">
       <value>1N5819RLG</value>
@@ -154,7 +169,7 @@
       </fields>
       <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -170,7 +185,7 @@
       </fields>
       <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -185,7 +200,7 @@
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -200,7 +215,7 @@
       </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
       <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -215,11 +230,26 @@
       </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
       <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>d63dfbee-f806-4ec1-9d79-15d950707e5d</tstamps>
+    </comp>
+    <comp ref="L103">
+      <value>390n</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2235feef-e9f3-4cb5-ba8c-55de2ed6065d</tstamps>
     </comp>
     <comp ref="R101">
       <value>10k</value>
@@ -230,7 +260,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -245,7 +275,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -260,7 +290,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -275,7 +305,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -290,7 +320,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -305,7 +335,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -320,11 +350,41 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>2f94e5a2-7ccc-463f-a830-64e8e2132035</tstamps>
+    </comp>
+    <comp ref="R110">
+      <value>49.9</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a5834e08-9bfd-4ef7-b16e-a6c02026d6f8</tstamps>
+    </comp>
+    <comp ref="R111">
+      <value>49.9</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c0db121-cfdb-4a08-80ca-16170fac4ed4</tstamps>
     </comp>
     <comp ref="U101">
       <value>LM2903P</value>
@@ -336,7 +396,7 @@
       </fields>
       <libsource lib="Comparator" part="LM2903" description="Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SOP-8/TSSOP-8/VSSOP-8"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="cmp open collector"/>
       <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -352,7 +412,7 @@
       </fields>
       <libsource lib="Regulator_Linear" part="LM7805_TO220" description="Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <property name="ki_keywords" value="Voltage Regulator 1A Positive"/>
       <property name="ki_fp_filters" value="TO?220*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -367,7 +427,7 @@
       </fields>
       <libsource lib="Connex_RF" part="SBL-1+" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>519ecb8c-ca23-4478-abf0-66d6a12c4ff2</tstamps>
     </comp>
@@ -547,6 +607,9 @@
     <library logical="Connector_Generic">
       <uri>/usr/share/kicad/symbols//Connector_Generic.kicad_sym</uri>
     </library>
+    <library logical="Connex_RF">
+      <uri>KiCad/MAIN/Connex_RF.kicad_sym</uri>
+    </library>
     <library logical="Device">
       <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
     </library>
@@ -636,29 +699,41 @@
       <node ref="U110" pin="1" pinfunction="RF" pintype="passive"/>
     </net>
     <net code="17" name="/RX_IF_10695" class="Default">
+      <node ref="C113" pin="1" pintype="passive"/>
+      <node ref="L103" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U110" pin="3" pinfunction="IF_A" pintype="passive"/>
       <node ref="U110" pin="4" pinfunction="IF_B" pintype="passive"/>
     </net>
-    <net code="18" name="/RX_LO_DRIVE" class="Default">
+    <net code="18" name="/RX_IF_LOWPASS" class="Default">
+      <node ref="L103" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R110" pin="1" pintype="passive"/>
+    </net>
+    <net code="19" name="/RX_LO_DRIVE" class="Default">
       <node ref="U110" pin="8" pinfunction="LO" pintype="passive"/>
     </net>
-    <net code="19" name="/RX_RF_RETURN" class="Default">
+    <net code="20" name="/RX_RF_RETURN" class="Default">
       <node ref="L101" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="L102" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R110" pin="2" pintype="passive"/>
+      <node ref="R111" pin="2" pintype="passive"/>
       <node ref="U110" pin="2" pinfunction="GND2" pintype="passive"/>
       <node ref="U110" pin="5" pinfunction="GND5" pintype="passive"/>
       <node ref="U110" pin="6" pinfunction="GND6" pintype="passive"/>
       <node ref="U110" pin="7" pinfunction="GND7" pintype="passive"/>
     </net>
-    <net code="20" name="Net-(C110-Pad2)" class="Default">
+    <net code="21" name="Net-(C110-Pad2)" class="Default">
       <node ref="C110" pin="2" pintype="passive"/>
       <node ref="C111" pin="1" pintype="passive"/>
       <node ref="L101" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="21" name="Net-(C111-Pad2)" class="Default">
+    <net code="22" name="Net-(C111-Pad2)" class="Default">
       <node ref="C111" pin="2" pintype="passive"/>
       <node ref="C112" pin="1" pintype="passive"/>
       <node ref="L102" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(C113-Pad2)" class="Default">
+      <node ref="C113" pin="2" pintype="passive"/>
+      <node ref="R111" pin="1" pintype="passive"/>
     </net>
   </nets>
 </export>
