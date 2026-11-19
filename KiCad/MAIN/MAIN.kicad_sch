@@ -1,6 +1,148 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A4")
 (title_block (title "MAIN - Interfaccia candidata"))
 (lib_symbols 
+	(symbol "Regulator_Linear:LM7805_TO220"
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -3.81 3.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM7805_TO220"
+			(at 0 3.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 0 5.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF"
+			(at 0 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "Voltage Regulator 1A Positive"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "TO?220*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LM7805_TO220_0_1"
+			(rectangle
+				(start -5.08 1.905)
+				(end 5.08 -5.08)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LM7805_TO220_1_1"
+			(pin power_in line
+				(at -7.62 0 0)
+				(length 2.54)
+				(name "VI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -7.62 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "VO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
 	(symbol "Comparator:LM2903"
 		(pin_names
 			(offset 0.127)
@@ -946,4 +1088,35 @@
 (label "MAIN_LOGIC_SUPPLY" (at 215.9 160.02 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "7359f549-f3e7-4442-adde-68cbe9e339f2"))
 (wire (pts (xy 215.9 180.34) (xy 215.9 185.42)) (stroke (width 0) (type default)) (uuid "57b13351-ee6d-42f9-8ff4-9838ab4e44f7"))
 (label "CONTROL_RETURN" (at 215.9 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0855af11-378e-42d1-8060-f15de1828f6e"))
+(symbol (lib_id "Device:C") (at 175.26 93.98 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b6f92766-e77e-4a1b-9a77-add8d3008ceb")
+(property "Reference" "C103" (at 182.88 91.44 0) (effects (font (size 1.27 1.27))))
+(property "Value" "220n" (at 182.88 96.52000000000001 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "2695e74c-b7a1-4dee-8579-2471393e5592")) (pin "2" (uuid "24bf3c1e-eef8-4464-962c-31cb89a21d37"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C103") (unit 1)))))
+(wire (pts (xy 175.26 90.17) (xy 175.26 85.09)) (stroke (width 0) (type default)) (uuid "5211f2c2-9ac1-4bbe-a590-fd1b63cde57b"))
+(label "MAIN_PROTECTED_DC" (at 175.26 85.09 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ab99d05d-5ba3-4878-87b9-f9841732b71e"))
+(wire (pts (xy 175.26 97.79) (xy 175.26 102.87)) (stroke (width 0) (type default)) (uuid "e26bee9f-f67c-4be3-88ad-2ec86949977c"))
+(label "CONTROL_RETURN" (at 175.26 102.87 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5b8c6e66-34de-41ff-a01d-a2c98fda9d31"))
+(symbol (lib_id "Device:C") (at 251.46 93.98 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6e8862ba-f3a4-4eee-9060-3d171e665c8d")
+(property "Reference" "C104" (at 259.08 91.44 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100n" (at 259.08 96.52000000000001 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "bb1b8ed3-08c3-46f2-8044-bd95f9b5455d")) (pin "2" (uuid "294f99ec-e6d1-482a-bea3-001935008c57"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C104") (unit 1)))))
+(wire (pts (xy 251.46 90.17) (xy 251.46 85.09)) (stroke (width 0) (type default)) (uuid "43fb1d9b-00d6-46fe-b487-abd8af815276"))
+(label "MAIN_LOGIC_SUPPLY" (at 251.46 85.09 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d3531eeb-3716-4aef-b40d-0e986ab10776"))
+(wire (pts (xy 251.46 97.79) (xy 251.46 102.87)) (stroke (width 0) (type default)) (uuid "cbfd2a4e-11ee-4796-8ece-7872d5632198"))
+(label "CONTROL_RETURN" (at 251.46 102.87 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ea0b63a1-3d6a-4795-9f8f-ad1ad9080ac5"))
+(symbol (lib_id "Regulator_Linear:LM7805_TO220") (at 213.36 71.12 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "587aff61-0092-45cd-ad77-d3064a3f7fa2")
+(property "Reference" "U102" (at 220.98000000000002 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "LM7805CT/NOPB" (at 220.98000000000002 73.66000000000001 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "060aba33-715f-4f7a-a21c-67083c6aeef2")) (pin "2" (uuid "9c974c49-d77d-4a9b-8790-30dac898fd69"))
+(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical" (at 213.36 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "3" (uuid "2544af42-248b-4024-8a98-b9aaa01614b8"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "U102") (unit 1)))))
+(wire (pts (xy 205.74 71.12) (xy 185.42 71.12)) (stroke (width 0) (type default)) (uuid "d531f862-b519-4bad-8a76-a3f2e19e7d49"))
+(label "MAIN_PROTECTED_DC" (at 185.42 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "565153a7-74c6-46d8-9876-efb25097075a"))
+(wire (pts (xy 213.36 78.74) (xy 213.36 83.82)) (stroke (width 0) (type default)) (uuid "f3e81dc0-baee-4885-be96-5044ae4de2db"))
+(label "CONTROL_RETURN" (at 213.36 83.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "25c761e8-191b-479d-9c71-344bfc0bd049"))
+(wire (pts (xy 220.98 71.12) (xy 246.38 71.12)) (stroke (width 0) (type default)) (uuid "d0bcb112-c246-4c60-9c8f-5f49c25e6ada"))
+(label "MAIN_LOGIC_SUPPLY" (at 246.38 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d0b8a107-1710-4dbf-9f93-7affa40c08dc"))
 )
