@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/f03c345ded48/avvio/KiCad/FRONT/FRONT.kicad_sch</source>
-    <date>2026-11-19T09:13:53+0100</date>
+    <date>2026-11-19T09:19:55+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -40,6 +40,22 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>3047c1ab-d21e-46f8-af6e-8cb39922a023</tstamps>
     </comp>
+    <comp ref="J202">
+      <value>Conn_01x02</value>
+      <footprint>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="FRONT.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d1a309d6-2b9e-4360-b62e-f32681b35fb7</tstamps>
+    </comp>
     <comp ref="R201">
       <value>10k</value>
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
@@ -72,22 +88,26 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>2ab29144-84a5-41a0-b569-e6650a95fd71</tstamps>
     </comp>
-    <comp ref="SW201">
-      <value>PTT_CONTACT</value>
-      <fields>
-        <field name="Footprint"/>
-        <field name="Datasheet"/>
-        <field name="Description"/>
-      </fields>
-      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="FRONT.kicad_sch"/>
-      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>75cc4428-51c2-4b05-b553-c360adc3a871</tstamps>
-    </comp>
   </components>
   <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Connector_Generic" part="Conn_01x06">
       <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <docs>~</docs>
@@ -128,28 +148,20 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Switch" part="SW_Push">
-      <description>Push button switch, generic, two pins</description>
-      <docs>~</docs>
-      <fields>
-        <field name="Reference">SW</field>
-        <field name="Value">SW_Push</field>
-        <field name="Footprint"/>
-        <field name="Datasheet">~</field>
-        <field name="Description">Push button switch, generic, two pins</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-      </pins>
-    </libpart>
   </libparts>
-  <libraries/>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
+    </library>
+  </libraries>
   <nets>
     <net code="1" name="/CONTROL_RETURN" class="Default">
       <node ref="J201" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J202" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R201" pin="2" pintype="passive"/>
-      <node ref="R202" pin="2" pintype="passive"/>
     </net>
     <net code="2" name="/CONTROL_TO_FRONT" class="Default">
       <node ref="J201" pin="4" pinfunction="Pin_4" pintype="passive"/>
@@ -163,14 +175,14 @@
     <net code="5" name="/FRONT_SUPPLY" class="Default">
       <node ref="J201" pin="1" pinfunction="Pin_1" pintype="passive"/>
     </net>
-    <net code="6" name="/PTT_SENSE" class="Default">
+    <net code="6" name="/MIC_PTT_KEY" class="Default">
+      <node ref="J202" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R202" pin="2" pintype="passive"/>
+    </net>
+    <net code="7" name="/PTT_SENSE" class="Default">
       <node ref="J201" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="R201" pin="1" pintype="passive"/>
-      <node ref="SW201" pin="1" pinfunction="1" pintype="passive"/>
-    </net>
-    <net code="7" name="/PTT_SWITCH_RETURN" class="Default">
       <node ref="R202" pin="1" pintype="passive"/>
-      <node ref="SW201" pin="2" pinfunction="2" pintype="passive"/>
     </net>
   </nets>
 </export>

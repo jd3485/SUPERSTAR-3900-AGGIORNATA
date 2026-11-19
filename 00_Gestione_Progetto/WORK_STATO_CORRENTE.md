@@ -56,6 +56,10 @@ Le PCB includono ora J101 e J201 con impronte candidate JST XH verticali a sei p
 
 Confronto delle due netlist esportate: corrispondenza dei sei pin e connessioni elettriche invariate. Verificati tutti i pad presenti contro le netlist. MAIN ha 11 impronte e FRONT 3. DRC con parità: zero pad scollegati fra quelli presenti, assenti entrambi i contorni, mancanti 34 impronte MAIN e 1 FRONT. ERC nativo: 10 errori MAIN, 4 FRONT. Nessun ordine o prova fisica.
 
+## Ingresso PTT dal microfono
+
+SW201 è stato sostituito in FRONT da J202 per il contatto esterno. R202 passa sul lato segnale. I quattro componenti del master FRONT attuale sono posizionati e collegati. DRC con parità: zero pad scollegati, zero difformità, contorno assente. ERC: quattro reti di alimentazione/dati aperte. Dettagli su tensioni, corto nel microfono e limiti del collegamento in KiCad/INTERFACCIA_MAIN_FRONT.md. Prossima integrazione: interfaccia microfonica audio e gestione della richiesta PTT all'avvio.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
