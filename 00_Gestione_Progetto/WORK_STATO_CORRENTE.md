@@ -50,6 +50,12 @@ MAIN contiene U101 e R101–R107, FRONT contiene R201 e R202. I due file nativi 
 
 ERC nativo: MAIN 10 errori, FRONT 4. Netlist: connettività pin/rete invariata. DRC con parità: nessun collegamento aperto tra i pad presenti, contorno assente su entrambe, 37 impronte mancanti MAIN e 2 FRONT. I rapporti KiCad sono in Verifiche/KiCad. Assenti prova fisica e qualifica di fabbricazione.
 
+## Connettori e filtro PTT su PCB candidate
+
+Le PCB includono ora J101 e J201 con impronte candidate JST XH verticali a sei poli, identiche per il cablaggio pin a pin. I pin 5 (CONTROL_RETURN) e 6 (PTT_SENSE) raggiungono il circuito PTT su entrambe le schede. I pin 1–4 attendono gli endpoint interni. Su MAIN sono posizionati e collegati anche C101 (10 nF, filtro del segnale) e C102 (100 nF, disaccoppiamento U101). Le due impronte radiali da 2,50 mm e i connettori richiedono qualifica meccanica e di produzione. Prima di fissare il cablaggio verificare corrente FRONT, sezione fili, contatti, verso del pin 1 alle due estremità e spazio di estrazione. SW201 e il consenso TX restano aperti.
+
+Confronto delle due netlist esportate: corrispondenza dei sei pin e connessioni elettriche invariate. Verificati tutti i pad presenti contro le netlist. MAIN ha 11 impronte e FRONT 3. DRC con parità: zero pad scollegati fra quelli presenti, assenti entrambi i contorni, mancanti 34 impronte MAIN e 1 FRONT. ERC nativo: 10 errori MAIN, 4 FRONT. Nessun ordine o prova fisica.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.

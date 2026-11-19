@@ -538,7 +538,7 @@
 (symbol (lib_id "Connector_Generic:Conn_01x06") (at 127 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "3047c1ab-d21e-46f8-af6e-8cb39922a023")
 (property "Reference" "J201" (at 132.08 71.12 0) (effects (font (size 1.27 1.27))))
 (property "Value" "Conn_01x06" (at 135.89 73.66 0) (effects (font (size 1.27 1.27))))
-(property "Footprint" "" (at 127 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Footprint" "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "bdfe9421-5163-4b53-8825-ba7cf490e719"))
 (pin "2" (uuid "9aeaaaed-72c6-4a1f-8f20-a479a2eab7bb"))
 (pin "3" (uuid "6e42be06-82e8-4dc9-aff9-70cf676d5ac5"))

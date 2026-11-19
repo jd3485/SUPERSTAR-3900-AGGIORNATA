@@ -1,5 +1,5 @@
 ** Drc report for FRONT.kicad_pcb **
-** Created on 2026-11-19T02:12:56+0100 **
+** Created on 2026-11-19T09:13:54+0100 **
 
 ** Found 1 DRC violations **
 [invalid_outline]: Board has malformed outline (no edges found on Edge.Cuts layer)
@@ -8,9 +8,7 @@
 
 ** Found 0 unconnected pads **
 
-** Found 2 Footprint errors **
-[missing_footprint]: Missing footprint J201 (Conn_01x06)
-    Local override; warning
+** Found 1 Footprint errors **
 [missing_footprint]: Missing footprint SW201 (PTT_CONTACT)
     Local override; warning
 

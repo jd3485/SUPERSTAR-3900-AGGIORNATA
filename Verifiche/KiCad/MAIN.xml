@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T02:12:54+0100</date>
+    <date>2026-11-19T09:13:52+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -26,8 +26,9 @@
   <components>
     <comp ref="C101">
       <value>10n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -41,8 +42,9 @@
     </comp>
     <comp ref="C102">
       <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -324,8 +326,9 @@
     </comp>
     <comp ref="J101">
       <value>Conn_01x06</value>
+      <footprint>Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -903,23 +906,8 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="Comparator">
-      <uri>/usr/share/kicad/symbols//Comparator.kicad_sym</uri>
-    </library>
-    <library logical="Connector_Generic">
-      <uri>/usr/share/kicad/symbols//Connector_Generic.kicad_sym</uri>
-    </library>
     <library logical="Connex_RF">
       <uri>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/Connex_RF.kicad_sym</uri>
-    </library>
-    <library logical="Device">
-      <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
-    </library>
-    <library logical="Regulator_Linear">
-      <uri>/usr/share/kicad/symbols//Regulator_Linear.kicad_sym</uri>
-    </library>
-    <library logical="Transistor_BJT">
-      <uri>/usr/share/kicad/symbols//Transistor_BJT.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
