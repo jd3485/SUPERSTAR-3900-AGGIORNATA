@@ -108,6 +108,14 @@ La scheda Coilcraft della 132-13L riporta 246 nH ±5%, Q minimo 70 a 25 MHz e au
 
 Verifiche KiCad sulla candidata: stessa connettività logica, corrispondenza pin/pad/rete per le 52 impronte presenti, ERC MAIN 10 segnalazioni. DRC con parità: contorno assente, 10 impronte mancanti e zero pad scollegati tra quelli presenti. Prossimo lavoro: selezionare una bobina con processo manuale documentato e verificare perdita e reiezione prima di fissarne l'impronta.
 
+## Due rami induttivi del preselettore collegati
+
+Sul ramo candidato L101 e L102 passano a 270 nH. L’impronta assiale di libreria da 7 × 3,3 mm con passo 10,16 mm ospita il corpo Token TCAL0307 (massimo 7 × 3 mm, terminali Ø0,50 ±0,05 mm). Il nome Fastron dell'impronta indica la geometria di libreria. I due assi sono ortogonali per limitare l’accoppiamento. I due rami dal percorso capacitivo tornano al ritorno RX del mixer. Resta aperta la sorgente a monte di C110. Codice candidato della famiglia TCAL con formatura U; prima della BOM finale confermare codice d’ordine completo, passo e produzione OEM attiva. Il produttore documenta la saldatura a mano dei suoi induttori con terminali. [Geometrie](https://token.com.tw/inductor/inductor-fixed1.htm) · [Dati RF](https://token.com.tw/pdf/inductor/inductor-fixed1.pdf) · [Processo](https://token.com.tw/inductor-precautions-usage.htm).
+
+Il modello a 50 Ω confronta 220 e 270 nH, tolleranza bobine ±20%, condensatori ±5%, Q minimo 30 a 25,2 MHz, frequenza di autorisonanza minima 380 e 360 MHz rispettivamente. Nella scansione storica da 25,615 a 28,305 MHz a passi da 10 kHz, sui 32 vertici di tolleranza, la massima perdita calcolata scende da 3,071 a 1,525 dB scegliendo 270 nH; l’attenuazione minima nella corrispondente banda immagine scende da 42,679 a 38,514 dB. La scelta candidata privilegia la sensibilità. Il modello a ESR costante esclude piste, accoppiamento residuo, dispersioni di montaggio e impedenze reali. La qualifica richiede misure di perdita e reiezione e verifica con il mixer reale.
+
+MAIN ora ha 54 impronte THT. Netlist invariata nelle connessioni, pad e reti verificati. ERC 10 segnalazioni, DRC con parità un errore di contorno, otto impronte mancanti e zero pad scollegati tra quelli presenti. Prossima attività: chiudere la rete di adattamento IF dei filtri AM verificando terminazioni e fattori di merito.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.

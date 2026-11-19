@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T11:23:14+0100</date>
+    <date>2026-11-19T14:16:54+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -432,9 +432,10 @@
       <tstamps>63babc60-42f5-4559-a351-21fb39963c04</tstamps>
     </comp>
     <comp ref="L101">
-      <value>240n</value>
+      <value>270n</value>
+      <footprint>Inductor_THT:L_Axial_L7.0mm_D3.3mm_P10.16mm_Horizontal_Fastron_MICC</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Inductor_THT:L_Axial_L7.0mm_D3.3mm_P10.16mm_Horizontal_Fastron_MICC</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -447,9 +448,10 @@
       <tstamps>c829375c-d960-4498-a8db-b431c2a56ef8</tstamps>
     </comp>
     <comp ref="L102">
-      <value>240n</value>
+      <value>270n</value>
+      <footprint>Inductor_THT:L_Axial_L7.0mm_D3.3mm_P10.16mm_Horizontal_Fastron_MICC</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Inductor_THT:L_Axial_L7.0mm_D3.3mm_P10.16mm_Horizontal_Fastron_MICC</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
