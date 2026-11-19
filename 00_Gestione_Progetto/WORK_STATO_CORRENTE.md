@@ -176,6 +176,14 @@ In recupero_portante_am.py si prova un’acquisizione spettrale di 32 ms seguita
 
 MAIN candidata: 93 impronte THT, zero pad scollegati, zero discrepanze. ERC 10 errori aperti; DRC errore per contorno assente. Verificato lo spostamento di C133 e mantenuti i collegamenti preesistenti estranei al ramo. Nessuna prova hardware.
 
+## Convertitore I/Q candidato sulla MAIN
+
+U111/U112 sono due mixer passivi SBL-1+ con impronte THT A06. C136 da 10 nF blocca la continua di Q104; R145/R146 da 49,9 Ω alimentano i due ingressi RF, e R147/R148 terminano le uscite in banda base su RX_RF_RETURN. Ogni coppia di pin IF 3–4 è unita localmente. Entrambi i ritorni sono instradati. Le due porte LO attendono ancora i driver a 10,695 MHz sfasati di 90°; il livello nominale richiesto è +7 dBm per porta (circa 0,50 V RMS su 50 Ω). In mancanza dei LO il percorso non effettua la conversione prevista. [Scheda Mini-Circuits](https://www.minicircuits.com/pdfs/SBL-1%2B.pdf).
+
+Il modello conversione_iq_am.py include entrambe le porte pompate assunte a 50 Ω, il disaccoppiamento in alternata e il ramo del diodo linearizzato. Per 1 µV RMS al nodo AM_IF_TERMINATED dà 11,5–36,1 µV RMS all’emettitore e 5,75–18,07 µV RMS all’ingresso di ciascun mixer. Per un tono leggermente scostato dal LO, assumendo 5,6–8 dB di perdita, risultano 2,29–9,48 µV RMS per uscita. La perdita al piccolo scarto, l’offset DC, il rumore 1/f, la fuga del LO verso Q104, l’isolamento tra canali e lo sbilanciamento di fase devono essere verificati. La stima di interdizione dell’emettitore con i rami nominali e senza carico del diodo è 103–145 mV di picco, da riesaminare a grande segnale. Il rumore a vuoto della sola terminazione da 49,9 Ω è circa 0,057 µV RMS su 4 kHz a 290 K. Per arrivare a 100 mV RMS (scenario ADC) al livello IF ipotizzato, il guadagno successivo richiesto è circa 10 550–43 670 V/V. Un guadagno fisso di tale entità avrebbe dinamica limitata. Confrontare un primo stadio baseband THT a basso rumore con conversione a basso IF e guadagno distribuito/regolabile; dimensionare separatamente i driver LO e il filtraggio anti-alias.
+
+MAIN candidata: 100 impronte THT. Pin/pad/net confrontati, nessun pad scollegato tra le impronte presenti e zero discrepanze di parità. DRC aperto per contorno assente. ERC 12 errori: i due nuovi sono le porte LO a singolo terminale. Nessuna qualifica di produzione o misura hardware implicita. Nessuna variazione della FRONT.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
