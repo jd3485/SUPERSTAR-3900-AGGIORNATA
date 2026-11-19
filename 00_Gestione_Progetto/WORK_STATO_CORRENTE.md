@@ -168,6 +168,14 @@ Il ramo a diodo resta candidato come indicatore di livelli maggiori. Per il perc
 
 MAIN candidata: 89 impronte THT. Il confronto netlist conserva tutte le precedenti connessioni e verifica orientamento di D104 e ritorni. ERC 10 errori preesistenti; DRC con parità zero pad scollegati, zero discrepanze, contorno assente. Qualifica OEM e collaudo fisico restano aperti.
 
+## Separazione del segnale IF e studio del recupero di portante
+
+Q104, candidato 2N3904BU, riceve direttamente la polarizzazione del collettore Q103. R143/C135 disaccoppiano il collettore e R144 fissa la corrente di emettitore. C133 preleva ora il segnale dall’emettitore AM_IF_BUFFER_OUT, condivisibile con il futuro ramo coerente. Il modello separatore_if_am.py include il caricamento del rivelatore linearizzato a portante prossima a zero. Nei casi campionati: Ie 2,16–3,05 mA, Vce 1,68–2,89 V, modulo dell’impedenza di ingresso 2,53–5,69 kΩ. Con 1 µV RMS al nodo AM_IF_TERMINATED restituisce 21,7–53,8 µV RMS all’emettitore. Ipotesi: ritorno e distribuzione ideali, resistenza di Thévenin DC approssimata, parametri ibrido-pi e capacità del diodo di scenario. Il precedente esempio a sorgente da 1 kΩ del rivelatore non rappresenta l’impedenza di uscita del nuovo separatore. Da verificare rumore, trasferimento su inviluppi grandi e dissipazione del regolatore. [Transistor OEM](https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf).
+
+In recupero_portante_am.py si prova un’acquisizione spettrale di 32 ms seguita da un anello di fase di secondo ordine in banda base complessa ideale a 16 kcampioni/s. Scarti −480/0/+480 Hz, modulazione al 50/100% a 1 kHz e tre realizzazioni di rumore per combinazione. Il C/N è potenza di portante divisa per potenza totale del rumore complesso campionato. Nell’ultimo quarto di secondo a −12 dB si osservano zero casi con salti su 18 e un errore RMS massimo di 23,8°; a −18 dB compaiono salti in 12 casi su 18. Questi punti non costituiscono una soglia garantita. Nessun convertitore I/Q, ADC, firmware o PLL fisico è integrato. Prossimo confronto concreto: dimensionare rumore riferito all’ingresso, guadagno e dinamica di un convertitore I/Q THT compatibile con decine di microvolt e verificare cattura anche con modulanti basse, interferenze e deriva. Verificare separatamente l’alternativa analogica e la disponibilità dei componenti.
+
+MAIN candidata: 93 impronte THT, zero pad scollegati, zero discrepanze. ERC 10 errori aperti; DRC errore per contorno assente. Verificato lo spostamento di C133 e mantenuti i collegamenti preesistenti estranei al ramo. Nessuna prova hardware.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
