@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T10:54:46+0100</date>
+    <date>2026-11-19T11:13:35+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -151,8 +151,9 @@
     </comp>
     <comp ref="C113">
       <value>160p</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -459,8 +460,9 @@
     </comp>
     <comp ref="L103">
       <value>390n</value>
+      <footprint>Inductor_THT:L_Axial_L9.5mm_D4.0mm_P12.70mm_Horizontal_Fastron_SMCC</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Inductor_THT:L_Axial_L9.5mm_D4.0mm_P12.70mm_Horizontal_Fastron_SMCC</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -631,8 +633,9 @@
     </comp>
     <comp ref="R110">
       <value>49.9</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -646,8 +649,9 @@
     </comp>
     <comp ref="R111">
       <value>49.9</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>

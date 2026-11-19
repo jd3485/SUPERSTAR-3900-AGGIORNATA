@@ -86,6 +86,14 @@ Trasferiti e collegati Q101, R113–R117 e C117–C120. L’emettitore pilota C1
 
 Il modello già presente in KiCad/RX/buffer_am.py, rieseguito a 10,695 MHz, restituisce Re(Zout) 48,50–52,30 Ω nelle condizioni esaminate, con ritorno RF ideale. Il rame non comprende ancora la terminazione IF a monte né L104 a valle. RX_RF_RETURN collega i componenti locali; resta da progettare il percorso DC di ritorno alla sorgente e da controllare l’impedenza RF del ritorno reale. Il buffer non è alimentabile nello stato attuale. ERC MAIN: 10 errori. DRC con parità: zero pad scollegati fra quelli presenti, contorno assente e 18 impronte del master mancanti. Prossimo blocco: terminazione del mixer e collegamento a C119, con scelta dell’induttore e verifica di Q e autorisonanza alla IF.
 
+## Terminazione IF del mixer sulla MAIN candidata
+
+L103, C113, R110 e R111 sono posizionati e collegati a C119 e al ritorno RF locale. L103 alimenta il ramo utile e C113/R111 terminano il ramo complementare. La PCB ha 48 impronte THT. Verificati pad e net delle impronte presenti e identità di tutte le connessioni schematiche rispetto alla revisione precedente. ERC MAIN: 10 errori. DRC con parità: contorno assente, zero pad scollegati tra quelli presenti, 14 impronte dello schema mancanti. U110 è ancora solo nello schema.
+
+Per L103 il candidato Fastron SMCC-R39K-02 ha valore 390 nH ±10%, Q minimo 45 a 25,2 MHz, SRF minima 230 MHz e DCR massima 0,13 Ω. Impronta assiale candidata specifica della serie a passo 12,70 mm. Confermare lo stato di produzione del codice completo, le pieghe dei reofori, il Q a 10,695 MHz e i parassiti del montaggio. [Scheda OEM Fastron SMCC](https://www.fastrongroup.com/uploads/datasheets/Series/Complete-DataSheet/SMCC.pdf).
+
+Lo script KiCad/RX/terminazione_if.py considera L ±10%, C ±5%, resistenze ±1%, Q ipotetici 10/25/45 alla IF e due casi di capacità parassita. Con il carico di prova 2 kΩ in parallelo a 10 pF e sorgente 50 Ω stima 1,094–1,569 dB di perdita verso R110 e return loss minimo 26,13 dB. Sono risultati del modello a una frequenza; restano da misurare risposta in banda e comportamento con il mixer reale. Prossimo passo: verificare la vista del lato piedini e il disegno meccanico A06 di U110 prima del trasferimento su rame. [Datasheet Mini-Circuits SBL-1+](https://www.minicircuits.com/pdfs/SBL-1%2B.pdf).
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
