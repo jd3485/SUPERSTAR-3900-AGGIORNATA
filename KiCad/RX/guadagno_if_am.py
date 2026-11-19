@@ -7,7 +7,7 @@ from taratura_am import seleziona
 W = 2*pi*10.695e6
 
 
-def stadio(vcc, beta, vbe, ft, cmu, rl, cl):
+def stadio(vcc, beta, vbe, ft, cmu, rl, cl, *, carico_extra=0j):
     # Partitore 15k/4k7, 47 ohm comuni al collettore e al partitore.
     frazione = 4700/(15000+4700)
     rth = 15000*frazione
@@ -38,7 +38,7 @@ def stadio(vcc, beta, vbe, ft, cmu, rl, cl):
     ramo(4,None,1/270+1j*W*10e-9)
     ramo(2,3,1/1200)
     ramo(3,None,1/47+1j*W*100e-9)
-    ramo(2,None,1/rl+1j*W*cl)
+    ramo(2,None,1/rl+1j*W*cl+carico_extra)
     y[2,0] += gm
     y[2,1] -= gm
     y[1,0] -= gm

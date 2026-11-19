@@ -150,6 +150,14 @@ Il modello riproducibile KiCad/RX/guadagno_if_am.py (Python con NumPy) risolve p
 
 Verifiche MAIN: conservate le connessioni precedenti e verificata nella netlist la mappa dei nuovi pin. 74 impronte THT. ERC 10 errori preesistenti; DRC con parità zero pad scollegati, zero discrepanze di impronte, contorno ancora assente. Prossimo lavoro: determinare il guadagno ancora necessario prima del rivelatore AM e il punto di intervento del controllo di guadagno, con il carico effettivo di uscita.
 
+## Secondo amplificatore IF AM e bilancio verso il rivelatore
+
+Q103 è accoppiato in alternata al collettore di Q102 mediante C130. R135/C132 disaccoppiano l’alimentazione locale. R136/R137 polarizzano la base, R138 carica il collettore e R139/R140/C131 impostano la degenerazione di emettitore. Dieci componenti instradati sulla MAIN, uscita AM_IF2_COLLECTOR polarizzata in continua. Il modello e il CAD usano la medesima topologia di Q102. [Transistor candidato onsemi](https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf).
+
+Il modello riproducibile in KiCad/RX/cascata_if_am.py risolve prima Q103, poi applica la sua impedenza complessa d’ingresso al collettore di Q102. Nei casi analizzati a 10,695 MHz il guadagno di Q102 caricato è 6,55–14,82 dB. Il guadagno totale dal nodo AM_IF_TERMINATED al collettore di Q103 è 24,37–33,91 dB. Con 1 µV RMS di portante a quel nodo si ottengono 16,5–49,6 µV RMS in uscita. La tensione al connettore antenna è distinta da quella al nodo IF. Per un esempio di 100 mV di inviluppo di picco con modulazione 100% servirebbero altri 57,06–66,60 dB con tale ingresso. Con i soli due stadi la stessa ampiezza sarebbe raggiunta per 0,713–2,138 mV RMS al nodo IF. La soglia è uno scenario per confrontare i rivelatori: guadagno finale e punto di intervento AGC dipendono dal rivelatore e dalla dinamica effettiva. Mancano verifica di rumore, compressione, stabilità, parassiti e tensione RF al filtro. Scelta successiva: confrontare rivelazione sincrona e d’inviluppo con livelli deboli e modulazione profonda prima di aumentare ancora il guadagno fisso.
+
+MAIN candidata a 84 impronte THT, zero pad scollegati e zero discrepanze rispetto allo schema parziale. Verificate le reti precedenti, la topologia duplicata del nuovo stadio e la separazione delle sue reti interne. ERC 10 errori aperti, DRC un errore per contorno assente. PCB e BOM ancora da qualificare.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
