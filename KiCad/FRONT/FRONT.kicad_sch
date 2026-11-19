@@ -1,6 +1,157 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "cf24d153-b40c-4c32-946c-864ba45498ea") (paper "A4")
 (title_block (title "FRONT - Interfaccia candidata"))
 (lib_symbols 
+	(symbol "Switch:SW_Push"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "SW"
+			(at 1.27 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 0 -1.524 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "switch normally-open pushbutton push-button"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "SW_Push_0_1"
+			(circle
+				(center -2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.27) (xy 0 3.048)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 1.27) (xy -2.54 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
 	(symbol "Connector_Generic:Conn_01x06"
 		(pin_names
 			(offset 1.016)
@@ -281,5 +432,14 @@
 (wire (pts (xy 101.60 81.28) (xy 121.92 81.28)) (stroke (width 0) (type default)) (uuid "af8c9af0-15e0-4741-b3e1-1de176c81ca8"))
 (label "CONTROL_RETURN" (at 101.60 81.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e66115bf-ced4-4969-be86-d6808cf04807"))
 (wire (pts (xy 101.60 83.82) (xy 121.92 83.82)) (stroke (width 0) (type default)) (uuid "7dad7341-e381-436e-94e7-061af85fa146"))
-(label "TX_REQUEST" (at 101.60 83.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cd567724-4c85-4c17-96e4-c8ce4c172f55"))
+(label "TX_REQUEST_N" (at 101.60 83.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cd567724-4c85-4c17-96e4-c8ce4c172f55"))
+(symbol (lib_id "Switch:SW_Push") (at 127 111.76 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "75cc4428-51c2-4b05-b553-c360adc3a871")
+(property "Reference" "SW201" (at 134.62 109.22 0) (effects (font (size 1.27 1.27))))
+(property "Value" "PTT_CONTACT" (at 134.62 114.30000000000001 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "c288bc1c-2f13-4913-a841-bc9683d30f62")) (pin "2" (uuid "17ff60de-77ad-43bb-ac43-00ecf8e350bf"))
+(instances (project "FRONT" (path "/cf24d153-b40c-4c32-946c-864ba45498ea" (reference "SW201") (unit 1)))))
+(wire (pts (xy 121.92 111.76) (xy 101.6 111.76)) (stroke (width 0) (type default)) (uuid "12b2d54e-1249-47d0-9ff2-1ba886df69cb"))
+(label "TX_REQUEST_N" (at 101.6 111.76 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cca5917f-a6f1-4554-8871-d30e5957509e"))
+(wire (pts (xy 132.08 111.76) (xy 152.4 111.76)) (stroke (width 0) (type default)) (uuid "2366df79-c2ac-4235-a436-3375721f0de9"))
+(label "CONTROL_RETURN" (at 152.4 111.76 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "699f832f-09a5-46f4-b4d3-39d09c6dffde"))
 )
