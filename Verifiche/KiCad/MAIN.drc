@@ -1,0 +1,87 @@
+** Drc report for MAIN.kicad_pcb **
+** Created on 2026-11-19T02:12:57+0100 **
+
+** Found 1 DRC violations **
+[invalid_outline]: Board has malformed outline (no edges found on Edge.Cuts layer)
+    Local override; error
+    @(0.0000 mm, 0.0000 mm): PCB
+
+** Found 0 unconnected pads **
+
+** Found 37 Footprint errors **
+[missing_footprint]: Missing footprint C101 (10n)
+    Local override; warning
+[missing_footprint]: Missing footprint C102 (100n)
+    Local override; warning
+[missing_footprint]: Missing footprint C103 (220n)
+    Local override; warning
+[missing_footprint]: Missing footprint C104 (100n)
+    Local override; warning
+[missing_footprint]: Missing footprint C105 (1u)
+    Local override; warning
+[missing_footprint]: Missing footprint C110 (270p)
+    Local override; warning
+[missing_footprint]: Missing footprint C111 (82p)
+    Local override; warning
+[missing_footprint]: Missing footprint C112 (270p)
+    Local override; warning
+[missing_footprint]: Missing footprint C113 (160p)
+    Local override; warning
+[missing_footprint]: Missing footprint C114 (54p total)
+    Local override; warning
+[missing_footprint]: Missing footprint C115 (11p total)
+    Local override; warning
+[missing_footprint]: Missing footprint C116 (54p total)
+    Local override; warning
+[missing_footprint]: Missing footprint C117 (1u)
+    Local override; warning
+[missing_footprint]: Missing footprint C118 (100n)
+    Local override; warning
+[missing_footprint]: Missing footprint C119 (10n)
+    Local override; warning
+[missing_footprint]: Missing footprint C120 (10n)
+    Local override; warning
+[missing_footprint]: Missing footprint D101 (1N5819RLG)
+    Local override; warning
+[missing_footprint]: Missing footprint D102 (1N5819RLG)
+    Local override; warning
+[missing_footprint]: Missing footprint FL101 (10.695-7.5B section)
+    Local override; warning
+[missing_footprint]: Missing footprint FL102 (10.695-7.5B section)
+    Local override; warning
+[missing_footprint]: Missing footprint J101 (Conn_01x06)
+    Local override; warning
+[missing_footprint]: Missing footprint L101 (240n)
+    Local override; warning
+[missing_footprint]: Missing footprint L102 (240n)
+    Local override; warning
+[missing_footprint]: Missing footprint L103 (390n)
+    Local override; warning
+[missing_footprint]: Missing footprint L104 (4.4u)
+    Local override; warning
+[missing_footprint]: Missing footprint L105 (4.4u)
+    Local override; warning
+[missing_footprint]: Missing footprint Q101 (2N3904BU)
+    Local override; warning
+[missing_footprint]: Missing footprint R110 (49.9)
+    Local override; warning
+[missing_footprint]: Missing footprint R111 (49.9)
+    Local override; warning
+[missing_footprint]: Missing footprint R112 (49.9)
+    Local override; warning
+[missing_footprint]: Missing footprint R113 (47)
+    Local override; warning
+[missing_footprint]: Missing footprint R114 (22k)
+    Local override; warning
+[missing_footprint]: Missing footprint R115 (22k)
+    Local override; warning
+[missing_footprint]: Missing footprint R116 (680)
+    Local override; warning
+[missing_footprint]: Missing footprint R117 (39)
+    Local override; warning
+[missing_footprint]: Missing footprint U102 (LM7805CT/NOPB)
+    Local override; warning
+[missing_footprint]: Missing footprint U110 (SBL-1+)
+    Local override; warning
+
+** End of Report **

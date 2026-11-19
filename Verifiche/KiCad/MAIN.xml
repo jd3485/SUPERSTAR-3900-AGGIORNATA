@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T02:03:52+0100</date>
+    <source>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/MAIN.kicad_sch</source>
+    <date>2026-11-19T02:12:54+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -428,8 +428,9 @@
     </comp>
     <comp ref="R101">
       <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -443,8 +444,9 @@
     </comp>
     <comp ref="R102">
       <value>100k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -458,8 +460,9 @@
     </comp>
     <comp ref="R103">
       <value>100k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -473,8 +476,9 @@
     </comp>
     <comp ref="R104">
       <value>86.6k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -488,8 +492,9 @@
     </comp>
     <comp ref="R105">
       <value>8.45k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -503,8 +508,9 @@
     </comp>
     <comp ref="R106">
       <value>4.02k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -518,8 +524,9 @@
     </comp>
     <comp ref="R107">
       <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -903,7 +910,7 @@
       <uri>/usr/share/kicad/symbols//Connector_Generic.kicad_sym</uri>
     </library>
     <library logical="Connex_RF">
-      <uri>KiCad/MAIN/Connex_RF.kicad_sym</uri>
+      <uri>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/Connex_RF.kicad_sym</uri>
     </library>
     <library logical="Device">
       <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
