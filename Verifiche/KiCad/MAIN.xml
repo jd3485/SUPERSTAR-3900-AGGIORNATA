@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T14:29:34+0100</date>
+    <date>2026-11-19T14:33:50+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -426,8 +426,9 @@
     </comp>
     <comp ref="FL101">
       <value>10.695-7.5B section</value>
+      <footprint>Connex_RF:Krystaly_HC49U_3pin_MCF</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Connex_RF:Krystaly_HC49U_3pin_MCF</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -439,8 +440,9 @@
     </comp>
     <comp ref="FL102">
       <value>10.695-7.5B section</value>
+      <footprint>Connex_RF:Krystaly_HC49U_3pin_MCF</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Connex_RF:Krystaly_HC49U_3pin_MCF</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>

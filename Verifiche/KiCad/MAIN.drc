@@ -1,5 +1,5 @@
 ** Drc report for MAIN.kicad_pcb **
-** Created on 2026-11-19T14:29:35+0100 **
+** Created on 2026-11-19T14:33:52+0100 **
 
 ** Found 1 DRC violations **
 [invalid_outline]: Board has malformed outline (no edges found on Edge.Cuts layer)
@@ -8,10 +8,6 @@
 
 ** Found 0 unconnected pads **
 
-** Found 2 Footprint errors **
-[missing_footprint]: Missing footprint FL101 (10.695-7.5B section)
-    Local override; warning
-[missing_footprint]: Missing footprint FL102 (10.695-7.5B section)
-    Local override; warning
+** Found 0 Footprint errors **
 
 ** End of Report **

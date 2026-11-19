@@ -134,6 +134,14 @@ Il disegno Krystaly indica due sezioni HC-49U a tre terminali. Rimane da verific
 
 MAIN candidata: 62 impronte THT, zero pad scollegati tra quelli presenti. ERC 10 segnalazioni, DRC un errore di contorno e due impronte mancanti rispetto allo schema parziale. Nessun collaudo fisico.
 
+## Filtro AM a quattro poli trasferito sulla MAIN candidata
+
+Il disegno 61 9573, specifica Krystaly 92 189, mostra le due sezioni HC-49U/3 pin, l’interasse esterno 5,08 ±0,3 mm e i punti colorati rivolti verso le porte esterne. La nuova impronta locale usa 5,08 mm tra DOT e INNER. Il pad centrale CASE è collocato a metà interasse per simmetria del disegno. Foro finito candidato 0,95 mm per terminali nominali da 0,43 mm; ingombro massimo in pianta 11,2 × 4,7 mm, altezza massima 11,3 mm. Rimangono da qualificare il centraggio del terminale centrale non quotato separatamente, le tolleranze di assemblaggio e la distanza del fondo metallico dal rame. Il punto serigrafico identifica il lato DOT. [Disegno quotato e circuito di misura OEM, pagina 1](https://www.krystaly.cz/wp-content/uploads/2023/05/TSP_10695-075-B.pdf).
+
+FL101.DOT va all’ingresso dal driver, FL102.DOT all’uscita terminata, entrambi gli INNER al nodo di accoppiamento con C115. Entrambi i CASE raggiungono RX_RF_RETURN. La rete verso il demodulatore a valle resta da sviluppare. La risposta in banda, l’attenuazione fuori banda e i parassiti effettivi non sono misurati. Confermare anche lo stato di produzione OEM della coppia prima di congelare la BOM.
+
+MAIN: 64 impronte THT sullo schema parziale corrente, corrispondenza pin/pad/rete verificata. Netlist logica conservata. DRC con parità: zero pad scollegati e zero discrepanze di impronta; permane un errore di contorno. ERC: 10 errori aperti. Prossimo blocco: dimensionare guadagno e carico dello stadio IF a valle di FL102, includendo il comportamento ai segnali deboli e la dinamica richiesta dal rivelatore AM.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
