@@ -64,6 +64,10 @@ SW201 è stato sostituito in FRONT da J202 per il contatto esterno. R202 passa s
 
 Aggiunti e collegati nello schema e sulla PCB U103, R120–R123 e C121. MAIN ospita 17 impronte. Confrontata la netlist precedente e verificati pin/pad/reti. Calcolo statico del rilascio e dei guasti in KiCad/INTERFACCIA_MAIN_FRONT.md. ERC MAIN: 10 errori. DRC con parità: zero pad scollegati tra le impronte presenti, manca il contorno e restano 34 impronte del master da trasferire. La memoria di armamento al rilascio e il reset per alimentazione insufficiente restano da progettare.
 
+## Alimentazione locale della logica su PCB MAIN
+
+Sette impronte aggiunte e collegate: selezione a diodi delle sorgenti DC del ramo logico, regolatore e capacità locali, precarico R124. MAIN ha 24 impronte THT. ERC: 10 errori. DRC con parità: nessun pad scollegato tra quelli presenti, contorno assente e 28 impronte mancanti rispetto allo schema. Dimensionamento e limiti del precarico in KiCad/INTERFACCIA_MAIN_FRONT.md. Restano aperti distribuzione e protezioni a monte, verifica termica e supervisore di reset con memoria di armamento.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.

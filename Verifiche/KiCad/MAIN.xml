@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T09:23:37+0100</date>
+    <date>2026-11-19T09:30:34+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -58,8 +58,9 @@
     </comp>
     <comp ref="C103">
       <value>220n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -73,8 +74,9 @@
     </comp>
     <comp ref="C104">
       <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -88,8 +90,9 @@
     </comp>
     <comp ref="C105">
       <value>1u</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -741,6 +744,22 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b116c666-0243-4f78-bf66-86384602e53e</tstamps>
     </comp>
+    <comp ref="R124">
+      <value>910</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>97c3d9d0-a442-46fe-909e-2f4492edc823</tstamps>
+    </comp>
     <comp ref="U101">
       <value>LM2903P</value>
       <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
@@ -1002,8 +1021,23 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="Comparator">
+      <uri>/usr/share/kicad/symbols//Comparator.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
     <library logical="Connex_RF">
       <uri>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/Connex_RF.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>/usr/share/kicad/symbols//Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>/usr/share/kicad/symbols//Transistor_BJT.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
@@ -1066,6 +1100,7 @@
       <node ref="R103" pin="2" pintype="passive"/>
       <node ref="R106" pin="2" pintype="passive"/>
       <node ref="R122" pin="2" pintype="passive"/>
+      <node ref="R124" pin="2" pintype="passive"/>
       <node ref="U101" pin="4" pinfunction="V-" pintype="power_in"/>
       <node ref="U102" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U103" pin="4" pinfunction="V-" pintype="power_in"/>
@@ -1095,6 +1130,7 @@
       <node ref="R113" pin="1" pintype="passive"/>
       <node ref="R120" pin="1" pintype="passive"/>
       <node ref="R123" pin="1" pintype="passive"/>
+      <node ref="R124" pin="1" pintype="passive"/>
       <node ref="U101" pin="8" pinfunction="V+" pintype="power_in"/>
       <node ref="U102" pin="3" pinfunction="VO" pintype="power_out"/>
       <node ref="U103" pin="8" pinfunction="V+" pintype="power_in"/>
