@@ -45,3 +45,19 @@ Il calcolo a 10,695 MHz usa un modello parametrico ibrido-pi, sorgente mixer da 
 Il terminale marcato di FL102 vede C116 (54 pF totali) in parallelo al ramo L105 (4,4 µH) in serie con R112 (49,9 Ω). Il prossimo stadio può prelevare il segnale sul nodo AM_IF_TERMINATED a impedenza ridotta. Una seconda terminazione da 50 Ω in parallelo altererebbe il carico. Se si adotta un ingresso terminato, ricalcolare R112. La selezione di modo a valle evita di commutare direttamente i terminali sensibili del quarzo. Topologia della commutazione ancora aperta.
 
 A 10,695 MHz l'equivalente parallelo nominale ideale è 1802 Ω e 5,06 pF (OEM 1800 Ω e 5 pF). Con Q ipotizzato di 60 e ingresso 2 kΩ || 10 pF scende a 1668 Ω e 5,02 pF. Per L/C ±5% e R ±1% in questo scenario, Rp copre 1504–1842 Ω e la suscettanza equivalente da −0,13 a +9,96 pF. Il segno negativo indica una suscettanza induttiva residua. Questa dispersione impone la selezione della bobina, un bilancio dei parassiti e il dimensionamento della taratura o di tolleranze più strette prima del congelamento. Lo script carico_filtro_am.py riproduce il calcolo. Netlist del nodo marcato e del nodo di uscita controllate. La risposta di selettività del filtro caricato richiede un modello OEM o una misura autorizzata.
+
+## Bilancio preliminare di rumore e guadagno RF
+
+Per REQ-12 confrontiamo l'ingresso passivo presente nel master con uno stadio RF candidato dopo la preselezione e prima di U110. Lo script bilancio_rumore.py applica Friis ai guadagni di potenza disponibili con porte adattate e T = 290 K. Ipotesi del confronto: perdita commutazione 0,5 dB, filtro RF 0,894 dB dal modello con bobine candidate, NF del possibile amplificatore 2 dB, mixer con perdita e NF assunte pari a 5,6 dB, rete IF 1,1 dB, NF equivalente del resto della catena 6 dB. Il termine IF comprende buffer, filtro a quarzo, stadi e demodulatore riferiti al suo ingresso; deve ancora essere costruito dal CAD per modo. La NF del mixer richiede verifica con iniezione inferiore, reiezione immagine reale e LO a +7 dBm. La perdita IF è una prima approssimazione basata sul modello della rete terminata, da rivedere con la rappresentazione a tensione/rumore del buffer. I dati OEM del mixer sono specificati con condizioni diverse da quelle della radio. [SBL-1+](https://www.minicircuits.com/pdfs/SBL-1%2B.pdf)
+
+| Guadagno RF candidato | NF complessiva stimata | Tensione RF per S/R 10 dB |
+|---|---:|---:|
+| Percorso passivo | 14,09 dB | 0,351 µV |
+| 6 dB | 9,18 dB | 0,200 µV |
+| 10 dB | 6,64 dB | 0,149 µV |
+| 12 dB | 5,70 dB | 0,134 µV |
+| 15 dB | 4,70 dB | 0,119 µV |
+
+Tensione RMS sul carico da 50 Ω e banda equivalente di rumore ipotizzata di 2,4 kHz. L'S/R è quello RF equivalente; sensibilità audio dei singoli modi e SINAD richiedono la rispettiva catena di demodulazione. Con filtro RF tra 0,193 e 0,894 dB e NF IF tra 3 e 9 dB, il caso con 12 dB di guadagno copre NF di 3,94–7,27 dB. Rumore d'antenna, interferenze e rumore interno digitale restano fuori dal modello.
+
+Valutare 10–12 dB di guadagno come ipotesi di progettazione, con riduzione del guadagno per segnali forti. Il beneficio a 12 dB è 8,39 dB di NF rispetto al percorso passivo nello scenario scelto. A parità di potenza del disturbante all'antenna, anche il mixer riceve 12 dB in più in banda. Prima di congelare lo stadio scegliere un candidato THT OEM e confrontare rumore, guadagno e adattamento a 25,615–28,305 MHz, stabilità, P1dB, intermodulazione a due toni, selettività sopra banda e interazione con RF GAIN. Nessun livello di sensibilità è stato misurato.

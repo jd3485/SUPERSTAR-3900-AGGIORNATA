@@ -36,7 +36,11 @@ Uscita AM trasformata tramite L105/C116/R112 su AM_IF_TERMINATED. Netlist e repo
 
 REQ-12 e REQ-13 introducono alta sensibilità RX e buona modulazione. Priorità: quantificare perdite e rumore prima del mixer e definire il margine microfono–modulatore per ciascun modo prima del congelamento.
 
+REQ-12: bilancio di rumore preliminare e analisi di sensibilità in KiCad/RX. Nello scenario nominale il percorso passivo dà 14,09 dB di NF, un front-end candidato da 12 dB di guadagno e 2 dB di NF dà 5,70 dB. Ipotesi senza misure. CAD invariato in questo ciclo.
+
 ## Prossimo lavoro
+
+Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
 
 Qualificare L104/L105, compensare le perdite e dimensionare commutazione e ramo SSB stretto.
 
