@@ -80,6 +80,12 @@ U105, R126, C123, C124 e R127 integrati su schema e PCB MAIN. 32 impronte THT pr
 
 Rilevato armamento spurio nel modello con impulsi ripetuti; integrati e sbrogliati D103 e R128 sulla MAIN candidata. Lo scenario di regressione è riprodotto e respinto dopo la modifica su 64 combinazioni. MAIN ha 34 impronte. ERC: 10 errori; DRC con parità: zero pad scollegati fra quelli presenti, contorno assente e 28 impronte mancanti. L’interblocco resta candidato. Proseguire con il percorso RF/IF del ricevitore mentre rimangono aperte qualifica fisica e gestione dei guasti PTT.
 
+## Buffer della media frequenza AM su PCB MAIN
+
+Trasferiti e collegati Q101, R113–R117 e C117–C120. L’emettitore pilota C120 e R117 verso la rete di adattamento del filtro. R113 alimenta il collettore tramite la rete locale di disaccoppiamento. Confermati corrispondenza pin/pad/net e montaggio passante di tutte le 44 impronte presenti. La netlist del master conserva tutte le connessioni precedenti. Per il candidato 2N3904BU è stato usato il TO-92 in linea, con emettitore, base e collettore ai pad 1, 2 e 3. Restano da confermare produzione OEM del codice e dimensioni definitive dei passivi. [Datasheet onsemi](https://www.onsemi.com/download/data-sheet/pdf/pzt3904-d.pdf).
+
+Il modello già presente in KiCad/RX/buffer_am.py, rieseguito a 10,695 MHz, restituisce Re(Zout) 48,50–52,30 Ω nelle condizioni esaminate, con ritorno RF ideale. Il rame non comprende ancora la terminazione IF a monte né L104 a valle. RX_RF_RETURN collega i componenti locali; resta da progettare il percorso DC di ritorno alla sorgente e da controllare l’impedenza RF del ritorno reale. Il buffer non è alimentabile nello stato attuale. ERC MAIN: 10 errori. DRC con parità: zero pad scollegati fra quelli presenti, contorno assente e 18 impronte del master mancanti. Prossimo blocco: terminazione del mixer e collegamento a C119, con scelta dell’induttore e verifica di Q e autorisonanza alla IF.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.

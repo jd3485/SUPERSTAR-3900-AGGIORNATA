@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T09:51:09+0100</date>
+    <date>2026-11-19T10:54:46+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -211,8 +211,9 @@
     </comp>
     <comp ref="C117">
       <value>1u</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -226,8 +227,9 @@
     </comp>
     <comp ref="C118">
       <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -241,8 +243,9 @@
     </comp>
     <comp ref="C119">
       <value>10n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -256,8 +259,9 @@
     </comp>
     <comp ref="C120">
       <value>10n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -500,8 +504,9 @@
     </comp>
     <comp ref="Q101">
       <value>2N3904BU</value>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -671,8 +676,9 @@
     </comp>
     <comp ref="R113">
       <value>47</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -686,8 +692,9 @@
     </comp>
     <comp ref="R114">
       <value>22k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -701,8 +708,9 @@
     </comp>
     <comp ref="R115">
       <value>22k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -716,8 +724,9 @@
     </comp>
     <comp ref="R116">
       <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -731,8 +740,9 @@
     </comp>
     <comp ref="R117">
       <value>39</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
