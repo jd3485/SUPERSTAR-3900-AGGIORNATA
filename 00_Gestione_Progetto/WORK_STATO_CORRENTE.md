@@ -34,6 +34,8 @@ Il ramo candidato AM è collegato al mixer tramite Q101 e la rete di adattamento
 
 Uscita AM trasformata tramite L105/C116/R112 su AM_IF_TERMINATED. Netlist e report MAIN aggiornati, ERC 10 errori. Il modello mostra la sensibilità dell’adattamento alle tolleranze e al Q. La scelta del commutatore di modo e la taratura restano aperte.
 
+REQ-12 e REQ-13 introducono alta sensibilità RX e buona modulazione. Priorità: quantificare perdite e rumore prima del mixer e definire il margine microfono–modulatore per ciascun modo prima del congelamento.
+
 ## Prossimo lavoro
 
 Qualificare L104/L105, compensare le perdite e dimensionare commutazione e ramo SSB stretto.

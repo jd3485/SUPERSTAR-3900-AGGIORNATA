@@ -35,3 +35,20 @@ La fonte Connex descrive separazione RX/TX; il manuale MK1 assegna coarse a RX/T
 | Alimentazioni e interfacce | Ripple e rumore condotto, accoppiamento di clock LCD/logica nei percorsi RF/IF/audio, ritorni di corrente e cablaggio MAIN–FRONT. |
 
 Fissare obiettivi numerici tracciabili per ciascun percorso prima del congelamento. Conservare risposta calcolata o simulata e condizioni di carico; qualificare poi con misure autorizzate. Il passa-alto RX e la rete IF presenti sono stadi candidati.
+
+## Sensibilità RX e qualità della modulazione
+
+**REQ-12 – Alta sensibilità in ricezione.** Rilevare segnali deboli con audio intelligibile su tutte le sei bande, mantenendo la selettività e la capacità di ricevere in presenza di segnali forti vicini. Prima di congelare il front-end, costruire un bilancio di rumore e guadagno dall'antenna al demodulatore, includendo perdite di commutazione, filtro RF, conversione e IF. Usarlo per decidere guadagno e posizione del primo stadio attivo. Verificare anche il rumore introdotto da alimentazione, display e comandi.
+
+Per il collaudo autorizzato registrare il livello RF minimo all'ingresso a 50 Ω e le condizioni: frequenza, modo, larghezza di banda, impostazioni, segnale di prova e criterio audio. In AM e FM specificare rispettivamente profondità e deviazione del segnale di prova e SINAD richiesto. In USB/LSB e CW specificare rapporto segnale/rumore audio, tono e banda di misura. Confrontare a parità di condizioni centro ed estremi delle bande. Misurare separatamente blocco e reiezione del canale adiacente.
+
+**REQ-13 – Buona modulazione.** Riprodurre la voce con intelligibilità, basso rumore e bassa distorsione nell'intervallo utile di MIC GAIN e RF POWER. Verificare risposta microfono–RF e margine prima del clipping con eco e Roger beep inizialmente esclusi, poi controllare l'effetto del loro inserimento.
+
+| Modo | Grandezze da misurare in collaudo autorizzato |
+|---|---|
+| AM | Profondità sui picchi positivi e negativi, distorsione dell'inviluppo e sovramodulazione |
+| FM | Deviazione di picco, risposta audio demodulata, distorsione e banda occupata |
+| USB/LSB | Intermodulazione a due toni, compressione, soppressione di portante e banda laterale indesiderata alla PEP prevista |
+| CW | Tempi di salita e discesa dell'inviluppo, transitori di manipolazione e stabilità della portante |
+
+Fissare soglie numeriche e condizioni ripetibili prima del congelamento dei blocchi interessati. Il requisito qualitativo è approvato; prestazioni raggiunte e margini saranno documentati con evidenze della fase applicabile.
