@@ -1,6 +1,258 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A1")
 (title_block (title "MAIN - Interfaccia candidata"))
-(lib_symbols (symbol "Oscillator:CXO_DIP8" (pin_names
+(lib_symbols (symbol "Amplifier_Operational:LM2904" (pin_names
+			(offset 0.127)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LM2904"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm358.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual Operational Amplifiers, DIP-8/SOIC-8/TSSOP-8/VSSOP-8"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_locked" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "dual opamp"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LM2904_1_1"
+			(polyline
+				(pts
+					(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin input line
+				(at -7.62 2.54 0)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 -2.54 0)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "LM2904_2_1"
+			(polyline
+				(pts
+					(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin input line
+				(at -7.62 2.54 0)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 -2.54 0)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "LM2904_3_1"
+			(pin power_in line
+				(at -2.54 7.62 270)
+				(length 3.81)
+				(name "V+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -2.54 -7.62 90)
+				(length 3.81)
+				(name "V-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "Oscillator:CXO_DIP8" (pin_names
 			(offset 0.254)
 		)
 		(exclude_from_sim no)
@@ -4675,4 +4927,149 @@
 (label "AM_XO_OUT" (at 669.29 105.41 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "32303581-f39a-4906-9a2e-4d905939f739"))
 (wire (pts (xy 669.29 123.19) (xy 669.29 133.35)) (stroke (width 0) (type default)) (uuid "008f7430-abf6-4313-82a6-6cc747c6d2fb"))
 (label "AM_LO_CLOCK" (at 669.29 133.35 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2d9bbb41-70fd-45cf-8a94-8fe011f72356"))
+(symbol (lib_id "Amplifier_Operational:LM2904") (at 266.70 534.67 0) (unit 1) (in_bom yes) (on_board yes) (uuid "bed4ade9-e243-4e2a-a974-10222aa85c60")(property "Reference" "U115" (at 272.70 527.67 0) (effects (font (size 1.27 1.27))))(property "Value" "OPA2134PA" (at 278.70 530.67 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_DIP:DIP-8_W7.62mm" (at 266.70 534.67 0) (effects (font (size 1.27 1.27))(hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa2134.pdf" (at 266.70 534.67 0) (effects (font (size 1.27 1.27))(hide yes)))(pin "1" (uuid "3b9ea5bb-23bd-4144-b591-d6ebc93499f4"))(pin "2" (uuid "94ed20f7-7961-4bcc-9a52-40e0fd5db9ce"))(pin "3" (uuid "15e2ff3a-b661-4c8e-88f9-95c82dbe4752"))(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "U115") (unit 1)))))
+(symbol (lib_id "Device:R") (at 224.79 532.13 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c448d004-3b40-42a5-b7ed-de2a18b05b47")
+(property "Reference" "R158" (at 232.41 527.05 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100" (at 232.41 537.21 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "9be45c52-7eaf-4180-bd46-9807c3fa72d7")) (pin "2" (uuid "915d4646-733e-4009-a55a-410aeefece22"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R158") (unit 1)))))
+(wire (pts (xy 220.98 532.13) (xy 199.39 532.13)) (stroke (width 0) (type default)) (uuid "1b360ce8-954b-4442-a8c2-c7356a449a6f"))
+(label "AM_I_BB" (at 199.39 532.13 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "eb52672a-09f5-4202-9ad3-72c902a0b688"))
+(wire (pts (xy 228.60 532.13) (xy 241.30 532.13)) (stroke (width 0) (type default)) (uuid "f898a005-06db-49f7-a08a-7f0b20b0a81f"))
+(wire (pts (xy 241.30 532.13) (xy 259.08 532.13)) (stroke (width 0) (type default)) (uuid "418f9cbc-6614-4f16-8deb-6cb2e3db21e4"))
+(junction (at 241.30 532.13) (diameter 0) (color 0 0 0 0) (uuid "9c0074a8-abb4-4100-813b-a19467aef420"))
+(symbol (lib_id "Device:C") (at 241.30 520.70 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a0f7f778-15d3-4344-82fe-a15cb3bf7372")
+(property "Reference" "C149" (at 248.92 515.62 0) (effects (font (size 1.27 1.27))))
+(property "Value" "4.7n" (at 248.92 525.78 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "c2ad55fe-f7f4-4e05-87a9-e429ac4200ac")) (pin "2" (uuid "b2f95059-c185-4ff4-945a-0ab63a160518"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C149") (unit 1)))))
+(wire (pts (xy 241.30 532.13) (xy 241.30 524.51)) (stroke (width 0) (type default)) (uuid "04ba554c-9b29-4857-a4d1-2ecc7223d884"))
+(wire (pts (xy 241.30 516.89) (xy 241.30 511.81)) (stroke (width 0) (type default)) (uuid "f25bda61-7118-4329-ac80-9c37868fc27e"))
+(label "RX_RF_RETURN" (at 241.30 511.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fd22a280-3ac6-4904-bd3c-c9cf19070e91"))
+(wire (pts (xy 259.08 537.21) (xy 252.73 537.21)) (stroke (width 0) (type default)) (uuid "bfa165c3-febd-4a97-a84b-ae2a66b9a6e6"))
+(wire (pts (xy 252.73 537.21) (xy 252.73 552.45)) (stroke (width 0) (type default)) (uuid "b68c924f-aa27-4c4f-ba4b-710b637d3b8f"))
+(wire (pts (xy 274.32 534.67) (xy 294.64 534.67)) (stroke (width 0) (type default)) (uuid "95cf8fa7-dfd1-480d-a809-464ddd0360fe"))
+(label "AM_I_PRE" (at 294.64 534.67 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3948ccba-b6e6-4649-8f65-dc3c9a28f0ac"))
+(wire (pts (xy 294.64 534.67) (xy 294.64 552.45)) (stroke (width 0) (type default)) (uuid "596a98f8-70d3-46be-b406-ac3c97ac419d"))
+(symbol (lib_id "Device:R") (at 224.79 552.45 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cce2e11b-a89d-4220-98f1-d16b68540bb8")
+(property "Reference" "R159" (at 232.41 547.37 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100" (at 232.41 557.53 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "a3022108-f083-457e-a02a-78ce86ed2f9b")) (pin "2" (uuid "c1d290cc-893b-4256-8ecd-7d29cb3a076a"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R159") (unit 1)))))
+(wire (pts (xy 220.98 552.45) (xy 208.28 552.45)) (stroke (width 0) (type default)) (uuid "af459b0b-85e3-4109-be0d-6c81c31f02e4"))
+(label "RX_RF_RETURN" (at 208.28 552.45 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3a3c5820-efe3-4a80-a7c3-9cdd5a3a1cd9"))
+(wire (pts (xy 228.60 552.45) (xy 252.73 552.45)) (stroke (width 0) (type default)) (uuid "a22dc83d-d0f8-41b0-8181-19fb019dd519"))
+(symbol (lib_id "Device:R") (at 271.78 552.45 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ba2182e7-bcaf-422e-8414-7746bec4d811")
+(property "Reference" "R160" (at 279.40 547.37 0) (effects (font (size 1.27 1.27))))
+(property "Value" "2k" (at 279.40 557.53 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "41bc70d8-c2fd-455a-9795-1e9cf4ff7963")) (pin "2" (uuid "87c96865-bc14-4f2f-afe3-471de44415e3"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R160") (unit 1)))))
+(wire (pts (xy 252.73 552.45) (xy 267.97 552.45)) (stroke (width 0) (type default)) (uuid "7f7fcdc1-baee-4c99-8ff6-01013d1f9133"))
+(wire (pts (xy 275.59 552.45) (xy 294.64 552.45)) (stroke (width 0) (type default)) (uuid "8443489e-0da0-4975-a170-4b2a60c0703a"))
+(symbol (lib_id "Device:C") (at 271.78 565.15 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "49e30132-6990-4dff-b5aa-c145641b0c45")
+(property "Reference" "C150" (at 279.40 560.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10n" (at 279.40 570.23 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "a69a78c1-1b20-4122-a59f-afe82d301a42")) (pin "2" (uuid "dd42680f-0ac5-4573-964f-a1eb60ea56c8"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C150") (unit 1)))))
+(wire (pts (xy 252.73 565.15) (xy 267.97 565.15)) (stroke (width 0) (type default)) (uuid "e14665d0-6e00-4f7f-bc5c-eea443336699"))
+(wire (pts (xy 275.59 565.15) (xy 294.64 565.15)) (stroke (width 0) (type default)) (uuid "b31f5533-b001-4d8f-adbe-e0a67b89ed99"))
+(junction (at 252.73 552.45) (diameter 0) (color 0 0 0 0) (uuid "9e799d1a-f834-4ceb-9116-1838d18bf666"))
+(wire (pts (xy 252.73 552.45) (xy 252.73 565.15)) (stroke (width 0) (type default)) (uuid "7fa31841-3136-4897-87ad-f1baf409f866"))
+(junction (at 294.64 552.45) (diameter 0) (color 0 0 0 0) (uuid "792f3453-b2c4-42be-90e1-23a41b0b190a"))
+(wire (pts (xy 294.64 552.45) (xy 294.64 565.15)) (stroke (width 0) (type default)) (uuid "602394db-db92-417a-b4bf-351d861b2cd5"))
+(symbol (lib_id "Amplifier_Operational:LM2904") (at 403.86 534.67 0) (unit 2) (in_bom yes) (on_board yes) (uuid "2cba73d5-15d0-4a0a-adb4-d18e71b695c0")(property "Reference" "U115" (at 409.86 527.67 0) (effects (font (size 1.27 1.27))))(property "Value" "OPA2134PA" (at 415.86 530.67 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_DIP:DIP-8_W7.62mm" (at 403.86 534.67 0) (effects (font (size 1.27 1.27))(hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa2134.pdf" (at 403.86 534.67 0) (effects (font (size 1.27 1.27))(hide yes)))(pin "5" (uuid "76b4cbf1-c24c-4853-b44c-9f1518395be7"))(pin "6" (uuid "eaea7fbe-5a5e-4a4b-8cb8-811ff89d7d10"))(pin "7" (uuid "67a5ebe2-157b-4cb1-84de-9c05b00ad7a0"))(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "U115") (unit 2)))))
+(symbol (lib_id "Device:R") (at 361.95 532.13 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e6b5a7cf-028c-4282-a97f-df551f273161")
+(property "Reference" "R161" (at 369.57 527.05 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100" (at 369.57 537.21 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "b57ed5cb-781d-455e-8966-f2b5018e41ce")) (pin "2" (uuid "93e03646-5dd6-4d48-a5f8-4d09a68dff59"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R161") (unit 1)))))
+(wire (pts (xy 358.14 532.13) (xy 336.55 532.13)) (stroke (width 0) (type default)) (uuid "526d3d60-3152-4464-8711-54ca3dc602a4"))
+(label "AM_Q_BB" (at 336.55 532.13 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "7208af96-f4fd-4f69-9e03-8427d09a42fd"))
+(wire (pts (xy 365.76 532.13) (xy 378.46 532.13)) (stroke (width 0) (type default)) (uuid "0a2ac5e8-28ea-4fca-8f3d-55e1ec83e0c8"))
+(wire (pts (xy 378.46 532.13) (xy 396.24 532.13)) (stroke (width 0) (type default)) (uuid "974b83fa-fd0d-41c3-9af7-1e748366a822"))
+(junction (at 378.46 532.13) (diameter 0) (color 0 0 0 0) (uuid "941947fc-dede-4f10-bca9-532dd85d0285"))
+(symbol (lib_id "Device:C") (at 378.46 520.70 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b58a75f0-e3f0-453d-8137-3fbeeb9a8939")
+(property "Reference" "C151" (at 386.08 515.62 0) (effects (font (size 1.27 1.27))))
+(property "Value" "4.7n" (at 386.08 525.78 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "a4e25042-7f3f-407c-9a9e-7fbe896bff0e")) (pin "2" (uuid "bfefb828-97cc-4ef1-b470-297914c259aa"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C151") (unit 1)))))
+(wire (pts (xy 378.46 532.13) (xy 378.46 524.51)) (stroke (width 0) (type default)) (uuid "527ab92c-b057-4c0a-a593-571a6c37a5cb"))
+(wire (pts (xy 378.46 516.89) (xy 378.46 511.81)) (stroke (width 0) (type default)) (uuid "a4edaec4-03a0-4366-af97-dfa5fe47c836"))
+(label "RX_RF_RETURN" (at 378.46 511.81 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d6baeee5-d9c5-4c76-b180-db49a55f0dfe"))
+(wire (pts (xy 396.24 537.21) (xy 389.89 537.21)) (stroke (width 0) (type default)) (uuid "ace2f564-311f-49a3-8937-6524d5c7dc9d"))
+(wire (pts (xy 389.89 537.21) (xy 389.89 552.45)) (stroke (width 0) (type default)) (uuid "1010777d-bbb2-442e-9bfc-e465c35742c4"))
+(wire (pts (xy 411.48 534.67) (xy 431.80 534.67)) (stroke (width 0) (type default)) (uuid "dc736698-2cd4-4031-bc90-a3c85e274040"))
+(label "AM_Q_PRE" (at 431.80 534.67 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1be4cabc-1d51-4a42-8d38-b9faf38b3930"))
+(wire (pts (xy 431.80 534.67) (xy 431.80 552.45)) (stroke (width 0) (type default)) (uuid "ca62f6dc-bb29-41a2-bcea-0a6e038b74fb"))
+(symbol (lib_id "Device:R") (at 361.95 552.45 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "dcec6c0c-34d3-4814-a662-47197980c9e7")
+(property "Reference" "R162" (at 369.57 547.37 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100" (at 369.57 557.53 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "16bf049e-fdde-49b1-a8e6-82f649f80397")) (pin "2" (uuid "a0b9a426-05cd-455f-a424-94620c4f6fdd"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R162") (unit 1)))))
+(wire (pts (xy 358.14 552.45) (xy 345.44 552.45)) (stroke (width 0) (type default)) (uuid "d5278a20-1cf9-4e0c-ab46-dee49d33bd4e"))
+(label "RX_RF_RETURN" (at 345.44 552.45 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "22acfea2-15b3-47e1-9531-edf7ac544ea8"))
+(wire (pts (xy 365.76 552.45) (xy 389.89 552.45)) (stroke (width 0) (type default)) (uuid "10df9d28-fcdd-49e3-8fd4-6d8a49c77cb4"))
+(symbol (lib_id "Device:R") (at 408.94 552.45 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "93db9c99-82c8-4473-9742-6ca604f75e0e")
+(property "Reference" "R163" (at 416.56 547.37 0) (effects (font (size 1.27 1.27))))
+(property "Value" "2k" (at 416.56 557.53 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "931dc6b5-8c0f-4e2c-9c4c-27d147580194")) (pin "2" (uuid "948d8f16-404b-4248-8779-94e034e5cdac"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R163") (unit 1)))))
+(wire (pts (xy 389.89 552.45) (xy 405.13 552.45)) (stroke (width 0) (type default)) (uuid "8c142cfd-663f-4ad7-ad69-9b7ca8f6426e"))
+(wire (pts (xy 412.75 552.45) (xy 431.80 552.45)) (stroke (width 0) (type default)) (uuid "c4880410-0b52-47ea-b67d-bb0b4402182e"))
+(symbol (lib_id "Device:C") (at 408.94 565.15 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a273c240-f020-4373-ae43-8d43f5ed3b6f")
+(property "Reference" "C152" (at 416.56 560.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10n" (at 416.56 570.23 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "8ea794c5-933e-4f16-84ff-3378d3166c09")) (pin "2" (uuid "3012d99d-0792-4b12-ba59-407a1adeb607"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C152") (unit 1)))))
+(wire (pts (xy 389.89 565.15) (xy 405.13 565.15)) (stroke (width 0) (type default)) (uuid "7cb1d00d-42a9-4f33-9e93-ba79e3dc0d68"))
+(wire (pts (xy 412.75 565.15) (xy 431.80 565.15)) (stroke (width 0) (type default)) (uuid "b721aed7-05c2-445c-bd85-ecc7ddf4634c"))
+(junction (at 389.89 552.45) (diameter 0) (color 0 0 0 0) (uuid "10616e36-ed4d-4121-b1a4-54a09e36d6a9"))
+(wire (pts (xy 389.89 552.45) (xy 389.89 565.15)) (stroke (width 0) (type default)) (uuid "9228f1cb-4775-481d-a04e-5e0e437de567"))
+(junction (at 431.80 552.45) (diameter 0) (color 0 0 0 0) (uuid "28ca0475-d30a-450f-9cc5-f409c9dec3c1"))
+(wire (pts (xy 431.80 552.45) (xy 431.80 565.15)) (stroke (width 0) (type default)) (uuid "1f30d788-c0d0-46a3-93eb-83e5dc1b837e"))
+(symbol (lib_id "Amplifier_Operational:LM2904") (at 480.06 548.64 0) (unit 3) (in_bom yes) (on_board yes) (uuid "0e013a1b-a1f1-45ae-ab1a-31af6e0e2722")(property "Reference" "U115" (at 486.06 541.64 0) (effects (font (size 1.27 1.27))))(property "Value" "OPA2134PA" (at 492.06 544.64 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_DIP:DIP-8_W7.62mm" (at 480.06 548.64 0) (effects (font (size 1.27 1.27))(hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa2134.pdf" (at 480.06 548.64 0) (effects (font (size 1.27 1.27))(hide yes)))(pin "4" (uuid "042be1bc-94f1-47ae-b038-342ef2ed0dd6"))(pin "8" (uuid "df765396-16d5-496f-8b68-00aa2c479b51"))(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "U115") (unit 3)))))
+(wire (pts (xy 477.52 541.02) (xy 477.52 532.13)) (stroke (width 0) (type default)) (uuid "868ab664-a5af-41d2-a623-2d7d77f0c824"))
+(label "AM_BB_POS" (at 477.52 532.13 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c5cd2c0b-81ba-49f5-8178-b6438df36709"))
+(wire (pts (xy 477.52 556.26) (xy 477.52 565.15)) (stroke (width 0) (type default)) (uuid "9faef61e-136c-4e27-8d1a-58d1fa79fdf3"))
+(label "AM_BB_NEG" (at 477.52 565.15 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ac72167c-5796-440f-bc9d-51a46b2db5d0"))
+(symbol (lib_id "Device:R") (at 554.99 76.20 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "eacef359-f61a-45f3-bcb6-9a4d68665f59")
+(property "Reference" "R164" (at 562.61 71.12 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10" (at 562.61 81.28 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "87f3b072-0768-4a2b-97d3-e6a8ec922654")) (pin "2" (uuid "3bf4752d-b850-43bf-aa81-8f6558ba2cb3"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R164") (unit 1)))))
+(wire (pts (xy 554.99 72.39) (xy 554.99 64.77)) (stroke (width 0) (type default)) (uuid "038c0f45-91f7-4007-97d6-d110a3d6621a"))
+(label "AM_LO_5V" (at 554.99 64.77 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ef614801-ca1b-4b38-932c-9b80af8def35"))
+(wire (pts (xy 554.99 80.01) (xy 554.99 87.63)) (stroke (width 0) (type default)) (uuid "2b08485e-6567-4e89-84e0-0f84a39a6f1c"))
+(label "AM_BB_POS" (at 554.99 87.63 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "efb06608-29c8-47de-873d-9eede2a57395"))
+(symbol (lib_id "Device:C") (at 608.33 76.20 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8ccceaa1-3126-4427-85c4-58dd7b9c3371")
+(property "Reference" "C153" (at 615.95 71.12 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100n" (at 615.95 81.28 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "020b059b-e4f4-4519-ab8f-5d7ecba6386c")) (pin "2" (uuid "2d87ceae-d4c6-46bd-9491-ee75d2b64f7f"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C153") (unit 1)))))
+(wire (pts (xy 608.33 72.39) (xy 608.33 64.77)) (stroke (width 0) (type default)) (uuid "94fecf6b-57e4-420f-ab1a-523928466100"))
+(label "AM_BB_POS" (at 608.33 64.77 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "4b02cb36-4b78-4b3b-bde9-d74908425c7d"))
+(wire (pts (xy 608.33 80.01) (xy 608.33 87.63)) (stroke (width 0) (type default)) (uuid "d1cb42f9-13d6-4724-8b3b-7a97e5feb975"))
+(label "RX_RF_RETURN" (at 608.33 87.63 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3a2d92e1-5696-4060-843a-24553b621638"))
+(symbol (lib_id "Device:C") (at 661.67 76.20 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "505651bd-cc8c-415a-bf43-45b04c967439")
+(property "Reference" "C154" (at 669.29 71.12 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100n" (at 669.29 81.28 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 0.00 0.00 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "115e86b8-6629-4ce6-a2f6-4a11ef3c25a2")) (pin "2" (uuid "1b0b9221-e291-4f68-a5cc-020601650400"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C154") (unit 1)))))
+(wire (pts (xy 661.67 72.39) (xy 661.67 64.77)) (stroke (width 0) (type default)) (uuid "602e3170-3a07-4565-b9e8-f7c7accc5242"))
+(label "AM_BB_NEG" (at 661.67 64.77 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cd58cc28-ffae-4846-92ea-3e3d895aa44a"))
+(wire (pts (xy 661.67 80.01) (xy 661.67 87.63)) (stroke (width 0) (type default)) (uuid "b2c204c3-6b86-4efa-8a60-3a8c4c401f6e"))
+(label "RX_RF_RETURN" (at 661.67 87.63 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b4daea4f-0160-4c2b-953a-26f621ac257f"))
 )
