@@ -100,6 +100,14 @@ U110 SBL-1+ ha un’impronta locale A06 a otto fori metallizzati. Vista lato com
 
 Pin 3 e 4 uniti sul rame al diplexer, pin 2/5/6/7 collegati al ritorno RX. Pin 1 RF e pin 8 LO attendono i rispettivi stadi. La netlist logica è invariata e i pad THT presenti corrispondono alla netlist. MAIN contiene 49 impronte. ERC 10 segnalazioni, DRC un errore di contorno, zero pad scollegati fra le impronte presenti e 13 impronte mancanti. Restano da verificare ritorni RF distribuiti, disponibilità OEM e montaggio. Prossimo blocco: preselettore RX verso il pin 1, previa verifica delle bobine e delle relative impronte.
 
+## Preselettore RX sulla MAIN candidata
+
+C110 (270 pF), C111 (82 pF) e C112 (270 pF) hanno impronte radiali THT candidate a passo 2,50 mm. I loro nodi in serie e l’uscita verso U110.1 sono instradati. Specifica candidata per i tre condensatori: C0G/NP0, ±5%, almeno 50 V. Restano aperti i codici OEM finali, l'ingresso a monte e i due rami induttivi verso RX_RF_RETURN.
+
+La scheda Coilcraft della 132-13L riporta 246 nH ±5%, Q minimo 70 a 25 MHz e autorisonanza minima 440 MHz. Il modello a terminazioni ideali da 50 Ω restituisce 0,193–0,894 dB nella banda RX analizzata. Nella sezione di processo il fabbricante specifica la sola saldatura a onda. Per L101/L102 rimane quindi aperta la scelta di una bobina compatibile con il montaggio manuale. Il valore schematico resta preliminare a 240 nH. [Scheda OEM e processo di saldatura](https://www.coilcraft.com/en-us/products/rf/air-core-inductors/maxi-spring/132/132-13/).
+
+Verifiche KiCad sulla candidata: stessa connettività logica, corrispondenza pin/pad/rete per le 52 impronte presenti, ERC MAIN 10 segnalazioni. DRC con parità: contorno assente, 10 impronte mancanti e zero pad scollegati tra quelli presenti. Prossimo lavoro: selezionare una bobina con processo manuale documentato e verificare perdita e reiezione prima di fissarne l'impronta.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
