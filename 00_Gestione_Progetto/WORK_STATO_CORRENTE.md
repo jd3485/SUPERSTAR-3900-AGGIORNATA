@@ -124,6 +124,16 @@ Confronto a centro banda nel modello carico_filtro_am.py. La scheda Krystaly pre
 
 MAIN candidata: 60 impronte THT; netlist logica conservata e pad verificati. ERC 10 segnalazioni. DRC con parità: errore di contorno, zero pad scollegati tra quelli presenti e due impronte mancanti nel master attuale. Il master rappresenta una radio parziale. Prossimo lavoro: predisporre la taratura alle due porte e verificare impronta e orientamento delle sezioni a quarzi.
 
+## Taratura predisposta sui due terminali esterni del filtro AM
+
+C114 e C116 diventano 33 pF. Accanto a ciascuno è instradato un secondo condensatore THT C0G da selezionare al montaggio: C125 all’ingresso, C126 all’uscita, inizialmente 15 pF ciascuno. Il circuito consente di regolare la parte reale mediante selezione di R117/R112 e quella reattiva mediante C125/C126. La rete tra le due sezioni mantiene C115. Verificati i quattro nuovi pin e la conservazione delle reti precedenti.
+
+Il calcolo riproducibile in KiCad/RX/taratura_am.py seleziona per ciascun caso valori discreti, assunti misurati. A 10,695 MHz si punta a 1800 Ω in parallelo a 5 pF. Nel dominio campionato del modello, R117 va da 27 a 62 Ω e C125 da 6,2 a 24 pF; R112 da 43 a 75 Ω e C126 da 6,8 a 24 pF. Dopo la selezione, ingresso 1742–1866 Ω e 4,01–6,00 pF, uscita 1734–1860 Ω e 4,04–5,98 pF. La compensazione è individuale per caso. Un unico valore fisso non assicura questi risultati. Restano aperte le verifiche di perdita e ondulazione sull’intera banda, il carico effettivo dello stadio successivo e la validazione con componenti reali.
+
+Il disegno Krystaly indica due sezioni HC-49U a tre terminali. Rimane da verificare il passo e il legame tra il punto colorato, il terminale esterno e il pad del contenitore sul disegno meccanico originale prima di trasferire FL101 e FL102. [Specifica del produttore](https://www.krystaly.cz/en/wp-content/uploads/2023/06/TSP_10695-075-B.pdf).
+
+MAIN candidata: 62 impronte THT, zero pad scollegati tra quelli presenti. ERC 10 segnalazioni, DRC un errore di contorno e due impronte mancanti rispetto allo schema parziale. Nessun collaudo fisico.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.

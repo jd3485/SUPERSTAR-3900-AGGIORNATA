@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T14:25:50+0100</date>
+    <date>2026-11-19T14:29:34+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -169,7 +169,7 @@
       <tstamps>38b907c0-4f6c-462a-ad09-67f11a6d2ede</tstamps>
     </comp>
     <comp ref="C114">
-      <value>47p</value>
+      <value>33p</value>
       <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
         <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
@@ -201,7 +201,7 @@
       <tstamps>0c1236b6-b15d-497c-8682-e2d43a81454f</tstamps>
     </comp>
     <comp ref="C116">
-      <value>47p</value>
+      <value>33p</value>
       <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
         <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
@@ -343,6 +343,38 @@
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>abef6b59-a87c-4eae-b6af-663709645614</tstamps>
+    </comp>
+    <comp ref="C125">
+      <value>15p</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0fd5a744-488a-4e2f-af85-5b635d737926</tstamps>
+    </comp>
+    <comp ref="C126">
+      <value>15p</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ad5a5bac-1216-49c2-a18f-9c3d8ad9b343</tstamps>
     </comp>
     <comp ref="D101">
       <value>1N5819RLG</value>
@@ -1335,11 +1367,13 @@
     </net>
     <net code="9" name="/AM_MCF_IN" class="Default">
       <node ref="C114" pin="1" pintype="passive"/>
+      <node ref="C125" pin="1" pintype="passive"/>
       <node ref="FL101" pin="DOT" pinfunction="DOT" pintype="passive"/>
       <node ref="L104" pin="2" pinfunction="2" pintype="passive"/>
     </net>
     <net code="10" name="/AM_MCF_OUT" class="Default">
       <node ref="C116" pin="1" pintype="passive"/>
+      <node ref="C126" pin="1" pintype="passive"/>
       <node ref="FL102" pin="DOT" pinfunction="DOT" pintype="passive"/>
       <node ref="L105" pin="1" pinfunction="1" pintype="passive"/>
     </net>
@@ -1514,6 +1548,8 @@
       <node ref="C116" pin="2" pintype="passive"/>
       <node ref="C117" pin="2" pintype="passive"/>
       <node ref="C118" pin="2" pintype="passive"/>
+      <node ref="C125" pin="2" pintype="passive"/>
+      <node ref="C126" pin="2" pintype="passive"/>
       <node ref="FL101" pin="CASE" pinfunction="CASE" pintype="passive"/>
       <node ref="FL102" pin="CASE" pinfunction="CASE" pintype="passive"/>
       <node ref="L101" pin="2" pinfunction="2" pintype="passive"/>
