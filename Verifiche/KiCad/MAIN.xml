@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>KiCad/MAIN/MAIN.kicad_sch</source>
+    <date>2026-11-19T01:51:19+0100</date>
+    <tool>Eeschema 9.0.2+dfsg-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>MAIN - Interfaccia candidata</title>
+        <company/>
+        <rev/>
+        <date/>
+        <source>MAIN.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C101">
+      <value>10n</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3c02fe94-6a9a-47a0-b68d-fc71204be088</tstamps>
+    </comp>
+    <comp ref="C102">
+      <value>100n</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>75812e7d-8de5-4fe3-8d98-6bb64e040c64</tstamps>
+    </comp>
+    <comp ref="C103">
+      <value>220n</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b6f92766-e77e-4a1b-9a77-add8d3008ceb</tstamps>
+    </comp>
+    <comp ref="C104">
+      <value>100n</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6e8862ba-f3a4-4eee-9060-3d171e665c8d</tstamps>
+    </comp>
+    <comp ref="C105">
+      <value>1u</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f24a4b4b-5e96-4d98-ae10-8578db178526</tstamps>
+    </comp>
+    <comp ref="C110">
+      <value>270p</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7421ee71-6d05-42a9-ad59-8887109e7d34</tstamps>
+    </comp>
+    <comp ref="C111">
+      <value>82p</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>af2daa3c-d1ba-43d8-b86f-8b97e3c9db11</tstamps>
+    </comp>
+    <comp ref="C112">
+      <value>270p</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7c0cb06-89fb-43f5-9831-4df2886c55d3</tstamps>
+    </comp>
+    <comp ref="D101">
+      <value>1N5819RLG</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0d5a9597-9554-439a-982e-4c22d2b07623</tstamps>
+    </comp>
+    <comp ref="D102">
+      <value>1N5819RLG</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>06f09f80-3996-4212-b0f0-21bbb9d223a8</tstamps>
+    </comp>
+    <comp ref="J101">
+      <value>Conn_01x06</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>63babc60-42f5-4559-a351-21fb39963c04</tstamps>
+    </comp>
+    <comp ref="L101">
+      <value>240n</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c829375c-d960-4498-a8db-b431c2a56ef8</tstamps>
+    </comp>
+    <comp ref="L102">
+      <value>240n</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d63dfbee-f806-4ec1-9d79-15d950707e5d</tstamps>
+    </comp>
+    <comp ref="R101">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6b0353e6-088c-4782-92a8-019a8c5c946f</tstamps>
+    </comp>
+    <comp ref="R102">
+      <value>100k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>62b18b0d-5b52-470a-938f-af06e0c0cefe</tstamps>
+    </comp>
+    <comp ref="R103">
+      <value>100k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3c25eecb-f245-4beb-b4cc-9fda1e90ebd5</tstamps>
+    </comp>
+    <comp ref="R104">
+      <value>86.6k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>63cce7e8-dbcd-469a-aa53-b355d5d2046b</tstamps>
+    </comp>
+    <comp ref="R105">
+      <value>8.45k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1c9dff0d-3ac8-4f64-9fdc-239414bc487d</tstamps>
+    </comp>
+    <comp ref="R106">
+      <value>4.02k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2476d398-92f8-41b2-87fc-534c9b37b237</tstamps>
+    </comp>
+    <comp ref="R107">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2f94e5a2-7ccc-463f-a830-64e8e2132035</tstamps>
+    </comp>
+    <comp ref="U101">
+      <value>LM2903P</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <fields>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Comparator" part="LM2903" description="Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SOP-8/TSSOP-8/VSSOP-8"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="cmp open collector"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>514f0547-ad9d-4c10-8bfb-280aa77d64ca d38aabf3-6932-4a84-b667-e4175e47d60c 43c7f432-eb01-44fc-aab7-9dbb223b0f96</tstamps>
+    </comp>
+    <comp ref="U102">
+      <value>LM7805CT/NOPB</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Regulator_Linear" part="LM7805_TO220" description="Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="Voltage Regulator 1A Positive"/>
+      <property name="ki_fp_filters" value="TO?220*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>587aff61-0092-45cd-ad77-d3064a3f7fa2</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Comparator" part="LM2903">
+      <description>Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SOP-8/TSSOP-8/VSSOP-8</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm393.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>SOP*5.28x5.23mm*P1.27mm*</fp>
+        <fp>VSSOP*3x3mm*P0.65mm*</fp>
+        <fp>TSSOP*4.4x3mm*P0.65mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM2903</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/lm393.pdf</field>
+        <field name="Description">Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SOP-8/TSSOP-8/VSSOP-8</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="open_collector"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="" type="open_collector"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Schottky diode</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="LM7805_TO220">
+      <description>Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220</description>
+      <docs>https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</docs>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM7805_TO220</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+        <field name="Datasheet">https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</field>
+        <field name="Description">Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VI" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Comparator">
+      <uri>/usr/share/kicad/symbols//Comparator.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>/usr/share/kicad/symbols//Regulator_Linear.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/AC_SOURCE_ISOLATED_DC" class="Default">
+      <node ref="D101" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="2" name="/CONTROL_RETURN" class="Default">
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="J101" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R103" pin="2" pintype="passive"/>
+      <node ref="R106" pin="2" pintype="passive"/>
+      <node ref="U101" pin="4" pinfunction="V-" pintype="power_in"/>
+      <node ref="U102" pin="2" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="3" name="/CONTROL_TO_FRONT" class="Default">
+      <node ref="J101" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="4" name="/CONTROL_TO_MAIN" class="Default">
+      <node ref="J101" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="5" name="/EXTERNAL_DC_PROTECTED" class="Default">
+      <node ref="D102" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="6" name="/FRONT_RETURN" class="Default">
+      <node ref="J101" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="7" name="/FRONT_SUPPLY" class="Default">
+      <node ref="J101" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="8" name="/MAIN_LOGIC_SUPPLY" class="Default">
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="R101" pin="1" pintype="passive"/>
+      <node ref="R104" pin="1" pintype="passive"/>
+      <node ref="R107" pin="1" pintype="passive"/>
+      <node ref="U101" pin="8" pinfunction="V+" pintype="power_in"/>
+      <node ref="U102" pin="3" pinfunction="VO" pintype="power_out"/>
+    </net>
+    <net code="9" name="/MAIN_PROTECTED_DC" class="Default">
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="C105" pin="1" pintype="passive"/>
+      <node ref="D101" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D102" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U102" pin="1" pinfunction="VI" pintype="power_in"/>
+    </net>
+    <net code="10" name="/PTT_HIGH_REF" class="Default">
+      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="R105" pin="1" pintype="passive"/>
+      <node ref="U101" pin="5" pinfunction="+" pintype="input"/>
+    </net>
+    <net code="11" name="/PTT_LOW_REF" class="Default">
+      <node ref="R105" pin="2" pintype="passive"/>
+      <node ref="R106" pin="1" pintype="passive"/>
+      <node ref="U101" pin="2" pinfunction="-" pintype="input"/>
+    </net>
+    <net code="12" name="/PTT_SCALED" class="Default">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="R102" pin="2" pintype="passive"/>
+      <node ref="R103" pin="1" pintype="passive"/>
+      <node ref="U101" pin="3" pinfunction="+" pintype="input"/>
+      <node ref="U101" pin="6" pinfunction="-" pintype="input"/>
+    </net>
+    <net code="13" name="/PTT_SENSE" class="Default">
+      <node ref="J101" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="R101" pin="2" pintype="passive"/>
+      <node ref="R102" pin="1" pintype="passive"/>
+    </net>
+    <net code="14" name="/PTT_WINDOW_VALID" class="Default">
+      <node ref="R107" pin="2" pintype="passive"/>
+      <node ref="U101" pin="1" pintype="open_collector"/>
+      <node ref="U101" pin="7" pintype="open_collector"/>
+    </net>
+    <net code="15" name="/RX_FILTER_IN" class="Default">
+      <node ref="C110" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="/RX_FILTER_OUT" class="Default">
+      <node ref="C112" pin="2" pintype="passive"/>
+    </net>
+    <net code="17" name="/RX_RF_RETURN" class="Default">
+      <node ref="L101" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="L102" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(C110-Pad2)" class="Default">
+      <node ref="C110" pin="2" pintype="passive"/>
+      <node ref="C111" pin="1" pintype="passive"/>
+      <node ref="L101" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(C111-Pad2)" class="Default">
+      <node ref="C111" pin="2" pintype="passive"/>
+      <node ref="C112" pin="1" pintype="passive"/>
+      <node ref="L102" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+  </nets>
+</export>

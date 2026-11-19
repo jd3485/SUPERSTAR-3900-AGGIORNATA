@@ -1,0 +1,35 @@
+ERC report (2026-11-19T01:51:19+0100, Encoding UTF8)
+
+***** Sheet /
+[label_dangling]: Label not connected to anything
+    ; error
+    @(109.22 mm, 35.56 mm): Label 'AC_SOURCE_ISOLATED_DC'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(109.22 mm, 50.80 mm): Label 'EXTERNAL_DC_PROTECTED'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(101.60 mm, 71.12 mm): Label 'FRONT_SUPPLY'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(101.60 mm, 73.66 mm): Label 'FRONT_RETURN'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(101.60 mm, 76.20 mm): Label 'CONTROL_TO_MAIN'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(101.60 mm, 78.74 mm): Label 'CONTROL_TO_FRONT'
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(205.74 mm, 71.12 mm): Symbol U102 Pin 1 [VI, Power input, Line]
+[label_dangling]: Label not connected to anything
+    ; error
+    @(45.72 mm, 220.98 mm): Label 'RX_FILTER_IN'
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(215.90 mm, 180.34 mm): Symbol U101 Pin 4 [V-, Power input, Line]
+[label_dangling]: Label not connected to anything
+    ; error
+    @(203.20 mm, 220.98 mm): Label 'RX_FILTER_OUT'
+
+ ** ERC messages: 10  Errors 10  Warnings 0
