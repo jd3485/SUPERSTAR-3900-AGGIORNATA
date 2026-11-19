@@ -72,6 +72,10 @@ Sette impronte aggiunte e collegate: selezione a diodi delle sorgenti DC del ram
 
 U104, C122 e R125 integrati e sbrogliati. Il simbolo di progetto di U104 segue la piedinatura MCP102 indicata nella tabella OEM. Controllati pad/reti e preservate tutte le connessioni precedenti. MAIN ha 27 impronte; ERC 10 errori, DRC con parità: contorno assente, zero pad scollegati e 28 impronte mancanti. Prossimo passo dell’interblocco: usare LOGIC_RESET_N per azzerare la memoria e consentire l’armamento solo dopo un rilascio stabile successivo. Vedere KiCad/INTERFACCIA_MAIN_FRONT.md per limiti di qualifica.
 
+## Memoria di rilascio dopo il reset
+
+U105, R126, C123, C124 e R127 integrati su schema e PCB MAIN. 32 impronte THT presenti. Nessun pad scollegato tra quelli presenti; contorno e 28 impronte del master mancanti. ERC MAIN: 10 errori. Il modello nominale basato sulla netlist verifica accensione con tasto premuto, rilascio, mantenimento e reset. Prossimo passo: verificare rimbalzi ripetuti e casi di guasto prima di progettare la qualificazione finale della richiesta. PTT_ARMED non pilota il trasmettitore.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
