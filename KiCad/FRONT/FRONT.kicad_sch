@@ -1,6 +1,131 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "cf24d153-b40c-4c32-946c-864ba45498ea") (paper "A4")
 (title_block (title "FRONT - Interfaccia candidata"))
 (lib_symbols 
+	(symbol "Device:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
 	(symbol "Switch:SW_Push"
 		(pin_numbers
 			(hide yes)
@@ -432,14 +557,32 @@
 (wire (pts (xy 101.60 81.28) (xy 121.92 81.28)) (stroke (width 0) (type default)) (uuid "af8c9af0-15e0-4741-b3e1-1de176c81ca8"))
 (label "CONTROL_RETURN" (at 101.60 81.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e66115bf-ced4-4969-be86-d6808cf04807"))
 (wire (pts (xy 101.60 83.82) (xy 121.92 83.82)) (stroke (width 0) (type default)) (uuid "7dad7341-e381-436e-94e7-061af85fa146"))
-(label "TX_REQUEST_N" (at 101.60 83.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cd567724-4c85-4c17-96e4-c8ce4c172f55"))
+(label "PTT_SENSE" (at 101.60 83.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cd567724-4c85-4c17-96e4-c8ce4c172f55"))
 (symbol (lib_id "Switch:SW_Push") (at 127 111.76 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "75cc4428-51c2-4b05-b553-c360adc3a871")
 (property "Reference" "SW201" (at 134.62 109.22 0) (effects (font (size 1.27 1.27))))
 (property "Value" "PTT_CONTACT" (at 134.62 114.30000000000001 0) (effects (font (size 1.27 1.27))))
 (pin "1" (uuid "c288bc1c-2f13-4913-a841-bc9683d30f62")) (pin "2" (uuid "17ff60de-77ad-43bb-ac43-00ecf8e350bf"))
 (instances (project "FRONT" (path "/cf24d153-b40c-4c32-946c-864ba45498ea" (reference "SW201") (unit 1)))))
 (wire (pts (xy 121.92 111.76) (xy 101.6 111.76)) (stroke (width 0) (type default)) (uuid "12b2d54e-1249-47d0-9ff2-1ba886df69cb"))
-(label "TX_REQUEST_N" (at 101.6 111.76 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cca5917f-a6f1-4554-8871-d30e5957509e"))
+(label "PTT_SENSE" (at 101.6 111.76 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cca5917f-a6f1-4554-8871-d30e5957509e"))
 (wire (pts (xy 132.08 111.76) (xy 152.4 111.76)) (stroke (width 0) (type default)) (uuid "2366df79-c2ac-4235-a436-3375721f0de9"))
-(label "CONTROL_RETURN" (at 152.4 111.76 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "699f832f-09a5-46f4-b4d3-39d09c6dffde"))
+(label "PTT_SWITCH_RETURN" (at 152.4 111.76 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "699f832f-09a5-46f4-b4d3-39d09c6dffde"))
+(symbol (lib_id "Device:R") (at 127 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4c5936c9-def9-40c5-9b6f-5e2208cd57cf")
+(property "Reference" "R201" (at 134.62 134.62 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10k" (at 134.62 139.7 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "3b52b61c-54b9-4e06-a2d3-1edbffdbe262")) (pin "2" (uuid "fc6e5a8d-7293-4438-8eb4-f8e0db9d8be0"))
+(instances (project "FRONT" (path "/cf24d153-b40c-4c32-946c-864ba45498ea" (reference "R201") (unit 1)))))
+(wire (pts (xy 127 133.35) (xy 127 127)) (stroke (width 0) (type default)) (uuid "ec63fd97-7db7-498d-901f-d58e2d5300f2"))
+(label "PTT_SENSE" (at 127 127 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1e6af051-36f4-4db2-a301-86b23b18a569"))
+(wire (pts (xy 127 140.97) (xy 127 147.32)) (stroke (width 0) (type default)) (uuid "175d99d0-7532-43b2-8c63-1b3e99f0315f"))
+(label "CONTROL_RETURN" (at 127 147.32 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "afa55000-f939-4784-9025-66617bfade0f"))
+(symbol (lib_id "Device:R") (at 172.72 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2ab29144-84a5-41a0-b569-e6650a95fd71")
+(property "Reference" "R202" (at 180.34 134.62 0) (effects (font (size 1.27 1.27))))
+(property "Value" "2.2k" (at 180.34 139.7 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "f90d547a-3e15-4d1e-ace7-5a82b653517d")) (pin "2" (uuid "10234be3-b5f7-43bf-9a8a-a2beb7191e18"))
+(instances (project "FRONT" (path "/cf24d153-b40c-4c32-946c-864ba45498ea" (reference "R202") (unit 1)))))
+(wire (pts (xy 172.72 133.35) (xy 172.72 127)) (stroke (width 0) (type default)) (uuid "916e1a26-e145-42b1-b40d-a2ad7c261b5b"))
+(label "PTT_SWITCH_RETURN" (at 172.72 127 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "9bc5576c-9d4c-4d79-aac1-dc7b9e6c04c9"))
+(wire (pts (xy 172.72 140.97) (xy 172.72 147.32)) (stroke (width 0) (type default)) (uuid "dced9eb1-3001-4e60-b2ea-a40ab063a3ed"))
+(label "CONTROL_RETURN" (at 172.72 147.32 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "eb247136-ffaf-4e9f-8d3c-d7d630415c73"))
 )
