@@ -1,4 +1,4 @@
-ERC report (2026-11-19T01:51:19+0100, Encoding UTF8)
+ERC report (2026-11-19T01:53:03+0100, Encoding UTF8)
 
 ***** Sheet /
 [label_dangling]: Label not connected to anything
@@ -30,6 +30,6 @@ ERC report (2026-11-19T01:51:19+0100, Encoding UTF8)
     @(215.90 mm, 180.34 mm): Symbol U101 Pin 4 [V-, Power input, Line]
 [label_dangling]: Label not connected to anything
     ; error
-    @(203.20 mm, 220.98 mm): Label 'RX_FILTER_OUT'
+    @(254.00 mm, 226.06 mm): Label 'RX_LO_DRIVE'
 
  ** ERC messages: 10  Errors 10  Warnings 0

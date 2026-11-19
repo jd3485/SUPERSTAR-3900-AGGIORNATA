@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T01:51:19+0100</date>
+    <date>2026-11-19T01:52:58+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -340,7 +340,7 @@
       <property name="ki_keywords" value="cmp open collector"/>
       <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>514f0547-ad9d-4c10-8bfb-280aa77d64ca d38aabf3-6932-4a84-b667-e4175e47d60c 43c7f432-eb01-44fc-aab7-9dbb223b0f96</tstamps>
+      <tstamps>d38aabf3-6932-4a84-b667-e4175e47d60c 514f0547-ad9d-4c10-8bfb-280aa77d64ca 43c7f432-eb01-44fc-aab7-9dbb223b0f96</tstamps>
     </comp>
     <comp ref="U102">
       <value>LM7805CT/NOPB</value>
@@ -357,6 +357,19 @@
       <property name="ki_fp_filters" value="TO?220*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>587aff61-0092-45cd-ad77-d3064a3f7fa2</tstamps>
+    </comp>
+    <comp ref="U110">
+      <value>SBL-1+</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connex_RF" part="SBL-1+" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KiCad/MAIN/MAIN.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>519ecb8c-ca23-4478-abf0-66d6a12c4ff2</tstamps>
     </comp>
   </components>
   <libparts>
@@ -408,6 +421,25 @@
         <pin num="4" name="Pin_4" type="passive"/>
         <pin num="5" name="Pin_5" type="passive"/>
         <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connex_RF" part="SBL-1+">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SBL-1+</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="RF" type="passive"/>
+        <pin num="2" name="GND2" type="passive"/>
+        <pin num="3" name="IF_A" type="passive"/>
+        <pin num="4" name="IF_B" type="passive"/>
+        <pin num="5" name="GND5" type="passive"/>
+        <pin num="6" name="GND6" type="passive"/>
+        <pin num="7" name="GND7" type="passive"/>
+        <pin num="8" name="LO" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Device" part="C">
@@ -601,17 +633,29 @@
     </net>
     <net code="16" name="/RX_FILTER_OUT" class="Default">
       <node ref="C112" pin="2" pintype="passive"/>
+      <node ref="U110" pin="1" pinfunction="RF" pintype="passive"/>
     </net>
-    <net code="17" name="/RX_RF_RETURN" class="Default">
+    <net code="17" name="/RX_IF_10695" class="Default">
+      <node ref="U110" pin="3" pinfunction="IF_A" pintype="passive"/>
+      <node ref="U110" pin="4" pinfunction="IF_B" pintype="passive"/>
+    </net>
+    <net code="18" name="/RX_LO_DRIVE" class="Default">
+      <node ref="U110" pin="8" pinfunction="LO" pintype="passive"/>
+    </net>
+    <net code="19" name="/RX_RF_RETURN" class="Default">
       <node ref="L101" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="L102" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U110" pin="2" pinfunction="GND2" pintype="passive"/>
+      <node ref="U110" pin="5" pinfunction="GND5" pintype="passive"/>
+      <node ref="U110" pin="6" pinfunction="GND6" pintype="passive"/>
+      <node ref="U110" pin="7" pinfunction="GND7" pintype="passive"/>
     </net>
-    <net code="18" name="Net-(C110-Pad2)" class="Default">
+    <net code="20" name="Net-(C110-Pad2)" class="Default">
       <node ref="C110" pin="2" pintype="passive"/>
       <node ref="C111" pin="1" pintype="passive"/>
       <node ref="L101" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="19" name="Net-(C111-Pad2)" class="Default">
+    <net code="21" name="Net-(C111-Pad2)" class="Default">
       <node ref="C111" pin="2" pintype="passive"/>
       <node ref="C112" pin="1" pintype="passive"/>
       <node ref="L102" pin="1" pinfunction="1" pintype="passive"/>
