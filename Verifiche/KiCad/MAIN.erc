@@ -1,4 +1,4 @@
-ERC report (2026-11-19T22:49:53+0100, Encoding UTF8)
+ERC report (2026-11-19T23:05:21+0100, Encoding UTF8)
 
 ***** Sheet /
 [label_dangling]: Label not connected to anything
@@ -33,7 +33,7 @@ ERC report (2026-11-19T22:49:53+0100, Encoding UTF8)
     @(254.00 mm, 226.06 mm): Label 'RX_LO_DRIVE'
 [power_pin_not_driven]: Input Power pin not driven by any Output Power pins
     ; error
-    @(734.06 mm, 344.17 mm): Symbol U113 Pin 6 [VDD, Power input, Line]
+    @(571.50 mm, 287.02 mm): Symbol U114 Pin 1 [VI, Power input, Line]
 [power_pin_not_driven]: Input Power pin not driven by any Output Power pins
     ; error
     @(734.06 mm, 364.49 mm): Symbol U113 Pin 3 [GND, Power input, Line]
