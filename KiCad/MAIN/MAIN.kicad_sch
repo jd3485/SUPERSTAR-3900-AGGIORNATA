@@ -1,6 +1,157 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A4")
 (title_block (title "MAIN - Interfaccia candidata"))
 (lib_symbols 
+	(symbol "Device:D_Schottky"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Schottky"
+			(at 0 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "diode Schottky"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "D_Schottky_0_1"
+			(polyline
+				(pts
+					(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "D_Schottky_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
 	(symbol "Regulator_Linear:LM7805_TO220"
 		(pin_names
 			(offset 0.254)
@@ -1119,4 +1270,33 @@
 (label "CONTROL_RETURN" (at 213.36 83.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "25c761e8-191b-479d-9c71-344bfc0bd049"))
 (wire (pts (xy 220.98 71.12) (xy 246.38 71.12)) (stroke (width 0) (type default)) (uuid "d0bcb112-c246-4c60-9c8f-5f49c25e6ada"))
 (label "MAIN_LOGIC_SUPPLY" (at 246.38 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d0b8a107-1710-4dbf-9f93-7affa40c08dc"))
+(symbol (lib_id "Device:D_Schottky") (at 76.2 35.56 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0d5a9597-9554-439a-982e-4c22d2b07623")
+(property "Reference" "D101" (at 83.82000000000001 33.02 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1N5819RLG" (at 83.82000000000001 38.1 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "0bbb9971-ea67-47c6-8462-637fea335878")) (pin "2" (uuid "a544b3db-725b-474d-8164-11ef3ac00cdc"))
+(property "Footprint" "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" (at 76.2 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "D101") (unit 1)))))
+(wire (pts (xy 72.39 35.56) (xy 48.26 35.56)) (stroke (width 0) (type default)) (uuid "d776015a-e755-4750-a796-0ea1311747fd"))
+(label "MAIN_PROTECTED_DC" (at 48.26 35.56 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5212e004-769c-428d-8f7b-6923dcc5568a"))
+(wire (pts (xy 80.01 35.56) (xy 109.22 35.56)) (stroke (width 0) (type default)) (uuid "8f4d4a68-a87d-4896-9d65-357fe3f545b1"))
+(label "AC_SOURCE_ISOLATED_DC" (at 109.22 35.56 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "edf25741-6329-4a91-b1fe-d9f545167c35"))
+(symbol (lib_id "Device:D_Schottky") (at 76.2 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "06f09f80-3996-4212-b0f0-21bbb9d223a8")
+(property "Reference" "D102" (at 83.82000000000001 48.26 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1N5819RLG" (at 83.82000000000001 53.339999999999996 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "5285e66d-0a97-45e0-8462-3585dd7c5dc9")) (pin "2" (uuid "de749082-a4c3-4076-b440-2339737a222f"))
+(property "Footprint" "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" (at 76.2 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "D102") (unit 1)))))
+(wire (pts (xy 72.39 50.8) (xy 48.26 50.8)) (stroke (width 0) (type default)) (uuid "f16d73f5-d23e-44b5-84ed-5738239f9c2e"))
+(label "MAIN_PROTECTED_DC" (at 48.26 50.8 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "87d1dfe3-d06a-4fa2-9757-2f2e57f102f2"))
+(wire (pts (xy 80.01 50.8) (xy 109.22 50.8)) (stroke (width 0) (type default)) (uuid "2cd60f21-5133-4234-820d-ff448fa44daf"))
+(label "EXTERNAL_DC_PROTECTED" (at 109.22 50.8 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "eb2086af-7e48-4b46-be56-7306d5e86a3f"))
+(symbol (lib_id "Device:C") (at 177.8 40.64 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f24a4b4b-5e96-4d98-ae10-8578db178526")
+(property "Reference" "C105" (at 185.42000000000002 38.1 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1u" (at 185.42000000000002 43.18 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "71306308-c574-4c8d-a918-59281f93405c")) (pin "2" (uuid "5ce1f4b7-a068-47e7-9731-a7a151f56b6b"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C105") (unit 1)))))
+(wire (pts (xy 177.8 36.83) (xy 177.8 31.75)) (stroke (width 0) (type default)) (uuid "f3f8a5e6-cc29-4e59-a106-192e6fa5f444"))
+(label "MAIN_PROTECTED_DC" (at 177.8 31.75 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "26575ca7-0878-4f3b-a0ae-c4f6885e6746"))
+(wire (pts (xy 177.8 44.45) (xy 177.8 49.53)) (stroke (width 0) (type default)) (uuid "a1cac0c3-e575-47f7-a00d-1871d5c4ef1e"))
+(label "CONTROL_RETURN" (at 177.8 49.53 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "dc492c82-2fc4-41c6-8e7d-7ff540101d2d"))
 )

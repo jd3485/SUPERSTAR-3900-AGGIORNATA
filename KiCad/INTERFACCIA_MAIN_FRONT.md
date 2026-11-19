@@ -40,6 +40,14 @@ ERC nativo: MAIN ha quattro reti ancora aperte. L'ingresso di U102 e il ritorno 
 
 ## Alimentazione logica candidata
 
-U102 è il TI LM7805CT/NOPB in TO-220 a tre terminali, in produzione secondo il datasheet OEM. C103 da 220 nF e C104 da 100 nF sono i condensatori locali di ingresso e uscita. C102 resta il disaccoppiamento di U101. MAIN_PROTECTED_DC è l'ingresso atteso a valle della protezione e della selezione AC/DC. CONTROL_RETURN è il ritorno locale di questo blocco; la relazione con il ritorno di potenza e FRONT_RETURN resta da definire al punto di distribuzione.
+U102 è il TI LM7805CT/NOPB in TO-220 a tre terminali, in produzione secondo il datasheet OEM. C103 da 220 nF e C104 da 100 nF sono i condensatori locali di ingresso e uscita. C102 resta il disaccoppiamento di U101. MAIN_PROTECTED_DC è l'uscita della selezione locale a diodi per il ramo logico. CONTROL_RETURN è il ritorno locale di questo blocco; la relazione con il ritorno di potenza e FRONT_RETURN resta da definire al punto di distribuzione.
 
 Verificati nella netlist pin 1 ingresso, pin 2 ritorno, pin 3 uscita, le due capacità e il collegamento a U101, oltre al riferimento di impronta TO-220. Impronta candidata, con montaggio e dissipazione da verificare. La verifica termica richiede tensione massima, corrente effettiva, bias interno e condizioni di montaggio: P ≈ (Vin − 5 V) × Iout + Vin × Iq. Perdita di regolazione, scarica inversa, sequenza di accensione e compatibilità con il filtro/protezioni a monte restano aperte. Fonte OEM: https://www.ti.com/lit/ds/symlink/lm340.pdf
+
+### Selezione locale delle sorgenti
+
+D101 e D102 combinano le due sorgenti DC del ramo logico con catodi comuni su MAIN_PROTECTED_DC. L'anodo D101 riceve esclusivamente la bassa tensione DC di una futura sorgente AC/DC isolata. L'anodo D102 riceve la DC esterna dopo le protezioni a monte. C105, 1 µF candidato, è il serbatoio locale sul nodo comune. La tensione effettiva è determinata dalla sorgente che prevale dopo la caduta sul rispettivo diodo. Non è prevista una priorità garantita e la corrente inversa di perdita non è nulla.
+
+D101/D102 sono candidati onsemi 1N5819RLG, assiali, 40 V, 1 A nominale secondo OEM. L'impronta candidata DO-41 ha pad passanti 1 (catodo) e 2 (anodo). La netlist verifica polarità, nodo comune e collegamento al regolatore e ai condensatori. Da qualificare ciclo produttivo del codice ordinabile, caduta diretta e perdita a temperatura, margine di dropout, corrente e dissipazione. L'OR a diodi riguarda esclusivamente il ramo logico e non costituisce la distribuzione di potenza RF. Il collegamento dei ritorni, i limiti di sorgente, le protezioni esterne e le condizioni di commutazione richiedono il progetto a monte.
+
+ERC MAIN: sei reti aperte, di cui due relative alle sorgenti candidate, e due errori di alimentazione all'ingresso U102 e al ritorno. Nessun collegamento fittizio per sopprimerli. Fonte OEM: https://www.onsemi.com/download/data-sheet/pdf/1n5817-d.pdf
