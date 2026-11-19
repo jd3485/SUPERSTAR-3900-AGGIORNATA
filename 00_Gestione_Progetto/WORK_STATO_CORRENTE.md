@@ -158,6 +158,16 @@ Il modello riproducibile in KiCad/RX/cascata_if_am.py risolve prima Q103, poi ap
 
 MAIN candidata a 84 impronte THT, zero pad scollegati e zero discrepanze rispetto allo schema parziale. Verificate le reti precedenti, la topologia duplicata del nuovo stadio e la separazione delle sue reti interne. ERC 10 errori aperti, DRC un errore per contorno assente. PCB e BOM ancora da qualificare.
 
+## Ramo di misura dell’inviluppo AM e confronto dei rivelatori
+
+C133 disaccoppia il collettore Q103 in continua. R141 (6,8 kΩ) assicura il ritorno di ingresso, D104 (candidato BAT85S-TAP, DO-35) carica C134 (120 pF) e R142 (47 kΩ) scarica il nodo AM_ENV_RAW. Costante nominale a diodo interdetto 5,64 µs. I cinque componenti THT sono cablati nello schema e sulla PCB. Nodo disponibile per la futura misura di livello; impedenza dell’eventuale buffer, filtraggio lento AGC, attuatore e stabilità di anello da dimensionare. Il ramo non chiude un anello AGC. [Diodo Vishay](https://www.vishay.com/docs/85513/bat85s.pdf).
+
+KiCad/RX/rivelatore_am.cpp confronta un rivelatore passivo con una demodulazione coerente ideale normalizzata. Sorgente di Thévenin da 1 kΩ, 10,695 MHz modulati all’80% a 1 kHz. I due scenari di Shockley (Is 10 o 100 nA, nVT 30 mV, Cj costante 8 pF) sono ipotesi di sensibilità: mancano parametri OEM a bassissima corrente, rumore, temperatura e capacità del cablaggio. Il modello risolve la corrente attraverso C133 e le due tensioni ai terminali del diodo. Con 30 µV RMS a vuoto e 192 passi per ciclo la fondamentale audio passiva è circa 0,20–1,76 nV di picco, rapporto combinato di seconda e terza armonica circa 20%. A 100 mV RMS risulta 8,95–25,69 mV di picco, con 22–40% di armoniche seconde/terze nei casi esaminati. Il raddoppio da 96 a 192 passi cambia le ampiezze fino a circa 2,1%. Sono stime deterministiche, non una misura della sensibilità né della distorsione reale. Il riferimento coerente ideale con portante perfettamente allineata produce 33,94 µV di picco a 30 µV RMS a vuoto: non include caricamento, perdita di conversione, rumore o perdita di aggancio.
+
+Il ramo a diodo resta candidato come indicatore di livelli maggiori. Per il percorso audio debole si privilegia lo studio della rivelazione sincrona: prossimo blocco è il recupero di portante e la verifica di aggancio con scarto IF, modulazione profonda e rumore, prima di fissare il demodulatore e le soglie AGC. Verificare anche il carico non lineare visto da Q103 e la dinamica complessiva.
+
+MAIN candidata: 89 impronte THT. Il confronto netlist conserva tutte le precedenti connessioni e verifica orientamento di D104 e ritorni. ERC 10 errori preesistenti; DRC con parità zero pad scollegati, zero discrepanze, contorno assente. Qualifica OEM e collaudo fisico restano aperti.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
