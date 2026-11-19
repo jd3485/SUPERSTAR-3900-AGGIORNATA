@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T14:16:54+0100</date>
+    <date>2026-11-19T14:25:50+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -169,9 +169,10 @@
       <tstamps>38b907c0-4f6c-462a-ad09-67f11a6d2ede</tstamps>
     </comp>
     <comp ref="C114">
-      <value>54p total</value>
+      <value>47p</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -184,9 +185,10 @@
       <tstamps>3b323096-1839-4669-96b2-f005c40b29bd</tstamps>
     </comp>
     <comp ref="C115">
-      <value>11p total</value>
+      <value>9.1p</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -199,9 +201,10 @@
       <tstamps>0c1236b6-b15d-497c-8682-e2d43a81454f</tstamps>
     </comp>
     <comp ref="C116">
-      <value>54p total</value>
+      <value>47p</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -480,9 +483,10 @@
       <tstamps>2235feef-e9f3-4cb5-ba8c-55de2ed6065d</tstamps>
     </comp>
     <comp ref="L104">
-      <value>4.4u</value>
+      <value>4.7u</value>
+      <footprint>Inductor_THT:L_Axial_L7.0mm_D3.3mm_P10.16mm_Horizontal_Fastron_MICC</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Inductor_THT:L_Axial_L7.0mm_D3.3mm_P10.16mm_Horizontal_Fastron_MICC</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -495,9 +499,10 @@
       <tstamps>b9b178cb-57f0-495d-8d94-38b0d788ef26</tstamps>
     </comp>
     <comp ref="L105">
-      <value>4.4u</value>
+      <value>4.7u</value>
+      <footprint>Inductor_THT:L_Axial_L7.0mm_D3.3mm_P10.16mm_Horizontal_Fastron_MICC</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Inductor_THT:L_Axial_L7.0mm_D3.3mm_P10.16mm_Horizontal_Fastron_MICC</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -669,9 +674,10 @@
       <tstamps>5c0db121-cfdb-4a08-80ca-16170fac4ed4</tstamps>
     </comp>
     <comp ref="R112">
-      <value>49.9</value>
+      <value>56.2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>

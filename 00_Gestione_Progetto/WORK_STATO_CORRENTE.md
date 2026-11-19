@@ -116,6 +116,14 @@ Il modello a 50 Ω confronta 220 e 270 nH, tolleranza bobine ±20%, condensatori
 
 MAIN ora ha 54 impronte THT. Netlist invariata nelle connessioni, pad e reti verificati. ERC 10 segnalazioni, DRC con parità un errore di contorno, otto impronte mancanti e zero pad scollegati tra quelli presenti. Prossima attività: chiudere la rete di adattamento IF dei filtri AM verificando terminazioni e fattori di merito.
 
+## Rete IF AM candidata a 10,695 MHz
+
+Sulla MAIN L104 e L105 da 4,7 µH, C114 e C116 da 47 pF, C115 da 9,1 pF e R112 da 56,2 Ω sono presenti nello schema e sulla PCB. Collegati il driver R117, i rami di adattamento disponibili e il ritorno RX. Per i condensatori si ipotizzano C0G ±5% e 1–3 pF di capacità esterna di montaggio; 9,1 pF più circa 2 pF concorrono agli 11 pF richiesti tra le sezioni. Le due sezioni FL101/FL102 restano da posizionare, con verifica della marcatura e della piedinatura.
+
+Confronto a centro banda nel modello carico_filtro_am.py. La scheda Krystaly prescrive 1800 Ω in parallelo a 5 pF a entrambe le porte. Il candidato assiale Token TCAL0307-4R7K ha tolleranza ±10%, Q minimo 45 a 7,96 MHz e SRF minima 50 MHz. Simulati ESR costante estratta dal Q, due estremi di capacità propria e parassiti di montaggio ipotetici. Usando il modello di impedenza complessa del buffer si ottengono 1463–2470 Ω e −5,11…12,44 pF all’ingresso; con carico futuro aperto o 2 kΩ in parallelo a 10 pF si ottengono 1376–2232 Ω e −4,88…12,67 pF all’uscita. Un valore negativo indica suscettanza netta induttiva. La dispersione richiede selezione o regolazione delle reti e verifica con il filtro reale. La banda passante e l’attenuazione fuori banda del circuito montato restano da dimostrare. Confermare MPN completo, produzione, parassiti, processo e impronte prima di congelare il circuito. [Filtro OEM](https://www.krystaly.cz/en/wp-content/uploads/2023/06/TSP_10695-075-B.pdf) · [Induttori OEM](https://token.com.tw/pdf/inductor/inductor-fixed1.pdf).
+
+MAIN candidata: 60 impronte THT; netlist logica conservata e pad verificati. ERC 10 segnalazioni. DRC con parità: errore di contorno, zero pad scollegati tra quelli presenti e due impronte mancanti nel master attuale. Il master rappresenta una radio parziale. Prossimo lavoro: predisporre la taratura alle due porte e verificare impronta e orientamento delle sezioni a quarzi.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
