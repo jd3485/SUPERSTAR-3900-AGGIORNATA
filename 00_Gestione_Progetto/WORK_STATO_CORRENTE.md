@@ -1,5 +1,13 @@
 # Stato operativo
 
+## Ultimo avanzamento candidato · distribuzione LO della ricezione AM
+
+Base canonica verificata `c14cfea15ceb180db34efb6fb73f0257736559a8`. La PR #1 contiene il CAD candidato. MAIN ha 109 impronte THT. L106–L109, C137–C140 e R149 formano un ibrido a elementi concentrati fra AM_LO_DRIVE e gli ingressi LO dei mixer U111/U112. Il quarto ramo termina su 49,9 Ω. Il driver a monte manca ancora. Netlist e PCB preservano le connessioni preesistenti. Il DRC con parità rileva zero pad scollegati e il solo errore di contorno assente. L’ERC MAIN mantiene dieci errori.
+
+Il modello riproducibile in KiCad/RX/ibrido_lo_am.py assume porte resistive da 50 Ω e Q delle induttanze pari a 45. A 10,695 MHz stima −90,12° Q/I e perdite di 3,16 e 3,77 dB. L’ingresso necessario per +7 dBm sul ramo debole è +10,77 dBm. Con L ±10%, C ±2%, R ±1% e Q comune 30 o 60, i 1024 vertici simulati danno da −101,63° a −77,43° e fino a +12,80 dBm richiesti. Il ramo più forte riceve più potenza. Restano da determinare il massimo pilotaggio ammissibile e lo sbilanciamento accettabile, inclusi i carichi reali non lineari, le capacità parassite, l’accoppiamento magnetico e i ritorni sul layout. Valutare selezione o taratura dei passivi prima del congelamento. Famiglia assiale candidata [Fastron MICC](https://fastrongroup.com/product-category/leaded-inductors-fixed-choke-coils/micc/). Produzione OEM del codice definitivo, Q alla frequenza di lavoro e geometria di montaggio ancora da qualificare.
+
+Prossimo blocco RX: dimensionare sorgente e driver a 10,695 MHz e verificare la finestra di pilotaggio di entrambi i mixer.
+
 ## Ultima integrazione su main al momento della proposta
 
 Bootstrap operativo a commit 34d1c309c6b1b58e1b32f2193e49a19d2ce8a4c5. Nessuna run Actions per quel commit.
