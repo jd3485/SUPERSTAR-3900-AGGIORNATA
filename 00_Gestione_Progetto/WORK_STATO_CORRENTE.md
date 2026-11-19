@@ -142,6 +142,14 @@ FL101.DOT va all’ingresso dal driver, FL102.DOT all’uscita terminata, entram
 
 MAIN: 64 impronte THT sullo schema parziale corrente, corrispondenza pin/pad/rete verificata. Netlist logica conservata. DRC con parità: zero pad scollegati e zero discrepanze di impronta; permane un errore di contorno. ERC: 10 errori aperti. Prossimo blocco: dimensionare guadagno e carico dello stadio IF a valle di FL102, includendo il comportamento ai segnali deboli e la dinamica richiesta dal rivelatore AM.
 
+## Primo amplificatore IF AM dopo FL102
+
+Q102, candidato onsemi 2N3904BU in TO-92 E/B/C, riceve il segnale dal nodo terminato attraverso C127. R129/C129 filtrano localmente la linea logica candidata, R130/R131 polarizzano la base, R132 è il carico di collettore e R133/R134 con C128 fissano la degenerazione di emettitore. Le dieci impronte THT e i relativi collegamenti sono presenti sulla MAIN. L’uscita AM_IF1_COLLECTOR porta anche la polarizzazione continua: prevedere accoppiamento e carico del prossimo stadio. Il ritorno RF alla sorgente e l’alimentazione complessiva restano aperti. [Scheda OEM](https://www.onsemi.com/download/data-sheet/pdf/2n3904-d.pdf).
+
+Il modello riproducibile KiCad/RX/guadagno_if_am.py (Python con NumPy) risolve polarizzazione e piccolo segnale a 10,695 MHz. A 4,75–5,25 V, nei casi campionati di transistor e con carico futuro solo AC da 2–10 kΩ in parallelo a 5–15 pF, restituisce Ie 0,97–1,77 mA, Vce 2,44–3,24 V e guadagno di tensione dal nodo AM_IF_TERMINATED al collettore 15,0–21,2 dB. L’impedenza d’ingresso in modulo è 229–714 Ω; il modello include la capacità base-collettore. Con questo carico complesso il calcolo della selezione di R112/C126 restituisce 43–82 Ω e 6,8–24 pF, equivalenti nei casi valutati a 1732–1874 Ω e 4,00–5,99 pF alla porta del quarzo. Sono scenari con componenti ideali esterni, senza parassiti del layout, rumore, compressione o modello OEM completo. Restano da verificare stabilità in frequenza, tolleranze, impedenza della distribuzione, guadagno complessivo e dinamica di rivelazione. Produzione OEM corrente da confermare prima del congelamento.
+
+Verifiche MAIN: conservate le connessioni precedenti e verificata nella netlist la mappa dei nuovi pin. 74 impronte THT. ERC 10 errori preesistenti; DRC con parità zero pad scollegati, zero discrepanze di impronte, contorno ancora assente. Prossimo lavoro: determinare il guadagno ancora necessario prima del rivelatore AM e il punto di intervento del controllo di guadagno, con il carico effettivo di uscita.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
