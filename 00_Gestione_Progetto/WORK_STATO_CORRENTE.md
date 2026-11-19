@@ -1,6 +1,14 @@
 # Stato operativo
 
-## Ultimo avanzamento candidato · distribuzione LO della ricezione AM
+## Filtro e dimensionamento del pilotaggio LO · PR #1
+
+MAIN candidata: 115 impronte THT. C143 interrompe la continua del driver; L110/C141/L111/C142/L112 costituiscono un passa-basso del quinto ordine davanti all’ibrido I/Q. Le induttanze successive sono montate su assi ortogonali. La sorgente attiva a monte di C143 resta aperta. Pin, pad e net precedenti conservati. DRC con parità su MAIN e FRONT: solo contorno mancante, zero pad scollegati; ERC rispettivamente 11 e 4 errori. Il nuovo errore identifica la sorgente LO da integrare.
+
+Il modello nodale in KiCad/RX/pilotaggio_lo_am.py include filtro, anello e terminazioni. Ipotesi: sorgente di Thévenin e mixer da 50 Ω, L ±10%, C di filtro e ibrido ±2%, blocco DC ±5%, terminazione ±1%, Q comune 30/60. Ai 65 536 vertici analizzati, +11,49 dBm disponibili alla fondamentale minimizzano la massima deviazione da +7 dBm sui due mixer; sono 4,75 Vpp sinusoidali a vuoto oppure 2,37 Vpp su carico adattato. Ai mixer si stimano +4,68…+9,32 dBm. Le curve tipiche OEM a +4/+7/+10 dBm sono un riferimento per il confronto; non specificano la prestazione del rivelatore a IF quasi nulla né un massimo assoluto applicabile. [SBL-1+, dati originali](https://www.minicircuits.com/pdfs/SBL-1%2B.pdf)
+
+La scelta dei passivi è candidata. Verificare produzione OEM, Q/SRF, parassiti e accoppiamento fisico. Alle armoniche il modello ideale serve solo a confrontare topologie, perché ignora accoppiamenti diretti, autorisonanze, Q dipendente dalla frequenza e impedenza dei mixer pompati. Prossimo passo: selezionare la sorgente a 10,695 MHz e uno stadio THT compatibile con il livello calcolato, l’alimentazione disponibile, lo spettro e i limiti in corrente, prima del routing attivo.
+
+## Stato precedente · distribuzione LO della ricezione AM
 
 Base canonica verificata `c14cfea15ceb180db34efb6fb73f0257736559a8`. La PR #1 contiene il CAD candidato. MAIN ha 109 impronte THT. L106–L109, C137–C140 e R149 formano un ibrido a elementi concentrati fra AM_LO_DRIVE e gli ingressi LO dei mixer U111/U112. Il quarto ramo termina su 49,9 Ω. Il driver a monte manca ancora. Netlist e PCB preservano le connessioni preesistenti. Il DRC con parità rileva zero pad scollegati e il solo errore di contorno assente. L’ERC MAIN mantiene dieci errori.
 

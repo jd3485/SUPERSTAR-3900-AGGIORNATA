@@ -1,4 +1,4 @@
-ERC report (2026-11-19T18:13:33+0100, Encoding UTF8)
+ERC report (2026-11-19T22:40:47+0100, Encoding UTF8)
 
 ***** Sheet /
 [label_dangling]: Label not connected to anything
@@ -31,5 +31,8 @@ ERC report (2026-11-19T18:13:33+0100, Encoding UTF8)
 [label_dangling]: Label not connected to anything
     ; error
     @(254.00 mm, 226.06 mm): Label 'RX_LO_DRIVE'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(520.70 mm, 534.67 mm): Label 'AM_LO_SOURCE_50R'
 
- ** ERC messages: 10  Errors 10  Warnings 0
+ ** ERC messages: 11  Errors 11  Warnings 0
