@@ -1,6 +1,200 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A2")
 (title_block (title "MAIN - Interfaccia candidata"))
-(lib_symbols (symbol "Connex_RF:MCF_HC49_Section" (in_bom yes) (on_board yes)
+(lib_symbols 
+	(symbol "Transistor_BJT:Q_NPN_EBC"
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "Q"
+			(at 5.08 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Q_NPN_EBC"
+			(at 5.08 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "NPN transistor, emitter/base/collector"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "BJT"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Q_NPN_EBC_0_1"
+			(polyline
+				(pts
+					(xy -2.54 0) (xy 0.635 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.635 1.905) (xy 0.635 -1.905)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 1.27 0)
+				(radius 2.8194)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Q_NPN_EBC_1_1"
+			(polyline
+				(pts
+					(xy 0.635 0.635) (xy 2.54 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.635 -0.635) (xy 2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(pin input line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 5.08 270)
+				(length 2.54)
+				(name "C"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(name "E"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Connex_RF:MCF_HC49_Section" (in_bom yes) (on_board yes)
 (property "Reference" "FL" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
 (property "Value" "MCF_HC49_Section" (at 0 -5.08 0) (effects (font (size 1.27 1.27))))
 (symbol "MCF_HC49_Section_0_1" (rectangle (start -5.08 3.81) (end 5.08 -3.81) (stroke (width 0.254)(type default))(fill(type background))))
@@ -1645,4 +1839,97 @@
 (label "AM_MCF_OUT" (at 312.42 332.74 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "70014b27-cfdf-4a9c-971a-3bd118d2aa28"))
 (wire (pts (xy 312.42 349.25) (xy 312.42 358.14)) (stroke (width 0) (type default)) (uuid "d69995f6-e79f-4604-aadd-887673a23cd2"))
 (label "RX_RF_RETURN" (at 312.42 358.14 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "05fef7db-0940-4f36-8f03-0ac13492b11e"))
+(symbol (lib_id "Device:R") (at 375.92 149.86 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "eba526a3-6ef7-4dbf-acb8-540ed07242b9")
+(property "Reference" "R113" (at 383.54 147.32000000000002 0) (effects (font (size 1.27 1.27))))
+(property "Value" "47" (at 383.54 152.4 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "b117a0d2-b68f-4c58-bdf3-e7c88eba0e64")) (pin "2" (uuid "bcd572ce-e5a1-48e6-81fc-ab83ee41f274"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R113") (unit 1)))))
+(wire (pts (xy 375.92 146.05) (xy 375.92 139.7)) (stroke (width 0) (type default)) (uuid "2695779e-ded0-4634-8ebf-ca1d0bb7ea9e"))
+(label "MAIN_LOGIC_SUPPLY" (at 375.92 139.7 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fe943bcf-8f40-4bd9-976a-55d8eebca151"))
+(wire (pts (xy 375.92 153.67) (xy 375.92 160.02)) (stroke (width 0) (type default)) (uuid "7380d317-eeec-42e3-a6db-269b5f1547c0"))
+(label "AM_BUFFER_VCC" (at 375.92 160.02 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2b7aabf5-f14f-4e5e-acac-8994dcc6c7ad"))
+(symbol (lib_id "Device:C") (at 416.56 149.86 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c3108fc1-65cb-492e-9231-d167a12868b3")
+(property "Reference" "C117" (at 424.18 147.32000000000002 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1u" (at 424.18 152.4 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "d61777c5-254a-4e1c-8b8d-11926ad16b33")) (pin "2" (uuid "bf7844c7-b471-49c7-887c-6a0eaf42bc7d"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C117") (unit 1)))))
+(wire (pts (xy 416.56 146.05) (xy 416.56 139.7)) (stroke (width 0) (type default)) (uuid "bf1453de-feed-4df5-830d-034e3922b650"))
+(label "AM_BUFFER_VCC" (at 416.56 139.7 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a39729be-1f5b-4d0f-93b3-0e4ee8c58b35"))
+(wire (pts (xy 416.56 153.67) (xy 416.56 160.02)) (stroke (width 0) (type default)) (uuid "d86f31e4-bdd2-4192-aa3d-4214c464ff36"))
+(label "RX_RF_RETURN" (at 416.56 160.02 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "99e73487-2378-4983-ad65-732ef99ff044"))
+(symbol (lib_id "Device:C") (at 457.2 149.86 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0fb887a2-c68a-41d8-bac6-a154b86eeb29")
+(property "Reference" "C118" (at 464.82 147.32000000000002 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100n" (at 464.82 152.4 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "0074e2b4-c6c1-49a9-b1c0-7fdb750e3812")) (pin "2" (uuid "ce5619d3-3a0c-4bfc-8cd8-c98dda229524"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C118") (unit 1)))))
+(wire (pts (xy 457.2 146.05) (xy 457.2 139.7)) (stroke (width 0) (type default)) (uuid "b94f1151-9fe8-4dea-80cd-a9d349ddb67e"))
+(label "AM_BUFFER_VCC" (at 457.2 139.7 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "39986403-6ebf-4613-998c-c596158d9ce4"))
+(wire (pts (xy 457.2 153.67) (xy 457.2 160.02)) (stroke (width 0) (type default)) (uuid "e243ea34-4dc8-4160-a520-ea5d3e867cd2"))
+(label "RX_RF_RETURN" (at 457.2 160.02 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "11b2b1f1-95b0-4d77-a05c-027a6fb20fff"))
+(symbol (lib_id "Device:C") (at 497.84 149.86 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "966f5ef7-7bcb-41cf-b430-0ffd8046639d")
+(property "Reference" "C119" (at 505.46 147.32000000000002 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10n" (at 505.46 152.4 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "e5fa9362-d566-441b-b122-4340ab2c8150")) (pin "2" (uuid "124d5212-7c58-48ca-b314-98ca0d41feb9"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C119") (unit 1)))))
+(wire (pts (xy 497.84 146.05) (xy 497.84 139.7)) (stroke (width 0) (type default)) (uuid "4585abed-e518-4e88-90f6-be53b4929ac2"))
+(label "RX_IF_LOWPASS" (at 497.84 139.7 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3c89269f-5d3e-4bff-8347-d5e8af04d86d"))
+(wire (pts (xy 497.84 153.67) (xy 497.84 160.02)) (stroke (width 0) (type default)) (uuid "21783c97-87f8-415a-9860-d1dd301b1e66"))
+(label "AM_BUFFER_BASE" (at 497.84 160.02 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "865a85b1-0c82-431a-b3fb-15911cb7f9c7"))
+(symbol (lib_id "Device:R") (at 375.92 203.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "797aafff-050a-443f-a633-e82b1dcce0f5")
+(property "Reference" "R114" (at 383.54 200.66 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22k" (at 383.54 205.73999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "8ba41473-6837-47ba-9c5b-f3ac25636400")) (pin "2" (uuid "3f55a65f-78ab-446f-9f33-16368bebaab5"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R114") (unit 1)))))
+(wire (pts (xy 375.92 199.39) (xy 375.92 193.04)) (stroke (width 0) (type default)) (uuid "7b36f85c-fb2f-4005-967f-c9f038309cb4"))
+(label "AM_BUFFER_VCC" (at 375.92 193.04 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f6a3928b-bf1f-4deb-8bca-84ef1b290759"))
+(wire (pts (xy 375.92 207.01) (xy 375.92 213.36)) (stroke (width 0) (type default)) (uuid "0c5147a0-2365-457e-bc24-0b7710b7022c"))
+(label "AM_BUFFER_BASE" (at 375.92 213.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "97f58ca1-bdfe-4f05-a1ce-55d74d7a5e8b"))
+(symbol (lib_id "Device:R") (at 416.56 203.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "19b08346-0c91-49e3-beb1-c1c0f58033e0")
+(property "Reference" "R115" (at 424.18 200.66 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22k" (at 424.18 205.73999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "f7a81c9b-1947-422a-928f-ae4bb4421b5b")) (pin "2" (uuid "91d0b87d-fc63-4207-b731-1961cb7d7b75"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R115") (unit 1)))))
+(wire (pts (xy 416.56 199.39) (xy 416.56 193.04)) (stroke (width 0) (type default)) (uuid "cf9d9abb-1608-4e5b-a6fa-b3a29f7a7078"))
+(label "AM_BUFFER_BASE" (at 416.56 193.04 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d1cbbed7-d8fe-4c77-8c4c-ed7a06ba95c1"))
+(wire (pts (xy 416.56 207.01) (xy 416.56 213.36)) (stroke (width 0) (type default)) (uuid "b112402b-7ab8-4f47-983e-a66fd818e18e"))
+(label "RX_RF_RETURN" (at 416.56 213.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6585ea09-a9c3-4667-944c-857df84447bc"))
+(symbol (lib_id "Device:R") (at 457.2 203.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5945e441-10b5-412f-9427-cbe17eb5ad6b")
+(property "Reference" "R116" (at 464.82 200.66 0) (effects (font (size 1.27 1.27))))
+(property "Value" "680" (at 464.82 205.73999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "20c30f41-797e-44c2-ae38-4078a81135af")) (pin "2" (uuid "829de293-e31f-4eb8-acee-aa1062c73ad1"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R116") (unit 1)))))
+(wire (pts (xy 457.2 199.39) (xy 457.2 193.04)) (stroke (width 0) (type default)) (uuid "e6d0d73d-0dfb-4475-a616-03ccc4ddbda7"))
+(label "AM_BUFFER_EMITTER" (at 457.2 193.04 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2e0e5a7f-ee4b-40d2-9523-e6060657457d"))
+(wire (pts (xy 457.2 207.01) (xy 457.2 213.36)) (stroke (width 0) (type default)) (uuid "e9c5329f-9a70-45e6-9c4b-a534eb8db78f"))
+(label "RX_RF_RETURN" (at 457.2 213.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0490fd43-4711-4981-a526-7582ee28985f"))
+(symbol (lib_id "Device:C") (at 497.84 203.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a49605fe-f7c8-4f62-a83c-0f6c4d1642db")
+(property "Reference" "C120" (at 505.46 200.66 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10n" (at 505.46 205.73999999999998 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "3f620a42-30e0-4431-8877-f2e512a74a6e")) (pin "2" (uuid "8e12457e-b605-4b88-bd55-2e0bc2eeb59a"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C120") (unit 1)))))
+(wire (pts (xy 497.84 199.39) (xy 497.84 193.04)) (stroke (width 0) (type default)) (uuid "a1561b1f-bc3f-4126-bdb0-07ae39d785de"))
+(label "AM_BUFFER_EMITTER" (at 497.84 193.04 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "114be0f9-d89b-499c-9eec-ef4bee16f47a"))
+(wire (pts (xy 497.84 207.01) (xy 497.84 213.36)) (stroke (width 0) (type default)) (uuid "b094c42f-0b55-4b7c-a078-1f4d06fe1889"))
+(label "AM_BUFFER_AC" (at 497.84 213.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "7b695871-296a-4fd5-9d62-6a2cf6782548"))
+(symbol (lib_id "Device:R") (at 375.92 256.54 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "fb80e48c-138f-4862-8485-eb5c53434972")
+(property "Reference" "R117" (at 383.54 254.00000000000003 0) (effects (font (size 1.27 1.27))))
+(property "Value" "39" (at 383.54 259.08000000000004 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "5d5691bd-a2ec-4509-867a-ba9c254e2fca")) (pin "2" (uuid "5a1873e3-38c7-4107-b684-7f88e03266d8"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R117") (unit 1)))))
+(wire (pts (xy 375.92 252.73) (xy 375.92 246.38)) (stroke (width 0) (type default)) (uuid "9e9b0370-fcd9-4c64-a7dc-ed13de11e8b9"))
+(label "AM_BUFFER_AC" (at 375.92 246.38 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2f40a46c-4e3a-4ccd-9414-acc3026bad47"))
+(wire (pts (xy 375.92 260.35) (xy 375.92 266.7)) (stroke (width 0) (type default)) (uuid "41f6f07a-8dd8-4463-bbbf-0a338d023d5c"))
+(label "AM_IF_DRIVER_50R" (at 375.92 266.7 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "7aaabeea-64a4-4d12-99be-5fd550692556"))
+(symbol (lib_id "Transistor_BJT:Q_NPN_EBC") (at 443.23 260.35 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "36256c0d-b62d-43a0-8f1e-c14e889c099e")
+(property "Reference" "Q101" (at 450.85 257.81 0) (effects (font (size 1.27 1.27))))
+(property "Value" "2N3904BU" (at 450.85 262.89000000000004 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "a08eb129-2940-4846-a62a-375dde673fa3")) (pin "2" (uuid "c39f2ef2-24eb-49f1-96b2-d93f588d6448"))
+(pin "3" (uuid "41044d1c-c460-4f55-aedd-d0269e69d4d0"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "Q101") (unit 1)))))
+(wire (pts (xy 438.15 260.35) (xy 414.02 260.35)) (stroke (width 0) (type default)) (uuid "764425dd-b6d7-4009-9d52-c89f9274b410"))
+(label "AM_BUFFER_BASE" (at 414.02 260.35 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "21396868-25c3-4bf6-a692-9a2c26719e11"))
+(wire (pts (xy 445.77 255.27) (xy 445.77 245.11)) (stroke (width 0) (type default)) (uuid "811ba4df-310f-45c2-a9b9-e7ba1044ba57"))
+(label "AM_BUFFER_VCC" (at 445.77 245.11 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "042bc5b5-c0e5-4bc6-9d5e-107bf0d2c28e"))
+(wire (pts (xy 445.77 265.43) (xy 445.77 274.32)) (stroke (width 0) (type default)) (uuid "d536bc9e-ef0d-42e7-b6f1-a7d0f9546f9e"))
+(label "AM_BUFFER_EMITTER" (at 445.77 274.32 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fdea075e-ceea-48b3-8074-5c6abb7fe9ca"))
 )
