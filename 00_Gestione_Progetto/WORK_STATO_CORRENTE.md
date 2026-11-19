@@ -68,6 +68,10 @@ Aggiunti e collegati nello schema e sulla PCB U103, R120–R123 e C121. MAIN osp
 
 Sette impronte aggiunte e collegate: selezione a diodi delle sorgenti DC del ramo logico, regolatore e capacità locali, precarico R124. MAIN ha 24 impronte THT. ERC: 10 errori. DRC con parità: nessun pad scollegato tra quelli presenti, contorno assente e 28 impronte mancanti rispetto allo schema. Dimensionamento e limiti del precarico in KiCad/INTERFACCIA_MAIN_FRONT.md. Restano aperti distribuzione e protezioni a monte, verifica termica e supervisore di reset con memoria di armamento.
 
+## Supervisione del rail logico su MAIN
+
+U104, C122 e R125 integrati e sbrogliati. Il simbolo di progetto di U104 segue la piedinatura MCP102 indicata nella tabella OEM. Controllati pad/reti e preservate tutte le connessioni precedenti. MAIN ha 27 impronte; ERC 10 errori, DRC con parità: contorno assente, zero pad scollegati e 28 impronte mancanti. Prossimo passo dell’interblocco: usare LOGIC_RESET_N per azzerare la memoria e consentire l’armamento solo dopo un rilascio stabile successivo. Vedere KiCad/INTERFACCIA_MAIN_FRONT.md per limiti di qualifica.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.
