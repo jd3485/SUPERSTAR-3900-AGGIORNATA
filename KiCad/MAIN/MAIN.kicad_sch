@@ -1,6 +1,175 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A2")
 (title_block (title "MAIN - Interfaccia candidata"))
 (lib_symbols 
+	(symbol "Device:D"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D"
+			(at 0 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "diode"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "D_0_1"
+			(polyline
+				(pts
+					(xy -1.27 1.27) (xy -1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "D_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
 	(symbol "74xx:74LS132"
 		(pin_names
 			(offset 1.016)
@@ -3323,4 +3492,24 @@
 (label "PTT_ARMED" (at 196.85 255.27 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a1f82243-217f-4bd7-b406-d7392ec0aa42"))
 (wire (pts (xy 196.85 267.97) (xy 196.85 273.05)) (stroke (width 0) (type default)) (uuid "84580a59-dfc4-45d3-950e-352265b223ff"))
 (label "CONTROL_RETURN" (at 196.85 273.05 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "774db3d3-36c9-4e7c-a9f0-d116cf859261"))
+(symbol (lib_id "Device:R") (at 241.30 265.43 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "359403c3-ff4b-4c36-8540-3ddd6f611729")
+(property "Reference" "R128" (at 248.92 262.89 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1.5k" (at 248.92 267.97 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 66.04 125.73 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "56092447-5404-43df-b991-ce5d2c41846c")) (pin "2" (uuid "ddcae158-9bce-48d8-b773-3801cbdc4925"))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R128") (unit 1)))))
+(wire (pts (xy 241.30 261.62) (xy 241.30 256.54)) (stroke (width 0) (type default)) (uuid "c7d35a55-26c0-4180-8313-6edd8e2e8caf"))
+(label "PTT_QUAL_N" (at 241.30 256.54 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "43d09ae6-d065-4a14-b253-58f6b71c4f42"))
+(wire (pts (xy 241.30 269.24) (xy 241.30 274.32)) (stroke (width 0) (type default)) (uuid "c2e05deb-af19-41d7-a3b6-77e3cbacd3d2"))
+(label "PTT_RECHARGE_A" (at 241.30 274.32 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "4dea8556-a9dc-4312-b62c-18a6fb6a58f6"))
+(symbol (lib_id "Device:D") (at 292.10 265.43 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "72506cff-486a-42b3-988c-efed9b73138f")
+(property "Reference" "D103" (at 299.72 262.89 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1N4148-TAP" (at 299.72 267.97 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "ee33261b-7c36-4916-a5f6-037f99530d08")) (pin "2" (uuid "55830513-24de-4751-aa07-a8699e3abe9f"))
+(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" (at 292.10 265.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "D103") (unit 1)))))
+(wire (pts (xy 288.29 265.43) (xy 264.16 265.43)) (stroke (width 0) (type default)) (uuid "c6bdde46-79ca-4168-82be-c8a03e967378"))
+(label "PTT_SET_N" (at 264.16 265.43 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0009ead3-1764-4836-b37b-edd2d89b0f5e"))
+(wire (pts (xy 295.91 265.43) (xy 325.12 265.43)) (stroke (width 0) (type default)) (uuid "d2857d62-4531-4287-b10b-7d45c6e7733c"))
+(label "PTT_RECHARGE_A" (at 325.12 265.43 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ae31dee2-d0a5-44be-9f36-48ccb12efa74"))
 )

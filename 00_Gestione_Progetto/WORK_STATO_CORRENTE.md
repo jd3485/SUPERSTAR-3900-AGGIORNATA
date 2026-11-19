@@ -76,6 +76,10 @@ U104, C122 e R125 integrati e sbrogliati. Il simbolo di progetto di U104 segue l
 
 U105, R126, C123, C124 e R127 integrati su schema e PCB MAIN. 32 impronte THT presenti. Nessun pad scollegato tra quelli presenti; contorno e 28 impronte del master mancanti. ERC MAIN: 10 errori. Il modello nominale basato sulla netlist verifica accensione con tasto premuto, rilascio, mantenimento e reset. Prossimo passo: verificare rimbalzi ripetuti e casi di guasto prima di progettare la qualificazione finale della richiesta. PTT_ARMED non pilota il trasmettitore.
 
+## Correzione del filtro di rilascio PTT
+
+Rilevato armamento spurio nel modello con impulsi ripetuti; integrati e sbrogliati D103 e R128 sulla MAIN candidata. Lo scenario di regressione è riprodotto e respinto dopo la modifica su 64 combinazioni. MAIN ha 34 impronte. ERC: 10 errori; DRC con parità: zero pad scollegati fra quelli presenti, contorno assente e 28 impronte mancanti. L’interblocco resta candidato. Proseguire con il percorso RF/IF del ricevitore mentre rimangono aperte qualifica fisica e gestione dei guasti PTT.
+
 ## Prossimo lavoro
 
 Selezionare il dispositivo RF THT e confrontare guadagno/rumore con blocco e intermodulazione prima di fissare la topologia d’ingresso.

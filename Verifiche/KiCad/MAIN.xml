@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/f03c345ded48/avvio/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-19T09:42:17+0100</date>
+    <date>2026-11-19T09:51:09+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -364,6 +364,22 @@
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>06f09f80-3996-4212-b0f0-21bbb9d223a8</tstamps>
+    </comp>
+    <comp ref="D103">
+      <value>1N4148-TAP</value>
+      <footprint>Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>72506cff-486a-42b3-988c-efed9b73138f</tstamps>
     </comp>
     <comp ref="FL101">
       <value>10.695-7.5B section</value>
@@ -856,6 +872,22 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>941a2907-07d4-4c8f-a3f6-ab2424a481ee</tstamps>
     </comp>
+    <comp ref="R128">
+      <value>1.5k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>359403c3-ff4b-4c36-8540-3ddd6f611729</tstamps>
+    </comp>
     <comp ref="U101">
       <value>LM2903P</value>
       <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
@@ -902,7 +934,7 @@
       <property name="ki_keywords" value="cmp open collector"/>
       <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7f45efdb-c6a1-4251-b3b8-8737bf7d7684 538992cb-de41-499e-bc19-632a4e2fbe59 4a66052d-7b33-436f-b89e-89aa2daa12d5</tstamps>
+      <tstamps>538992cb-de41-499e-bc19-632a4e2fbe59 7f45efdb-c6a1-4251-b3b8-8737bf7d7684 4a66052d-7b33-436f-b89e-89aa2daa12d5</tstamps>
     </comp>
     <comp ref="U104">
       <value>MCP102-450E/TO</value>
@@ -932,7 +964,7 @@
       <property name="ki_keywords" value="TTL Nand2"/>
       <property name="ki_fp_filters" value="DIP*W7.62mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>83c6766c-eed0-4bf4-9b57-8183a396bb34 d2f44e18-15c7-42e4-8c05-25e565da33a3 9fde2b51-2d1f-4698-a555-b72f9f60b164 7d016bf9-fb0e-4a7b-a180-40a87ec356a0 2a025132-ad83-4b13-95ae-d32e7d75e16b</tstamps>
+      <tstamps>83c6766c-eed0-4bf4-9b57-8183a396bb34 9fde2b51-2d1f-4698-a555-b72f9f60b164 7d016bf9-fb0e-4a7b-a180-40a87ec356a0 d2f44e18-15c7-42e4-8c05-25e565da33a3 2a025132-ad83-4b13-95ae-d32e7d75e16b</tstamps>
     </comp>
     <comp ref="U110">
       <value>SBL-1+</value>
@@ -1092,6 +1124,29 @@
       <pins>
         <pin num="1" name="" type="passive"/>
         <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Diode</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Device" part="D_Schottky">
@@ -1358,25 +1413,30 @@
     </net>
     <net code="25" name="/PTT_QUAL_N" class="Default">
       <node ref="R126" pin="1" pintype="passive"/>
+      <node ref="R128" pin="1" pintype="passive"/>
       <node ref="U105" pin="3" pintype="output"/>
     </net>
-    <net code="26" name="/PTT_RELEASE_HIGH" class="Default">
+    <net code="26" name="/PTT_RECHARGE_A" class="Default">
+      <node ref="D103" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R128" pin="2" pintype="passive"/>
+    </net>
+    <net code="27" name="/PTT_RELEASE_HIGH" class="Default">
       <node ref="R120" pin="2" pintype="passive"/>
       <node ref="R121" pin="1" pintype="passive"/>
       <node ref="U103" pin="5" pinfunction="+" pintype="input"/>
     </net>
-    <net code="27" name="/PTT_RELEASE_LOW" class="Default">
+    <net code="28" name="/PTT_RELEASE_LOW" class="Default">
       <node ref="R121" pin="2" pintype="passive"/>
       <node ref="R122" pin="1" pintype="passive"/>
       <node ref="U103" pin="2" pinfunction="-" pintype="input"/>
     </net>
-    <net code="28" name="/PTT_RELEASE_VALID" class="Default">
+    <net code="29" name="/PTT_RELEASE_VALID" class="Default">
       <node ref="R123" pin="2" pintype="passive"/>
       <node ref="U103" pin="1" pintype="open_collector"/>
       <node ref="U103" pin="7" pintype="open_collector"/>
       <node ref="U105" pin="1" pintype="input"/>
     </net>
-    <net code="29" name="/PTT_SCALED" class="Default">
+    <net code="30" name="/PTT_SCALED" class="Default">
       <node ref="C101" pin="1" pintype="passive"/>
       <node ref="R102" pin="2" pintype="passive"/>
       <node ref="R103" pin="1" pintype="passive"/>
@@ -1385,43 +1445,44 @@
       <node ref="U103" pin="3" pinfunction="+" pintype="input"/>
       <node ref="U103" pin="6" pinfunction="-" pintype="input"/>
     </net>
-    <net code="30" name="/PTT_SENSE" class="Default">
+    <net code="31" name="/PTT_SENSE" class="Default">
       <node ref="J101" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="R101" pin="2" pintype="passive"/>
       <node ref="R102" pin="1" pintype="passive"/>
     </net>
-    <net code="31" name="/PTT_SET_N" class="Default">
+    <net code="32" name="/PTT_SET_N" class="Default">
       <node ref="C123" pin="1" pintype="passive"/>
+      <node ref="D103" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R126" pin="2" pintype="passive"/>
       <node ref="U105" pin="4" pintype="input"/>
     </net>
-    <net code="32" name="/PTT_WINDOW_VALID" class="Default">
+    <net code="33" name="/PTT_WINDOW_VALID" class="Default">
       <node ref="R107" pin="2" pintype="passive"/>
       <node ref="U101" pin="1" pintype="open_collector"/>
       <node ref="U101" pin="7" pintype="open_collector"/>
     </net>
-    <net code="33" name="/RX_FILTER_IN" class="Default">
+    <net code="34" name="/RX_FILTER_IN" class="Default">
       <node ref="C110" pin="1" pintype="passive"/>
     </net>
-    <net code="34" name="/RX_FILTER_OUT" class="Default">
+    <net code="35" name="/RX_FILTER_OUT" class="Default">
       <node ref="C112" pin="2" pintype="passive"/>
       <node ref="U110" pin="1" pinfunction="RF" pintype="passive"/>
     </net>
-    <net code="35" name="/RX_IF_10695" class="Default">
+    <net code="36" name="/RX_IF_10695" class="Default">
       <node ref="C113" pin="1" pintype="passive"/>
       <node ref="L103" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U110" pin="3" pinfunction="IF_A" pintype="passive"/>
       <node ref="U110" pin="4" pinfunction="IF_B" pintype="passive"/>
     </net>
-    <net code="36" name="/RX_IF_LOWPASS" class="Default">
+    <net code="37" name="/RX_IF_LOWPASS" class="Default">
       <node ref="C119" pin="1" pintype="passive"/>
       <node ref="L103" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R110" pin="1" pintype="passive"/>
     </net>
-    <net code="37" name="/RX_LO_DRIVE" class="Default">
+    <net code="38" name="/RX_LO_DRIVE" class="Default">
       <node ref="U110" pin="8" pinfunction="LO" pintype="passive"/>
     </net>
-    <net code="38" name="/RX_RF_RETURN" class="Default">
+    <net code="39" name="/RX_RF_RETURN" class="Default">
       <node ref="C114" pin="2" pintype="passive"/>
       <node ref="C115" pin="2" pintype="passive"/>
       <node ref="C116" pin="2" pintype="passive"/>
@@ -1441,17 +1502,17 @@
       <node ref="U110" pin="6" pinfunction="GND6" pintype="passive"/>
       <node ref="U110" pin="7" pinfunction="GND7" pintype="passive"/>
     </net>
-    <net code="39" name="Net-(C110-Pad2)" class="Default">
+    <net code="40" name="Net-(C110-Pad2)" class="Default">
       <node ref="C110" pin="2" pintype="passive"/>
       <node ref="C111" pin="1" pintype="passive"/>
       <node ref="L101" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="40" name="Net-(C111-Pad2)" class="Default">
+    <net code="41" name="Net-(C111-Pad2)" class="Default">
       <node ref="C111" pin="2" pintype="passive"/>
       <node ref="C112" pin="1" pintype="passive"/>
       <node ref="L102" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="41" name="Net-(C113-Pad2)" class="Default">
+    <net code="42" name="Net-(C113-Pad2)" class="Default">
       <node ref="C113" pin="2" pintype="passive"/>
       <node ref="R111" pin="1" pintype="passive"/>
     </net>
