@@ -1,5 +1,13 @@
 # Stato operativo
 
+## Bilancio temporale RX e immagine diagnostica · PR #1
+
+Con PBCLK a 36,864 MHz il periodo Timer2 comprende 768 tick. Il trasferimento SPI a 16 bit con BRG=15 occupa nominalmente 512 tick. Il lancio previsto a tick 96–144 colloca l’ultimo clock intorno a tick 608–656, prima dei costi software di lettura e deselezione. Restano quindi al più 112–160 tick PBCLK prima del nuovo periodo, circa 3,0–4,3 µs secondo la fase di lancio. Il budget utile al DSP va misurato sulla sequenza effettiva.
+
+Il target `make -C Firmware/RX profile` prepara con XC32 una variante separata in build/profile. Nel debugger, rx_profile_data.work_max contiene i massimi dopo IQ_OK per acquisizione PLL, demodulazione senza uscita FIR e demodulazione con uscita FIR, in tick CP0 da 1/18,432 MHz. interval_max registra la distanza massima fra due coppie accettate. long_intervals conta intervalli di almeno 576 tick, anche dopo uno scarto esplicito. Un intervallo può coprire più slot. Per la prova futura acquisire anche rx_rejected_frames, rx_valid_pairs e rx_am_audio_samples e confrontarli con la variante ordinaria sullo stesso intervallo, senza fermare il core durante la misura. L’aggiornamento delle statistiche aggiunge lavoro alla sola variante profile e avviene dopo la misura del DSP.
+
+Superate le quattro prove host, inclusi wrap CP0, soglia e massimi distinti. Disponibile solo la verifica logica degli strumenti diagnostici. Restano aperte la compilazione XC32 e la misura sulla scheda. Prossimo lavoro autonomo: verificare se il calcolo del filtro può essere distribuito fra gli ingressi riducendo il picco per slot a parità di uscita.
+
 ## Filtro audio AM e decimazione a 16 kcampioni/s · PR #1
 
 Dopo il demodulatore, un FIR simmetrico a 65 coefficienti Q15 produce un campione audio ogni tre ingressi a 48 kcampioni/s. Banda audio scelta 0–4 kHz. Il ritardo di gruppo è 32 campioni di ingresso (0,667 ms). Dopo una riacquisizione, il firmware attende 65 campioni audio contigui prima di pubblicare il primo risultato. Il contatore rx_am_audio_samples permette di riconoscere ogni aggiornamento al debugger.

@@ -4,6 +4,11 @@
 #include "am_sync.h"
 #include "audio_decim.h"
 
+#ifdef RX_PROFILE
+#include "rx_profile.h"
+volatile struct rx_profile rx_profile_data;
+#endif
+
 #pragma config FNOSC = PRIPLL, POSCMOD = XT, FPLLIDIV = DIV_2
 #pragma config FPLLMUL = MUL_16, FPLLODIV = DIV_2, FPBDIV = DIV_1
 #pragma config FSOSCEN = OFF, IESO = OFF, FCKSM = CSECME
@@ -38,12 +43,21 @@ int main(void)
         enum iq_status result = pic32_iq_poll(&pair);
         if (result == IQ_OK) {
             uint32_t stamp = _CP0_GET_COUNT();
+#ifdef RX_PROFILE
+            enum rx_work stage = RX_ACQUIRE;
+#endif
             int32_t audio;
             rx_last_pair = ((uint32_t)(uint16_t)pair.i << 16) | (uint16_t)pair.q;
             ++rx_valid_pairs;
             if (am_sync_sample(&am, pair, stamp, &audio)) {
+#ifdef RX_PROFILE
+                stage = RX_DEMOD;
+#endif
                 int32_t filtered;
                 if (audio_decim_sample(&filter, audio, &filtered)) {
+#ifdef RX_PROFILE
+                    stage = RX_FIR;
+#endif
                     rx_am_audio_q7 = filtered;
                     ++rx_am_audio_samples;
                     rx_am_audio_valid = true;
@@ -52,6 +66,10 @@ int main(void)
                 audio_decim_reset(&filter);
                 rx_am_audio_valid = false;
             }
+#ifdef RX_PROFILE
+            uint32_t end = _CP0_GET_COUNT();
+            rx_profile_record(&rx_profile_data, stage, stamp, end);
+#endif
         } else if (result != IQ_IDLE) {
             ++rx_rejected_frames;
             am_sync_reset(&am, offset);
