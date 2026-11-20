@@ -4,7 +4,8 @@
 #include <stdbool.h>
 
 struct audio_decim {
-    int32_t history[128];
+    int32_t history[64];
+    int64_t partial;
     unsigned next, remaining;
 };
 

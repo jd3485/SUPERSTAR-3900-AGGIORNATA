@@ -1,5 +1,11 @@
 # Stato operativo
 
+## Calcolo FIR distribuito sui tre ingressi · PR #1
+
+Le 24 coppie di coefficienti simmetrici non nulli sono distribuite in tre gruppi da otto. Il termine centrale entra nel primo gruppo. Le somme parziali restano a 64 bit fino all’unico arrotondamento finale. L’anello conserva 64 campioni anziché 128, grazie ai coefficienti nulli alle estremità. La prima uscita resta al campione 65 e le successive ogni tre ingressi.
+
+Confronto bit per bit con convoluzione diretta su 962 uscite da sequenze pseudo-casuali a piena scala, con reset in tre fasi diverse. Verificate anche la cadenza, la risposta in frequenza e le costanti estreme. Superate le quattro prove host e la prova del filtro con AddressSanitizer e UBSan. La diagnostica RX_DEMOD comprende adesso anche le somme FIR intermedie, RX_FIR comprende la fase con pubblicazione. La durata peggiore resta da misurare con XC32 su PIC32. Prossimo lavoro autonomo: caratterizzare la ricezione AM con portante interferente nel canale adiacente.
+
 ## Bilancio temporale RX e immagine diagnostica · PR #1
 
 Con PBCLK a 36,864 MHz il periodo Timer2 comprende 768 tick. Il trasferimento SPI a 16 bit con BRG=15 occupa nominalmente 512 tick. Il lancio previsto a tick 96–144 colloca l’ultimo clock intorno a tick 608–656, prima dei costi software di lettura e deselezione. Restano quindi al più 112–160 tick PBCLK prima del nuovo periodo, circa 3,0–4,3 µs secondo la fase di lancio. Il budget utile al DSP va misurato sulla sequenza effettiva.
