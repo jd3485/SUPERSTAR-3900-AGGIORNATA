@@ -1,5 +1,11 @@
 # Stato operativo
 
+## Filtro audio AM e decimazione a 16 kcampioni/s · PR #1
+
+Dopo il demodulatore, un FIR simmetrico a 65 coefficienti Q15 produce un campione audio ogni tre ingressi a 48 kcampioni/s. Banda audio scelta 0–4 kHz. Il ritardo di gruppo è 32 campioni di ingresso (0,667 ms). Dopo una riacquisizione, il firmware attende 65 campioni audio contigui prima di pubblicare il primo risultato. Il contatore rx_am_audio_samples permette di riconoscere ogni aggiornamento al debugger.
+
+Sui coefficienti quantizzati, una griglia di 131072 frequenze dà uno scostamento inferiore a 0,002 dB in banda e un’attenuazione minima di 74,4 dB tra 8 e 24 kHz. Il test C su host verifica toni ogni 25 Hz nelle due bande, cadenza di uscita, reset e valori estremi. Superati host-check e UBSan sul filtro. La selettività del ricevitore verso portanti adiacenti richiede una verifica a monte del demodulatore. Restano da misurare con XC32 e su PIC32 il tempo di elaborazione e le eventuali perdite di campioni.
+
 ## Demodulazione AM sincrona a 48 kcampioni/s · PR #1
 
 Il percorso RX candidato passa le coppie valide al nuovo demodulatore C a virgola fissa. L'acquisizione stima fase e frequenza confrontando le somme complesse di due finestre consecutive da 16 campioni. Un PLL digitale segue la fase e un oscillatore numerico ruota I e Q sulla portante stimata. Si rimuove la componente continua dopo la proiezione. L'uscita diagnostica rx_am_audio_q7 conserva sette bit frazionari per codice ADC. Gli offset dei due canali sono separati e inizializzati a zero, in attesa di misura a ingresso terminato. Il flag di validità indica che il campione è stato elaborato dopo l'acquisizione iniziale. Non misura la qualità dell'aggancio e non comanda lo squelch.
