@@ -1,4 +1,4 @@
-/* PIC32MX250F128B. Startup: SYSCLK=PBCLK=36,864 MHz, PPS sbloccato,
+/* PIC32MX250F128B. Startup: SYSCLK=PBCLK=36,864 MHz, 
    JTAG disabilitato. Servizio esclusivo di Timer2 e SPI1/2, non rientrante. */
 #include <xc.h>
 #include "pic32_iq.h"
@@ -61,11 +61,23 @@ bool pic32_iq_init(void)
     LATBCLR = 1u << 14;
     TRISBSET = (1u << 8) | (1u << 9) | (1u << 13) | (1u << 15);
     TRISBCLR = ADC_SELECT | SLAVE_SELECT | (1u << 14);
-    SDI1R = 4;                      /* RB8, pin 17 */
-    SDI2R = 3;                      /* RB13, pin 24 */
-    SS2R = 4;                       /* RB9, pin 18, da RB7 */
+    if (SDI1R != 4 || SDI2R != 3 || SS2R != 4) {
+        /* Inizializzazione prima del DMA. Con IOL1WAY basta uno sblocco. */
+        unsigned previous_status = __builtin_disable_interrupts();
+        SYSKEY = 0;
+        SYSKEY = 0xaa996655u;
+        SYSKEY = 0x556699aau;
+        CFGCONbits.IOLOCK = 0;
+        SDI1R = 4;                  /* RB8, pin 17 */
+        SDI2R = 3;                  /* RB13, pin 24 */
+        SS2R = 4;                   /* RB9, pin 18, da RB7 */
+        CFGCONbits.IOLOCK = 1;
+        SYSKEY = 0;
+        if (previous_status & 1u)
+            __builtin_enable_interrupts();
+    }
     if (SDI1R != 4 || SDI2R != 3 || SS2R != 4 || OSCCONbits.PBDIV != 0 ||
-        OSCCONbits.COSC != 3 || OSCCONbits.CF) {
+        OSCCONbits.COSC != 3 || OSCCONbits.CF || !OSCCONbits.SLOCK) {
         SPI1CON = 0;
         SPI2CON = 0;
         IFS0CLR = _IFS0_T2IF_MASK;
@@ -83,11 +95,11 @@ bool pic32_iq_init(void)
 enum iq_status pic32_iq_poll(struct iq_pair *out)
 {
     if (!IFS0bits.T2IF)
-        return IQ_NOT_READY;
+        return IQ_IDLE;
     IFS0CLR = _IFS0_T2IF_MASK;
     if (skip_slot) {
         skip_slot = false;
-        return IQ_NOT_READY;
+        return IQ_IDLE;
     }
     enum iq_status result = iq_capture(&port, out);
     skip_slot = result != IQ_OK;

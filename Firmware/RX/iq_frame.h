@@ -5,7 +5,7 @@
 
 struct iq_pair { int16_t i, q; };
 
-enum iq_status { IQ_OK, IQ_NOT_READY, IQ_LATE, IQ_SPI_ERROR, IQ_BAD_NULL };
+enum iq_status { IQ_OK, IQ_NOT_READY, IQ_LATE, IQ_SPI_ERROR, IQ_BAD_NULL, IQ_IDLE };
 struct iq_snapshot {
     uint16_t tick;                  /* TMR2, 0..767 */
     bool invalid_slot;              /* overflow timer o cambio clock */
