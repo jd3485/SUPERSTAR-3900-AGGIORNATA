@@ -1,4 +1,146 @@
 (kicad_sch (version 20250114)(generator "eeschema")(generator_version "9.0")(uuid "5cb60d42-d8e8-492c-a128-6eea9321ee73")(paper "A2")(title_block (title "Condizionamento in continua dei canali I/Q"))(lib_symbols 
+(symbol "Connex_RF:PIC32MX250F128B-I_SP" (in_bom yes)(on_board yes)(property "Reference" "U"(at 0 21.59 0)(effects(font(size 1 1))))(property "Value" "PIC32MX250F128B-I_SP"(at 0 19.05 0)(effects(font(size 1 1))))
+		(symbol "PIC32MX250F128B-I_SP_1_1"(rectangle(start -15.24 18.0)(end 15.24 -18.0)(stroke(width .254)(type default))(fill(type background)))(pin input line(at -20.32 16.51 0)(length 5.08)(name "MCLR"(effects(font(size .95 .95))))(number "1"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 13.97 0)(length 5.08)(name "RA0"(effects(font(size .95 .95))))(number "2"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 11.43 0)(length 5.08)(name "RA1"(effects(font(size .95 .95))))(number "3"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 8.89 0)(length 5.08)(name "PGED1/RB0"(effects(font(size .95 .95))))(number "4"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 6.35 0)(length 5.08)(name "PGEC1/RB1"(effects(font(size .95 .95))))(number "5"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 3.81 0)(length 5.08)(name "RB2"(effects(font(size .95 .95))))(number "6"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 1.27 0)(length 5.08)(name "RB3"(effects(font(size .95 .95))))(number "7"(effects(font(size 1 1)))))(pin power_in line(at -20.32 -1.27 0)(length 5.08)(name "VSS"(effects(font(size .95 .95))))(number "8"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -3.81 0)(length 5.08)(name "OSC1/RA2"(effects(font(size .95 .95))))(number "9"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -6.35 0)(length 5.08)(name "OSC2/RA3"(effects(font(size .95 .95))))(number "10"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -8.89 0)(length 5.08)(name "RB4"(effects(font(size .95 .95))))(number "11"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -11.43 0)(length 5.08)(name "RA4"(effects(font(size .95 .95))))(number "12"(effects(font(size 1 1)))))(pin power_in line(at -20.32 -13.97 0)(length 5.08)(name "VDD"(effects(font(size .95 .95))))(number "13"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -16.51 0)(length 5.08)(name "RB5"(effects(font(size .95 .95))))(number "14"(effects(font(size 1 1)))))(pin input line(at 20.32 -16.51 180)(length 5.08)(name "VBUS"(effects(font(size .95 .95))))(number "15"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -13.97 180)(length 5.08)(name "RB7"(effects(font(size .95 .95))))(number "16"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -11.43 180)(length 5.08)(name "SDI1/RB8"(effects(font(size .95 .95))))(number "17"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -8.89 180)(length 5.08)(name "RB9"(effects(font(size .95 .95))))(number "18"(effects(font(size 1 1)))))(pin power_in line(at 20.32 -6.35 180)(length 5.08)(name "VSS"(effects(font(size .95 .95))))(number "19"(effects(font(size 1 1)))))(pin power_out line(at 20.32 -3.81 180)(length 5.08)(name "VCAP"(effects(font(size .95 .95))))(number "20"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -1.27 180)(length 5.08)(name "D+/RB10"(effects(font(size .95 .95))))(number "21"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 1.27 180)(length 5.08)(name "D-/RB11"(effects(font(size .95 .95))))(number "22"(effects(font(size 1 1)))))(pin power_in line(at 20.32 3.81 180)(length 5.08)(name "VUSB3V3"(effects(font(size .95 .95))))(number "23"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 6.35 180)(length 5.08)(name "SDI2/RB13"(effects(font(size .95 .95))))(number "24"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 8.89 180)(length 5.08)(name "SCK1/RB14"(effects(font(size .95 .95))))(number "25"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 11.43 180)(length 5.08)(name "SCK2/RB15"(effects(font(size .95 .95))))(number "26"(effects(font(size 1 1)))))(pin power_in line(at 20.32 13.97 180)(length 5.08)(name "AVSS"(effects(font(size .95 .95))))(number "27"(effects(font(size 1 1)))))(pin power_in line(at 20.32 16.51 180)(length 5.08)(name "AVDD"(effects(font(size .95 .95))))(number "28"(effects(font(size 1 1)))))))
+(symbol "Regulator_Linear:LM317_TO-220"
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -3.81 3.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM317_TO-220"
+			(at 0 3.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 0 6.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm317.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.5A 35V Adjustable Linear Regulator, TO-220"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "Adjustable Voltage Regulator 1A Positive"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "TO?220*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LM317_TO-220_0_1"
+			(rectangle
+				(start -5.08 1.905)
+				(end 5.08 -5.08)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LM317_TO-220_1_1"
+			(pin power_in line
+				(at -7.62 0 0)
+				(length 2.54)
+				(name "VI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 -7.62 90)
+				(length 2.54)
+				(name "ADJ"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "VO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no))
 (symbol "74xx:74LS00"
 		(pin_names
 			(offset 1.016)
@@ -3466,4 +3608,115 @@
 (label "ADC_VDD"(at 520.7 288.29 0)(effects(font(size 1 1))(justify left bottom))(uuid "293e3425-9c10-4e36-a646-a9384b3180ab"))
 (wire(pts(xy 520.7 303.53)(xy 520.7 311.15))(stroke(width 0)(type default))(uuid "8a43833a-79f1-482b-958d-21b14d9568d9"))
 (label "RX_RF_RETURN"(at 520.7 311.15 0)(effects(font(size 1 1))(justify left bottom))(uuid "3fa19bcc-e97d-435b-8ad5-c47ea52075f5"))
+
+(symbol (lib_id "Connex_RF:PIC32MX250F128B-I_SP")(at 101.6 308.61 0)(unit 1)(in_bom yes)(on_board yes)(uuid "b09bd31e-032a-40bb-9670-77b1e4c47cbf")(property "Reference" "U123" (at 109.6 286.61 0)(effects(font(size 1 1))))(property "Value" "PIC32MX250F128B-I/SP" (at 109.6 288.61 0)(effects(font(size 1 1))))(property "Footprint" "Package_DIP:DIP-28_W7.62mm" (at 109.6 290.61 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "U123")(unit 1)))))
+(wire(pts(xy 81.28 292.1)(xy 71.12 292.1))(stroke(width 0)(type default))(uuid "5004235f-830c-42ce-99bd-5fb0c8ca836b"))
+(label "PIC_MCLR"(at 71.12 292.1 0)(effects(font(size 1 1))(justify left bottom))(uuid "e0080a37-426b-43d3-9dfc-5b7ef870f054"))
+(no_connect(at 81.28 294.64)(uuid "f71d085e-c27e-4a7a-9719-64f2091fa37f"))
+(no_connect(at 81.28 297.18)(uuid "6fe1a538-8687-40f5-9508-9c49b467e33d"))
+(wire(pts(xy 81.28 299.72)(xy 71.12 299.72))(stroke(width 0)(type default))(uuid "5d351147-638c-415a-9777-fb847935731f"))
+(label "PIC_PGED1"(at 71.12 299.72 0)(effects(font(size 1 1))(justify left bottom))(uuid "841650ba-9025-4917-95b3-8cc5ab9eb6cd"))
+(wire(pts(xy 81.28 302.26)(xy 71.12 302.26))(stroke(width 0)(type default))(uuid "45e30186-a033-4505-ba3b-85d7aa12e05a"))
+(label "PIC_PGEC1"(at 71.12 302.26 0)(effects(font(size 1 1))(justify left bottom))(uuid "9c398080-ac77-41dd-94dd-6b51d745d291"))
+(no_connect(at 81.28 304.8)(uuid "ba501114-fbc6-4d0d-8ee9-88c05c448cc9"))
+(no_connect(at 81.28 307.34)(uuid "c40146d8-7d8a-4809-aac6-1d39ad9c460c"))
+(wire(pts(xy 81.28 309.88)(xy 71.12 309.88))(stroke(width 0)(type default))(uuid "3063d581-c942-4722-a1ae-2b52bb0ed62b"))
+(label "RX_RF_RETURN"(at 71.12 309.88 0)(effects(font(size 1 1))(justify left bottom))(uuid "40925f17-23c6-48f0-9969-c84858abb52d"))
+(no_connect(at 81.28 312.42)(uuid "f9872bbb-7b29-4c80-94a4-7cf6e9ce4762"))
+(no_connect(at 81.28 314.96)(uuid "7a7da4a8-acbe-4072-a9f1-a1b31b56ddc6"))
+(wire(pts(xy 81.28 317.5)(xy 71.12 317.5))(stroke(width 0)(type default))(uuid "8ed6d3ae-c331-414d-9a42-c8bc3987fe90"))
+(label "IQ_SELECT"(at 71.12 317.5 0)(effects(font(size 1 1))(justify left bottom))(uuid "bd342ba4-2c33-4c3f-8c26-a2757a043d9d"))
+(no_connect(at 81.28 320.04)(uuid "0f0aafdb-4a8e-4651-a5bf-23f196246eb9"))
+(wire(pts(xy 81.28 322.58)(xy 71.12 322.58))(stroke(width 0)(type default))(uuid "e8a42e01-4f12-477f-acca-7ae60df54337"))
+(label "MCU_3V3"(at 71.12 322.58 0)(effects(font(size 1 1))(justify left bottom))(uuid "1c37dc7a-8502-41bc-b5fe-32be69ca2a48"))
+(no_connect(at 81.28 325.12)(uuid "2c0d2855-c244-4631-a6a8-0c69f86b44fa"))
+(wire(pts(xy 121.92 325.12)(xy 132.08 325.12))(stroke(width 0)(type default))(uuid "90057ec2-14ad-4ca1-9ccd-122f692200bd"))
+(label "RX_RF_RETURN"(at 132.08 325.12 0)(effects(font(size 1 1))(justify left bottom))(uuid "4fa5c0b6-ac00-40e1-a0b2-d1102587ff4e"))
+(no_connect(at 121.92 322.58)(uuid "43bd7915-4914-4aec-bf7c-8619aac81ccf"))
+(wire(pts(xy 121.92 320.04)(xy 132.08 320.04))(stroke(width 0)(type default))(uuid "c80f4734-c663-41d3-b14f-c385ba9e2e13"))
+(label "MCU_DI"(at 132.08 320.04 0)(effects(font(size 1 1))(justify left bottom))(uuid "160be874-5ac8-407f-81c3-967253f70cec"))
+(no_connect(at 121.92 317.5)(uuid "472adbf9-4d58-4139-98a7-9b63fe4b4126"))
+(wire(pts(xy 121.92 314.96)(xy 132.08 314.96))(stroke(width 0)(type default))(uuid "4bacfbd5-ff48-45e1-9b14-70eafbd7a68f"))
+(label "RX_RF_RETURN"(at 132.08 314.96 0)(effects(font(size 1 1))(justify left bottom))(uuid "bccbae07-9f41-43c5-8eec-76dfee337c73"))
+(wire(pts(xy 121.92 312.42)(xy 132.08 312.42))(stroke(width 0)(type default))(uuid "98e341fb-bb3d-46a4-b007-1aacdb064927"))
+(label "PIC_VCAP"(at 132.08 312.42 0)(effects(font(size 1 1))(justify left bottom))(uuid "b829a2fb-308a-48a1-8be6-2c93aeb5d61e"))
+(no_connect(at 121.92 309.88)(uuid "2dc47644-f23f-4277-92a8-607a32e3aa46"))
+(no_connect(at 121.92 307.34)(uuid "9bd403d8-dfc7-477c-9994-b398be79a026"))
+(wire(pts(xy 121.92 304.8)(xy 132.08 304.8))(stroke(width 0)(type default))(uuid "e6048ffa-c4bf-4926-bb24-ee89f236e9d6"))
+(label "MCU_3V3"(at 132.08 304.8 0)(effects(font(size 1 1))(justify left bottom))(uuid "58635222-1557-4acb-963d-cae77e4c0899"))
+(wire(pts(xy 121.92 302.26)(xy 132.08 302.26))(stroke(width 0)(type default))(uuid "5769d299-c8ce-4577-a59e-f481ab5b2a35"))
+(label "MCU_DQ"(at 132.08 302.26 0)(effects(font(size 1 1))(justify left bottom))(uuid "f74c069e-a0e3-433b-990d-7b773f86724e"))
+(wire(pts(xy 121.92 299.72)(xy 132.08 299.72))(stroke(width 0)(type default))(uuid "0a3cc7a2-132f-439c-9355-756f42f744ee"))
+(label "MCU_SCK"(at 132.08 299.72 0)(effects(font(size 1 1))(justify left bottom))(uuid "dd944f23-ae04-44d5-b248-10a5ca0fcbf9"))
+(wire(pts(xy 121.92 297.18)(xy 132.08 297.18))(stroke(width 0)(type default))(uuid "a217b915-b154-4b24-8614-534a35021e34"))
+(label "MCU_SCK"(at 132.08 297.18 0)(effects(font(size 1 1))(justify left bottom))(uuid "ae9579c2-ba1b-495f-9e73-2ff0a0c0d07f"))
+(wire(pts(xy 121.92 294.64)(xy 132.08 294.64))(stroke(width 0)(type default))(uuid "69c378b3-d474-4792-9ac6-972ad3c17e3a"))
+(label "RX_RF_RETURN"(at 132.08 294.64 0)(effects(font(size 1 1))(justify left bottom))(uuid "825f7796-e588-4044-8b1b-502bded82661"))
+(wire(pts(xy 121.92 292.1)(xy 132.08 292.1))(stroke(width 0)(type default))(uuid "d7146218-bf2f-4886-80e4-e54a7fcf3e99"))
+(label "MCU_3V3"(at 132.08 292.1 0)(effects(font(size 1 1))(justify left bottom))(uuid "7efa920c-ec9b-4888-8e6b-67cb5d4f64ac"))
+(symbol (lib_id "Regulator_Linear:LM317_TO-220")(at 213.36 304.8 0)(unit 1)(in_bom yes)(on_board yes)(uuid "e575f8ec-36c4-4d95-862a-7d8fa18d8e18")(property "Reference" "U124" (at 221.36 282.8 0)(effects(font(size 1 1))))(property "Value" "LM317T/NOPB" (at 221.36 284.8 0)(effects(font(size 1 1))))(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical" (at 221.36 286.8 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "U124")(unit 1)))))
+(wire(pts(xy 205.74 304.8)(xy 195.58 304.8))(stroke(width 0)(type default))(uuid "8ce489f9-8456-44ab-b13a-fe640fbbc1ec"))
+(label "MAIN_PROTECTED_DC"(at 195.58 304.8 0)(effects(font(size 1 1))(justify left bottom))(uuid "182a2687-b613-4ca8-9f5b-fd5f3cc409df"))
+(wire(pts(xy 213.36 312.42)(xy 213.36 320.04))(stroke(width 0)(type default))(uuid "9c93388f-0477-4a35-8c98-ac84be712b4f"))
+(label "PIC_ADJ"(at 213.36 320.04 0)(effects(font(size 1 1))(justify left bottom))(uuid "6a3727bd-7512-4491-b3f9-5ca7c6911bc6"))
+(wire(pts(xy 220.98 304.8)(xy 231.14 304.8))(stroke(width 0)(type default))(uuid "126bf9ff-458b-4057-baa5-698012b5065e"))
+(label "MCU_3V3"(at 231.14 304.8 0)(effects(font(size 1 1))(justify left bottom))(uuid "df32b8de-772e-4f24-a145-3e9e7d392386"))
+(symbol (lib_id "Connector_Generic:Conn_01x06")(at 53.34 370.84 0)(unit 1)(in_bom yes)(on_board yes)(uuid "6421c09e-dbe7-48c8-b437-198eb9f24b89")(property "Reference" "J104" (at 61.34 348.84 0)(effects(font(size 1 1))))(property "Value" "ICSP target powered" (at 61.34 350.84 0)(effects(font(size 1 1))))(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" (at 61.34 352.84 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "J104")(unit 1)))))
+(wire(pts(xy 48.26 365.76)(xy 38.1 365.76))(stroke(width 0)(type default))(uuid "1be5909e-c646-455c-99b7-5dc76aa7aaee"))
+(label "PIC_MCLR"(at 38.1 365.76 0)(effects(font(size 1 1))(justify left bottom))(uuid "bb3a88e2-3dfe-49f8-b86e-01912f8c182d"))
+(wire(pts(xy 48.26 368.3)(xy 38.1 368.3))(stroke(width 0)(type default))(uuid "0d82f199-f1fc-405d-9fcc-3e9840d3c86d"))
+(label "MCU_3V3"(at 38.1 368.3 0)(effects(font(size 1 1))(justify left bottom))(uuid "ea0666b9-c4ba-42cb-accf-78a92ef98011"))
+(wire(pts(xy 48.26 370.84)(xy 38.1 370.84))(stroke(width 0)(type default))(uuid "493f93f8-c39f-42a7-b817-b5d4f8a82ccf"))
+(label "RX_RF_RETURN"(at 38.1 370.84 0)(effects(font(size 1 1))(justify left bottom))(uuid "249ce848-6417-4d95-90f9-432c89784ccd"))
+(wire(pts(xy 48.26 373.38)(xy 38.1 373.38))(stroke(width 0)(type default))(uuid "45e4d4d7-45c3-4990-a660-72a818b26e41"))
+(label "PIC_PGED1"(at 38.1 373.38 0)(effects(font(size 1 1))(justify left bottom))(uuid "b6a3bb7e-6246-4a21-babf-ecf356bcb06b"))
+(wire(pts(xy 48.26 375.92)(xy 38.1 375.92))(stroke(width 0)(type default))(uuid "57d634a8-50d7-4e0c-a4f2-077c5b932a4a"))
+(label "PIC_PGEC1"(at 38.1 375.92 0)(effects(font(size 1 1))(justify left bottom))(uuid "3af9925d-3efc-43f2-b4c3-83d8b8b94cdd"))
+(no_connect(at 48.26 378.46)(uuid "742d6b67-b0a1-4bcb-a46a-e7c0f03f4067"))
+(symbol (lib_id "Device:R")(at 111.76 370.84 0)(unit 1)(in_bom yes)(on_board yes)(uuid "910bf4f2-653e-4d5f-a882-66e65af22a32")(property "Reference" "R188" (at 119.76 348.84 0)(effects(font(size 1 1))))(property "Value" "10k" (at 119.76 350.84 0)(effects(font(size 1 1))))(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 119.76 352.84 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "R188")(unit 1)))))
+(wire(pts(xy 111.76 367.03)(xy 111.76 359.41))(stroke(width 0)(type default))(uuid "0695cef8-5dc2-47e3-a5e1-f7ac9621326c"))
+(label "MCU_3V3"(at 111.76 359.41 0)(effects(font(size 1 1))(justify left bottom))(uuid "2fd32676-c89c-4133-96d5-51172dc94b32"))
+(wire(pts(xy 111.76 374.65)(xy 111.76 382.27))(stroke(width 0)(type default))(uuid "3ed75383-28fd-4189-b10f-f8d829722a4f"))
+(label "PIC_MCLR"(at 111.76 382.27 0)(effects(font(size 1 1))(justify left bottom))(uuid "5d0449fd-a8fd-49b9-91d7-12c41944d22e"))
+(symbol (lib_id "Device:R")(at 149.86 370.84 0)(unit 1)(in_bom yes)(on_board yes)(uuid "f834f746-b7ee-48f9-a37a-3c0577dc0f22")(property "Reference" "R189" (at 157.86 348.84 0)(effects(font(size 1 1))))(property "Value" "115R 0.1%" (at 157.86 350.84 0)(effects(font(size 1 1))))(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 157.86 352.84 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "R189")(unit 1)))))
+(wire(pts(xy 149.86 367.03)(xy 149.86 359.41))(stroke(width 0)(type default))(uuid "e61264c2-061c-46de-9cdd-11efc8622e47"))
+(label "MCU_3V3"(at 149.86 359.41 0)(effects(font(size 1 1))(justify left bottom))(uuid "8bef2643-177f-49b4-8f4f-51768525e6d0"))
+(wire(pts(xy 149.86 374.65)(xy 149.86 382.27))(stroke(width 0)(type default))(uuid "bf58d60e-4699-43be-b71b-3f127e611c37"))
+(label "PIC_ADJ"(at 149.86 382.27 0)(effects(font(size 1 1))(justify left bottom))(uuid "dd3413ee-1d92-4a93-b77c-54ecb0906633"))
+(symbol (lib_id "Device:R")(at 187.96 370.84 0)(unit 1)(in_bom yes)(on_board yes)(uuid "783ce67a-16eb-4256-9b85-1e6542322a36")(property "Reference" "R190" (at 195.96 348.84 0)(effects(font(size 1 1))))(property "Value" "187R 0.1%" (at 195.96 350.84 0)(effects(font(size 1 1))))(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 195.96 352.84 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "R190")(unit 1)))))
+(wire(pts(xy 187.96 367.03)(xy 187.96 359.41))(stroke(width 0)(type default))(uuid "59b2723a-1af2-41d8-939b-ed2161a5fc1d"))
+(label "PIC_ADJ"(at 187.96 359.41 0)(effects(font(size 1 1))(justify left bottom))(uuid "12ba12f4-6422-4ef3-82e5-ed1a95503a35"))
+(wire(pts(xy 187.96 374.65)(xy 187.96 382.27))(stroke(width 0)(type default))(uuid "b8a6385b-9400-48fc-9d3a-dfd0dd30c388"))
+(label "RX_RF_RETURN"(at 187.96 382.27 0)(effects(font(size 1 1))(justify left bottom))(uuid "ff166bca-9c6b-4f59-a618-bf28312b9c62"))
+(symbol (lib_id "Device:C")(at 242.57 370.84 0)(unit 1)(in_bom yes)(on_board yes)(uuid "f28c7a5c-6d72-434a-ae1a-450eaa0f7314")(property "Reference" "C178" (at 250.57 348.84 0)(effects(font(size 1 1))))(property "Value" "100n" (at 250.57 350.84 0)(effects(font(size 1 1))))(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 250.57 352.84 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "C178")(unit 1)))))
+(wire(pts(xy 242.57 367.03)(xy 242.57 359.41))(stroke(width 0)(type default))(uuid "3f17cb89-2d19-4d23-8612-2b32ae49ec94"))
+(label "MCU_3V3"(at 242.57 359.41 0)(effects(font(size 1 1))(justify left bottom))(uuid "d510649c-7f75-4673-a438-631628e7cb28"))
+(wire(pts(xy 242.57 374.65)(xy 242.57 382.27))(stroke(width 0)(type default))(uuid "38200e89-6544-46c8-b04e-9a9f908788e0"))
+(label "RX_RF_RETURN"(at 242.57 382.27 0)(effects(font(size 1 1))(justify left bottom))(uuid "f5fb0c95-b06a-424e-b1a6-4eed1a58f446"))
+(symbol (lib_id "Device:C")(at 281.94 370.84 0)(unit 1)(in_bom yes)(on_board yes)(uuid "ba9860b9-865e-4f04-90dd-4fb86d4368d0")(property "Reference" "C179" (at 289.94 348.84 0)(effects(font(size 1 1))))(property "Value" "100n" (at 289.94 350.84 0)(effects(font(size 1 1))))(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 289.94 352.84 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "C179")(unit 1)))))
+(wire(pts(xy 281.94 367.03)(xy 281.94 359.41))(stroke(width 0)(type default))(uuid "79cd145f-03dc-4b9d-a091-f5c2ae95f9ef"))
+(label "MCU_3V3"(at 281.94 359.41 0)(effects(font(size 1 1))(justify left bottom))(uuid "e33053d6-0d9b-4423-b55e-397cc3d68bc4"))
+(wire(pts(xy 281.94 374.65)(xy 281.94 382.27))(stroke(width 0)(type default))(uuid "caa7c282-fe90-4980-a71e-2c7f6ee19298"))
+(label "RX_RF_RETURN"(at 281.94 382.27 0)(effects(font(size 1 1))(justify left bottom))(uuid "7d9aa0ad-3957-4748-bfba-396755811882"))
+(symbol (lib_id "Device:C")(at 321.31 370.84 0)(unit 1)(in_bom yes)(on_board yes)(uuid "844e51ad-a9d1-43e1-9ac8-b9d18be0ef4e")(property "Reference" "C180" (at 329.31 348.84 0)(effects(font(size 1 1))))(property "Value" "100n" (at 329.31 350.84 0)(effects(font(size 1 1))))(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 329.31 352.84 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "C180")(unit 1)))))
+(wire(pts(xy 321.31 367.03)(xy 321.31 359.41))(stroke(width 0)(type default))(uuid "894b2925-8f78-4f71-99cc-2ee536e8eacb"))
+(label "MCU_3V3"(at 321.31 359.41 0)(effects(font(size 1 1))(justify left bottom))(uuid "c83db92c-c00c-43f9-81e1-b62840ab4a43"))
+(wire(pts(xy 321.31 374.65)(xy 321.31 382.27))(stroke(width 0)(type default))(uuid "bdc59eba-dd6a-45ad-8012-0af5d6344491"))
+(label "RX_RF_RETURN"(at 321.31 382.27 0)(effects(font(size 1 1))(justify left bottom))(uuid "c5a9a7a7-3528-4405-985c-814d1a2c8e29"))
+(symbol (lib_id "Device:C")(at 360.68 370.84 0)(unit 1)(in_bom yes)(on_board yes)(uuid "fc320b86-318c-48ca-b8d9-a00ef2852c27")(property "Reference" "C181" (at 368.68 348.84 0)(effects(font(size 1 1))))(property "Value" "10u X7R" (at 368.68 350.84 0)(effects(font(size 1 1))))(property "Footprint" "Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm" (at 368.68 352.84 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "C181")(unit 1)))))
+(wire(pts(xy 360.68 367.03)(xy 360.68 359.41))(stroke(width 0)(type default))(uuid "65985153-1f95-4e7a-a65f-fa42160a1d5c"))
+(label "PIC_VCAP"(at 360.68 359.41 0)(effects(font(size 1 1))(justify left bottom))(uuid "a7d2f6b2-c809-4f88-802b-52798239a642"))
+(wire(pts(xy 360.68 374.65)(xy 360.68 382.27))(stroke(width 0)(type default))(uuid "689df2a3-4ec6-432d-b8a5-8428a104ae98"))
+(label "RX_RF_RETURN"(at 360.68 382.27 0)(effects(font(size 1 1))(justify left bottom))(uuid "5af00e7c-1a12-4cb6-bcfd-a408c44e5808"))
+(symbol (lib_id "Device:C")(at 400.05 370.84 0)(unit 1)(in_bom yes)(on_board yes)(uuid "43c8c8b7-6165-46b1-b2d8-c5cd2e35d3ac")(property "Reference" "C182" (at 408.05 348.84 0)(effects(font(size 1 1))))(property "Value" "100n 50V" (at 408.05 350.84 0)(effects(font(size 1 1))))(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 408.05 352.84 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "C182")(unit 1)))))
+(wire(pts(xy 400.05 367.03)(xy 400.05 359.41))(stroke(width 0)(type default))(uuid "bb5ca990-9829-458a-84ce-c4954fa6e5cf"))
+(label "MAIN_PROTECTED_DC"(at 400.05 359.41 0)(effects(font(size 1 1))(justify left bottom))(uuid "c2b14677-9f03-4c8c-9dde-a0151f5668c2"))
+(wire(pts(xy 400.05 374.65)(xy 400.05 382.27))(stroke(width 0)(type default))(uuid "fb68ff0f-ec77-44e4-89d5-83b1dce25e2e"))
+(label "RX_RF_RETURN"(at 400.05 382.27 0)(effects(font(size 1 1))(justify left bottom))(uuid "aa350ade-bb87-45f0-82f8-b01050a9be0a"))
+(symbol (lib_id "Device:C")(at 439.42 370.84 0)(unit 1)(in_bom yes)(on_board yes)(uuid "473de667-c9cb-4259-b5b7-95502743b3f1")(property "Reference" "C183" (at 447.42 348.84 0)(effects(font(size 1 1))))(property "Value" "1u X7R" (at 447.42 350.84 0)(effects(font(size 1 1))))(property "Footprint" "Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm" (at 447.42 352.84 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "C183")(unit 1)))))
+(wire(pts(xy 439.42 367.03)(xy 439.42 359.41))(stroke(width 0)(type default))(uuid "a764550f-e0a7-4070-a846-957648e556d7"))
+(label "MCU_3V3"(at 439.42 359.41 0)(effects(font(size 1 1))(justify left bottom))(uuid "a9c6d5a6-c2f8-474e-9521-f50f99aa1399"))
+(wire(pts(xy 439.42 374.65)(xy 439.42 382.27))(stroke(width 0)(type default))(uuid "ecb37fdc-73de-4c03-b47e-1ed8911a0c06"))
+(label "RX_RF_RETURN"(at 439.42 382.27 0)(effects(font(size 1 1))(justify left bottom))(uuid "187fb9c2-02dc-428b-9e85-f6036c905d1a"))
+(hierarchical_label "MAIN_PROTECTED_DC"(shape input)(at 233.68 270.51 180)(effects(font(size 1 1))(justify right))(uuid "a1c63418-d5fe-4fbf-afd9-4a7a3bb89ee6"))(wire(pts(xy 233.68 270.51)(xy 243.84 270.51))(stroke(width 0)(type default))(uuid "67229569-4333-4617-9d5d-39777e7c8849"))(label "MAIN_PROTECTED_DC"(at 243.84 270.51 0)(effects(font(size 1 1))(justify left bottom))(uuid "3372fe56-9773-4375-ab74-eb3e08bd7035"))
 )

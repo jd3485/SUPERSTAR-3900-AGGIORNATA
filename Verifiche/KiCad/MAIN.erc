@@ -1,4 +1,4 @@
-ERC report (2026-11-20T15:36:35+0100, Encoding UTF8)
+ERC report (2026-11-20T15:47:45+0100, Encoding UTF8)
 
 ***** Sheet /Condizionamento IQ/
 [label_dangling]: Label not connected to anything
@@ -63,9 +63,6 @@ ERC report (2026-11-20T15:36:35+0100, Encoding UTF8)
     ; warning
     @(434.34 mm, 114.30 mm): Symbol U121 Pin 9 [A7, Tri-state, Line]
     @(447.04 mm, 129.54 mm): Symbol U121 Pin 10 [GND, Power input, Line]
-[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
-    ; error
-    @(447.04 mm, 88.90 mm): Symbol U121 Pin 20 [VCC, Power input, Line]
 
 ***** Sheet /
 [power_pin_not_driven]: Input Power pin not driven by any Output Power pins
@@ -90,4 +87,4 @@ ERC report (2026-11-20T15:36:35+0100, Encoding UTF8)
     ; error
     @(734.06 mm, 364.49 mm): Symbol U113 Pin 3 [GND, Power input, Line]
 
- ** ERC messages: 26  Errors 18  Warnings 8
+ ** ERC messages: 25  Errors 17  Warnings 8
