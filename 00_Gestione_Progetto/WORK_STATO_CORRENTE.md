@@ -1,5 +1,19 @@
 # Stato operativo
 
+## Interferenza AM adiacente all’ingresso digitale · PR #1
+
+Prova host ripetibile in host-check, con il demodulatore e il decimatore del firmware. Desiderata a +230 Hz in banda base, portante 180 codici ADC, tono a 1 kHz al 60%. Interferente a ±10 kHz dalla desiderata, tono a 1,7 kHz al 70%. Due fasi iniziali per ciascun lato e livello. I due segnali sono presenti fin dall’avvio. Tutti gli ingressi rientrano nei 13 bit senza clipping. Dopo 0,5 s di assestamento, un secondo di audio a 16 kcampioni/s viene proiettato sulle due quadrature del tono utile. Il residuo comprende ogni altra componente audio, esclusa la continua.
+
+| Portante adiacente rispetto alla desiderata, all’ADC | Guadagno tono utile (dB) | Rapporto tono/residuo (dB) |
+|---|---:|---:|
+| Assente | 0,00 | 54,70 |
+| −20 dB | 0,00 … +0,01 | 54,54 … 55,06 |
+| 0 dB | +0,02 … +0,05 | 30,43 … 31,19 |
+| +10 dB | 0,00 circa … +0,05 | 19,72 … 19,85 |
+| +20 dB | −85,05 … −28,30 | −90,32 … −33,72 |
+
+A +20 dB il tono desiderato crolla in tutti e quattro i casi. La simulazione isola la catena digitale, senza filtraggio RF/IF, rumore aggiunto o misura all’antenna. Superate le cinque prove host e UBSan sul test adiacente. Prossimo passo: confrontare un filtro I/Q a monte del PLL con questi risultati, verificando contemporaneamente la risposta al segnale debole e il costo sul PIC32.
+
 ## Calcolo FIR distribuito sui tre ingressi · PR #1
 
 Le 24 coppie di coefficienti simmetrici non nulli sono distribuite in tre gruppi da otto. Il termine centrale entra nel primo gruppo. Le somme parziali restano a 64 bit fino all’unico arrotondamento finale. L’anello conserva 64 campioni anziché 128, grazie ai coefficienti nulli alle estremità. La prima uscita resta al campione 65 e le successive ogni tre ingressi.
