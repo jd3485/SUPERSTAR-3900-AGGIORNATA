@@ -218,10 +218,9 @@
 	(net 138 "unconnected-(U123-RB2-Pad6)")
 	(net 139 "unconnected-(U123-RB3-Pad7)")
 	(net 140 "unconnected-(U123-RB5-Pad14)")
-	(net 141 "unconnected-(U123-RB7-Pad16)")
-	(net 142 "unconnected-(U123-RB9-Pad18)")
-	(net 143 "/Condizionamento IQ/PIC_OSC1")
-	(net 144 "/Condizionamento IQ/PIC_OSC2")
+	(net 141 "/Condizionamento IQ/PIC_OSC1")
+	(net 142 "/Condizionamento IQ/PIC_OSC2")
+	(net 143 "/Condizionamento IQ/PIC_SS2_N")
 	(footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "0077bdd1-b36a-40f9-8d3e-58d86a4658f5")
@@ -2854,7 +2853,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 143 "/Condizionamento IQ/PIC_OSC1")
+			(net 141 "/Condizionamento IQ/PIC_OSC1")
 			(uuid "7d2c729b-5675-4ac0-92d2-d8eb0d22f1b8")
 		)
 		(pad "10" thru_hole circle
@@ -2863,7 +2862,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 144 "/Condizionamento IQ/PIC_OSC2")
+			(net 142 "/Condizionamento IQ/PIC_OSC2")
 			(uuid "7e981a00-3958-47bd-bb0b-a4a30457ff98")
 		)
 		(pad "11" thru_hole circle
@@ -2917,7 +2916,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 141 "unconnected-(U123-RB7-Pad16)")
+			(net 143 "/Condizionamento IQ/PIC_SS2_N")
 			(uuid "81d55025-c515-402b-bf79-858cf1cec198")
 		)
 		(pad "17" thru_hole circle
@@ -2935,7 +2934,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 142 "unconnected-(U123-RB9-Pad18)")
+			(net 143 "/Condizionamento IQ/PIC_SS2_N")
 			(uuid "2a6ea630-6c42-4525-aef9-cbd65271294d")
 		)
 		(pad "19" thru_hole circle
@@ -19116,7 +19115,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 143 "/Condizionamento IQ/PIC_OSC1")
+			(net 141 "/Condizionamento IQ/PIC_OSC1")
 			(uuid "ea5a88ea-ac13-410d-b468-f3bbf0e2af0d")
 		)
 		(pad "2" thru_hole circle
@@ -28925,7 +28924,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 144 "/Condizionamento IQ/PIC_OSC2")
+			(net 142 "/Condizionamento IQ/PIC_OSC2")
 			(uuid "3891b5d6-8f3b-4da8-ad66-637d44c402f6")
 		)
 		(pad "2" thru_hole circle
@@ -35915,7 +35914,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 143 "/Condizionamento IQ/PIC_OSC1")
+			(net 141 "/Condizionamento IQ/PIC_OSC1")
 			(uuid "790f338e-16ef-4f55-9d15-f7fb0b5751a7")
 		)
 		(pad "2" thru_hole circle
@@ -35924,7 +35923,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 144 "/Condizionamento IQ/PIC_OSC2")
+			(net 142 "/Condizionamento IQ/PIC_OSC2")
 			(uuid "434220b5-af1a-4e44-a626-8986e1f36e44")
 		)
 		(embedded_fonts no)
@@ -61610,7 +61609,7 @@
 		(end 226 171.25)
 		(width 0.25)
 		(layer "F.Cu")
-		(net 143)
+		(net 141)
 		(uuid "67c05b0d-3f9a-4a4c-b45a-cc26d5a5485b")
 	)
 	(segment
@@ -61618,7 +61617,7 @@
 		(end 225.25 170.5)
 		(width 0.25)
 		(layer "F.Cu")
-		(net 143)
+		(net 141)
 		(uuid "8b761056-2dee-40e2-b892-c568c5514239")
 	)
 	(segment
@@ -61626,7 +61625,7 @@
 		(end 226 171.32)
 		(width 0.25)
 		(layer "F.Cu")
-		(net 143)
+		(net 141)
 		(uuid "af3931ab-d19a-4489-987e-04234279609e")
 	)
 	(segment
@@ -61634,7 +61633,7 @@
 		(end 221 169.5)
 		(width 0.25)
 		(layer "B.Cu")
-		(net 143)
+		(net 141)
 		(uuid "4e48812c-e7d3-4c6a-b370-fe09cca65dd4")
 	)
 	(segment
@@ -61642,7 +61641,7 @@
 		(end 222 170.5)
 		(width 0.25)
 		(layer "B.Cu")
-		(net 143)
+		(net 141)
 		(uuid "a4a24f20-cc7d-48f8-a88d-933dfda3d1d9")
 	)
 	(segment
@@ -61650,7 +61649,7 @@
 		(end 222 175.5)
 		(width 0.25)
 		(layer "F.Cu")
-		(net 144)
+		(net 142)
 		(uuid "2dd13984-02b8-4379-af5c-33eee7d18043")
 	)
 	(segment
@@ -61658,7 +61657,7 @@
 		(end 222 175.38)
 		(width 0.25)
 		(layer "F.Cu")
-		(net 144)
+		(net 142)
 		(uuid "4a01e0ad-ce52-4aff-a295-967f4fa144b8")
 	)
 	(segment
@@ -61666,7 +61665,7 @@
 		(end 220.5 174)
 		(width 0.25)
 		(layer "F.Cu")
-		(net 144)
+		(net 142)
 		(uuid "4c8c7d1f-0ad8-4b31-877e-97a8477e1411")
 	)
 	(segment
@@ -61674,7 +61673,7 @@
 		(end 224.75 174.75)
 		(width 0.25)
 		(layer "B.Cu")
-		(net 144)
+		(net 142)
 		(uuid "2708617b-a1b7-4aa7-bc07-f7876e543531")
 	)
 	(segment
@@ -61682,7 +61681,7 @@
 		(end 222 175.5)
 		(width 0.25)
 		(layer "B.Cu")
-		(net 144)
+		(net 142)
 		(uuid "7aadc548-bc9a-4cb9-9603-8c2944f6510d")
 	)
 	(segment
@@ -61690,7 +61689,7 @@
 		(end 225 174.75)
 		(width 0.25)
 		(layer "B.Cu")
-		(net 144)
+		(net 142)
 		(uuid "8da4e65a-43a2-4750-9c2c-badc73c606fe")
 	)
 	(segment
@@ -61698,7 +61697,7 @@
 		(end 224 175.5)
 		(width 0.25)
 		(layer "B.Cu")
-		(net 144)
+		(net 142)
 		(uuid "a9b2d7e7-cf45-4160-bf46-4701eae8460d")
 	)
 	(segment
@@ -61706,7 +61705,7 @@
 		(end 226 173.75)
 		(width 0.25)
 		(layer "B.Cu")
-		(net 144)
+		(net 142)
 		(uuid "b9adc24b-6cbc-420a-b96f-c0bac690f0bb")
 	)
 	(segment
@@ -61714,8 +61713,32 @@
 		(end 226 173.86)
 		(width 0.25)
 		(layer "B.Cu")
-		(net 144)
+		(net 142)
 		(uuid "fa5b96db-a968-4b3b-8fa6-52cd7b7eeea6")
+	)
+	(segment
+		(start 235.22 180.48)
+		(end 235.22 177.4)
+		(width 0.25)
+		(layer "F.Cu")
+		(net 143)
+		(uuid "753ce37b-28af-4c9f-99e2-12a37df28125")
+	)
+	(segment
+		(start 235.22 177.4)
+		(end 233.62 176.4)
+		(width 0.25)
+		(layer "F.Cu")
+		(net 143)
+		(uuid "be5c7e1b-31c0-41eb-b090-6f387bd173fc")
+	)
+	(segment
+		(start 233.62 181.48)
+		(end 235.22 180.48)
+		(width 0.25)
+		(layer "F.Cu")
+		(net 143)
+		(uuid "cbb6e7da-762b-42d0-a8ee-87d1749348a5")
 	)
 	(embedded_fonts no)
 )

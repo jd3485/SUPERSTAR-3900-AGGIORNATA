@@ -26,6 +26,7 @@ def verifica_interfaccia():
 
     # Connettore lato MCU, alimentato dalla stessa rail del ricevitore.
     percorso = {
+        "PIC_SS2_N": ("U123.16", "U123.18"),
         "PIC_OSC1": ("Y102.1", "C184.1", "U123.9"),
         "PIC_OSC2": ("Y102.2", "C185.1", "U123.10"),
         "MCU_3V3": ("J103.4", "U121.1", "U121.20", "C176.1"),
