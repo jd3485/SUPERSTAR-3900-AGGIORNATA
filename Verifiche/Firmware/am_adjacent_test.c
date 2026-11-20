@@ -38,16 +38,43 @@ static struct iq_pair channel_sample(struct channel_filter *s, struct iq_pair in
     return (struct iq_pair){quantize(i), quantize(q)};
 }
 
+/* Due biquad ellittici a guadagno unitario in continua. Stato Q3 e
+   coefficienti Q12. b2=b0 riduce a quattro i prodotti per sezione. */
+struct biquad_state { int32_t x1, x2, y1, y2; };
+static const int16_t sos[2][4] = {
+    {231,135,5641,-2142}, {1364,-1299,6055,-3388}
+};
+
+static int16_t elliptic_sample(struct biquad_state state[2], int16_t input)
+{
+    int32_t x = 8 * input;
+    for (unsigned j = 0; j < 2; ++j) {
+        struct biquad_state *s = &state[j];
+        const int16_t *k = sos[j];
+        int32_t acc = k[0]*(x+s->x2) + k[1]*s->x1 + k[2]*s->y1 + k[3]*s->y2;
+        int32_t y = (acc + (acc < 0 ? -2048 : 2048))/4096;
+        y = y > 65535 ? 65535 : y < -65535 ? -65535 : y;
+        s->x2 = s->x1;
+        s->x1 = x;
+        s->y2 = s->y1;
+        s->y1 = y;
+        x = y;
+    }
+    x = (x + (x < 0 ? -4 : 4))/8;
+    return x > 4095 ? 4095 : x < -4096 ? -4096 : (int16_t)x;
+}
+
 static double noise(uint32_t *seed)
 {
     *seed = 1664525u * *seed + 1013904223u;
     return ((double)(*seed >> 8)/16777216. - .5) * sqrt(12.);
 }
 
-static void trial(int spacing, double ratio, double phase, bool filtered,
+static void trial(int spacing, double ratio, double phase, unsigned mode,
                   double carrier, double tone, double rms)
 {
     struct channel_filter channel = {0};
+    struct biquad_state elliptic[2][2] = {0};
     uint32_t seed = 151;
     struct am_sync am;
     struct audio_decim filter;
@@ -65,8 +92,13 @@ static void trial(int spacing, double ratio, double phase, bool filtered,
         assert(i >= -4096 && i <= 4095 && q >= -4096 && q <= 4095);
         int32_t audio, y;
         struct iq_pair pair = {(int16_t)i, (int16_t)q};
-        if (filtered) {
-            pair = channel_sample(&channel, pair);
+        if (mode) {
+            if (mode == 1) {
+                pair = channel_sample(&channel, pair);
+            } else {
+                pair.i = elliptic_sample(elliptic[0], pair.i);
+                pair.q = elliptic_sample(elliptic[1], pair.q);
+            }
             if (n < 30)
                 continue;
         }
@@ -90,12 +122,16 @@ static void trial(int spacing, double ratio, double phase, bool filtered,
     double gain = 10*log10(tone_power / (pow(carrier*.6, 2)/2));
     double quality = 10*log10(tone_power/residual);
     printf("%s A=%.0f tono %.0f Hz %+6d Hz  %4.1fx  fase %.1f  tono %+.2f dB  tono/residuo %.2f dB\n",
-           filtered ? "FIR" : "base", carrier, tone, spacing, ratio, phase, gain, quality);
+           ((const char *[]){"base","FIR","IIR"})[mode], carrier, tone, spacing, ratio, phase, gain, quality);
     if (rms > 0) {
         assert(fabs(gain) < .2 && quality > 10);
         return;
     }
-    if (filtered) {
+    if (mode == 2) {
+        assert(fabs(gain) < .35 && quality > 48);
+        return;
+    }
+    if (mode == 1) {
         assert(fabs(gain) < .35 && quality > 49);
         return;
     }
@@ -109,10 +145,28 @@ static void trial(int spacing, double ratio, double phase, bool filtered,
     }
 }
 
+static void check_decay(void)
+{
+    struct biquad_state s[2] = {0};
+    uint32_t seed = 1;
+    for (unsigned run = 0; run < 32; ++run) {
+        for (unsigned n = 0; n < 1024; ++n) {
+            seed = 1664525u * seed + 1013904223u;
+            (void)elliptic_sample(s, seed >> 31 ? 4095 : -4096);
+        }
+        for (unsigned n = 0; n < 1024; ++n) {
+            int16_t y = elliptic_sample(s, 0);
+            if (n >= 512)
+                assert(y >= -1 && y <= 1);
+        }
+    }
+}
+
 int main(void)
 {
+    check_decay();
     const double ratios[] = {.1, 1, 3.16227766016838, 10};
-    for (unsigned mode = 0; mode < 2; ++mode) {
+    for (unsigned mode = 0; mode < 3; ++mode) {
         trial(10000, 0, 0, mode, 180, 1000, 0);
         for (int sign = -1; sign <= 1; sign += 2)
             for (unsigned level = 0; level < sizeof ratios / sizeof ratios[0]; ++level)

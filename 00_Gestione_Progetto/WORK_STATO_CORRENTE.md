@@ -1,5 +1,17 @@
 # Stato operativo
 
+## Prefiltro I/Q a costo ridotto · confronto host nella PR #1
+
+Confrontati bypass, FIR a 31 coefficienti e due sezioni IIR ellittiche in cascata sui medesimi 21 stimoli. Il candidato IIR usa coefficienti Q12, stato Q3 con limitazione intermedia e arrotondamento a ogni sezione. La simmetria del numeratore permette quattro moltiplicazioni per sezione e per ramo: 16 per coppia I/Q invece di 32 nel FIR, cioè 768 000 prodotti/s a 48 kcampioni/s. È un conteggio aritmetico. Il tempo effettivo dipende anche da accessi, dipendenze fra operazioni, saturazioni e codice XC32.
+
+| Misura host | FIR | IIR |
+|---|---:|---:|
+| Adiacente ±10 kHz e +20 dB, rapporto tono/residuo | 51,83–52,39 dB | 49,75–50,38 dB |
+| Stessi casi, guadagno del tono utile | −0,04 dB | +0,13 dB |
+| Segnale debole da 4 codici, rumore RMS 1 codice, rapporto tono/residuo | 10,66 dB | 10,40 dB |
+
+Sulla risposta lineare dei coefficienti IIR quantizzati, verificata su 65 536 frequenze fra continua e Nyquist, il guadagno da 0 a 4,5 kHz è compreso tra −0,003 e +0,250 dB e la reiezione da 8 kHz a Nyquist supera 41,7 dB sulla griglia. Nelle 32 sequenze pseudo-casuali a piena scala seguite da silenzio, l’uscita resta entro un codice dal campione 512 al 1023 del silenzio. Superati host-check e UBSan. Il filtro è ancora un candidato host. Prossimo passo: portare il candidato nel percorso diagnostico opzionale e verificare la riacquisizione dopo salti di campionamento prima di misurare il margine sul bersaglio.
+
 ## Selettività I/Q prima del PLL · confronto host nella PR #1
 
 Confrontati gli stessi 21 stimoli con e senza il candidato FIR simmetrico a 31 coefficienti Q12. La frequenza di campionamento è 48 kHz, il ritardo 15 campioni (0,3125 ms). Si escludono i primi 30 ingressi dalla fase di acquisizione del PLL per riempire la storia del filtro. La convoluzione su I e Q richiede complessivamente 32 prodotti per coppia (1,536 milioni al secondo), prima del demodulatore e del filtro audio. Il limite della somma assoluta dei coefficienti è 6000, quindi per ogni ingresso ADC a 13 bit l’accumulatore resta entro 24 576 000 in valore assoluto. L’uscita viene arrotondata e limitata al formato signed a 13 bit.
