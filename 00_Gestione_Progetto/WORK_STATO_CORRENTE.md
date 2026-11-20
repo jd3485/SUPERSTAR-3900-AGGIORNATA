@@ -1,5 +1,15 @@
 # Stato operativo
 
+## Demodulazione AM sincrona a 48 kcampioni/s · PR #1
+
+Il percorso RX candidato passa le coppie valide al nuovo demodulatore C a virgola fissa. L'acquisizione stima fase e frequenza confrontando le somme complesse di due finestre consecutive da 16 campioni. Un PLL digitale segue la fase e un oscillatore numerico ruota I e Q sulla portante stimata. Si rimuove la componente continua dopo la proiezione. L'uscita diagnostica rx_am_audio_q7 conserva sette bit frazionari per codice ADC. Gli offset dei due canali sono separati e inizializzati a zero, in attesa di misura a ingresso terminato. Il flag di validità indica che il campione è stato elaborato dopo l'acquisizione iniziale. Non misura la qualità dell'aggancio e non comanda lo squelch.
+
+Una trama rifiutata azzera l'inseguimento. Anche una discontinuità temporale fra coppie, rilevata dal contatore CP0 a SYSCLK/2, impone 32 nuove coppie contigue prima della ripresa. Il primo campione audio riparte da zero. Il test comprende il wrap del contatore e un salto di 13 campioni con e senza segnalazione esplicita. L'aritmetica temporale assume che il contatore sia libero e che l'intervallo non copra un intero ciclo di wrap.
+
+Su host, 11 scenari sintetici ripetibili: toni 300/1000/3000 Hz a profondità 80%, portante di 850 codici e scarto −450/0/+450 Hz; un caso al 98% e −700 Hz; un caso debole con portante 4 codici, rumore RMS 1 codice per canale e scarto +180 Hz. Dopo il transitorio la correlazione con il tono è almeno 0,9997 nei casi forti e 0,9085 nel debole. La calibrazione simulata sottrae gli offset noti. Il caso debole non costituisce misura della sensibilità all'antenna. Superati host-check e controllo UBSan del demodulatore, compresi i vertici ADC. Resta verde su host il test di 8.192 coppie e 11 guasti del sequenziatore.
+
+L'immagine RX candidata include il demodulatore e pubblica il campione per il debugger. Restano da verificare il tempo CPU con XC32, le perdite di slot sul bersaglio, la calibrazione e la reiezione dei segnali adiacenti. Nessun ELF target né prova fisica. Il percorso di uscita analogica e gli altri modi di ricezione restano aperti. Prossimo passo autonomo: dimensionare il filtro di canale e la decimazione audio, verificando la reiezione fuori banda e i costi prima di impegnare il margine del PIC32.
+
 ## Avvio del ricevitore PIC32 e build candidata · PR #1
 
 Firmware/RX/main.c imposta il quarzo XT con PLL e divisori per SYSCLK/PBCLK a 36,864 MHz, il monitor guasti clock, ICSP su PGEC1/PGED1 e la disabilitazione di JTAG, USB PLL e watchdog hardware per questa immagine diagnostica. Prima del DMA, pic32_iq_init configura PPS nella finestra protetta SYSKEY, ripristina il blocco e controlla mappatura e stato del clock prima di avviare Timer2. Lo startup C e il vettore di reset dipendono dal runtime XC32. Il ciclo principale pubblica I e Q con una scrittura a 32 bit per il debugger e conta le coppie valide e le trame scartate. IQ_IDLE distingue l'attesa e lo slot di recupero da un errore di acquisizione. Il registro dell'ultima coppia serve alla diagnostica e non conserva uno storico per il DSP.
