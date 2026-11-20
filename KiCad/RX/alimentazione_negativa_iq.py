@@ -23,7 +23,7 @@ def alias(frequency, sample_rate):
 if __name__ == "__main__":
     # Topologia TI: condensatore volante 10 uF, serbatoio 100 uF.
     # Ramo dopo il serbatoio: due celle 10 ohm / 100 uF.
-    # Riferimento delle capacità: RX_RF_RETURN. Positivo dei tre elettrolitici a massa.
+    # Riferimento delle capacità: RX_RF_RETURN. Positivo del serbatoio a massa, due condensatori di filtro bipolari.
     load = .010
     max_tone = (0, 0, 0)
     max_in_band = (0, 0, 0)
@@ -50,3 +50,27 @@ if __name__ == "__main__":
                                                 (900.9, 919.1))]
     print("P U114 massima [W], bus minimo [V]",
           round(max(c[1] for c in cases), 3), round(max(c[3] for c in cases), 3))
+
+    # Q105, configurazione TI fig. 30. Tensioni espresse in modulo.
+    # 4,0 V al pin 5 è un punto di verifica da dimostrare alla corrente totale.
+    rb = 3000
+    base_min = (4.0 - .85) / (rb * 1.01)
+    base_max = (5.25 - .65) / (rb * .99)
+    pump_load = load + base_max
+    print("Q105 Ib [mA] a regime, beta forzato massimo a 10 mA",
+          round(1000 * base_min, 3), round(1000 * base_max, 3),
+          round(load / base_min, 2))
+    print("Minimo modulo pin 5 per Ib >= 1 mA [V]", round(.85 + .001 * rb * 1.01, 3))
+    print("Modulo rail a pin 5 di -4 V, VCE 0,2 V, R +1% [V]",
+          round(4 - .2 - 2 * 10.1 * load, 3))
+    total_protected = load + 1.2 * pump_load + .005
+    cases = [budget(16, .075, vo, series, preload, .0085, .030, total_protected)
+             for vo, series, preload in product((4.75, 5.25), (4.653, 4.747),
+                                                (900.9, 919.1))]
+    print("Con Q105: P U114 [W], bus minimo [V], tono rail [uV picco, BJT ideale in AC]",
+          round(max(c[1] for c in cases), 3), round(max(c[3] for c in cases), 3),
+          round(max_in_band[0] * 1e6 * pump_load / load, 3))
+    # Un gradino ideale a valle del collettore darebbe inizialmente V/R166.
+    # Serve un modello di avvio a corrente limitata, oltre al bilancio DC.
+    print("Gradino 5,25 V su R166 -1%, C158 scarico: corrente ideale [A]",
+          round(5.25 / 9.9, 3))

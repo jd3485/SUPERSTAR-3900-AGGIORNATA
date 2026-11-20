@@ -1,6 +1,395 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A1")
 (title_block (title "MAIN - Interfaccia candidata"))
-(lib_symbols (symbol "Amplifier_Operational:LM2904" (pin_names
+(lib_symbols 
+	(symbol "Device:C_Polarized"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Polarized"
+			(at 0.635 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "CP_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "C_Polarized_0_1"
+			(rectangle
+				(start -2.286 0.508)
+				(end 2.286 1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 2.286) (xy -0.762 2.286)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 2.794) (xy -1.27 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 2.286 -0.508)
+				(end -2.286 -1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+		)
+		(symbol "C_Polarized_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
+	(symbol "Regulator_SwitchedCapacitor:LT1054"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -6.604 11.176 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LT1054"
+			(at 4.318 11.176 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 2.54 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/1054lfh.pdf"
+			(at 2.54 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Switched-Capacitor Voltage Converter with Regulator, output current 100mA, operating range 3.5V to 15V, low loss 1.1V at 100mA, DIP-8/SO-8"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "monolithic bipolar switched capacitor voltage converter regulator inverter doubler shutdown"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "DIP*W7.62mm* SOIC*3.9x4.9mm*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LT1054_0_1"
+			(rectangle
+				(start -7.62 10.16)
+				(end 7.62 -10.16)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LT1054_1_1"
+			(pin power_in line
+				(at -10.16 7.62 0)
+				(length 2.54)
+				(name "V+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 5.08 0)
+				(length 2.54)
+				(name "FB/SHDN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 0 0)
+				(length 2.54)
+				(name "OSC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at -10.16 -5.08 0)
+				(length 2.54)
+				(name "VREF"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -12.7 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 10.16 7.62 180)
+				(length 2.54)
+				(name "-VOUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 10.16 2.54 180)
+				(length 2.54)
+				(name "CAP+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 10.16 -7.62 180)
+				(length 2.54)
+				(name "CAP-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Amplifier_Operational:LM2904" (pin_names
 			(offset 0.127)
 		)
 		(exclude_from_sim no)
@@ -5072,4 +5461,56 @@
 (label "AM_BB_NEG" (at 661.67 64.77 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cd58cc28-ffae-4846-92ea-3e3d895aa44a"))
 (wire (pts (xy 661.67 80.01) (xy 661.67 87.63)) (stroke (width 0) (type default)) (uuid "b2c204c3-6b86-4efa-8a60-3a8c4c401f6e"))
 (label "RX_RF_RETURN" (at 661.67 87.63 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b4daea4f-0160-4c2b-953a-26f621ac257f"))
+
+(symbol (lib_id "Regulator_SwitchedCapacitor:LT1054") (at 574.04 172.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "eb5954eb-0fff-4af3-9100-65c86b9b52dc") (property "Reference" "U116" (at 574.04 156.21 0) (effects (font (size 1.27 1.27)) )) (property "Value" "LT1054CP" (at 574.04 158.50 0) (effects (font (size 1.27 1.27)) )) (property "Footprint" "Package_DIP:DIP-8_W7.62mm" (at 574.04 160.78 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "https://www.ti.com/lit/ds/symlink/lt1054.pdf" (at 574.04 163.07 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "U116") (unit 1)))))
+(no_connect (at 563.88 167.64) (uuid "43ef50a5-d832-4aea-8012-1513993cd195"))
+(no_connect (at 563.88 172.72) (uuid "e741af2a-ad3a-474b-9758-15e4fa9c941a"))
+(no_connect (at 563.88 177.80) (uuid "4205b465-f340-4f39-8d3b-b59f073d4393"))
+(symbol (lib_id "Device:C_Polarized") (at 537.21 173.99 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1c61a15a-0ed6-437d-8f6f-b0ab4767940b") (property "Reference" "C155" (at 544.83 171.45 0) (effects (font (size 1.27 1.27)) )) (property "Value" "10u" (at 544.83 173.74 0) (effects (font (size 1.27 1.27)) )) (property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" (at 544.83 176.02 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 544.83 178.31 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C155") (unit 1)))))
+(wire (pts (xy 537.21 165.10) (xy 563.88 165.10)) (stroke (width 0) (type default)) (uuid "ea93dada-e15a-4ba1-9430-606f181c1930"))
+(label "AM_LO_5V" (at 537.21 165.10 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "84da01b0-2da1-4bef-870a-088bad21d427"))
+(wire (pts (xy 537.21 165.10) (xy 537.21 170.18)) (stroke (width 0) (type default)) (uuid "829e29c7-9f8a-41cb-a153-08e3e64af795"))
+(wire (pts (xy 537.21 177.80) (xy 537.21 185.42)) (stroke (width 0) (type default)) (uuid "e95df17c-b236-4b80-918e-b5f89d286342"))
+(label "RX_RF_RETURN" (at 537.21 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1fd5d259-bd9d-4dae-96ab-001b7f910356"))
+(wire (pts (xy 574.04 185.42) (xy 574.04 191.77)) (stroke (width 0) (type default)) (uuid "e54959ff-f177-4134-b2cd-192bece94ba2"))
+(label "RX_RF_RETURN" (at 574.04 191.77 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "af232a87-e984-40b7-ab21-3a4d44e9c9e9"))
+(symbol (lib_id "Device:C_Polarized") (at 596.90 175.26 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a729bce0-4961-40f0-b426-4b0cb1c47229") (property "Reference" "C156" (at 604.52 172.72 0) (effects (font (size 1.27 1.27)) )) (property "Value" "10u" (at 604.52 175.01 0) (effects (font (size 1.27 1.27)) )) (property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" (at 604.52 177.29 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 604.52 179.58 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C156") (unit 1)))))
+(wire (pts (xy 584.20 170.18) (xy 596.90 170.18)) (stroke (width 0) (type default)) (uuid "f15df53d-bd8d-4f3d-a0dc-12ad6019a1d6"))
+(wire (pts (xy 596.90 170.18) (xy 596.90 171.45)) (stroke (width 0) (type default)) (uuid "ce62565b-7512-487c-96a7-3c037fc1cb67"))
+(wire (pts (xy 584.20 180.34) (xy 596.90 180.34)) (stroke (width 0) (type default)) (uuid "ed46e046-91dd-4753-9659-387fee368c31"))
+(wire (pts (xy 596.90 180.34) (xy 596.90 179.07)) (stroke (width 0) (type default)) (uuid "5d28d2ce-a9c9-4520-bb0b-bf4544ba5556"))
+(wire (pts (xy 584.20 165.10) (xy 612.14 165.10)) (stroke (width 0) (type default)) (uuid "908bcac2-ea0b-4317-8e4d-9097759d02a1"))
+(label "AM_PUMP_RAW" (at 612.14 165.10 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ebf6f889-d929-490f-a92a-9ceeb557e0e1"))
+(symbol (lib_id "Device:C_Polarized") (at 628.65 175.26 180) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e77a374c-5314-4178-8974-5f24cd8123e5") (property "Reference" "C157" (at 636.27 172.72 0) (effects (font (size 1.27 1.27)) )) (property "Value" "100u" (at 636.27 175.01 0) (effects (font (size 1.27 1.27)) )) (property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" (at 636.27 177.29 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 636.27 179.58 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C157") (unit 1)))))
+(wire (pts (xy 628.65 165.10) (xy 628.65 171.45)) (stroke (width 0) (type default)) (uuid "8a18a75e-e23a-47b9-93d5-71f094aeef6f"))
+(label "AM_PUMP_RAW" (at 628.65 165.10 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a78f7839-2f8d-4be6-b943-18fe2d337d3b"))
+(wire (pts (xy 628.65 179.07) (xy 628.65 185.42)) (stroke (width 0) (type default)) (uuid "cd7e0550-728e-4c3b-8f96-266eac7ea5fd"))
+(label "RX_RF_RETURN" (at 628.65 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0935b441-fce0-4ef2-b2fd-739fb671f0de"))
+(symbol (lib_id "Transistor_BJT:Q_NPN_EBC") (at 679.45 175.26 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ebc9c490-ba1f-4b67-b021-694eb46c5c1b") (property "Reference" "Q105" (at 690.88 172.72 0) (effects (font (size 1.27 1.27)) )) (property "Value" "2N3904BU" (at 690.88 175.01 0) (effects (font (size 1.27 1.27)) )) (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 690.88 177.29 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf" (at 690.88 179.58 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "Q105") (unit 1)))))
+(wire (pts (xy 681.99 180.34) (xy 681.99 190.50)) (stroke (width 0) (type default)) (uuid "e46a28ce-0fcc-49aa-8505-f8ac09b7b030"))
+(label "AM_PUMP_RAW" (at 681.99 190.50 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "383a7f32-f84f-4a4c-91b3-3d1b1c4ef930"))
+(wire (pts (xy 681.99 170.18) (xy 681.99 165.10)) (stroke (width 0) (type default)) (uuid "48120482-9f86-4a58-a476-6daae1fad8a7"))
+(label "AM_PUMP_ISO" (at 681.99 165.10 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "349f3854-d47d-4927-8cd4-ce1dd55396ae"))
+(symbol (lib_id "Device:R") (at 665.48 175.26 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "155cc7dc-e751-4f50-8d67-5f87a2065e9e") (property "Reference" "R165" (at 665.48 168.91 90) (effects (font (size 1.27 1.27)) )) (property "Value" "3k" (at 665.48 171.20 90) (effects (font (size 1.27 1.27)) )) (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 665.48 173.48 90) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 665.48 175.77 90) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R165") (unit 1)))))
+(wire (pts (xy 669.29 175.26) (xy 674.37 175.26)) (stroke (width 0) (type default)) (uuid "a3aa0aed-760d-4a50-b5d3-18511574a72d"))
+(wire (pts (xy 650.24 175.26) (xy 661.67 175.26)) (stroke (width 0) (type default)) (uuid "ce6f438d-2200-47c4-a379-f6576768dbbc"))
+(label "RX_RF_RETURN" (at 650.24 175.26 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c5626786-9f52-4c18-b6f0-d8f8bd015949"))
+(symbol (lib_id "Device:R") (at 716.28 165.10 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2c0fdd83-4b8b-4ea3-8c7d-ed90e7a337bd") (property "Reference" "R166" (at 716.28 158.75 90) (effects (font (size 1.27 1.27)) )) (property "Value" "10" (at 716.28 161.04 90) (effects (font (size 1.27 1.27)) )) (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 716.28 163.32 90) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 716.28 165.61 90) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R166") (unit 1)))))
+(symbol (lib_id "Device:R") (at 755.65 165.10 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "beef7e76-9603-445d-aab4-92689ebaa364") (property "Reference" "R167" (at 755.65 158.75 90) (effects (font (size 1.27 1.27)) )) (property "Value" "10" (at 755.65 161.04 90) (effects (font (size 1.27 1.27)) )) (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 755.65 163.32 90) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 755.65 165.61 90) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "R167") (unit 1)))))
+(wire (pts (xy 699.77 165.10) (xy 712.47 165.10)) (stroke (width 0) (type default)) (uuid "1b0d6a87-2e53-4ab5-a599-13b59881d758"))
+(label "AM_PUMP_ISO" (at 699.77 165.10 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "160af0a6-05d6-4621-87bd-d63bd521657b"))
+(wire (pts (xy 720.09 165.10) (xy 736.60 165.10)) (stroke (width 0) (type default)) (uuid "cbb4ce9c-5e55-46fd-836c-3adeadb5aac7"))
+(wire (pts (xy 736.60 165.10) (xy 751.84 165.10)) (stroke (width 0) (type default)) (uuid "d47e9c0f-578c-4ac5-9a24-ac690f9dd059"))
+(label "AM_NEG_FILT1" (at 736.60 165.10 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ce3b68f9-06ff-42ee-aa08-aac2bf1225a1"))
+(wire (pts (xy 759.46 165.10) (xy 775.97 165.10)) (stroke (width 0) (type default)) (uuid "d8b1c72e-de1a-4992-a0a0-3bf6c3e23aa7"))
+(label "AM_BB_NEG" (at 775.97 165.10 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3eed5b03-012c-49dd-a7eb-a327be2db1a3"))
+(symbol (lib_id "Device:C") (at 736.60 175.26 180) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "acddb67d-e07b-4c08-bc70-e02e1f54d5d3") (property "Reference" "C158" (at 746.76 172.72 0) (effects (font (size 1.27 1.27)) )) (property "Value" "100u NP" (at 746.76 175.01 0) (effects (font (size 1.27 1.27)) )) (property "Footprint" "Capacitor_THT:C_Radial_D10.0mm_H16.0mm_P5.00mm" (at 746.76 177.29 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 746.76 179.58 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C158") (unit 1)))))
+(wire (pts (xy 736.60 165.10) (xy 736.60 171.45)) (stroke (width 0) (type default)) (uuid "291c7f85-b188-494d-b0f1-ff86bf37732f"))
+(wire (pts (xy 736.60 179.07) (xy 736.60 185.42)) (stroke (width 0) (type default)) (uuid "a84e45d5-f758-4df2-9aaf-7d1dc3ac18b0"))
+(label "RX_RF_RETURN" (at 736.60 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e050e0b4-886d-4116-ba8c-21f7fc4fc2df"))
+(symbol (lib_id "Device:C") (at 775.97 175.26 180) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6b856cc2-e981-4455-9295-967302c81170") (property "Reference" "C159" (at 786.13 172.72 0) (effects (font (size 1.27 1.27)) )) (property "Value" "100u NP" (at 786.13 175.01 0) (effects (font (size 1.27 1.27)) )) (property "Footprint" "Capacitor_THT:C_Radial_D10.0mm_H16.0mm_P5.00mm" (at 786.13 177.29 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 786.13 179.58 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (reference "C159") (unit 1)))))
+(wire (pts (xy 775.97 165.10) (xy 775.97 171.45)) (stroke (width 0) (type default)) (uuid "f6736df3-b043-4c3e-8a10-44f609d727c6"))
+(wire (pts (xy 775.97 179.07) (xy 775.97 185.42)) (stroke (width 0) (type default)) (uuid "8781ac93-ca17-43fb-986f-da890de11f92"))
+(label "RX_RF_RETURN" (at 775.97 185.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "efacfaa0-340a-4325-8f99-054518f2545c"))
+(junction (at 736.60 165.10) (diameter 0) (color 0 0 0 0) (uuid "cf705a19-6c15-4cac-b08a-5e74f64ec60c"))
 )
