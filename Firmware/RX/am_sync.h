@@ -13,6 +13,11 @@ struct am_sync {
     bool audio_started;
 };
 
+static inline bool am_interval_valid(uint32_t elapsed)
+{
+    return elapsed >= 192u && elapsed < 576u;
+}
+
 void am_sync_reset(struct am_sync *s, struct iq_pair offset);
 /* core_count: CP0 Count libero a SYSCLK/2, letto al completamento della coppia.
    Un falso indica riacquisizione. Il valore di uscita resta intatto. */

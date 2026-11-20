@@ -4,6 +4,10 @@
 #include "am_sync.h"
 #include "audio_decim.h"
 
+#ifdef RX_IQ_IIR
+#include "iq_iir.h"
+#endif
+
 #ifdef RX_PROFILE
 #include "rx_profile.h"
 volatile struct rx_profile rx_profile_data;
@@ -31,6 +35,9 @@ int main(void)
     /* Offset iniziali neutri, da misurare a ingresso RF terminato. */
     const struct iq_pair offset = {0, 0};
     struct am_sync am;
+#ifdef RX_IQ_IIR
+    struct iq_iir channel = {0};
+#endif
     struct audio_decim filter;
     audio_decim_reset(&filter);
     am_sync_reset(&am, offset);
@@ -49,7 +56,12 @@ int main(void)
             int32_t audio;
             rx_last_pair = ((uint32_t)(uint16_t)pair.i << 16) | (uint16_t)pair.q;
             ++rx_valid_pairs;
-            if (am_sync_sample(&am, pair, stamp, &audio)) {
+#ifdef RX_IQ_IIR
+            bool valid = iq_iir_am_sample(&channel, &am, pair, stamp, &audio);
+#else
+            bool valid = am_sync_sample(&am, pair, stamp, &audio);
+#endif
+            if (valid) {
 #ifdef RX_PROFILE
                 stage = RX_DEMOD;
 #endif
@@ -72,6 +84,9 @@ int main(void)
 #endif
         } else if (result != IQ_IDLE) {
             ++rx_rejected_frames;
+#ifdef RX_IQ_IIR
+            iq_iir_reset(&channel);
+#endif
             am_sync_reset(&am, offset);
             audio_decim_reset(&filter);
             rx_am_audio_valid = false;

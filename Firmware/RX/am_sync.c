@@ -72,7 +72,7 @@ bool am_sync_sample(struct am_sync *s, struct iq_pair sample, uint32_t core_coun
     /* Un periodo vale 384 tick CP0. La finestra copre la variazione della
        fase di completamento ammessa da iq_capture, anche al wrap di Count. */
     uint32_t elapsed = core_count - s->previous_count;
-    if (s->count && (elapsed < 192 || elapsed >= 576))
+    if (s->count && !am_interval_valid(elapsed))
         am_sync_reset(s, s->offset);
     s->previous_count = core_count;
     int32_t i = sample.i - s->offset.i, q = sample.q - s->offset.q;

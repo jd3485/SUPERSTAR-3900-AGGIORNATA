@@ -1,5 +1,13 @@
 # Stato operativo
 
+## Variante diagnostica RX con prefiltro I/Q · PR #1
+
+Il target `make -C Firmware/RX profile-iir` seleziona il prefiltro ellittico prima del PLL e la misura CP0 nello stesso intervallo del target di confronto `profile`. Produce un percorso di build separato. Il codice a virgola fissa è condiviso fra firmware diagnostico e confronto host. Nella variante ordinaria rimane attivo il percorso diretto.
+
+Una trama rifiutata o un intervallo CP0 fuori dalla finestra [192, 576) tick avvia una nuova acquisizione. Si scartano 30 uscite iniziali del prefiltro e si riempiono nuovamente PLL e decimatore. Nei casi di prova con portante presente, il primo campione audio arriva alla 127ª coppia valida contigua, poi ogni tre coppie. Il test confronta campione per campione la ripresa con un avvio a stato pulito in quattro momenti (prefiltro, PLL, riempimento FIR audio e regime). Sono coperti reset esplicito, intervallo breve di 191 tick, soglia di 576 tick e salto di 13 periodi persi.
+
+Superate le 16 prove di ripresa, le 63 condizioni AM e la suite host; UBSan superato. I risultati numerici pubblicati dal confronto host sono identici alla revisione precedente. Verificata la sintassi MIPS32r2 del percorso diagnostico con adattatori locali. Restano aperti build/link XC32 e misura reale degli slot. Prossimo lavoro autonomo: valutare la distribuzione temporale del calcolo rispetto all’attesa SPI con un modello del sequenziatore, prima di modificare il percorso RX ordinario.
+
 ## Prefiltro I/Q a costo ridotto · confronto host nella PR #1
 
 Confrontati bypass, FIR a 31 coefficienti e due sezioni IIR ellittiche in cascata sui medesimi 21 stimoli. Il candidato IIR usa coefficienti Q12, stato Q3 con limitazione intermedia e arrotondamento a ogni sezione. La simmetria del numeratore permette quattro moltiplicazioni per sezione e per ramo: 16 per coppia I/Q invece di 32 nel FIR, cioè 768 000 prodotti/s a 48 kcampioni/s. È un conteggio aritmetico. Il tempo effettivo dipende anche da accessi, dipendenze fra operazioni, saturazioni e codice XC32.

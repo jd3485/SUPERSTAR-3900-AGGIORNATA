@@ -1,6 +1,7 @@
 /* Due stazioni AM sintetiche al convertitore I/Q. Livelli riferiti alle portanti. */
 #include "../../Firmware/RX/am_sync.h"
 #include "../../Firmware/RX/audio_decim.h"
+#include "../../Firmware/RX/iq_iir.h"
 #include <assert.h>
 #include <math.h>
 #include <stdio.h>
@@ -38,32 +39,6 @@ static struct iq_pair channel_sample(struct channel_filter *s, struct iq_pair in
     return (struct iq_pair){quantize(i), quantize(q)};
 }
 
-/* Due biquad ellittici a guadagno unitario in continua. Stato Q3 e
-   coefficienti Q12. b2=b0 riduce a quattro i prodotti per sezione. */
-struct biquad_state { int32_t x1, x2, y1, y2; };
-static const int16_t sos[2][4] = {
-    {231,135,5641,-2142}, {1364,-1299,6055,-3388}
-};
-
-static int16_t elliptic_sample(struct biquad_state state[2], int16_t input)
-{
-    int32_t x = 8 * input;
-    for (unsigned j = 0; j < 2; ++j) {
-        struct biquad_state *s = &state[j];
-        const int16_t *k = sos[j];
-        int32_t acc = k[0]*(x+s->x2) + k[1]*s->x1 + k[2]*s->y1 + k[3]*s->y2;
-        int32_t y = (acc + (acc < 0 ? -2048 : 2048))/4096;
-        y = y > 65535 ? 65535 : y < -65535 ? -65535 : y;
-        s->x2 = s->x1;
-        s->x1 = x;
-        s->y2 = s->y1;
-        s->y1 = y;
-        x = y;
-    }
-    x = (x + (x < 0 ? -4 : 4))/8;
-    return x > 4095 ? 4095 : x < -4096 ? -4096 : (int16_t)x;
-}
-
 static double noise(uint32_t *seed)
 {
     *seed = 1664525u * *seed + 1013904223u;
@@ -74,7 +49,7 @@ static void trial(int spacing, double ratio, double phase, unsigned mode,
                   double carrier, double tone, double rms)
 {
     struct channel_filter channel = {0};
-    struct biquad_state elliptic[2][2] = {0};
+    struct iq_iir elliptic = {0};
     uint32_t seed = 151;
     struct am_sync am;
     struct audio_decim filter;
@@ -92,17 +67,14 @@ static void trial(int spacing, double ratio, double phase, unsigned mode,
         assert(i >= -4096 && i <= 4095 && q >= -4096 && q <= 4095);
         int32_t audio, y;
         struct iq_pair pair = {(int16_t)i, (int16_t)q};
-        if (mode) {
-            if (mode == 1) {
-                pair = channel_sample(&channel, pair);
-            } else {
-                pair.i = elliptic_sample(elliptic[0], pair.i);
-                pair.q = elliptic_sample(elliptic[1], pair.q);
-            }
+        if (mode == 1) {
+            pair = channel_sample(&channel, pair);
             if (n < 30)
                 continue;
         }
-        if (!am_sync_sample(&am, pair, n*384u, &audio)) {
+        bool valid = mode == 2 ? iq_iir_am_sample(&elliptic, &am, pair, n*384u, &audio)
+                               : am_sync_sample(&am, pair, n*384u, &audio);
+        if (!valid) {
             audio_decim_reset(&filter);
             continue;
         }
@@ -147,24 +119,78 @@ static void trial(int spacing, double ratio, double phase, unsigned mode,
 
 static void check_decay(void)
 {
-    struct biquad_state s[2] = {0};
+    struct iq_iir s = {0};
     uint32_t seed = 1;
     for (unsigned run = 0; run < 32; ++run) {
         for (unsigned n = 0; n < 1024; ++n) {
             seed = 1664525u * seed + 1013904223u;
-            (void)elliptic_sample(s, seed >> 31 ? 4095 : -4096);
+            (void)iq_iir_filter(&s, (struct iq_pair){seed >> 31 ? 4095 : -4096, 0});
         }
         for (unsigned n = 0; n < 1024; ++n) {
-            int16_t y = elliptic_sample(s, 0);
+            int16_t y = iq_iir_filter(&s, (struct iq_pair){0, 0}).i;
             if (n >= 512)
                 assert(y >= -1 && y <= 1);
         }
     }
 }
 
+struct chain {
+    struct iq_iir channel;
+    struct am_sync am;
+    struct audio_decim decim;
+};
+
+static void restart(struct chain *s)
+{
+    iq_iir_reset(&s->channel);
+    am_sync_reset(&s->am, (struct iq_pair){12, -17});
+    audio_decim_reset(&s->decim);
+}
+
+static bool sample_chain(struct chain *s, struct iq_pair pair, uint32_t stamp, int32_t *y)
+{
+    int32_t audio;
+    if (!iq_iir_am_sample(&s->channel, &s->am, pair, stamp, &audio)) {
+        audio_decim_reset(&s->decim);
+        return false;
+    }
+    return audio_decim_sample(&s->decim, audio, y);
+}
+
+static void check_restart(unsigned before, uint32_t elapsed, bool rejected)
+{
+    struct chain used, fresh;
+    restart(&used);
+    restart(&fresh);
+    uint32_t stamp = UINT32_MAX - 1500u;
+    int32_t old = 0;
+    for (unsigned n = 0; n < before; ++n) {
+        (void)sample_chain(&used, (struct iq_pair){-815,321}, stamp, &old);
+        stamp += 384u;
+    }
+    stamp += elapsed - 384u;
+    if (rejected)
+        restart(&used);
+    for (unsigned n = 0; n < 420; ++n, stamp += 384u) {
+        struct iq_pair pair = {(int16_t)(750 + (int)(n%49)), -200};
+        int32_t a = 12345, b = 12345;
+        bool ready = sample_chain(&used, pair, stamp, &a);
+        assert(sample_chain(&fresh, pair, stamp, &b) == ready);
+        assert(ready == (n >= 126 && (n-126)%3 == 0));
+        assert(a == b && (ready || a == 12345));
+    }
+}
+
 int main(void)
 {
     check_decay();
+    for (unsigned j = 0; j < 4; ++j) {
+        unsigned before = ((const unsigned[]){4, 45, 100, 240})[j];
+        check_restart(before, 384, true);
+        check_restart(before, 191, false);
+        check_restart(before, 576, false);
+        check_restart(before, 14*384, false);
+    }
     const double ratios[] = {.1, 1, 3.16227766016838, 10};
     for (unsigned mode = 0; mode < 3; ++mode) {
         trial(10000, 0, 0, mode, 180, 1000, 0);

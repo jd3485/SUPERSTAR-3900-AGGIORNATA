@@ -7,7 +7,8 @@ ifneq ($(strip $(DFP_DIR)),)
 DEVICE_FLAGS += -mdfp="$(DFP_DIR)/xc32"
 endif
 SOURCES := main.c pic32_iq.c iq_frame.c am_sync.c audio_decim.c
-HEADERS := rx_profile.h pic32_iq.h iq_frame.h am_sync.h audio_decim.h
+SOURCES += $(EXTRA_SOURCES)
+HEADERS := iq_iir.h rx_profile.h pic32_iq.h iq_frame.h am_sync.h audio_decim.h
 ELF := $(BUILD_DIR)/rx.elf
 
 .PHONY: all host-check
@@ -35,8 +36,12 @@ $(BUILD_DIR)/rx_profile_test: rx_profile.h ../../Verifiche/Firmware/rx_profile_t
 profile:
 	$(MAKE) BUILD_DIR="$(BUILD_DIR)/profile" CPPFLAGS="$(CPPFLAGS) -DRX_PROFILE" all
 
-$(BUILD_DIR)/am_adjacent_test: am_sync.c am_sync.h iq_frame.h audio_decim.c audio_decim.h ../../Verifiche/Firmware/am_adjacent_test.c | $(BUILD_DIR)
-	$(HOST_CC) -std=c11 -O2 -Wall -Wextra -Werror -pedantic am_sync.c audio_decim.c ../../Verifiche/Firmware/am_adjacent_test.c -lm -o "$@"
+.PHONY: profile-iir
+profile-iir:
+	$(MAKE) BUILD_DIR="$(BUILD_DIR)/profile-iir" CPPFLAGS="$(CPPFLAGS) -DRX_PROFILE -DRX_IQ_IIR" EXTRA_SOURCES=iq_iir.c all
+
+$(BUILD_DIR)/am_adjacent_test: iq_iir.c iq_iir.h am_sync.c am_sync.h iq_frame.h audio_decim.c audio_decim.h ../../Verifiche/Firmware/am_adjacent_test.c | $(BUILD_DIR)
+	$(HOST_CC) -std=c11 -O2 -Wall -Wextra -Werror -pedantic iq_iir.c am_sync.c audio_decim.c ../../Verifiche/Firmware/am_adjacent_test.c -lm -o "$@"
 
 host-check: $(BUILD_DIR)/am_adjacent_test $(BUILD_DIR)/rx_profile_test $(BUILD_DIR)/iq_frame_test $(BUILD_DIR)/am_sync_test $(BUILD_DIR)/audio_decim_test
 	"$(BUILD_DIR)/am_adjacent_test"
