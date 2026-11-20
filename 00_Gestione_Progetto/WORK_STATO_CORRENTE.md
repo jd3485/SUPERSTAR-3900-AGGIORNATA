@@ -1,5 +1,20 @@
 # Stato operativo
 
+## Modello di sovrapposizione DSP/SPI · PR #1
+
+La prova host iq_schedule_test usa iq_capture del firmware con una periferica simulata. Confronta l’elaborazione della coppia appena letta con quella della coppia precedente subito dopo il lancio SPI successivo. Un solo elemento pendente, verificato in ordine. Il secondo schema aggiunge uno slot di latenza all’avvio del calcolo. Si scansiona il costo DSP da zero in passi di un tick PBCLK finché una trama viene rifiutata. A ogni costo, lo stato procede fino allo scarto o alla ripetizione di una fase di ingresso a regime.
+
+| Costi sintetici in tick PBCLK (poll/lancio/chiusura/gestione) | Dopo lettura | Durante SPI |
+|---|---:|---:|
+| 4/0/0/0 | 214 | 603 |
+| 8/8/8/16 | 170 | 591 |
+| 12/16/12/24 | 134 | 579 |
+| 16/16/16/32 | 114 | 575 |
+
+Le colonne riportano il massimo costo contiguo accettato a partire da zero. Il trasferimento occupa 512 tick e il sequenziatore ammette la lettura entro una finestra successiva al completamento. Nello scenario con maggiori costi, il margine modellato passa da 114 a 575 tick (3,09 a 15,60 µs a 36,864 MHz). Tempi di polling e overhead sono ipotesi deterministiche. Il modello mantiene il lancio SPI all’interno dello slot e tratta il DSP come un ritardo senza accessi alle periferiche. Non include jitter reale, costo effettivo del filtro o interruzioni. Superati host-check e UBSan sul modello.
+
+Prossimo passo: implementare la sovrapposizione in una variante diagnostica mantenendo il timestamp della coppia originale e verificando scarti, slot saltati e assenza di doppia pubblicazione. Il percorso ordinario è ancora quello sequenziale.
+
 ## Variante diagnostica RX con prefiltro I/Q · PR #1
 
 Il target `make -C Firmware/RX profile-iir` seleziona il prefiltro ellittico prima del PLL e la misura CP0 nello stesso intervallo del target di confronto `profile`. Produce un percorso di build separato. Il codice a virgola fissa è condiviso fra firmware diagnostico e confronto host. Nella variante ordinaria rimane attivo il percorso diretto.
