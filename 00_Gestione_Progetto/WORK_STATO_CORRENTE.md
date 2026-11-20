@@ -1,5 +1,11 @@
 # Stato operativo
 
+## Variante RX diagnostica con elaborazione durante SPI · PR #1
+
+Il target `make -C Firmware/RX profile-overlap` prepara una variante distinta con prefiltro IIR, demodulazione AM, decimatore e profilazione. Il driver deposita la parola in SPI1BUF, poi elabora una sola volta la coppia accettata nel periodo precedente, prima di interrogare nuovamente lo stato SPI. La coppia porta con sé il timestamp CP0 di cattura per la continuità del PLL. La profilazione misura separatamente il tempo di servizio DSP e gli intervalli tra catture. Uno scarto prima del lancio svuota la coppia precedente prima del reset. Uno scarto dopo il lancio invalida l’audio e azzera la catena dopo il consumo già avvenuto. IQ_IDLE mantiene l’elemento in attesa.
+
+Prova host del ciclo main con polling e CP0 simulati su 1024 iterazioni: 1019 coppie accettate, due periodi senza cattura e tre scarti prima o dopo il lancio. Verificati ordine e timestamp di elaborazione, pubblicazione audio campione per campione contro il riferimento, contatori, wrap CP0 e riacquisizione. Superati host-check ordinario, host-check con UBSan e analisi semantica MIPS32r2 di main, driver e prefiltro con adattatori locali. Restano da eseguire build/link XC32 e confronto temporale sul bersaglio con profile-iir. Prossimo lavoro autonomo: confrontare gli effetti del jitter di lancio e dei tempi DSP variabili sulle scadenze del sequenziatore.
+
 ## Modello di sovrapposizione DSP/SPI · PR #1
 
 La prova host iq_schedule_test usa iq_capture del firmware con una periferica simulata. Confronta l’elaborazione della coppia appena letta con quella della coppia precedente subito dopo il lancio SPI successivo. Un solo elemento pendente, verificato in ordine. Il secondo schema aggiunge uno slot di latenza all’avvio del calcolo. Si scansiona il costo DSP da zero in passi di un tick PBCLK finché una trama viene rifiutata. A ogni costo, lo stato procede fino allo scarto o alla ripetizione di una fase di ingresso a regime.

@@ -30,15 +30,63 @@ volatile int32_t rx_am_audio_q7;
 volatile bool rx_am_audio_valid;
 volatile uint32_t rx_am_audio_samples;
 
+static const struct iq_pair offset = {0, 0};
+static struct am_sync am;
+#ifdef RX_IQ_IIR
+static struct iq_iir channel;
+#endif
+static struct audio_decim filter;
+
+static void process_pair(struct iq_pair pair, uint32_t stamp)
+{
+#ifdef RX_PROFILE
+    uint32_t start = _CP0_GET_COUNT();
+    enum rx_work stage = RX_ACQUIRE;
+#endif
+    int32_t audio;
+#ifdef RX_IQ_IIR
+    bool valid = iq_iir_am_sample(&channel, &am, pair, stamp, &audio);
+#else
+    bool valid = am_sync_sample(&am, pair, stamp, &audio);
+#endif
+    if (valid) {
+#ifdef RX_PROFILE
+        stage = RX_DEMOD;
+#endif
+        int32_t filtered;
+        if (audio_decim_sample(&filter, audio, &filtered)) {
+#ifdef RX_PROFILE
+            stage = RX_FIR;
+#endif
+            rx_am_audio_q7 = filtered;
+            ++rx_am_audio_samples;
+            rx_am_audio_valid = true;
+        }
+    } else {
+        audio_decim_reset(&filter);
+        rx_am_audio_valid = false;
+    }
+#ifdef RX_PROFILE
+    rx_profile_record(&rx_profile_data, stage, stamp, _CP0_GET_COUNT() - start);
+#endif
+}
+
+#ifdef RX_SPI_OVERLAP
+static bool pending;
+static struct iq_pair pending_pair;
+static uint32_t pending_stamp;
+
+void rx_process_pending(void)
+{
+    if (pending) {
+        pending = false;
+        process_pair(pending_pair, pending_stamp);
+    }
+}
+#endif
+
 int main(void)
 {
-    /* Offset iniziali neutri, da misurare a ingresso RF terminato. */
-    const struct iq_pair offset = {0, 0};
-    struct am_sync am;
-#ifdef RX_IQ_IIR
-    struct iq_iir channel = {0};
-#endif
-    struct audio_decim filter;
     audio_decim_reset(&filter);
     am_sync_reset(&am, offset);
     rx_initialized = pic32_iq_init();
@@ -50,39 +98,20 @@ int main(void)
         enum iq_status result = pic32_iq_poll(&pair);
         if (result == IQ_OK) {
             uint32_t stamp = _CP0_GET_COUNT();
-#ifdef RX_PROFILE
-            enum rx_work stage = RX_ACQUIRE;
-#endif
-            int32_t audio;
             rx_last_pair = ((uint32_t)(uint16_t)pair.i << 16) | (uint16_t)pair.q;
             ++rx_valid_pairs;
-#ifdef RX_IQ_IIR
-            bool valid = iq_iir_am_sample(&channel, &am, pair, stamp, &audio);
+#ifdef RX_SPI_OVERLAP
+            pending_pair = pair;
+            pending_stamp = stamp;
+            pending = true;
 #else
-            bool valid = am_sync_sample(&am, pair, stamp, &audio);
-#endif
-            if (valid) {
-#ifdef RX_PROFILE
-                stage = RX_DEMOD;
-#endif
-                int32_t filtered;
-                if (audio_decim_sample(&filter, audio, &filtered)) {
-#ifdef RX_PROFILE
-                    stage = RX_FIR;
-#endif
-                    rx_am_audio_q7 = filtered;
-                    ++rx_am_audio_samples;
-                    rx_am_audio_valid = true;
-                }
-            } else {
-                audio_decim_reset(&filter);
-                rx_am_audio_valid = false;
-            }
-#ifdef RX_PROFILE
-            uint32_t end = _CP0_GET_COUNT();
-            rx_profile_record(&rx_profile_data, stage, stamp, end);
+            process_pair(pair, stamp);
 #endif
         } else if (result != IQ_IDLE) {
+#ifdef RX_SPI_OVERLAP
+            /* Uno scarto prima del lancio lascia valida la coppia precedente. */
+            rx_process_pending();
+#endif
             ++rx_rejected_frames;
 #ifdef RX_IQ_IIR
             iq_iir_reset(&channel);

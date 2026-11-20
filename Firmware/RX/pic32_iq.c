@@ -47,7 +47,13 @@ static struct iq_snapshot status(void)
     return s;
 }
 
-static void launch(void) { SPI1BUF = 0; }
+static void launch(void)
+{
+    SPI1BUF = 0;
+#ifdef RX_SPI_OVERLAP
+    rx_process_pending();
+#endif
+}
 static void read_pair(uint16_t *i, uint16_t *q) { *i = SPI1BUF; *q = SPI2BUF; }
 static const struct iq_port port = {status, select_frame, launch, read_pair, reset_spi};
 static bool skip_slot;

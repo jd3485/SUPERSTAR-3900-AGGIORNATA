@@ -11,13 +11,12 @@ struct rx_profile {
     bool started;
 };
 
-/* Letture CP0 dopo IQ_OK e dopo la pubblicazione dell'uscita diagnostica.
+/* stamp indica la cattura. work misura solo il servizio DSP, in tick CP0.
    Sottrazioni modulo 2^32, con intervalli minori di un giro del contatore. */
 static inline void rx_profile_record(volatile struct rx_profile *p,
                                      enum rx_work stage,
-                                     uint32_t stamp, uint32_t end)
+                                     uint32_t stamp, uint32_t work)
 {
-    uint32_t work = end - stamp;
     if (work > p->work_max[stage])
         p->work_max[stage] = work;
     if (p->started) {
