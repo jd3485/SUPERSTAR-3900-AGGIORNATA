@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/2136ab1d57c6/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-20T09:34:17+0100</date>
+    <date>2026-11-20T10:03:31+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -967,6 +967,23 @@
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>fad052bb-4993-422d-99ef-3c35fef69726</tstamps>
+    </comp>
+    <comp ref="D105">
+      <value>BAT85S</value>
+      <footprint>Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.vishay.com/docs/85513/bat85s.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</field>
+        <field name="Datasheet">https://www.vishay.com/docs/85513/bat85s.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MAIN.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0832aaf0-c241-4dc9-9f47-9c17a14c2ee4</tstamps>
     </comp>
     <comp ref="FL101">
       <value>10.695-7.5B section</value>
@@ -2241,7 +2258,7 @@
       <tstamps>eacef359-f61a-45f3-bcb6-9a4d68665f59</tstamps>
     </comp>
     <comp ref="R165">
-      <value>3k</value>
+      <value>1k5</value>
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <fields>
         <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
@@ -2917,6 +2934,7 @@
     <net code="2" name="/AM_BB_NEG" class="Default">
       <node ref="C154" pin="1" pintype="passive"/>
       <node ref="C159" pin="2" pintype="passive"/>
+      <node ref="D105" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="R167" pin="2" pintype="passive"/>
       <node ref="U115" pin="4" pinfunction="V-" pintype="power_in"/>
     </net>
@@ -3332,6 +3350,7 @@
       <node ref="C157" pin="1" pintype="passive"/>
       <node ref="C158" pin="1" pintype="passive"/>
       <node ref="C159" pin="1" pintype="passive"/>
+      <node ref="D105" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="FL101" pin="CASE" pinfunction="CASE" pintype="passive"/>
       <node ref="FL102" pin="CASE" pinfunction="CASE" pintype="passive"/>
       <node ref="L101" pin="2" pinfunction="2" pintype="passive"/>

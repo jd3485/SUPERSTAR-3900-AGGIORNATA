@@ -53,7 +53,7 @@ if __name__ == "__main__":
 
     # Q105, configurazione TI fig. 30. Tensioni espresse in modulo.
     # 4,0 V al pin 5 è un punto di verifica da dimostrare alla corrente totale.
-    rb = 3000
+    rb = 1500
     base_min = (4.0 - .85) / (rb * 1.01)
     base_max = (5.25 - .65) / (rb * .99)
     pump_load = load + base_max
