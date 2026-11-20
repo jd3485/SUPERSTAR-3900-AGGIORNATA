@@ -66,11 +66,14 @@ if __name__ == "__main__":
     # U117 sul solo ramo positivo: due sezioni, divisore e 0,1 mA
     # di carico aggiuntivo ipotizzato prima della scelta ADC.
     iq_stage = 2 * .00135 + 5.25 / (29700 * .999) + .0001
-    total_protected = load + 1.2 * pump_load + .005 + iq_stage
+    # Scenario ADC: 2 x 450 uA, riferimento 100 uA, 2 x 150 uA
+    # di carico VREF, due pull da 10k all’estremo e carico uscite ipotizzato.
+    adc_stage = 2*.00045 + .0001 + 2*.00015 + 2*5.25/9900 + .0002
+    total_protected = load + 1.2 * pump_load + .005 + iq_stage + adc_stage
     cases = [budget(16, .075, vo, series, preload, .0085, .030, total_protected)
              for vo, series, preload in product((4.75, 5.25), (4.653, 4.747),
                                                 (900.9, 919.1))]
-    print("Con Q105 e U117: P U114 [W], bus minimo [V], tono rail [uV picco, BJT ideale in AC]",
+    print("Con Q105, U117 e ADC: P U114 [W], bus minimo [V], tono rail [uV picco, BJT ideale in AC]",
           round(max(c[1] for c in cases), 3), round(max(c[3] for c in cases), 3),
           round(max_in_band[0] * 1e6 * pump_load / load, 3))
     # Un gradino ideale a valle del collettore darebbe inizialmente V/R166.

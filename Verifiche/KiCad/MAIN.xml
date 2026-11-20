@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/2136ab1d57c6/KiCad/MAIN/MAIN.kicad_sch</source>
-    <date>2026-11-20T10:23:21+0100</date>
+    <date>2026-11-20T14:50:48+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/">
       <title_block>
@@ -105,6 +105,150 @@
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
       <tstamps>047a3df1-0336-4b2e-802c-f3ee7306e3e1</tstamps>
+    </comp>
+    <comp ref="C168">
+      <value>1n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>15ae74f1-da88-43d3-a1d6-e196f71dd634</tstamps>
+    </comp>
+    <comp ref="C169">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>751336aa-cabf-4b9b-84ec-f01e81485f65</tstamps>
+    </comp>
+    <comp ref="C170">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>4838a261-cc1a-4757-b455-fa43c4c6e73e</tstamps>
+    </comp>
+    <comp ref="C171">
+      <value>1n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>3a335f8a-1c1a-4cc2-80c5-87232205849a</tstamps>
+    </comp>
+    <comp ref="C172">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>ba1741e3-0a21-47f5-a181-b1a3e0046fee</tstamps>
+    </comp>
+    <comp ref="C173">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>68cc04d7-932b-4872-9393-6da6b32a5d2a</tstamps>
+    </comp>
+    <comp ref="C174">
+      <value>2u2</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>76a4152b-0f91-43bc-bb08-5aa65c443599</tstamps>
+    </comp>
+    <comp ref="C175">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>ccecf643-4203-49e6-939b-610a51985743</tstamps>
+    </comp>
+    <comp ref="J102">
+      <value>IQ acquisition</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>c6a7a62b-f763-4193-824d-1b3fd2f31630</tstamps>
     </comp>
     <comp ref="R172">
       <value>68k</value>
@@ -218,6 +362,86 @@
       <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
       <tstamps>6fb1be28-0fba-41ea-b744-7531d6b85d6f</tstamps>
     </comp>
+    <comp ref="R179">
+      <value>47</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>90efaf6b-114a-4888-b484-46b0195a3725</tstamps>
+    </comp>
+    <comp ref="R180">
+      <value>47</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>e9e80522-a2fe-4735-b4da-8018951a77dd</tstamps>
+    </comp>
+    <comp ref="R181">
+      <value>4R7</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>80ffd191-2dab-4861-acde-0394bb494289</tstamps>
+    </comp>
+    <comp ref="R182">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>6062bc48-21f6-49d7-8ac6-339700ea62ec</tstamps>
+    </comp>
+    <comp ref="R183">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>19f8fedf-e2da-49f8-b2d9-9663ed6dc324</tstamps>
+    </comp>
     <comp ref="U117">
       <value>MCP6022-I/P</value>
       <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
@@ -233,7 +457,55 @@
       <property name="ki_keywords" value="dual opamp"/>
       <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"/>
       <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
-      <tstamps>e1d1f447-2400-4ace-aa94-09e475ab11d7 de7c8191-8f9d-4fdb-81d5-5148de95dbb2 b2c7d560-8d26-474a-9f93-a799860a255d</tstamps>
+      <tstamps>de7c8191-8f9d-4fdb-81d5-5148de95dbb2 e1d1f447-2400-4ace-aa94-09e475ab11d7 b2c7d560-8d26-474a-9f93-a799860a255d</tstamps>
+    </comp>
+    <comp ref="U118">
+      <value>MCP3301-BI/P</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <fields>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Analog_ADC" part="MCP3301" description="13-Bit Differential Input, Low Power A/D Converter with SPI Interface"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="13-Bit Differential ADC SPI  1ch"/>
+      <property name="ki_fp_filters" value="DIP*W7.62mm* SOIC*3.9x4.9mm*P1.27mm*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>5252b695-7a0d-428e-8b15-f9187307169d</tstamps>
+    </comp>
+    <comp ref="U119">
+      <value>MCP3301-BI/P</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <fields>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Analog_ADC" part="MCP3301" description="13-Bit Differential Input, Low Power A/D Converter with SPI Interface"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="13-Bit Differential ADC SPI  1ch"/>
+      <property name="ki_fp_filters" value="DIP*W7.62mm* SOIC*3.9x4.9mm*P1.27mm*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>a6c19e1c-8fbc-4412-8e34-6f4e1a9fc0e2</tstamps>
+    </comp>
+    <comp ref="U120">
+      <value>MCP1525-I/TO</value>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline</footprint>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Reference_Voltage" part="MCP1525-TO" description="2.5V Voltage Reference, TO-92"/>
+      <property name="Sheetname" value="Condizionamento IQ"/>
+      <property name="Sheetfile" value="IQ_Livello.kicad_sch"/>
+      <property name="ki_keywords" value="Voltage Reference 2.5V"/>
+      <property name="ki_fp_filters" value="TO*92*"/>
+      <sheetpath names="/Condizionamento IQ/" tstamps="/89707d45-45b0-4f78-a85b-f9c9f7e74549/"/>
+      <tstamps>a4c36f2d-589a-4369-8f7f-5d04ef3b6ce8</tstamps>
     </comp>
     <comp ref="C101">
       <value>10n</value>
@@ -2913,6 +3185,31 @@
         <pin num="8" name="V+" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="Analog_ADC" part="MCP3301">
+      <description>13-Bit Differential Input, Low Power A/D Converter with SPI Interface</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/21700D.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP3301</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/21700D.pdf</field>
+        <field name="Description">13-Bit Differential Input, Low Power A/D Converter with SPI Interface</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Vref" type="power_in"/>
+        <pin num="2" name="IN+" type="input"/>
+        <pin num="3" name="IN-" type="input"/>
+        <pin num="4" name="Vss" type="power_in"/>
+        <pin num="5" name="~{CS}/SHDN" type="input"/>
+        <pin num="6" name="Dout" type="output"/>
+        <pin num="7" name="CLK" type="input"/>
+        <pin num="8" name="Vdd" type="power_in"/>
+      </pins>
+    </libpart>
     <libpart lib="Comparator" part="LM2903">
       <description>Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SOP-8/TSSOP-8/VSSOP-8</description>
       <docs>http://www.ti.com/lit/ds/symlink/lm393.pdf</docs>
@@ -3173,6 +3470,25 @@
         <pin num="8" name="Vcc" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="Reference_Voltage" part="MCP1525-TO">
+      <description>2.5V Voltage Reference, TO-92</description>
+      <docs>http://ww1.microchip.com/downloads/en/devicedoc/21653b.pdf</docs>
+      <footprints>
+        <fp>TO*92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP1525-TO</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/devicedoc/21653b.pdf</field>
+        <field name="Description">2.5V Voltage Reference, TO-92</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Vss" type="power_in"/>
+        <pin num="2" name="Vout" type="power_out"/>
+        <pin num="3" name="Vin" type="power_in"/>
+      </pins>
+    </libpart>
     <libpart lib="Regulator_Linear" part="LM7805_TO220">
       <description>Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220</description>
       <docs>https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</docs>
@@ -3241,6 +3557,9 @@
     <library logical="Amplifier_Operational">
       <uri>/usr/share/kicad/symbols//Amplifier_Operational.kicad_sym</uri>
     </library>
+    <library logical="Analog_ADC">
+      <uri>/usr/share/kicad/symbols//Analog_ADC.kicad_sym</uri>
+    </library>
     <library logical="Comparator">
       <uri>/usr/share/kicad/symbols//Comparator.kicad_sym</uri>
     </library>
@@ -3255,6 +3574,9 @@
     </library>
     <library logical="Oscillator">
       <uri>/usr/share/kicad/symbols//Oscillator.kicad_sym</uri>
+    </library>
+    <library logical="Reference_Voltage">
+      <uri>/usr/share/kicad/symbols//Reference_Voltage.kicad_sym</uri>
     </library>
     <library logical="Regulator_Linear">
       <uri>/usr/share/kicad/symbols//Regulator_Linear.kicad_sym</uri>
@@ -3395,6 +3717,7 @@
       <node ref="R157" pin="1" pintype="passive"/>
       <node ref="R164" pin="1" pintype="passive"/>
       <node ref="R176" pin="1" pintype="passive"/>
+      <node ref="R181" pin="1" pintype="passive"/>
       <node ref="U113" pin="6" pinfunction="VDD" pintype="power_in"/>
       <node ref="U114" pin="3" pinfunction="VO" pintype="power_out"/>
       <node ref="U116" pin="8" pinfunction="V+" pintype="power_in"/>
@@ -3529,45 +3852,87 @@
     <net code="46" name="/CONTROL_TO_MAIN" class="Default">
       <node ref="J101" pin="3" pinfunction="Pin_3" pintype="passive"/>
     </net>
-    <net code="47" name="/Condizionamento IQ/AM_I_LEVEL" class="Default">
+    <net code="47" name="/Condizionamento IQ/ADC_CLK" class="Default">
+      <node ref="J102" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R183" pin="1" pintype="passive"/>
+      <node ref="U118" pin="7" pinfunction="CLK" pintype="input"/>
+      <node ref="U119" pin="7" pinfunction="CLK" pintype="input"/>
+    </net>
+    <net code="48" name="/Condizionamento IQ/ADC_CS_N" class="Default">
+      <node ref="J102" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R182" pin="2" pintype="passive"/>
+      <node ref="U118" pin="5" pinfunction="~{CS}/SHDN" pintype="input"/>
+      <node ref="U119" pin="5" pinfunction="~{CS}/SHDN" pintype="input"/>
+    </net>
+    <net code="49" name="/Condizionamento IQ/ADC_DI" class="Default">
+      <node ref="J102" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="U118" pin="6" pinfunction="Dout" pintype="output"/>
+    </net>
+    <net code="50" name="/Condizionamento IQ/ADC_DQ" class="Default">
+      <node ref="J102" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U119" pin="6" pinfunction="Dout" pintype="output"/>
+    </net>
+    <net code="51" name="/Condizionamento IQ/ADC_REF_2V5" class="Default">
+      <node ref="C170" pin="1" pintype="passive"/>
+      <node ref="C173" pin="1" pintype="passive"/>
+      <node ref="C174" pin="1" pintype="passive"/>
+      <node ref="U118" pin="1" pinfunction="Vref" pintype="power_in"/>
+      <node ref="U118" pin="3" pinfunction="IN-" pintype="input"/>
+      <node ref="U119" pin="1" pinfunction="Vref" pintype="power_in"/>
+      <node ref="U119" pin="3" pinfunction="IN-" pintype="input"/>
+      <node ref="U120" pin="2" pinfunction="Vout" pintype="power_out"/>
+    </net>
+    <net code="52" name="/Condizionamento IQ/ADC_VDD" class="Default">
+      <node ref="C169" pin="1" pintype="passive"/>
+      <node ref="C172" pin="1" pintype="passive"/>
+      <node ref="C175" pin="1" pintype="passive"/>
+      <node ref="R181" pin="2" pintype="passive"/>
+      <node ref="R182" pin="1" pintype="passive"/>
+      <node ref="U118" pin="8" pinfunction="Vdd" pintype="power_in"/>
+      <node ref="U119" pin="8" pinfunction="Vdd" pintype="power_in"/>
+      <node ref="U120" pin="3" pinfunction="Vin" pintype="power_in"/>
+    </net>
+    <net code="53" name="/Condizionamento IQ/AM_I_LEVEL" class="Default">
       <node ref="C164" pin="2" pintype="passive"/>
       <node ref="R173" pin="2" pintype="passive"/>
+      <node ref="R179" pin="1" pintype="passive"/>
       <node ref="U117" pin="1" pintype="output"/>
     </net>
-    <net code="48" name="/Condizionamento IQ/AM_Q_LEVEL" class="Default">
+    <net code="54" name="/Condizionamento IQ/AM_Q_LEVEL" class="Default">
       <node ref="C165" pin="2" pintype="passive"/>
       <node ref="R175" pin="2" pintype="passive"/>
+      <node ref="R180" pin="1" pintype="passive"/>
       <node ref="U117" pin="7" pintype="output"/>
     </net>
-    <net code="49" name="/Condizionamento IQ/IQ_BIAS" class="Default">
+    <net code="55" name="/Condizionamento IQ/IQ_BIAS" class="Default">
       <node ref="C166" pin="1" pintype="passive"/>
       <node ref="R177" pin="2" pintype="passive"/>
       <node ref="R178" pin="1" pintype="passive"/>
       <node ref="U117" pin="3" pinfunction="+" pintype="input"/>
       <node ref="U117" pin="5" pinfunction="+" pintype="input"/>
     </net>
-    <net code="50" name="/Condizionamento IQ/IQ_VDD" class="Default">
+    <net code="56" name="/Condizionamento IQ/IQ_VDD" class="Default">
       <node ref="C167" pin="1" pintype="passive"/>
       <node ref="R176" pin="2" pintype="passive"/>
       <node ref="R177" pin="1" pintype="passive"/>
       <node ref="U117" pin="8" pinfunction="V+" pintype="power_in"/>
     </net>
-    <net code="51" name="/EXTERNAL_DC_PROTECTED" class="Default">
+    <net code="57" name="/EXTERNAL_DC_PROTECTED" class="Default">
       <node ref="D102" pin="2" pinfunction="A" pintype="passive"/>
     </net>
-    <net code="52" name="/FRONT_RETURN" class="Default">
+    <net code="58" name="/FRONT_RETURN" class="Default">
       <node ref="J101" pin="2" pinfunction="Pin_2" pintype="passive"/>
     </net>
-    <net code="53" name="/FRONT_SUPPLY" class="Default">
+    <net code="59" name="/FRONT_SUPPLY" class="Default">
       <node ref="J101" pin="1" pinfunction="Pin_1" pintype="passive"/>
     </net>
-    <net code="54" name="/LOGIC_RESET_N" class="Default">
+    <net code="60" name="/LOGIC_RESET_N" class="Default">
       <node ref="R125" pin="1" pintype="passive"/>
       <node ref="U104" pin="1" pinfunction="~{RST}" pintype="output"/>
       <node ref="U105" pin="10" pintype="input"/>
       <node ref="U105" pin="2" pintype="input"/>
     </net>
-    <net code="55" name="/MAIN_LOGIC_SUPPLY" class="Default">
+    <net code="61" name="/MAIN_LOGIC_SUPPLY" class="Default">
       <node ref="C102" pin="1" pintype="passive"/>
       <node ref="C104" pin="1" pintype="passive"/>
       <node ref="C121" pin="1" pintype="passive"/>
@@ -3589,7 +3954,7 @@
       <node ref="U104" pin="2" pinfunction="VDD" pintype="power_in"/>
       <node ref="U105" pin="14" pinfunction="VCC" pintype="power_in"/>
     </net>
-    <net code="56" name="/MAIN_PROTECTED_DC" class="Default">
+    <net code="62" name="/MAIN_PROTECTED_DC" class="Default">
       <node ref="C103" pin="1" pintype="passive"/>
       <node ref="C105" pin="1" pintype="passive"/>
       <node ref="D101" pin="1" pinfunction="K" pintype="passive"/>
@@ -3597,56 +3962,56 @@
       <node ref="R153" pin="1" pintype="passive"/>
       <node ref="U102" pin="1" pinfunction="VI" pintype="power_in"/>
     </net>
-    <net code="57" name="/PTT_ARMED" class="Default">
+    <net code="63" name="/PTT_ARMED" class="Default">
       <node ref="R127" pin="1" pintype="passive"/>
       <node ref="U105" pin="11" pintype="output"/>
     </net>
-    <net code="58" name="/PTT_ARM_N" class="Default">
+    <net code="64" name="/PTT_ARM_N" class="Default">
       <node ref="U105" pin="12" pintype="input"/>
       <node ref="U105" pin="13" pintype="input"/>
       <node ref="U105" pin="5" pintype="input"/>
       <node ref="U105" pin="8" pintype="output"/>
     </net>
-    <net code="59" name="/PTT_HIGH_REF" class="Default">
+    <net code="65" name="/PTT_HIGH_REF" class="Default">
       <node ref="R104" pin="2" pintype="passive"/>
       <node ref="R105" pin="1" pintype="passive"/>
       <node ref="U101" pin="5" pinfunction="+" pintype="input"/>
     </net>
-    <net code="60" name="/PTT_LATCH_Q" class="Default">
+    <net code="66" name="/PTT_LATCH_Q" class="Default">
       <node ref="U105" pin="6" pintype="output"/>
       <node ref="U105" pin="9" pintype="input"/>
     </net>
-    <net code="61" name="/PTT_LOW_REF" class="Default">
+    <net code="67" name="/PTT_LOW_REF" class="Default">
       <node ref="R105" pin="2" pintype="passive"/>
       <node ref="R106" pin="1" pintype="passive"/>
       <node ref="U101" pin="2" pinfunction="-" pintype="input"/>
     </net>
-    <net code="62" name="/PTT_QUAL_N" class="Default">
+    <net code="68" name="/PTT_QUAL_N" class="Default">
       <node ref="R126" pin="1" pintype="passive"/>
       <node ref="R128" pin="1" pintype="passive"/>
       <node ref="U105" pin="3" pintype="output"/>
     </net>
-    <net code="63" name="/PTT_RECHARGE_A" class="Default">
+    <net code="69" name="/PTT_RECHARGE_A" class="Default">
       <node ref="D103" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="R128" pin="2" pintype="passive"/>
     </net>
-    <net code="64" name="/PTT_RELEASE_HIGH" class="Default">
+    <net code="70" name="/PTT_RELEASE_HIGH" class="Default">
       <node ref="R120" pin="2" pintype="passive"/>
       <node ref="R121" pin="1" pintype="passive"/>
       <node ref="U103" pin="5" pinfunction="+" pintype="input"/>
     </net>
-    <net code="65" name="/PTT_RELEASE_LOW" class="Default">
+    <net code="71" name="/PTT_RELEASE_LOW" class="Default">
       <node ref="R121" pin="2" pintype="passive"/>
       <node ref="R122" pin="1" pintype="passive"/>
       <node ref="U103" pin="2" pinfunction="-" pintype="input"/>
     </net>
-    <net code="66" name="/PTT_RELEASE_VALID" class="Default">
+    <net code="72" name="/PTT_RELEASE_VALID" class="Default">
       <node ref="R123" pin="2" pintype="passive"/>
       <node ref="U103" pin="1" pintype="open_collector"/>
       <node ref="U103" pin="7" pintype="open_collector"/>
       <node ref="U105" pin="1" pintype="input"/>
     </net>
-    <net code="67" name="/PTT_SCALED" class="Default">
+    <net code="73" name="/PTT_SCALED" class="Default">
       <node ref="C101" pin="1" pintype="passive"/>
       <node ref="R102" pin="2" pintype="passive"/>
       <node ref="R103" pin="1" pintype="passive"/>
@@ -3655,44 +4020,44 @@
       <node ref="U103" pin="3" pinfunction="+" pintype="input"/>
       <node ref="U103" pin="6" pinfunction="-" pintype="input"/>
     </net>
-    <net code="68" name="/PTT_SENSE" class="Default">
+    <net code="74" name="/PTT_SENSE" class="Default">
       <node ref="J101" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="R101" pin="2" pintype="passive"/>
       <node ref="R102" pin="1" pintype="passive"/>
     </net>
-    <net code="69" name="/PTT_SET_N" class="Default">
+    <net code="75" name="/PTT_SET_N" class="Default">
       <node ref="C123" pin="1" pintype="passive"/>
       <node ref="D103" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R126" pin="2" pintype="passive"/>
       <node ref="U105" pin="4" pintype="input"/>
     </net>
-    <net code="70" name="/PTT_WINDOW_VALID" class="Default">
+    <net code="76" name="/PTT_WINDOW_VALID" class="Default">
       <node ref="R107" pin="2" pintype="passive"/>
       <node ref="U101" pin="1" pintype="open_collector"/>
       <node ref="U101" pin="7" pintype="open_collector"/>
     </net>
-    <net code="71" name="/RX_FILTER_IN" class="Default">
+    <net code="77" name="/RX_FILTER_IN" class="Default">
       <node ref="C110" pin="1" pintype="passive"/>
     </net>
-    <net code="72" name="/RX_FILTER_OUT" class="Default">
+    <net code="78" name="/RX_FILTER_OUT" class="Default">
       <node ref="C112" pin="2" pintype="passive"/>
       <node ref="U110" pin="1" pinfunction="RF" pintype="passive"/>
     </net>
-    <net code="73" name="/RX_IF_10695" class="Default">
+    <net code="79" name="/RX_IF_10695" class="Default">
       <node ref="C113" pin="1" pintype="passive"/>
       <node ref="L103" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U110" pin="3" pinfunction="IF_A" pintype="passive"/>
       <node ref="U110" pin="4" pinfunction="IF_B" pintype="passive"/>
     </net>
-    <net code="74" name="/RX_IF_LOWPASS" class="Default">
+    <net code="80" name="/RX_IF_LOWPASS" class="Default">
       <node ref="C119" pin="1" pintype="passive"/>
       <node ref="L103" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R110" pin="1" pintype="passive"/>
     </net>
-    <net code="75" name="/RX_LO_DRIVE" class="Default">
+    <net code="81" name="/RX_LO_DRIVE" class="Default">
       <node ref="U110" pin="8" pinfunction="LO" pintype="passive"/>
     </net>
-    <net code="76" name="/RX_RF_RETURN" class="Default">
+    <net code="82" name="/RX_RF_RETURN" class="Default">
       <node ref="C114" pin="2" pintype="passive"/>
       <node ref="C115" pin="2" pintype="passive"/>
       <node ref="C116" pin="2" pintype="passive"/>
@@ -3731,9 +4096,19 @@
       <node ref="C163" pin="2" pintype="passive"/>
       <node ref="C166" pin="2" pintype="passive"/>
       <node ref="C167" pin="2" pintype="passive"/>
+      <node ref="C168" pin="2" pintype="passive"/>
+      <node ref="C169" pin="2" pintype="passive"/>
+      <node ref="C170" pin="2" pintype="passive"/>
+      <node ref="C171" pin="2" pintype="passive"/>
+      <node ref="C172" pin="2" pintype="passive"/>
+      <node ref="C173" pin="2" pintype="passive"/>
+      <node ref="C174" pin="2" pintype="passive"/>
+      <node ref="C175" pin="2" pintype="passive"/>
       <node ref="D105" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="FL101" pin="CASE" pinfunction="CASE" pintype="passive"/>
       <node ref="FL102" pin="CASE" pinfunction="CASE" pintype="passive"/>
+      <node ref="J102" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J102" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="L101" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="L102" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R110" pin="2" pintype="passive"/>
@@ -3759,6 +4134,7 @@
       <node ref="R162" pin="1" pintype="passive"/>
       <node ref="R165" pin="1" pintype="passive"/>
       <node ref="R178" pin="2" pintype="passive"/>
+      <node ref="R183" pin="2" pintype="passive"/>
       <node ref="U110" pin="2" pinfunction="GND2" pintype="passive"/>
       <node ref="U110" pin="5" pinfunction="GND5" pintype="passive"/>
       <node ref="U110" pin="6" pinfunction="GND6" pintype="passive"/>
@@ -3776,139 +4152,152 @@
       <node ref="U114" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U116" pin="3" pinfunction="GND" pintype="power_in"/>
       <node ref="U117" pin="4" pinfunction="V-" pintype="power_in"/>
+      <node ref="U118" pin="4" pinfunction="Vss" pintype="power_in"/>
+      <node ref="U119" pin="4" pinfunction="Vss" pintype="power_in"/>
+      <node ref="U120" pin="1" pinfunction="Vss" pintype="power_in"/>
       <node ref="Y101" pin="4" pinfunction="GND" pintype="power_in"/>
     </net>
-    <net code="77" name="Net-(C110-Pad2)" class="Default">
+    <net code="83" name="Net-(C110-Pad2)" class="Default">
       <node ref="C110" pin="2" pintype="passive"/>
       <node ref="C111" pin="1" pintype="passive"/>
       <node ref="L101" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="78" name="Net-(C111-Pad2)" class="Default">
+    <net code="84" name="Net-(C111-Pad2)" class="Default">
       <node ref="C111" pin="2" pintype="passive"/>
       <node ref="C112" pin="1" pintype="passive"/>
       <node ref="L102" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="79" name="Net-(C113-Pad2)" class="Default">
+    <net code="85" name="Net-(C113-Pad2)" class="Default">
       <node ref="C113" pin="2" pintype="passive"/>
       <node ref="R111" pin="1" pintype="passive"/>
     </net>
-    <net code="80" name="Net-(C131-Pad1)" class="Default">
+    <net code="86" name="Net-(C131-Pad1)" class="Default">
       <node ref="C131" pin="1" pintype="passive"/>
       <node ref="R139" pin="2" pintype="passive"/>
       <node ref="R140" pin="1" pintype="passive"/>
     </net>
-    <net code="81" name="Net-(C132-Pad1)" class="Default">
+    <net code="87" name="Net-(C132-Pad1)" class="Default">
       <node ref="C132" pin="1" pintype="passive"/>
       <node ref="R135" pin="2" pintype="passive"/>
       <node ref="R136" pin="1" pintype="passive"/>
       <node ref="R138" pin="1" pintype="passive"/>
     </net>
-    <net code="82" name="Net-(C141-Pad1)" class="Default">
+    <net code="88" name="Net-(C141-Pad1)" class="Default">
       <node ref="C141" pin="1" pintype="passive"/>
       <node ref="L110" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="L111" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="83" name="Net-(C142-Pad1)" class="Default">
+    <net code="89" name="Net-(C142-Pad1)" class="Default">
       <node ref="C142" pin="1" pintype="passive"/>
       <node ref="L111" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="L112" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="84" name="Net-(C143-Pad2)" class="Default">
+    <net code="90" name="Net-(C143-Pad2)" class="Default">
       <node ref="C143" pin="2" pintype="passive"/>
       <node ref="L110" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="85" name="Net-(C160-Pad1)" class="Default">
+    <net code="91" name="Net-(C160-Pad1)" class="Default">
       <node ref="C160" pin="1" pintype="passive"/>
       <node ref="R168" pin="2" pintype="passive"/>
       <node ref="R169" pin="1" pintype="passive"/>
     </net>
-    <net code="86" name="Net-(C162-Pad1)" class="Default">
+    <net code="92" name="Net-(C162-Pad1)" class="Default">
       <node ref="C162" pin="1" pintype="passive"/>
       <node ref="R170" pin="2" pintype="passive"/>
       <node ref="R171" pin="1" pintype="passive"/>
     </net>
-    <net code="87" name="Net-(D104-A)" class="Default">
+    <net code="93" name="Net-(D104-A)" class="Default">
       <node ref="C133" pin="2" pintype="passive"/>
       <node ref="D104" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="R141" pin="1" pintype="passive"/>
     </net>
-    <net code="88" name="Net-(Q103-B)" class="Default">
+    <net code="94" name="Net-(Q103-B)" class="Default">
       <node ref="C130" pin="2" pintype="passive"/>
       <node ref="Q103" pin="2" pinfunction="B" pintype="input"/>
       <node ref="R136" pin="2" pintype="passive"/>
       <node ref="R137" pin="1" pintype="passive"/>
     </net>
-    <net code="89" name="Net-(Q103-E)" class="Default">
+    <net code="95" name="Net-(Q103-E)" class="Default">
       <node ref="Q103" pin="1" pinfunction="E" pintype="passive"/>
       <node ref="R139" pin="1" pintype="passive"/>
     </net>
-    <net code="90" name="Net-(Q104-C)" class="Default">
+    <net code="96" name="Net-(Q104-C)" class="Default">
       <node ref="C135" pin="1" pintype="passive"/>
       <node ref="Q104" pin="3" pinfunction="C" pintype="passive"/>
       <node ref="R143" pin="2" pintype="passive"/>
     </net>
-    <net code="91" name="Net-(Q105-B)" class="Default">
+    <net code="97" name="Net-(Q105-B)" class="Default">
       <node ref="Q105" pin="2" pinfunction="B" pintype="input"/>
       <node ref="R165" pin="2" pintype="passive"/>
     </net>
-    <net code="92" name="Net-(U115A-+)" class="Default">
+    <net code="98" name="Net-(U115A-+)" class="Default">
       <node ref="C149" pin="2" pintype="passive"/>
       <node ref="R158" pin="2" pintype="passive"/>
       <node ref="U115" pin="3" pinfunction="+" pintype="input"/>
     </net>
-    <net code="93" name="Net-(U115A--)" class="Default">
+    <net code="99" name="Net-(U115A--)" class="Default">
       <node ref="C150" pin="1" pintype="passive"/>
       <node ref="R159" pin="2" pintype="passive"/>
       <node ref="R160" pin="1" pintype="passive"/>
       <node ref="U115" pin="2" pinfunction="-" pintype="input"/>
     </net>
-    <net code="94" name="Net-(U115B-+)" class="Default">
+    <net code="100" name="Net-(U115B-+)" class="Default">
       <node ref="C151" pin="2" pintype="passive"/>
       <node ref="R161" pin="2" pintype="passive"/>
       <node ref="U115" pin="5" pinfunction="+" pintype="input"/>
     </net>
-    <net code="95" name="Net-(U115B--)" class="Default">
+    <net code="101" name="Net-(U115B--)" class="Default">
       <node ref="C152" pin="1" pintype="passive"/>
       <node ref="R162" pin="2" pintype="passive"/>
       <node ref="R163" pin="1" pintype="passive"/>
       <node ref="U115" pin="6" pinfunction="-" pintype="input"/>
     </net>
-    <net code="96" name="Net-(U116-CAP+)" class="Default">
+    <net code="102" name="Net-(U116-CAP+)" class="Default">
       <node ref="C156" pin="1" pintype="passive"/>
       <node ref="U116" pin="2" pinfunction="CAP+" pintype="input"/>
     </net>
-    <net code="97" name="Net-(U116-CAP-)" class="Default">
+    <net code="103" name="Net-(U116-CAP-)" class="Default">
       <node ref="C156" pin="2" pintype="passive"/>
       <node ref="U116" pin="4" pinfunction="CAP-" pintype="input"/>
     </net>
-    <net code="98" name="Net-(U117A--)" class="Default">
+    <net code="104" name="Net-(U117A--)" class="Default">
       <node ref="C164" pin="1" pintype="passive"/>
       <node ref="R172" pin="2" pintype="passive"/>
       <node ref="R173" pin="1" pintype="passive"/>
       <node ref="U117" pin="2" pinfunction="-" pintype="input"/>
     </net>
-    <net code="99" name="Net-(U117B--)" class="Default">
+    <net code="105" name="Net-(U117B--)" class="Default">
       <node ref="C165" pin="1" pintype="passive"/>
       <node ref="R174" pin="2" pintype="passive"/>
       <node ref="R175" pin="1" pintype="passive"/>
       <node ref="U117" pin="6" pinfunction="-" pintype="input"/>
     </net>
-    <net code="100" name="unconnected-(U113-NC-Pad1)" class="Default">
+    <net code="106" name="Net-(U118-IN+)" class="Default">
+      <node ref="C168" pin="1" pintype="passive"/>
+      <node ref="R179" pin="2" pintype="passive"/>
+      <node ref="U118" pin="2" pinfunction="IN+" pintype="input"/>
+    </net>
+    <net code="107" name="Net-(U119-IN+)" class="Default">
+      <node ref="C171" pin="1" pintype="passive"/>
+      <node ref="R180" pin="2" pintype="passive"/>
+      <node ref="U119" pin="2" pinfunction="IN+" pintype="input"/>
+    </net>
+    <net code="108" name="unconnected-(U113-NC-Pad1)" class="Default">
       <node ref="U113" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="101" name="unconnected-(U113-NC-Pad8)" class="Default">
+    <net code="109" name="unconnected-(U113-NC-Pad8)" class="Default">
       <node ref="U113" pin="8" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="102" name="unconnected-(U113-OUT_B-Pad5)" class="Default">
+    <net code="110" name="unconnected-(U113-OUT_B-Pad5)" class="Default">
       <node ref="U113" pin="5" pinfunction="OUT_B" pintype="output+no_connect"/>
     </net>
-    <net code="103" name="unconnected-(U116-FB/SHDN-Pad1)" class="Default">
+    <net code="111" name="unconnected-(U116-FB/SHDN-Pad1)" class="Default">
       <node ref="U116" pin="1" pinfunction="FB/SHDN" pintype="input+no_connect"/>
     </net>
-    <net code="104" name="unconnected-(U116-OSC-Pad7)" class="Default">
+    <net code="112" name="unconnected-(U116-OSC-Pad7)" class="Default">
       <node ref="U116" pin="7" pinfunction="OSC" pintype="input+no_connect"/>
     </net>
-    <net code="105" name="unconnected-(U116-VREF-Pad6)" class="Default">
+    <net code="113" name="unconnected-(U116-VREF-Pad6)" class="Default">
       <node ref="U116" pin="6" pinfunction="VREF" pintype="output+no_connect"/>
     </net>
   </nets>
