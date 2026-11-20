@@ -1,5 +1,18 @@
 # Stato operativo
 
+## Selettività I/Q prima del PLL · confronto host nella PR #1
+
+Confrontati gli stessi 21 stimoli con e senza il candidato FIR simmetrico a 31 coefficienti Q12. La frequenza di campionamento è 48 kHz, il ritardo 15 campioni (0,3125 ms). Si escludono i primi 30 ingressi dalla fase di acquisizione del PLL per riempire la storia del filtro. La convoluzione su I e Q richiede complessivamente 32 prodotti per coppia (1,536 milioni al secondo), prima del demodulatore e del filtro audio. Il limite della somma assoluta dei coefficienti è 6000, quindi per ogni ingresso ADC a 13 bit l’accumulatore resta entro 24 576 000 in valore assoluto. L’uscita viene arrotondata e limitata al formato signed a 13 bit.
+
+| Stimolo | Senza FIR I/Q | Con FIR I/Q |
+|---|---:|---:|
+| Adiacente a ±10 kHz, +20 dB, guadagno del tono desiderato | −85,05 … −28,30 dB | −0,04 dB |
+| Stessi quattro casi, rapporto tono/residuo | −90,32 … −33,72 dB | 51,83 … 52,39 dB |
+| Portante debole (4 codici), rumore 1 codice RMS per canale, rapporto tono/residuo | 10,65 dB | 10,66 dB |
+| Senza interferente, tono a 1 kHz, rapporto tono/residuo | 54,70 dB | 52,15 dB |
+
+Per i toni utili a 300, 1000, 3000 e 4000 Hz con portante da 180 codici, massimo scostamento del guadagno filtrato 0,23 dB. Sul segnale pulito il FIR introduce un piccolo aumento del residuo. Il test debole usa lo stesso rumore deterministico nelle due varianti. Superati host-check e UBSan. Il filtro resta nel confronto host. Il margine temporale del PIC32 non è qualificato. Prossimo lavoro: valutare un filtro a costo inferiore sugli stessi ingressi prima della scelta d’integrazione.
+
 ## Interferenza AM adiacente all’ingresso digitale · PR #1
 
 Prova host ripetibile in host-check, con il demodulatore e il decimatore del firmware. Desiderata a +230 Hz in banda base, portante 180 codici ADC, tono a 1 kHz al 60%. Interferente a ±10 kHz dalla desiderata, tono a 1,7 kHz al 70%. Due fasi iniziali per ciascun lato e livello. I due segnali sono presenti fin dall’avvio. Tutti gli ingressi rientrano nei 13 bit senza clipping. Dopo 0,5 s di assestamento, un secondo di audio a 16 kcampioni/s viene proiettato sulle due quadrature del tono utile. Il residuo comprende ogni altra componente audio, esclusa la continua.
