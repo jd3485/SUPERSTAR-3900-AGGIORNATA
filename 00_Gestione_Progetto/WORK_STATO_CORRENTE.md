@@ -1,5 +1,17 @@
 # Stato operativo
 
+## Filtri di uscita I/Q · PR #1
+
+R168–R171 e C160–C163 formano due reti RC identiche all’uscita di U115. Per ciascun canale il primo ramo usa 330 Ω e 39 nF, il secondo 3,3 kΩ e 3,9 nF. I condensatori THT non polarizzati tornano a RX_RF_RETURN. AM_I_LP e AM_Q_LP restano bipolari e disponibili per il successivo stadio ad alta impedenza. Specificare resistori ±1%, condensatori stabili ±5% o migliori e verificarne l’accoppiamento e l’impronta. I resistori da 330 Ω isolano U115 dalla prima capacità. Restano da verificare stabilità dell’operazionale e risposta con il carico effettivo.
+
+Il modello filtro_uscita_iq.py include il caricamento reciproco delle celle. Nel caso nominale a vuoto si ottengono 0 dB in continua, −1,01 dB a 4 kHz, −6,19 dB a 12 kHz e −35,05 dB a 92 kHz. I valori sono relativi all’uscita del preamplificatore. Ai vertici delle tolleranze la differenza fra canali può raggiungere 0,23 dB e 4,08° a 4 kHz, in aggiunta allo sbilanciamento di U115. Con 100 kΩ e 100 pF di carico e sorgente da 10 Ω la perdita a 4 kHz diventa 1,34 dB. Un ADC con capacità commutata necessita di un controllo specifico del tempo di acquisizione.
+
+A 16 kcampioni/s per canale un disturbo a 12 kHz si ripiega a 4 kHz dopo appena 6,19 dB di attenuazione da queste celle. A 96 kcampioni/s per canale la prima immagine della banda utile comincia a 92 kHz. Nel confronto numerico un FIR da 97 coefficienti prima della decimazione per sei dà un massimo di −83,52 dB tra 12 e 48 kHz e 0,5 ms di ritardo. Restano gli alias creati nella prima acquisizione e la risposta reale di tutta la catena. La cadenza a 96 kcampioni/s per canale è un’ipotesi. Prossimo blocco: dimensionare insieme guadagno regolabile, gestione dell’offset DC, dinamica, rumore e interfaccia di acquisizione THT sui due canali. Il FIR è solo nel modello.
+
+D105: il limite di 400 mV a 10 mA è specificato nelle condizioni di tabella a 25 °C. La curva a −50 °C della figura 1 è tipica. Con lo scenario precedente a Vf aumentata di 100 mV, un ingresso a 0 V avrebbe solo circa 2 mV di distanza dal limite assoluto V− − 0,5 V al picco di +0,498 V sulla rail. La differenza è inferiore agli scostamenti plausibili del modello e dei ritorni: mantenere aperta la qualifica, inclusi entrambi gli ingressi reali di ciascun operazionale. [Vishay BAT85S, tabella e fig. 1](https://www.vishay.com/docs/85513/bat85s.pdf) · [TI OPA2134](https://www.ti.com/lit/ds/symlink/opa2134.pdf)
+
+KiCad: MAIN candidata con 164 impronte THT. Conservate le 388 precedenti associazioni pin/rete e verificati tutti i pad numerati rispetto alla netlist da 404 associazioni. Entrambi i filtri sono collegati sulla PCB. DRC MAIN con parità: zero pad scollegati e zero discrepanze; contorno assente. ERC MAIN 15 errori aperti. Nessuna prova hardware.
+
 ## Limitazione locale della rail di U115 e confronto delle sequenze · PR #1
 
 D105 è nello schema e sulla PCB MAIN, con anodo sul negativo di U115 e catodo su RX_RF_RETURN presso C154. Il componente candidato BAT85S assiale usa l'impronta DO-35 a passo 7,62 mm. La limitazione interviene quando AM_BB_NEG diventa positiva. R165 passa da 3 kΩ a 1,5 kΩ per aumentare la corrente di base disponibile a Q105 durante la carica. Con le ipotesi già documentate la corrente di base di regime diventa 2,08–3,10 mA, con dissipazione di U114 fino a 1,618 W nello scenario a 16 V. Confermare termica, corrente di perdita, Vf a freddo, ingombro e MPN in produzione prima del rilascio. [BAT85S – specifica Vishay](https://www.vishay.com/docs/85513/bat85s.pdf)
