@@ -107,6 +107,68 @@ static unsigned budget(bool during_spi)
     return 0;
 }
 
+/* Uno slot con DSP pesante ogni tre, negli altri costo fisso di 96
+   tick. La fase è riferita alla coppia, anche quando il DSP è differito. */
+struct state { unsigned entry, phase; };
+
+static bool all_jitter_paths(unsigned peak, unsigned jitter, bool during_spi)
+{
+    struct state queue[65*3];
+    bool seen[65][3] = {{false}};
+    unsigned head = 0, tail = 0;
+    /* A regime: tutte le tre fasi iniziali, ingresso puntuale. Con gli
+       overhead scelti lo slot di avvio senza DSP pendente termina in tempo. */
+    for (unsigned phase = 0; phase < 3; ++phase) {
+        queue[tail++] = (struct state){0, phase};
+        seen[0][phase] = true;
+    }
+    overlap = during_spi;
+    while (head < tail) {
+        struct state state = queue[head++];
+        for (unsigned delay = 0; delay <= jitter; ++delay) {
+            timing = (struct scenario){16, delay, 16, 32};
+            slot = 768;
+            now = slot + state.entry;
+            processed = during_spi ? 0 : 1;
+            pending_id = 0;
+            pending = during_spi;
+            active = read_done = false;
+            unsigned phase = during_spi ? (state.phase+2)%3 : state.phase;
+            cost = phase == 0 ? peak : 96;
+            struct iq_pair out;
+            if (iq_capture(&port, &out) != IQ_OK)
+                return false;
+            assert(out.i == 1 && !pending);
+            if (!during_spi) {
+                pending_id = 1;
+                pending = true;
+                process_previous();
+            }
+            now += timing.housekeeping;
+            unsigned entry = now > 2*768 ? now-2*768 : 0;
+            if (entry > 64)
+                return false;
+            unsigned next = (state.phase+1)%3;
+            if (!seen[entry][next]) {
+                seen[entry][next] = true;
+                queue[tail++] = (struct state){entry, next};
+            }
+        }
+    }
+    return true;
+}
+
+static unsigned peak_budget(unsigned jitter, bool during_spi)
+{
+    for (unsigned peak = 96; peak <= 768; ++peak)
+        if (!all_jitter_paths(peak, jitter, during_spi)) {
+            assert(peak > 96);
+            return peak-1;
+        }
+    assert(0);
+    return 0;
+}
+
 int main(void)
 {
     const struct scenario cases[] = {
@@ -119,5 +181,12 @@ int main(void)
             timing.poll, timing.launch_delay, timing.close, timing.housekeeping, after, during);
         assert(during > after && during >= 512);
         assert(!sustained(704, true));
+    }
+    for (unsigned jitter = 0; jitter <= 32; jitter += 16) {
+        unsigned after = peak_budget(jitter, false);
+        unsigned during = peak_budget(jitter, true);
+        printf("Lancio 0..%u tick, picco DSP dopo=%u durante=%u tick PBCLK\n",
+               jitter, after, during);
+        assert(during >= 512 && during > after);
     }
 }

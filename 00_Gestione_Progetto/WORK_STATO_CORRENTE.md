@@ -1,5 +1,17 @@
 # Stato operativo
 
+## Jitter SPI e picco DSP ogni tre coppie · PR #1
+
+La prova host iq_schedule_test usa il sequenziatore reale con un costo sintetico di 96 tick PBCLK su due coppie e un picco sulla terza. Polling, chiusura e gestione occupano rispettivamente 16, 16 e 32 tick. Il ritardo di lancio può cambiare indipendentemente a ogni slot, con qualunque valore intero nell’intervallo indicato. Si esplorano tutte le fasi di ingresso raggiungibili e tutte le tre posizioni iniziali del picco. Si conserva l’associazione fra il costo del DSP e la coppia originale nel percorso differito.
+
+| Ritardo di lancio, tick PBCLK | Massimo picco dopo lettura | Massimo picco durante SPI |
+|---|---:|---:|
+| 0 | 130 | 591 |
+| 0–16 | 113 | 575 |
+| 0–32 | 97 | 559 |
+
+Ogni limite è l’ultimo valore intero prima del primo picco che causa uno scarto in almeno una sequenza ammessa, partendo da 96 tick. Nel modello con ritardo fino a 32 tick, 559 tick PBCLK equivalgono a 15,16 µs a 36,864 MHz. Il test host completo e UBSan sul modello passano. Le soglie valgono per le ipotesi esplicite di costo, senza qualificare i tempi del PIC32. Per chiudere la verifica temporale occorrono XC32 e dati dal bersaglio. Il prossimo lavoro CAD autonomo riguarda il percorso dall’audio digitale a 16 kcampioni/s all’ingresso audio analogico della MAIN, iniziando da risorse disponibili e livelli dei due lati.
+
 ## Variante RX diagnostica con elaborazione durante SPI · PR #1
 
 Il target `make -C Firmware/RX profile-overlap` prepara una variante distinta con prefiltro IIR, demodulazione AM, decimatore e profilazione. Il driver deposita la parola in SPI1BUF, poi elabora una sola volta la coppia accettata nel periodo precedente, prima di interrogare nuovamente lo stato SPI. La coppia porta con sé il timestamp CP0 di cattura per la continuità del PLL. La profilazione misura separatamente il tempo di servizio DSP e gli intervalli tra catture. Uno scarto prima del lancio svuota la coppia precedente prima del reset. Uno scarto dopo il lancio invalida l’audio e azzera la catena dopo il consumo già avvenuto. IQ_IDLE mantiene l’elemento in attesa.
