@@ -69,7 +69,13 @@ if __name__ == "__main__":
     # Scenario ADC: 2 x 450 uA, riferimento 100 uA, 2 x 150 uA
     # di carico VREF, due pull da 10k all’estremo e carico uscite ipotizzato.
     adc_stage = 2*.00045 + .0001 + 2*.00015 + 2*5.25/9900 + .0002
-    total_protected = load + 1.2 * pump_load + .005 + iq_stage + adc_stage
+    # U122: scenario di budget per quattro ingressi AHCT pilotati a 3,3 V,
+    # capacità totale commutata equivalente 200 pF a 1,152 MHz, 50 uA statici.
+    # Le correnti addizionali reali dipendono da VIH, carico, duty cycle e PVT.
+    # U121 prende energia dalla rail MCU; i due pull dati restano sul ramo ADC.
+    logic_5v = 4*.002 + 200e-12*5.25*1.152e6 + .00005 + 2*5.25/46530
+    print("Scenario aggiuntivo interfaccia a 5 V [mA]", round(1000*logic_5v, 3))
+    total_protected = load + 1.2 * pump_load + .005 + iq_stage + adc_stage + logic_5v
     cases = [budget(16, .075, vo, series, preload, .0085, .030, total_protected)
              for vo, series, preload in product((4.75, 5.25), (4.653, 4.747),
                                                 (900.9, 919.1))]
