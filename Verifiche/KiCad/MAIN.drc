@@ -1,16 +1,12 @@
 ** Drc report for MAIN.kicad_pcb **
-** Created on 2026-11-20T09:35:44+0100 **
+** Created on 2026-11-20T09:45:55+0100 **
 
 ** Found 1 DRC violations **
 [invalid_outline]: Board has malformed outline (no edges found on Edge.Cuts layer)
     Local override; error
     @(0.0000 mm, 0.0000 mm): PCB
 
-** Found 1 unconnected pads **
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(28.0000 mm, 157.0000 mm): PTH pad 1 [/AM_NEG_FILT1] of R167
-    @(164.6200 mm, 54.0000 mm): Track [/AM_NEG_FILT1] on F.Cu, length 4.7800 mm
+** Found 0 unconnected pads **
 
 ** Found 0 Footprint errors **
 
