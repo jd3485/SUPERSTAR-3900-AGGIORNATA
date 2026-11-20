@@ -1,4 +1,176 @@
 (kicad_sch (version 20250114)(generator "eeschema")(generator_version "9.0")(uuid "5cb60d42-d8e8-492c-a128-6eea9321ee73")(paper "A2")(title_block (title "Condizionamento in continua dei canali I/Q"))(lib_symbols 
+(symbol "Device:Crystal"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "Y"
+			(at 0 3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Crystal"
+			(at 0 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Two pin crystal"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "quartz ceramic resonator oscillator"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Crystal*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Crystal_0_1"
+			(polyline
+				(pts
+					(xy -2.54 0) (xy -1.905 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.905 -1.27) (xy -1.905 1.27)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.143 2.54)
+				(end 1.143 -2.54)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.905 -1.27) (xy 1.905 1.27)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy 1.905 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Crystal_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 1.27)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 1.27)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no))
 (symbol "Connex_RF:PIC32MX250F128B-I_SP" (in_bom yes)(on_board yes)(property "Reference" "U"(at 0 21.59 0)(effects(font(size 1 1))))(property "Value" "PIC32MX250F128B-I_SP"(at 0 19.05 0)(effects(font(size 1 1))))
 		(symbol "PIC32MX250F128B-I_SP_1_1"(rectangle(start -15.24 18.0)(end 15.24 -18.0)(stroke(width .254)(type default))(fill(type background)))(pin input line(at -20.32 16.51 0)(length 5.08)(name "MCLR"(effects(font(size .95 .95))))(number "1"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 13.97 0)(length 5.08)(name "RA0"(effects(font(size .95 .95))))(number "2"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 11.43 0)(length 5.08)(name "RA1"(effects(font(size .95 .95))))(number "3"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 8.89 0)(length 5.08)(name "PGED1/RB0"(effects(font(size .95 .95))))(number "4"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 6.35 0)(length 5.08)(name "PGEC1/RB1"(effects(font(size .95 .95))))(number "5"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 3.81 0)(length 5.08)(name "RB2"(effects(font(size .95 .95))))(number "6"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 1.27 0)(length 5.08)(name "RB3"(effects(font(size .95 .95))))(number "7"(effects(font(size 1 1)))))(pin power_in line(at -20.32 -1.27 0)(length 5.08)(name "VSS"(effects(font(size .95 .95))))(number "8"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -3.81 0)(length 5.08)(name "OSC1/RA2"(effects(font(size .95 .95))))(number "9"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -6.35 0)(length 5.08)(name "OSC2/RA3"(effects(font(size .95 .95))))(number "10"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -8.89 0)(length 5.08)(name "RB4"(effects(font(size .95 .95))))(number "11"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -11.43 0)(length 5.08)(name "RA4"(effects(font(size .95 .95))))(number "12"(effects(font(size 1 1)))))(pin power_in line(at -20.32 -13.97 0)(length 5.08)(name "VDD"(effects(font(size .95 .95))))(number "13"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -16.51 0)(length 5.08)(name "RB5"(effects(font(size .95 .95))))(number "14"(effects(font(size 1 1)))))(pin input line(at 20.32 -16.51 180)(length 5.08)(name "VBUS"(effects(font(size .95 .95))))(number "15"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -13.97 180)(length 5.08)(name "RB7"(effects(font(size .95 .95))))(number "16"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -11.43 180)(length 5.08)(name "SDI1/RB8"(effects(font(size .95 .95))))(number "17"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -8.89 180)(length 5.08)(name "RB9"(effects(font(size .95 .95))))(number "18"(effects(font(size 1 1)))))(pin power_in line(at 20.32 -6.35 180)(length 5.08)(name "VSS"(effects(font(size .95 .95))))(number "19"(effects(font(size 1 1)))))(pin power_out line(at 20.32 -3.81 180)(length 5.08)(name "VCAP"(effects(font(size .95 .95))))(number "20"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -1.27 180)(length 5.08)(name "D+/RB10"(effects(font(size .95 .95))))(number "21"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 1.27 180)(length 5.08)(name "D-/RB11"(effects(font(size .95 .95))))(number "22"(effects(font(size 1 1)))))(pin power_in line(at 20.32 3.81 180)(length 5.08)(name "VUSB3V3"(effects(font(size .95 .95))))(number "23"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 6.35 180)(length 5.08)(name "SDI2/RB13"(effects(font(size .95 .95))))(number "24"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 8.89 180)(length 5.08)(name "SCK1/RB14"(effects(font(size .95 .95))))(number "25"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 11.43 180)(length 5.08)(name "SCK2/RB15"(effects(font(size .95 .95))))(number "26"(effects(font(size 1 1)))))(pin power_in line(at 20.32 13.97 180)(length 5.08)(name "AVSS"(effects(font(size .95 .95))))(number "27"(effects(font(size 1 1)))))(pin power_in line(at 20.32 16.51 180)(length 5.08)(name "AVDD"(effects(font(size .95 .95))))(number "28"(effects(font(size 1 1)))))))
 (symbol "Regulator_Linear:LM317_TO-220"
@@ -3622,8 +3794,10 @@
 (no_connect(at 81.28 307.34)(uuid "c40146d8-7d8a-4809-aac6-1d39ad9c460c"))
 (wire(pts(xy 81.28 309.88)(xy 71.12 309.88))(stroke(width 0)(type default))(uuid "3063d581-c942-4722-a1ae-2b52bb0ed62b"))
 (label "RX_RF_RETURN"(at 71.12 309.88 0)(effects(font(size 1 1))(justify left bottom))(uuid "40925f17-23c6-48f0-9969-c84858abb52d"))
-(no_connect(at 81.28 312.42)(uuid "f9872bbb-7b29-4c80-94a4-7cf6e9ce4762"))
-(no_connect(at 81.28 314.96)(uuid "7a7da4a8-acbe-4072-a9f1-a1b31b56ddc6"))
+(wire(pts(xy 81.28 312.42)(xy 66.04 312.42))(stroke(width 0)(type default))(uuid "e7a7f098-8a43-4373-a618-78ac461ec25a"))
+(label "PIC_OSC1"(at 66.04 312.42 0)(effects(font(size 1 1))(justify left bottom))(uuid "90f6ff56-3c5f-4207-b41b-1c7092b4e061"))
+(wire(pts(xy 81.28 314.96)(xy 66.04 314.96))(stroke(width 0)(type default))(uuid "8d319c65-6d1c-4c92-8f20-3c0c9e722716"))
+(label "PIC_OSC2"(at 66.04 314.96 0)(effects(font(size 1 1))(justify left bottom))(uuid "1f8dfbc8-b9cd-44bf-abb8-0d84ebb64da3"))
 (wire(pts(xy 81.28 317.5)(xy 71.12 317.5))(stroke(width 0)(type default))(uuid "8ed6d3ae-c331-414d-9a42-c8bc3987fe90"))
 (label "IQ_SELECT"(at 71.12 317.5 0)(effects(font(size 1 1))(justify left bottom))(uuid "bd342ba4-2c33-4c3f-8c26-a2757a043d9d"))
 (no_connect(at 81.28 320.04)(uuid "0f0aafdb-4a8e-4651-a5bf-23f196246eb9"))
@@ -3719,4 +3893,20 @@
 (wire(pts(xy 439.42 374.65)(xy 439.42 382.27))(stroke(width 0)(type default))(uuid "ecb37fdc-73de-4c03-b47e-1ed8911a0c06"))
 (label "RX_RF_RETURN"(at 439.42 382.27 0)(effects(font(size 1 1))(justify left bottom))(uuid "187fb9c2-02dc-428b-9e85-f6036c905d1a"))
 (hierarchical_label "MAIN_PROTECTED_DC"(shape input)(at 233.68 270.51 180)(effects(font(size 1 1))(justify right))(uuid "a1c63418-d5fe-4fbf-afd9-4a7a3bb89ee6"))(wire(pts(xy 233.68 270.51)(xy 243.84 270.51))(stroke(width 0)(type default))(uuid "67229569-4333-4617-9d5d-39777e7c8849"))(label "MAIN_PROTECTED_DC"(at 243.84 270.51 0)(effects(font(size 1 1))(justify left bottom))(uuid "3372fe56-9773-4375-ab74-eb3e08bd7035"))
+
+(symbol (lib_id "Device:Crystal")(at 50.8 264.16 0)(unit 1)(in_bom yes)(on_board yes)(uuid "8d645fc9-c6c7-4c65-810f-585024404fc9")(property "Reference" "Y102" (at 58.8 242.16000000000003 0)(effects(font(size 1 1))))(property "Value" "9.216 MHz CL 18pF" (at 58.8 244.16000000000003 0)(effects(font(size 1 1))))(property "Footprint" "Crystal:Crystal_HC49-U_Vertical" (at 58.8 246.16000000000003 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "Y102")(unit 1)))))
+(wire(pts(xy 46.99 264.16)(xy 36.83 264.16))(stroke(width 0)(type default))(uuid "c2ce739a-533f-4834-b335-53925e9565ba"))
+(label "PIC_OSC1"(at 36.83 264.16 0)(effects(font(size 1 1))(justify left bottom))(uuid "2ce73ef7-c0f6-4974-aa86-80b784ed55dc"))
+(wire(pts(xy 54.61 264.16)(xy 64.77 264.16))(stroke(width 0)(type default))(uuid "79d801da-c057-4a33-be8d-e9ffbf08fa89"))
+(label "PIC_OSC2"(at 64.77 264.16 0)(effects(font(size 1 1))(justify left bottom))(uuid "6743a680-61d6-4ba4-9ba8-53aca34d7185"))
+(symbol (lib_id "Device:C")(at 100.33 264.16 0)(unit 1)(in_bom yes)(on_board yes)(uuid "24c4081e-7845-409c-9064-76991ddf4c5f")(property "Reference" "C184" (at 108.33 242.16000000000003 0)(effects(font(size 1 1))))(property "Value" "27p C0G" (at 108.33 244.16000000000003 0)(effects(font(size 1 1))))(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 108.33 246.16000000000003 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "C184")(unit 1)))))
+(wire(pts(xy 100.33 260.35)(xy 100.33 252.73))(stroke(width 0)(type default))(uuid "ffc07764-a87e-45db-9bfe-85e5febf1243"))
+(label "PIC_OSC1"(at 100.33 252.73 0)(effects(font(size 1 1))(justify left bottom))(uuid "4b5c8f16-3d16-44a0-bef1-11349196e985"))
+(wire(pts(xy 100.33 267.97)(xy 100.33 275.59))(stroke(width 0)(type default))(uuid "77e39a23-5dbc-470c-ba8f-cd0171ba7d67"))
+(label "RX_RF_RETURN"(at 100.33 275.59 0)(effects(font(size 1 1))(justify left bottom))(uuid "6b46f706-68ce-4e0e-a6f6-69696a7de701"))
+(symbol (lib_id "Device:C")(at 138.43 264.16 0)(unit 1)(in_bom yes)(on_board yes)(uuid "143c0217-7c8b-4c3d-bc65-645405f3cd44")(property "Reference" "C185" (at 146.43 242.16000000000003 0)(effects(font(size 1 1))))(property "Value" "27p C0G" (at 146.43 244.16000000000003 0)(effects(font(size 1 1))))(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (at 146.43 246.16000000000003 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "C185")(unit 1)))))
+(wire(pts(xy 138.43 260.35)(xy 138.43 252.73))(stroke(width 0)(type default))(uuid "0e1551e3-1198-41e8-9eb8-6f03d378fd84"))
+(label "PIC_OSC2"(at 138.43 252.73 0)(effects(font(size 1 1))(justify left bottom))(uuid "5752a8fd-f407-4b3e-a4b2-7751b14464a3"))
+(wire(pts(xy 138.43 267.97)(xy 138.43 275.59))(stroke(width 0)(type default))(uuid "65c01c8c-670a-4a3a-b856-42e5d54ff538"))
+(label "RX_RF_RETURN"(at 138.43 275.59 0)(effects(font(size 1 1))(justify left bottom))(uuid "d64732d6-419f-4675-bfd5-4d476551f00a"))
 )
