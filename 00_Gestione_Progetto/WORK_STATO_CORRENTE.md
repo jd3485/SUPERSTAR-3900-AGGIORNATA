@@ -1,5 +1,11 @@
 # Stato operativo
 
+## Squelch AM con interferente continuo e fading · PR #1
+
+Otto sequenze sintetiche di 2,5 s percorrono prefiltro IIR, demodulatore, decimatore, squelch, livellatore e interpolatore PWM. Portante utile a +180 Hz di 4 codici, AM al 60% a 1 kHz. Interferente da 40 codici (20 dB sopra la desiderata a regime) a ±10 kHz dalla portante utile, AM al 70% a 1,7 kHz. Quattro fasi relative e quattro sequenze deterministiche di rumore RMS 1 codice per ramo. Soglie di apertura/chiusura 3/2 codici.
+
+Il solo interferente con rumore mantiene il gate chiuso. Alla comparsa a gradino della desiderata l’apertura avviene dopo 30,4–33,2 ms. Un buco di 4 ms nella desiderata lascia aperto lo squelch. Durante la discesa lineare a zero in 100 ms, la chiusura avviene a 79,9–81,8 ms dall’inizio della discesa. Dopo 200 ms senza portante utile, il ritorno lineare in 100 ms riapre a 96,1–97,2 ms dall’inizio della salita. In ciascuna sequenza si contano esattamente due aperture e una chiusura, con PWM a metà scala nelle finestre di silenzio a regime. Superato host-check con UBSan. Prossimo passo: collegare la cadenza di mute del percorso diagnostico agli slot audio anche durante una perdita di acquisizione. Soglie fisiche e comando sul frontale restano aperti.
+
 ## Squelch audio AM e ripresa PWM · PR #1
 
 La variante host audio_gate collega il livellatore e l’interpolatore. Riceve a 16 kHz validità del flusso, portante coerente stimata dal demodulatore e soglie indipendenti. Servono 32 campioni consecutivi sopra o alla soglia di apertura e 128 sotto o alla soglia di chiusura. L’apertura applica una rampa di 64 campioni. Dati invalidi o soglie incoerenti chiudono il gate al primo passo. In chiusura si azzerano livellatore e storia FIR e il comando PWM ritorna al centro di un tick per fase a 48 kHz.

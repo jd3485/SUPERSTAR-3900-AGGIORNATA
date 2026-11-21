@@ -62,7 +62,11 @@ $(BUILD_DIR)/audio_level_test: audio_level.c audio_level.h audio_pwm.c audio_pwm
 $(BUILD_DIR)/audio_gate_test: audio_gate.c audio_gate.h audio_level.c audio_level.h audio_pwm.c audio_pwm.h am_sync.c am_sync.h iq_frame.h audio_decim.c audio_decim.h ../../Verifiche/Firmware/audio_gate_test.c | $(BUILD_DIR)
 	$(HOST_CC) -std=c11 -O2 -Wall -Wextra -Werror -pedantic audio_gate.c audio_level.c audio_pwm.c am_sync.c audio_decim.c ../../Verifiche/Firmware/audio_gate_test.c -lm -o "$@"
 
-host-check: $(BUILD_DIR)/audio_gate_test $(BUILD_DIR)/audio_level_test $(BUILD_DIR)/audio_pwm_test $(BUILD_DIR)/overlap_test $(BUILD_DIR)/iq_schedule_test $(BUILD_DIR)/am_adjacent_test $(BUILD_DIR)/rx_profile_test $(BUILD_DIR)/iq_frame_test $(BUILD_DIR)/am_sync_test $(BUILD_DIR)/audio_decim_test
+$(BUILD_DIR)/squelch_fading_test: iq_iir.c iq_iir.h audio_gate.c audio_gate.h audio_level.c audio_level.h audio_pwm.c audio_pwm.h am_sync.c am_sync.h iq_frame.h audio_decim.c audio_decim.h ../../Verifiche/Firmware/squelch_fading_test.c | $(BUILD_DIR)
+	$(HOST_CC) -std=c11 -O2 -Wall -Wextra -Werror -pedantic iq_iir.c audio_gate.c audio_level.c audio_pwm.c am_sync.c audio_decim.c ../../Verifiche/Firmware/squelch_fading_test.c -lm -o "$@"
+
+host-check: $(BUILD_DIR)/squelch_fading_test $(BUILD_DIR)/audio_gate_test $(BUILD_DIR)/audio_level_test $(BUILD_DIR)/audio_pwm_test $(BUILD_DIR)/overlap_test $(BUILD_DIR)/iq_schedule_test $(BUILD_DIR)/am_adjacent_test $(BUILD_DIR)/rx_profile_test $(BUILD_DIR)/iq_frame_test $(BUILD_DIR)/am_sync_test $(BUILD_DIR)/audio_decim_test
+	"$(BUILD_DIR)/squelch_fading_test"
 	"$(BUILD_DIR)/audio_gate_test"
 	"$(BUILD_DIR)/audio_level_test"
 	"$(BUILD_DIR)/audio_pwm_test"
