@@ -1,15 +1,25 @@
-"""R191-R193/C186-C188. Tensioni a RX_AF_LINE con generatore PWM ideale."""
+"""R191-R194/C186-C189. Tensioni a RX_AF_LINE con generatore PWM ideale."""
 from cmath import exp
+from itertools import product
 from math import floor, gcd, log10, pi, sin
 
 
-def transfer(freq, load):
+ORIGINAL = ((1000, 15e-9), (4700, 3.3e-9))
+FILTER = ((470, 22e-9), (1500, 6.8e-9), (3300, 2.7e-9))
+
+
+def transfer(freq, load, stages=FILTER):
     s = 2j * pi * freq
     output = 1 / (1 / 100000 + 1 / load)
     coupling = 1 / (s * 1e-6)
-    second = 1 / (s * 3.3e-9 + 1 / (coupling + output))
-    first = 1 / (s * 15e-9 + 1 / (4700 + second))
-    return first / (1000 + first) * second / (4700 + second) * output / (coupling + output)
+    impedance = coupling + output
+    gain = output / impedance
+    for resistance, capacitance in reversed(stages):
+        shunt = 1 / (s * capacitance + 1 / impedance)
+        impedance = resistance + shunt
+        gain *= shunt / impedance
+    return gain
+
 
 
 # FIR interpolatore x3: finestra utile 0–4 kHz, banda oscura da 12 kHz.
@@ -65,6 +75,10 @@ if __name__ == "__main__":
     assert TAPS == TAPS[::-1]
     for load in (10000, 47000, 100000):
         print(f"Carico esterno {load} ohm")
+        for name, stages in (("due poli", ORIGINAL), ("tre poli", FILTER)):
+            residue = pwm_peak([128], 144000)*abs(transfer(144000, load, stages))
+            voice = db(abs(transfer(4000, load, stages))*digital_gain(4000, True))
+            print(f"  {name}: {1000*residue:.2f} mV picco PWM, tono 4 kHz {voice:.2f} dB")
         for interpolate in (False, True):
             for tone in (300, 1000, 4000):
                 gain = abs(transfer(tone, load))*digital_gain(tone, interpolate)
@@ -82,3 +96,22 @@ if __name__ == "__main__":
         ripple = pwm_peak([128], 144000)*abs(transfer(144000, load))
         assert abs(pwm_peak([128], 144000) - 2*3.3/pi) < 1e-12
         print(f"  Fondamentale PWM a riposo: {1000*ripple:.2f} mV picco")
+    # Scenari AM del confronto I/Q: tono al 60%, obiettivo di prova ±64 tick.
+    for carrier in (4, 180):
+        audio_peak_codes = .6*carrier
+        ticks_per_code = 64 / audio_peak_codes
+        print(f"  Portante {carrier} codici: {ticks_per_code:.3f} tick/codice,"
+              f" fondo scala a {128/ticks_per_code:.2f} codici audio di picco")
+
+    # Estremi discreti: R ±1%, C dei tre poli ±5%, uscita GPIO ideale o 50 ohm.
+    # C188, R193 e carico restano nominali.
+    ripple_values, voice_values = [], []
+    for signs in product((-1, 1), repeat=6):
+        for source in (0, 50):
+            stages = [(r*(1+.01*signs[2*i]), c*(1+.05*signs[2*i+1]))
+                      for i, (r, c) in enumerate(FILTER)]
+            stages[0] = (stages[0][0] + source, stages[0][1])
+            ripple_values.append(1000*pwm_peak([128], 144000)*abs(transfer(144000, 47000, stages)))
+            voice_values.append(db(abs(transfer(4000, 47000, stages))*digital_gain(4000, True)))
+    print(f"  47 kohm, 128 casi: residuo {min(ripple_values):.2f}..{max(ripple_values):.2f} mV,"
+          f" tono 4 kHz {min(voice_values):.2f}..{max(voice_values):.2f} dB")

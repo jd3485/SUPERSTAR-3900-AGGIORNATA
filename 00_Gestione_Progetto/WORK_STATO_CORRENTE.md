@@ -1,5 +1,13 @@
 # Stato operativo
 
+## Ricostruzione PWM a tre poli nel master MAIN · PR #1
+
+Aggiunti R194 e C189 THT a monte di R191. Le tre celle RC caricate in cascata sono 470 Ω/22 nF, 1,5 kΩ/6,8 nF e 3,3 kΩ/2,7 nF. C188 e R193 mantengono accoppiamento e ritorno della linea. Netlist esportata dal master: pin 2 di U123 → R194 → giunzione con C189 e R191. Verificato il ritorno di C189. ERC identico alla revisione precedente, con 17 errori e 8 avvisi aperti. Stato del blocco: schema candidato, impronte THT assegnate, posizionamento e instradamento ancora da eseguire.
+
+Con interpolazione 48 kHz e carico esterno 47 kΩ, la fondamentale PWM a riposo scende da 10,94 a 2,90 mV di picco. Il tono a 4 kHz passa da −2,86 a −2,88 dB. Su 128 combinazioni agli estremi di R ±1%, C dei tre poli ±5% e impedenza GPIO 0/50 Ω il modello restituisce 2,21–3,47 mV e −3,19…−2,72 dB. Non sono inclusi accoppiamenti di layout, impedenza GPIO misurata e tolleranze del carico.
+
+Per un tono al 60% e obiettivo di prova ±64 tick PWM, portanti da 4 e 180 codici ADC richiedono rispettivamente 26,67 e 0,593 tick per codice audio. A guadagno debole fisso la saturazione inizia a circa 4,8 codici audio di picco: per coprire entrambi gli scenari occorre variare il guadagno (rapporto 45:1). Prossimo passo: dimensionare e provare controllo di guadagno e limitazione sul passaggio debole/forte, includendo rumore e tempi di recupero. Nessuna modifica al firmware attivo o prova fisica.
+
 ## Ricostruzione audio PWM a 48 kcampioni/s · PR #1
 
 Il candidato FIR polifase a 19 coefficienti Q12 interpola ogni ingresso a 16 kHz su tre aggiornamenti a 48 kHz. Ogni fase ha guadagno unitario in continua; ritardo di gruppo 187,5 µs. Il modulo C audio_pwm produce confronti timer 0–256 da ingressi in tick di duty Q8. Il test su host confronta 6144 uscite con la convoluzione diretta a 64 bit, compresi i due estremi di saturazione. Superata la suite host con UBSan. Il modulo resta da collegare al timer, al guadagno e alla gestione mute.
