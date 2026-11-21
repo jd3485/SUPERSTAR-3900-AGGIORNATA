@@ -1,5 +1,13 @@
 # Stato operativo
 
+## Ritorno del finale RX e ingressi DC sulla MAIN · PR #1
+
+Introdotti i morsetti THT candidati J107 per l’uscita in continua dell’alimentatore isolato e J108 per l’ingresso DC già protetto. Il pin 1 di ciascun morsetto alimenta i rispettivi anodi di selezione. Entrambi i pin 2 raggiungono il nodo DC_SOURCE_RETURN. Architettura candidata con negativi comuni sul solo lato bassa tensione. Occorre verificare la compatibilità delle due sorgenti con il negativo comune e i collegamenti esterni a telaio, antenna e accessori.
+
+NT101 realizza nello schema il punto stella in rame con quattro terminali distinti per il layout: 1 ritorno sorgenti, 2 ritorno audio di potenza, 3 ritorno RF/segnale, 4 ritorno logica. Il ramo 2 raggiunge esclusivamente U126.8 e i negativi C196/C197. I due fili del diffusore restano sui due poli BTL. Il ramo FRONT_RETURN resta aperto per la definizione del cablaggio. Impronta net-tie THT senza componente montato. Morsetti con impronta candidata Phoenix MKDS 1,5, due poli a passo 5,08 mm. Da qualificare codice finale, ingombro, polarità sul pannello e corrente dell’intero sistema. Riferimento di famiglia https://www.phoenixcontact.com/en-pc/products/pcb-terminal-block-mkds-15-2-508-bd6162-1990643 .
+
+Verificata la netlist esportata dalla gerarchia MAIN rispetto alla revisione precedente: tutti i collegamenti preesistenti conservati. Verificati pin dei morsetti e domini distinti su NT101. ERC MAIN 18 errori e 8 avvisi, risolto il pin gerarchico di ritorno aperto. ERC FRONT 4 errori. I morsetti sono interfacce passive. Restano aperti fusibili, protezione contro inversione e transitori, specifiche degli alimentatori e corrente di guasto. Il posizionamento della stella vicino ai morsetti, il dimensionamento rame e il controllo dell’effettiva corrente di ritorno sul PCB sono da eseguire. Nessun test sotto tensione.
+
 ## Alimentazione positiva dedicata al finale RX · PR #1
 
 Per REQ-04 il ramo audio seleziona le due sorgenti sul lato continua. D106 STPS10L60CFP in TO-220FPAB, doppio Schottky THT a catodo comune, porta il positivo al finale senza caricare D101/D102 con la corrente dell’altoparlante. Pin 1 ad AC_SOURCE_ISOLATED_DC, pin 3 ad EXTERNAL_DC_PROTECTED, pin 2 su AF_PROTECTED_DC verso U126 pin 3/13, C196, C197 e R302. MAIN_PROTECTED_DC rimane distinta. Il doppio diodo realizza la selezione fra sorgenti, mentre limitazione di corrente, protezione dai transitori e fusibili a monte restano da progettare.

@@ -1,6 +1,334 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A1")
 (title_block (title "MAIN - Interfaccia candidata"))
-(lib_symbols 	(symbol "Device:D_Schottky_Dual_CommonCathode_AKA"
+(lib_symbols 	(symbol "Device:NetTie_4"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(property "Reference" "NT"
+			(at 0 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_4"
+			(at 0 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Net tie, 4 pins"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "net tie short"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Net*Tie*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "NetTie_4_0_1"
+			(polyline
+				(pts
+					(xy -1.27 0) (xy 1.27 0)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 -2.54) (xy 1.27 -2.54)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -2.54) (xy 0 0)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "NetTie_4_1_1"
+			(pin passive line
+				(at -2.54 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -2.54 -2.54 0)
+				(length 2.54)
+				(name "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -2.54 180)
+				(length 2.54)
+				(name "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Connector_Generic:Conn_01x02"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Conn_01x02_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Device:D_Schottky_Dual_CommonCathode_AKA"
 		(pin_names
 			(offset 0.762)
 			(hide yes)
@@ -5809,7 +6137,7 @@
 (label "AM_Q_LP" (at 755.65 33.02 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b73e156f-d536-4f50-824e-85ebee20f6b1"))
 (junction (at 707.39 33.02) (diameter 0) (color 0 0 0 0) (uuid "96b80a58-2b78-4772-b425-9f46eac884f8"))
 
-(sheet (at 133.35 393.70) (size 68.58 48.26) (stroke (width 0.1524)(type solid)) (fill (color 0 0 0 0)) (uuid "89707d45-45b0-4f78-a85b-f9c9f7e74549") (property "Sheetname" "Condizionamento IQ" (at 133.35 391.16 0)(effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "IQ_Livello.kicad_sch" (at 133.35 444.50 0)(effects (font (size 1.27 1.27)) (justify left top))) (pin "AM_I_LP" input (at 133.35 401.32 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "6972784b-7d3e-4a15-b9f6-fcc08605b285")) (pin "AM_Q_LP" input (at 133.35 411.48 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "8e19f587-bce9-40a9-b806-be7ce941d5e2")) (pin "AM_LO_5V" input (at 133.35 421.64 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "740d13c6-3c41-4b26-9cd3-fca5c54c5e0e")) (pin "RX_RF_RETURN" input (at 133.35 431.80 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "9a9f728b-e481-4a64-8d5a-15b2c644d551")) (pin "MAIN_PROTECTED_DC" input(at 133.35 438.15 180)(effects(font(size 1 1))(justify left))(uuid "6109a0c3-d259-4a0b-92f9-ba8b4021d772")) (pin "AF_PROTECTED_DC" input(at 201.93 419.10 0)(effects(font(size 1 1))(justify right))(uuid "1b87c80b-41ed-4916-b5de-9940558ffe9e")) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (page "2")))))
+(sheet (at 133.35 393.70) (size 68.58 48.26) (stroke (width 0.1524)(type solid)) (fill (color 0 0 0 0)) (uuid "89707d45-45b0-4f78-a85b-f9c9f7e74549") (property "Sheetname" "Condizionamento IQ" (at 133.35 391.16 0)(effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "IQ_Livello.kicad_sch" (at 133.35 444.50 0)(effects (font (size 1.27 1.27)) (justify left top))) (pin "AM_I_LP" input (at 133.35 401.32 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "6972784b-7d3e-4a15-b9f6-fcc08605b285")) (pin "AM_Q_LP" input (at 133.35 411.48 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "8e19f587-bce9-40a9-b806-be7ce941d5e2")) (pin "AM_LO_5V" input (at 133.35 421.64 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "740d13c6-3c41-4b26-9cd3-fca5c54c5e0e")) (pin "RX_RF_RETURN" input (at 133.35 431.80 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "9a9f728b-e481-4a64-8d5a-15b2c644d551")) (pin "MAIN_PROTECTED_DC" input(at 133.35 438.15 180)(effects(font(size 1 1))(justify left))(uuid "6109a0c3-d259-4a0b-92f9-ba8b4021d772")) (pin "AF_PROTECTED_DC" input(at 201.93 419.10 0)(effects(font(size 1 1))(justify right))(uuid "1b87c80b-41ed-4916-b5de-9940558ffe9e")) (pin "AF_POWER_RETURN" input(at 201.93 429.26 0)(effects(font(size 1 1))(justify right))(uuid "7e12c02e-723d-4f9d-a3ae-7cfba3b52467")) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (page "2")))))
 (wire (pts (xy 104.14 401.32) (xy 133.35 401.32)) (stroke (width 0) (type default)) (uuid "f9f683a4-b8a5-47b7-8870-2a1c57277fdd"))
 (label "AM_I_LP" (at 104.14 401.32 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fc80aff7-5b57-4af4-8c6c-2fad7c47fdef"))
 (wire (pts (xy 104.14 411.48) (xy 133.35 411.48)) (stroke (width 0) (type default)) (uuid "a090fbe7-c942-4e06-bf62-94071d96a696"))
@@ -5823,4 +6151,13 @@
 (label "AC_SOURCE_ISOLATED_DC"(at 612.14 528.32 0)(effects(font(size 1 1))(justify left bottom))(uuid "66f81b62-c84b-47dd-af9e-abdece8dc0c9"))(wire(pts(xy 657.86 528.32)(xy 668.02 528.32))(stroke(width 0)(type default))(uuid "79411b55-0407-40d3-be79-177badcc7b8e"))
 (label "EXTERNAL_DC_PROTECTED"(at 668.02 528.32 0)(effects(font(size 1 1))(justify left bottom))(uuid "026794b2-72a2-4f66-aa14-2fbbe9657d5b"))(wire(pts(xy 650.24 533.4)(xy 650.24 543.56))(stroke(width 0)(type default))(uuid "8c2d850a-f010-4d9d-b3f3-bb4ae7dba350"))
 (label "AF_PROTECTED_DC"(at 650.24 543.56 0)(effects(font(size 1 1))(justify left bottom))(uuid "c2037dc9-ddee-4a23-9276-440c1f686e36"))(wire(pts(xy 201.93 419.1)(xy 214.63 419.1))(stroke(width 0)(type default))(uuid "7169d1d0-f9c6-4a5f-8294-81a32fb96a56"))
-(label "AF_PROTECTED_DC"(at 214.63 419.1 0)(effects(font(size 1 1))(justify left bottom))(uuid "811ec75f-7ad4-4e05-8a07-09817cc8b4c4")))
+(label "AF_PROTECTED_DC"(at 214.63 419.1 0)(effects(font(size 1 1))(justify left bottom))(uuid "811ec75f-7ad4-4e05-8a07-09817cc8b4c4"))(symbol(lib_id "Connector_Generic:Conn_01x02")(at 746.76 510.54 0)(unit 1)(in_bom yes)(on_board yes)(uuid "7de67b7e-92f9-4bc4-905c-bcd9c7598d87")(property "Reference" "J107"(at 755.76 505.54 0)(effects(font(size 1 1))))(property "Value" "DC da sorgente isolata"(at 755.76 508.54 0)(effects(font(size 1 1))))(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"(at 746.76 510.54 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad"(reference "J107")(unit 1)))))(wire(pts(xy 741.68 510.54)(xy 720.09 510.54))(stroke(width 0)(type default))(uuid "6e132714-e22d-450d-a642-ee9443e7c078"))
+(label "AC_SOURCE_ISOLATED_DC"(at 720.09 510.54 0)(effects(font(size 1 1))(justify left bottom))(uuid "76b39fdb-05ec-47fc-8498-e1e8c853f35a"))(wire(pts(xy 741.68 513.08)(xy 720.09 513.08))(stroke(width 0)(type default))(uuid "9c3d0a99-a2f5-41fd-ab87-2cde03ad9a00"))
+(label "DC_SOURCE_RETURN"(at 720.09 513.08 0)(effects(font(size 1 1))(justify left bottom))(uuid "0a8a9bde-c057-45c7-84f3-c015d966f703"))(symbol(lib_id "Connector_Generic:Conn_01x02")(at 746.76 528.32 0)(unit 1)(in_bom yes)(on_board yes)(uuid "61ca4477-494a-41ba-866e-b71f0b6c6f99")(property "Reference" "J108"(at 755.76 523.32 0)(effects(font(size 1 1))))(property "Value" "DC esterna protetta"(at 755.76 526.32 0)(effects(font(size 1 1))))(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"(at 746.76 528.32 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad"(reference "J108")(unit 1)))))(wire(pts(xy 741.68 528.32)(xy 720.09 528.32))(stroke(width 0)(type default))(uuid "778f310c-59bb-42ed-80f2-f2e6c2d11d06"))
+(label "EXTERNAL_DC_PROTECTED"(at 720.09 528.32 0)(effects(font(size 1 1))(justify left bottom))(uuid "16eedcc0-b3bc-4325-bfec-31db63ccb8a9"))(wire(pts(xy 741.68 530.86)(xy 720.09 530.86))(stroke(width 0)(type default))(uuid "dc245a4b-0c6f-4fed-9fb3-d634408d1b49"))
+(label "DC_SOURCE_RETURN"(at 720.09 530.86 0)(effects(font(size 1 1))(justify left bottom))(uuid "c2aa82c7-ee4d-4571-b6de-eda053800cc3"))(symbol(lib_id "Device:NetTie_4")(at 731.52 548.64 0)(unit 1)(in_bom no)(on_board yes)(uuid "3c282229-6cc0-4a77-a30b-a4b6c811b329")(property "Reference" "NT101"(at 740.52 543.64 0)(effects(font(size 1 1))))(property "Value" "Stella DC"(at 740.52 546.64 0)(effects(font(size 1 1))))(property "Footprint" "NetTie:NetTie-4_THT_Pad1.0mm"(at 731.52 548.64 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad"(reference "NT101")(unit 1)))))(wire(pts(xy 728.98 548.64)(xy 701.04 548.64))(stroke(width 0)(type default))(uuid "e86f3fc2-6850-4716-baef-4e95f0df11bf"))
+(label "DC_SOURCE_RETURN"(at 701.04 548.64 0)(effects(font(size 1 1))(justify left bottom))(uuid "12c9abaa-9e0c-4077-a20f-06e206a1674d"))(wire(pts(xy 734.06 548.64)(xy 751.84 548.64))(stroke(width 0)(type default))(uuid "31397fdc-9c3d-4435-8d75-7eeb21b48a88"))
+(label "AF_POWER_RETURN"(at 751.84 548.64 0)(effects(font(size 1 1))(justify left bottom))(uuid "5411e9fd-320f-45cd-b5da-ffcee47d5d85"))(wire(pts(xy 728.98 551.18)(xy 701.04 551.18))(stroke(width 0)(type default))(uuid "aea28c86-6c38-4b90-ad01-e1ae3f71b1ff"))
+(label "RX_RF_RETURN"(at 701.04 551.18 0)(effects(font(size 1 1))(justify left bottom))(uuid "41388f1f-7f55-40e5-8463-fd61c3d4f1df"))(wire(pts(xy 734.06 551.18)(xy 751.84 551.18))(stroke(width 0)(type default))(uuid "be726829-5d8c-490d-9dcf-09d405d2aa68"))
+(label "CONTROL_RETURN"(at 751.84 551.18 0)(effects(font(size 1 1))(justify left bottom))(uuid "ccca9e15-7277-4e3a-bc69-87db38853786"))(wire(pts(xy 201.93 429.26)(xy 214.63 429.26))(stroke(width 0)(type default))(uuid "feee6636-6ccd-4be3-b371-69d183dc2673"))
+(label "AF_POWER_RETURN"(at 214.63 429.26 0)(effects(font(size 1 1))(justify left bottom))(uuid "68299aac-b1b9-472a-a32d-192f10efdeba")))

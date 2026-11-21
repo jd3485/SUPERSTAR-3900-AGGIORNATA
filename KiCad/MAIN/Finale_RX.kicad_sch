@@ -1140,4 +1140,4 @@
 (label "SPK_N"(at 205.74 45.72 0)(effects(font(size 1 1))(justify left bottom))(uuid "3426145f-adf3-40cb-936b-7a7d10cb5cdf"))
 (text "Uscita a ponte: entrambi i fili isolati dal telaio." (at 185.42 60.96 0)(effects(font(size 1.27 1.27))(justify left bottom))(uuid "50d2b928-36e2-46b5-83b4-9a494b31bc6a"))
 (text "ST DS0184 fig. 5 - abilitazione analogica" (at 38.1 129.54 0)(effects(font(size 1.27 1.27))(justify left bottom))(uuid "ac74ab28-dc79-49be-9fa3-e524c5a29aa6"))
-(text "Positivo dal selettore D106. Ritorno di potenza aperto sul master." (at 38.1 173.99 0)(effects(font(size 1.27 1.27))(justify left bottom))(uuid "ba4c1320-a739-4d11-9c61-f636d56d3e76")))
+(text "Positivo da D106, ritorno di potenza dedicato fino a NT101." (at 38.1 173.99 0)(effects(font(size 1.27 1.27))(justify left bottom))(uuid "ba4c1320-a739-4d11-9c61-f636d56d3e76")))
