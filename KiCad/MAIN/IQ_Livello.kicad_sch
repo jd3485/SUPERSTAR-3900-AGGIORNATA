@@ -1,4 +1,4 @@
-(kicad_sch (version 20250114)(generator "eeschema")(generator_version "9.0")(uuid "5cb60d42-d8e8-492c-a128-6eea9321ee73")(paper "A2")(title_block (title "Condizionamento in continua dei canali I/Q"))(lib_symbols 	(symbol "Amplifier_Operational:MCP601-xP"
+(kicad_sch (version 20250114)(generator "eeschema")(generator_version "9.0")(uuid "5cb60d42-d8e8-492c-a128-6eea9321ee73")(paper "A1")(title_block (title "Condizionamento in continua dei canali I/Q"))(lib_symbols 	(symbol "Amplifier_Operational:MCP601-xP"
 		(pin_names
 			(offset 0.127)
 		)
@@ -4425,4 +4425,7 @@
 (label "AF_PWR_DRIVE"(at 96.52 171.45 0)(effects(font(size 1 1))(justify left bottom))(uuid "a22a57ee-ebbc-4f48-ae26-804e8c4ad570"))
 (wire(pts(xy 96.52 184.15)(xy 96.52 189.23))(stroke(width 0)(type default))(uuid "54dff375-0641-433e-9138-3d04d5e0501b"))
 (label "RX_RF_RETURN"(at 96.52 189.23 0)(effects(font(size 1 1))(justify left bottom))(uuid "8339ea07-9457-4b62-aabd-c3b2321c5547"))
-)
+(sheet(at 635 50.8)(size 71.12 50.8)(stroke(width 0.1524)(type solid))(fill(color 0 0 0 0))(uuid "e16f98ce-bf38-4586-bb2b-1d710362c1c4")(property "Sheetname" "Finale RX"(at 635 48.26 0)(effects(font(size 1 1))))(property "Sheetfile" "Finale_RX.kicad_sch"(at 635 104.14 0)(effects(font(size 1 1))))(pin "AF_PWR_DRIVE" input(at 635 63.5 180)(effects(font(size 1 1))(justify left))(uuid "741bc51e-337c-4292-b7e1-00ba0b7996e3"))(pin "RX_RF_RETURN" input(at 635 73.66 180)(effects(font(size 1 1))(justify left))(uuid "0dcf0746-4752-455f-b4fe-27d2a1af9f0c"))(pin "AF_PROTECTED_DC" input(at 635 83.82 180)(effects(font(size 1 1))(justify left))(uuid "cb0dc1b2-7a37-44ed-99e0-412f7c503320"))(pin "AF_POWER_RETURN" input(at 635 93.98 180)(effects(font(size 1 1))(justify left))(uuid "5dffc4c6-3086-4f90-9a46-e3871ea5aec4"))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(page "3")))))
+(wire(pts(xy 635 63.5)(xy 614.68 63.5))(stroke(width 0)(type default))(uuid "b0974b20-a133-4f20-bafd-cc549f6ddd15"))
+(label "AF_PWR_DRIVE"(at 614.68 63.5 0)(effects(font(size 1 1))(justify left bottom))(uuid "d3dee30c-2865-450d-ba09-28798ead338a"))(wire(pts(xy 635 73.66)(xy 614.68 73.66))(stroke(width 0)(type default))(uuid "03d3892e-a4ba-4046-b38f-82a882ff782b"))
+(label "RX_RF_RETURN"(at 614.68 73.66 0)(effects(font(size 1 1))(justify left bottom))(uuid "9aa6c339-4744-42c8-b4d1-a098a2968f32"))(text "Ingresso DC protetto e ritorno dedicato da dimensionare" (at 635 113.03 0)(effects(font(size 1.27 1.27))(justify left bottom))(uuid "4541cfee-61b1-49e1-8f7a-30aeae8c8bce")))

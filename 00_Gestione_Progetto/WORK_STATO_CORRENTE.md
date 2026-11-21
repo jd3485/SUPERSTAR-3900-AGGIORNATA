@@ -1,5 +1,13 @@
 # Stato operativo
 
+## Finale audio RX candidato · PR #1
+
+Il nuovo foglio Finale_RX nella gerarchia MAIN collega il partitore R300/R301 a IN1 di U126 TDA7266 attraverso C194 da 220 nF. J106 (JST XH THT candidato) espone OUT1+ e OUT1− ai soli due fili isolati dell’altoparlante interno da 8 Ω. IN2 riferito al ritorno segnale in alternata attraverso C195, ponte 2 senza carico. R302/R303 47 kΩ e C198 10 µF implementano l’abilitazione analogica della figura 5 ST. C196 470 µF e C197 100 nF chiudono il disaccoppiamento sul ritorno di potenza. Presa esterna e mute comandato in TX da definire.
+
+Netlist esportata: tutti i nodi preesistenti conservati, OUT1+/− esclusivamente ai pin 1/2 di J106. Pin 3/13 alla stessa alimentazione, pin 8 al ritorno di potenza, pin 9 al ritorno di segnale. Alimentazione e ritorno di potenza restano aperti al confine del foglio: occorre dimensionare il percorso protetto (D101/D102 1N5819RLG) per tutti i carichi, spunto del condensatore e perdite, e identificare il punto stella. ERC MAIN 22 errori e 8 avvisi: quattro errori aggiuntivi corrispondono ai due ingressi gerarchici aperti e ai due domini di potenza senza sorgente. FRONT 4 errori. Nessun trasferimento PCB. L’impronta predefinita U126 non è presente nella libreria installata; da verificare sul disegno OEM prima di assegnarla.
+
+Predimensionamento dissipatore con un ponte attivo, carico resistivo 8 Ω, seno ideale in classe B. Massimo teorico al variare del livello: 2·Vs²/(π²·R) + Vs·Iq. Con Iq ipotizzata 65 mA si ottengono 3,78 W a 11 V e 5,72 W a 13,8 V. Per un esempio di progetto con aria interna 50 °C, giunzione obiettivo 110 °C, RθJC massima 2 °C/W e interfaccia ipotizzata 1 °C/W, serve RθSA ≤ 7,5 °C/W a 13,8 V. Verificare escursione della rail, dissipazione reale, contatto, isolamento del tab e ventilazione prima della scelta meccanica. I valori sono stime, non prove termiche. Fonte OEM: https://www.st.com/resource/en/datasheet/tda7266.pdf
+
 ## Dimensionamento del pilotaggio del finale RX · PR #1
 
 Il manuale CRT Superstar 3900 FR riporta 8 Ω e 4,5 W massimi. Per il dimensionamento candidato si usa un carico resistivo da 8 Ω. I requisiti di progetto non fissano una potenza continua a una THD specifica. Candidato ST TDA7266 Multiwatt15 THT, in produzione secondo ST. Un ponte alimenta il carico, secondo canale senza carico nel modello. Il datasheet DS0184 rev. 11 specifica guadagno 25–27 dB e resistenza d’ingresso minima 25 kΩ, tipica 30 kΩ. La potenza di targa a THD 10% non è un obiettivo di ascolto.
