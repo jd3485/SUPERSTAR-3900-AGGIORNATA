@@ -58,6 +58,15 @@ static void read_pair(uint16_t *i, uint16_t *q) { *i = SPI1BUF; *q = SPI2BUF; }
 static const struct iq_port port = {status, select_frame, launch, read_pair, reset_spi};
 static bool skip_slot;
 
+static bool pins_mapped(void)
+{
+#ifdef RX_AUDIO_OC1
+    if (RPA0R != 5)
+        return false;
+#endif
+    return SDI1R == 4 && SDI2R == 3 && SS2R == 4;
+}
+
 bool pic32_iq_init(void)
 {
     IEC0CLR = _IEC0_T2IE_MASK;       /* Il servizio usa polling del flag latched. */
@@ -67,7 +76,7 @@ bool pic32_iq_init(void)
     LATBCLR = 1u << 14;
     TRISBSET = (1u << 8) | (1u << 9) | (1u << 13) | (1u << 15);
     TRISBCLR = ADC_SELECT | SLAVE_SELECT | (1u << 14);
-    if (SDI1R != 4 || SDI2R != 3 || SS2R != 4) {
+    if (!pins_mapped()) {
         /* Inizializzazione prima del DMA. Con IOL1WAY basta uno sblocco. */
         unsigned previous_status = __builtin_disable_interrupts();
         SYSKEY = 0;
@@ -77,23 +86,41 @@ bool pic32_iq_init(void)
         SDI1R = 4;                  /* RB8, pin 17 */
         SDI2R = 3;                  /* RB13, pin 24 */
         SS2R = 4;                   /* RB9, pin 18, da RB7 */
+#ifdef RX_AUDIO_OC1
+        RPA0R = 5;                  /* OC1, RA0, pin 2 */
+#endif
         CFGCONbits.IOLOCK = 1;
         SYSKEY = 0;
         if (previous_status & 1u)
             __builtin_enable_interrupts();
     }
-    if (SDI1R != 4 || SDI2R != 3 || SS2R != 4 || OSCCONbits.PBDIV != 0 ||
+    if (!pins_mapped() || OSCCONbits.PBDIV != 0 ||
         OSCCONbits.COSC != 3 || OSCCONbits.CF || !OSCCONbits.SLOCK) {
         SPI1CON = 0;
         SPI2CON = 0;
         IFS0CLR = _IFS0_T2IF_MASK;
         return false;
     }
+#ifdef RX_AUDIO_OC1
+    T3CON = 0;
+    OC1CON = 0;
+    ANSELACLR = 1u;
+    LATACLR = 1u;
+    TRISACLR = 1u;
+    TMR3 = 0;
+    PR3 = 255;
+    OC1R = 128;
+    OC1RS = 128;
+    OC1CON = _OC1CON_ON_MASK | _OC1CON_OCTSEL_MASK | 6u;
+#endif
     reset_spi();
     PR2 = 767;
     TMR2 = 0;
     IFS0CLR = _IFS0_T2IF_MASK;
     skip_slot = true;
+#ifdef RX_AUDIO_OC1
+    T3CONSET = _T3CON_ON_MASK;
+#endif
     T2CONSET = _T2CON_ON_MASK;
     return true;
 }
@@ -103,6 +130,9 @@ enum iq_status pic32_iq_poll(struct iq_pair *out)
     if (!IFS0bits.T2IF)
         return IQ_IDLE;
     IFS0CLR = _IFS0_T2IF_MASK;
+#ifdef RX_AUDIO_OC1
+    OC1RS = rx_audio_slot(_CP0_GET_COUNT());
+#endif
     if (skip_slot) {
         skip_slot = false;
         return IQ_IDLE;

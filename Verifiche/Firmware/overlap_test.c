@@ -6,6 +6,9 @@
 #include <setjmp.h>
 
 static jmp_buf finished;
+#ifdef RX_AUDIO_OC1
+static unsigned changing_slots;
+#endif
 static unsigned step, accepted, errors, count;
 static bool reference_valid;
 static int32_t reference_audio;
@@ -33,6 +36,11 @@ enum iq_status pic32_iq_poll(struct iq_pair *out)
     unsigned n = step++;
     if (n == 1024)
         longjmp(finished, 1);
+#ifdef RX_AUDIO_OC1
+    uint16_t duty = rx_audio_slot(UINT32_MAX - 4096u + n*384u);
+    assert(duty <= 256);
+    changing_slots += duty != 128;
+#endif
     if (n == 410 || n == 411)
         return IQ_IDLE;
     clock_tick = UINT32_MAX - 4096u + n * 384u;
@@ -81,6 +89,9 @@ int main(void)
     audio_decim_reset(&reference_filter);
     if (!setjmp(finished))
         (void)rx_firmware_main();
+#ifdef RX_AUDIO_OC1
+    assert(changing_slots > 10);
+#endif
     assert(count > 100 && errors == 3 && accepted == 1019);
     assert(rx_profile_data.previous_stamp == UINT32_MAX - 4096u + 1022u*384u + 280u);
     assert(rx_profile_data.interval_max == 3*384u && rx_profile_data.long_intervals == 3);

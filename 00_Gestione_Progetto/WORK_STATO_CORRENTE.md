@@ -1,5 +1,13 @@
 # Stato operativo
 
+## Consegna delle fasi audio a OC1 · variante diagnostica PR #1
+
+Il target opzionale profile-oc1 instrada OC1 su RA0 durante lo stesso sblocco PPS delle SPI. Imposta Timer3 con PR3=255, confronto iniziale 128 e PWM senza ingresso Fault. Il driver scrive OC1RS una volta al servizio del flag Timer2, anche nello slot saltato per riarmo. Le tre fasi del campione a 16 kHz vengono consegnate in ordine su tre slot a 48 kHz. La portante prevista a PBCLK nominale è 144 kHz. Riferimento: Microchip PIC32 Family Reference Manual, Section 16 Output Compare, e datasheet PIC32MX1XX/2XX tabella 11-2.
+
+Quando la terna si esaurisce, il comando converge a metà scala di un tick per slot servito. Un errore esplicito elimina le fasi pendenti. Una discontinuità tra servizi riconosciuta da CP0 svuota la terna prima della successiva scrittura. Se il processore smette di servire Timer2, OC1 mantiene l’ultimo confronto fino alla ripresa del servizio. Questa variante richiede verifica del ritardo introdotto prima della cattura I/Q e della fase relativa di Timer2 e Timer3 sul bersaglio.
+
+Superate suite host con UBSan, integrazione del main con polling simulato e prova delle tre fasi, estremi 0 e 256, wrap CP0, esaurimento, scarto di una terna interrotta e ripartenza. Nessun caricamento su hardware. Restano build/link XC32 e misura di frequenza, jitter e residuo analogico. Prossimo lavoro CAD autonomo: collegare RX_AF_LINE al controllo volume verificando il carico reale del frontale.
+
 ## Mute temporizzato nel percorso diagnostico RX · PR #1
 
 Il target profile-audio collega il decimatore, la stima della portante, lo squelch e l’interpolatore al ciclo con sovrapposizione SPI. Pubblica per il debugger tre valori di confronto a 9 bit in una parola. Il tempo di arrivo di ciascuna uscita decimata viene letto da CP0. Un errore esplicito o una riacquisizione avvia il mute al primo servizio. Con polling continuo e senza nuovi campioni, la soglia di 1728 tick (93,75 µs) avvia la discesa al primo polling utile. I passi successivi sono riferiti a multipli di 1152 tick (62,5 µs). Dopo una pausa del servizio si ricostruisce la terna corrente a costo costante senza ripetere le terne arretrate. È richiesto almeno un servizio entro un giro di CP0.

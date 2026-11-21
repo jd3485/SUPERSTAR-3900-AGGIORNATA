@@ -37,6 +37,15 @@ static struct audio_monitor monitor = {.duty = {128,128,128}};
 volatile uint32_t rx_audio_duties = 128u | (128u << 9) | (128u << 18);
 #endif
 
+#ifdef RX_AUDIO_OC1
+#include "pwm_slots.h"
+static struct pwm_slots speaker = {.last = 128};
+uint16_t rx_audio_slot(uint32_t now)
+{
+    return pwm_slots_next(&speaker, now);
+}
+#endif
+
 static const struct iq_pair offset = {0, 0};
 static struct am_sync am;
 #ifdef RX_IQ_IIR
@@ -67,6 +76,9 @@ static void process_pair(struct iq_pair pair, uint32_t stamp)
 #endif
 #ifdef RX_AUDIO_MONITOR
             audio_monitor_sample(&monitor, _CP0_GET_COUNT(), am.dc_q10/1024, filtered);
+#ifdef RX_AUDIO_OC1
+            pwm_slots_submit(&speaker, monitor.duty);
+#endif
 #endif
             rx_am_audio_q7 = filtered;
             ++rx_am_audio_samples;
@@ -75,6 +87,9 @@ static void process_pair(struct iq_pair pair, uint32_t stamp)
     } else {
 #ifdef RX_AUDIO_MONITOR
         audio_monitor_poll(&monitor, _CP0_GET_COUNT(), true);
+#ifdef RX_AUDIO_OC1
+            speaker.remaining = 0;
+#endif
 #endif
         audio_decim_reset(&filter);
         rx_am_audio_valid = false;
@@ -127,6 +142,9 @@ int main(void)
 #endif
 #ifdef RX_AUDIO_MONITOR
             audio_monitor_poll(&monitor, _CP0_GET_COUNT(), true);
+#ifdef RX_AUDIO_OC1
+            speaker.remaining = 0;
+#endif
 #endif
             ++rx_rejected_frames;
 #ifdef RX_IQ_IIR
