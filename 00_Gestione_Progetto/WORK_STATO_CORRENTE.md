@@ -1,5 +1,15 @@
 # Stato operativo
 
+## Impronta U126 e margine sul ramo protetto · PR #1
+
+Assegnata a tutte le unità U126 l’impronta THT candidata Multiwatt15V_ST_0016036 nella libreria locale della MAIN. Dal disegno ST 0016036 J (DS0184 rev. 11, figura 15 e tabella 4): passo longitudinale 1,27 mm, 17,78 mm tra 1 e 15, fila dispari anteriore, interasse trasversale nominale scelto 2,54 mm dalle quote M/M1. La diagonale massima della sezione del reoforo è circa 0,99 mm (0,88 × 0,49 mm). Foro finito candidato 1,20 mm, piazzola 1,90 mm. Tolleranze cumulate, montabilità reale, dissipatore e accesso alla vite restano da qualificare. Nessun posizionamento sulla PCB.
+
+KiCad ha caricato l’impronta e la netlist esportata dalla MAIN. Verificati i 15 numeri di pad, coordinate, fori e corrispondenza con tutti i pin di U126, inclusi i tre NC. Tutte le reti e le appartenenze pin/rete coincidono con la revisione precedente. ERC MAIN ancora 22 errori e 8 avvisi.
+
+Nella netlist i catodi D101 e D102 convergono sul bus che alimenta U102 (logica), U124 (digitale 3,3 V) e R153/U114 (ramo LO). Le sorgenti alternative si dimensionano ciascuna per il carico intero. Per un ponte ideale, 8 Ω e Iq assunta 65 mA, il finale assorbirebbe in media 723 mA a 4,27 W e 803 mA a 5,38 W. Con lo scenario U124 di 100 mA più 11,4 mA di precarico/ADJ, rimangono rispettivamente 166 e 85 mA prima del limite nominale di 1 A del singolo diodo per U102, U114 e altri consumi. Nessun margine termico o transitorio è incluso. La portata di 1 A vale alle condizioni di montaggio e temperatura della tabella onsemi. Per C196 da 470 µF a 13,8 V servono 6,49 mC: una rampa lineare di 10 ms aggiungerebbe 649 mA medi nella rampa, esclusi gli altri condensatori. La corrente reale dipende da sorgente, cablaggio e limitazione. Alimentazione del finale ancora aperta: dimensionare i due percorsi protetti e il ritorno sulla base dei carichi mancanti e dello spunto.
+
+Fonti OEM: https://www.st.com/resource/en/datasheet/tda7266.pdf · https://www.onsemi.com/pdf/datasheet/1n5817-d.pdf
+
 ## Finale audio RX candidato · PR #1
 
 Il nuovo foglio Finale_RX nella gerarchia MAIN collega il partitore R300/R301 a IN1 di U126 TDA7266 attraverso C194 da 220 nF. J106 (JST XH THT candidato) espone OUT1+ e OUT1− ai soli due fili isolati dell’altoparlante interno da 8 Ω. IN2 riferito al ritorno segnale in alternata attraverso C195, ponte 2 senza carico. R302/R303 47 kΩ e C198 10 µF implementano l’abilitazione analogica della figura 5 ST. C196 470 µF e C197 100 nF chiudono il disaccoppiamento sul ritorno di potenza. Presa esterna e mute comandato in TX da definire.
