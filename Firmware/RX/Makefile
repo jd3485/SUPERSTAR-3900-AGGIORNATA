@@ -53,7 +53,11 @@ $(BUILD_DIR)/iq_schedule_test: iq_frame.c iq_frame.h ../../Verifiche/Firmware/iq
 $(BUILD_DIR)/overlap_test: main.c $(HEADERS) am_sync.c audio_decim.c iq_iir.c ../../Verifiche/Firmware/overlap_test.c ../../Verifiche/Firmware/mock/xc.h | $(BUILD_DIR)
 	$(HOST_CC) -std=c11 -O2 -Wall -Wextra -Werror -pedantic -Wno-unknown-pragmas -DRX_PROFILE -DRX_IQ_IIR -DRX_SPI_OVERLAP -I../../Verifiche/Firmware/mock am_sync.c audio_decim.c iq_iir.c ../../Verifiche/Firmware/overlap_test.c -o "$@"
 
-host-check: $(BUILD_DIR)/overlap_test $(BUILD_DIR)/iq_schedule_test $(BUILD_DIR)/am_adjacent_test $(BUILD_DIR)/rx_profile_test $(BUILD_DIR)/iq_frame_test $(BUILD_DIR)/am_sync_test $(BUILD_DIR)/audio_decim_test
+$(BUILD_DIR)/audio_pwm_test: audio_pwm.c audio_pwm.h ../../Verifiche/Firmware/audio_pwm_test.c | $(BUILD_DIR)
+	$(HOST_CC) -std=c11 -O2 -Wall -Wextra -Werror -pedantic audio_pwm.c ../../Verifiche/Firmware/audio_pwm_test.c -o "$@"
+
+host-check: $(BUILD_DIR)/audio_pwm_test $(BUILD_DIR)/overlap_test $(BUILD_DIR)/iq_schedule_test $(BUILD_DIR)/am_adjacent_test $(BUILD_DIR)/rx_profile_test $(BUILD_DIR)/iq_frame_test $(BUILD_DIR)/am_sync_test $(BUILD_DIR)/audio_decim_test
+	"$(BUILD_DIR)/audio_pwm_test"
 	"$(BUILD_DIR)/overlap_test"
 	"$(BUILD_DIR)/iq_schedule_test"
 	"$(BUILD_DIR)/am_adjacent_test"

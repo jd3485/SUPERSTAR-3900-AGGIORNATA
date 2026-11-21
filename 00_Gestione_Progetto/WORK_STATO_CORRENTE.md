@@ -1,5 +1,11 @@
 # Stato operativo
 
+## Ricostruzione audio PWM a 48 kcampioni/s · PR #1
+
+Il candidato FIR polifase a 19 coefficienti Q12 interpola ogni ingresso a 16 kHz su tre aggiornamenti a 48 kHz. Ogni fase ha guadagno unitario in continua; ritardo di gruppo 187,5 µs. Il modulo C audio_pwm produce confronti timer 0–256 da ingressi in tick di duty Q8. Il test su host confronta 6144 uscite con la convoluzione diretta a 64 bit, compresi i due estremi di saturazione. Superata la suite host con UBSan. Il modulo resta da collegare al timer, al guadagno e alla gestione mute.
+
+Con rete RC del master, carico esterno 47 kΩ e tono a 4 kHz, il mantenimento diretto dà −3,66 dB e l’interpolazione −2,86 dB. L’immagine lineare a 12 kHz passa da −15,48 a −63,43 dBc. Il modello a impulsi ideali 0–3,3 V integra esattamente i fronti PWM a 144 kHz con duty arrotondato a tick interi. Alla peggiore delle 32 fasi provate, con ampiezza 64 tick, la componente a 12 kHz (comprende anche la terza armonica del tono) passa da −15,41 a −50,22 dBc. Con ampiezza 4 tick passa da −15,39 a −28,30 dBc. La fondamentale PWM a riposo resta 10,94 mV di picco. Il modello comprende carichi da 10, 47 e 100 kΩ. Prossimo passo: verificare il guadagno necessario per segnali deboli e il filtro analogico aggiuntivo per attenuare la portante PWM prima del volume. PCB e qualificazione fisica aperte.
+
 ## Uscita audio candidata nel master MAIN · PR #1
 
 U123 pin 2 (RA0) alimenta RX_AF_PWM attraverso la funzione OC1 prevista dalla tabella PPS 11-2 del datasheet Microchip PIC32MX1XX/2XX. Timer3 con PR3=255 e PBCLK 36,864 MHz è la proposta per una PWM a 144 kHz, nove periodi per campione audio a 16 kcampioni/s. Configurazione firmware e gestione del livello restano aperte.
