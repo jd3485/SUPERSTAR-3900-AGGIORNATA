@@ -1,0 +1,247 @@
+(kicad_symbol_lib (version 20241209) (generator kicad_symbol_editor) (symbol "SBL-1+" (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 13.97 0) (effects (font (size 1 1))))
+(property "Value" "SBL-1+" (at 0 -13.97 0) (effects (font (size 1 1))))
+(symbol "SBL-1+_0_1" (rectangle (start -6.35 11.43) (end 6.35 -11.43) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "SBL-1+_1_1" (pin passive line (at -10.16 8.89 0) (length 3.81) (name "RF" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
+(pin passive line (at -10.16 6.35 0) (length 3.81) (name "LO" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1)))))
+(pin passive line (at -10.16 3.81 0) (length 3.81) (name "IF_A" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1)))))
+(pin passive line (at -10.16 1.27 0) (length 3.81) (name "IF_B" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1)))))
+(pin passive line (at -10.16 -1.27 0) (length 3.81) (name "GND2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))
+(pin passive line (at -10.16 -3.81 0) (length 3.81) (name "GND5" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1)))))
+(pin passive line (at -10.16 -6.35 0) (length 3.81) (name "GND6" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1)))))
+(pin passive line (at -10.16 -8.89 0) (length 3.81) (name "GND7" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1)))))
+))(symbol "MCF_HC49_Section" (in_bom yes) (on_board yes)
+(property "Reference" "FL" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
+(property "Value" "MCF_HC49_Section" (at 0 -5.08 0) (effects (font (size 1.27 1.27))))
+(symbol "MCF_HC49_Section_0_1" (rectangle (start -5.08 3.81) (end 5.08 -3.81) (stroke (width 0.254)(type default))(fill(type background))))
+(symbol "MCF_HC49_Section_1_1"(pin passive line (at -7.62 0 0) (length 2.54) (name "DOT" (effects (font (size 1.27 1.27))))(number "DOT" (effects (font (size 1.27 1.27)))))(pin passive line (at 7.62 0 180) (length 2.54) (name "INNER" (effects (font (size 1.27 1.27))))(number "INNER" (effects (font (size 1.27 1.27)))))(pin passive line (at 0 -6.35 90) (length 2.54) (name "CASE" (effects (font (size 1.27 1.27))))(number "CASE" (effects (font (size 1.27 1.27)))))))(symbol "MCP102-450E_TO" (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 9 0) (effects (font (size 1.27 1.27)))) (property "Value" "MCP102-450E_TO" (at 0 -9 0) (effects (font (size 1.27 1.27)))) (symbol "MCP102-450E_TO_0_1" (rectangle (start -6.35 6.35) (end 6.35 -6.35) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "MCP102-450E_TO_1_1" (pin output line (at -10.16 5.08 0) (length 3.81) (name "~{RST}" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin power_in line (at -10.16 0 0) (length 3.81) (name "VDD" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin power_in line (at -10.16 -5.08 0) (length 3.81) (name "VSS" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))))(symbol "TC4427AEPA" (exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -7.62 8.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TC4427AEPA"
+			(at 1.27 8.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 0.508 -15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/20001423J.pdf"
+			(at 0.508 -13.208 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.5A Dual High-Speed Power MOSFET Drivers, 4.5...18V supply, TTL/CMOS compatible inputs, non-inverting drivers, PDIP-8"
+			(at 0 -11.176 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "ESD push-pull"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "DIP*W7.62mm*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "TC4427AEPA_0_1"
+			(rectangle
+				(start -7.62 -7.62)
+				(end 7.62 7.62)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "TC4427AEPA_1_1"
+			(pin input line
+				(at -10.16 2.54 0)
+				(length 2.54)
+				(name "IN_A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -2.54 0)
+				(length 2.54)
+				(name "IN_B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at -7.62 0 0)
+				(length 2.54)
+				(hide yes)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 10.16 270)
+				(length 2.54)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -10.16 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 7.62 0 180)
+				(length 2.54)
+				(hide yes)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 10.16 2.54 180)
+				(length 2.54)
+				(name "OUT_A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 10.16 -2.54 180)
+				(length 2.54)
+				(name "OUT_B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "PIC32MX250F128B-I_SP" (in_bom yes)(on_board yes)(property "Reference" "U"(at 0 21.59 0)(effects(font(size 1 1))))(property "Value" "PIC32MX250F128B-I_SP"(at 0 19.05 0)(effects(font(size 1 1))))
+		(symbol "PIC32MX250F128B-I_SP_1_1"(rectangle(start -15.24 18.0)(end 15.24 -18.0)(stroke(width .254)(type default))(fill(type background)))(pin input line(at -20.32 16.51 0)(length 5.08)(name "MCLR"(effects(font(size .95 .95))))(number "1"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 13.97 0)(length 5.08)(name "RA0"(effects(font(size .95 .95))))(number "2"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 11.43 0)(length 5.08)(name "RA1"(effects(font(size .95 .95))))(number "3"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 8.89 0)(length 5.08)(name "PGED1/RB0"(effects(font(size .95 .95))))(number "4"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 6.35 0)(length 5.08)(name "PGEC1/RB1"(effects(font(size .95 .95))))(number "5"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 3.81 0)(length 5.08)(name "RB2"(effects(font(size .95 .95))))(number "6"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 1.27 0)(length 5.08)(name "RB3"(effects(font(size .95 .95))))(number "7"(effects(font(size 1 1)))))(pin power_in line(at -20.32 -1.27 0)(length 5.08)(name "VSS"(effects(font(size .95 .95))))(number "8"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -3.81 0)(length 5.08)(name "OSC1/RA2"(effects(font(size .95 .95))))(number "9"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -6.35 0)(length 5.08)(name "OSC2/RA3"(effects(font(size .95 .95))))(number "10"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -8.89 0)(length 5.08)(name "RB4"(effects(font(size .95 .95))))(number "11"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -11.43 0)(length 5.08)(name "RA4"(effects(font(size .95 .95))))(number "12"(effects(font(size 1 1)))))(pin power_in line(at -20.32 -13.97 0)(length 5.08)(name "VDD"(effects(font(size .95 .95))))(number "13"(effects(font(size 1 1)))))(pin bidirectional line(at -20.32 -16.51 0)(length 5.08)(name "RB5"(effects(font(size .95 .95))))(number "14"(effects(font(size 1 1)))))(pin input line(at 20.32 -16.51 180)(length 5.08)(name "VBUS"(effects(font(size .95 .95))))(number "15"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -13.97 180)(length 5.08)(name "RB7"(effects(font(size .95 .95))))(number "16"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -11.43 180)(length 5.08)(name "SDI1/RB8"(effects(font(size .95 .95))))(number "17"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -8.89 180)(length 5.08)(name "RB9"(effects(font(size .95 .95))))(number "18"(effects(font(size 1 1)))))(pin power_in line(at 20.32 -6.35 180)(length 5.08)(name "VSS"(effects(font(size .95 .95))))(number "19"(effects(font(size 1 1)))))(pin power_out line(at 20.32 -3.81 180)(length 5.08)(name "VCAP"(effects(font(size .95 .95))))(number "20"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 -1.27 180)(length 5.08)(name "D+/RB10"(effects(font(size .95 .95))))(number "21"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 1.27 180)(length 5.08)(name "D-/RB11"(effects(font(size .95 .95))))(number "22"(effects(font(size 1 1)))))(pin power_in line(at 20.32 3.81 180)(length 5.08)(name "VUSB3V3"(effects(font(size .95 .95))))(number "23"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 6.35 180)(length 5.08)(name "SDI2/RB13"(effects(font(size .95 .95))))(number "24"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 8.89 180)(length 5.08)(name "SCK1/RB14"(effects(font(size .95 .95))))(number "25"(effects(font(size 1 1)))))(pin bidirectional line(at 20.32 11.43 180)(length 5.08)(name "SCK2/RB15"(effects(font(size .95 .95))))(number "26"(effects(font(size 1 1)))))(pin power_in line(at 20.32 13.97 180)(length 5.08)(name "AVSS"(effects(font(size .95 .95))))(number "27"(effects(font(size 1 1)))))(pin power_in line(at 20.32 16.51 180)(length 5.08)(name "AVDD"(effects(font(size .95 .95))))(number "28"(effects(font(size 1 1))))))))
