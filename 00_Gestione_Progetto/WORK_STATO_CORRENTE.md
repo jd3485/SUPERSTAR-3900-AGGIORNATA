@@ -1,5 +1,13 @@
 # Stato operativo
 
+## Fusibili sui due ingressi DC della MAIN · PR #1
+
+F101 e F102 sono in serie al positivo rispettivamente di J107 e J108, prima della diramazione fra diodo del bus MAIN e doppio diodo del finale. Ciascun ingresso deve sostenere da solo il carico previsto. Fusibile assiale saldato candidato Littelfuse 0251002.MXL, serie 251 PICO II, 2 A molto rapido. Impronta assiale THT candidata a passo 12,70 mm, con inviluppo 9 × 3,2 mm per corpo da 7,11 × 2,8 mm e reoforo 0,64 mm. Scelta preliminare per la configurazione RX; corrente TX e cablaggi finali ancora aperti. La serie OEM riporta per 2 A potere di interruzione 300 A a 125 VDC, resistenza a freddo nominale 47,3 mΩ e integrale nominale di fusione 0,405 A²s. Qualifica del codice e montaggio da completare. Fonte OEM: https://www.littelfuse.com/assetdocs/littelfuse-fuse-251-253-datasheet?assetguid=f47a0bb7-8ede-4679-9646-7114c3787688 .
+
+Prima verifica di sensibilità allo spunto con il solo C196 nominale di 470 µF scarico. Per un gradino di 16 V attraverso una resistenza totale R e trascurando induttanze, limitazione della sorgente, cadute dei diodi e carico, l’integrale della corrente al quadrato è C·V²/(2R). Per R di 0,10 / 0,25 / 1,00 Ω si ottengono 0,602 / 0,241 / 0,060 A²s. Il primo scenario supera già l’integrale nominale di fusione. Questo confronto non dimostra affidabilità ai cicli né coordinamento in corto. Restano da caratterizzare impedenza e limite delle sorgenti, altri carichi e capacità, spunto ripetitivo a caldo, corrente di corto presunta e comportamento delle due sorgenti simultanee. In base ai risultati rivedere caratteristica del fusibile o prevedere limitazione di spunto. La protezione del cavo a monte della MAIN va verificata separatamente.
+
+Netlist confrontata integralmente con il master precedente: J107.1 raggiunge solo F101.1, J108.1 solo F102.1. Ogni pin 2 del fusibile raggiunge entrambi gli anodi previsti sul proprio ingresso. Tutti gli altri nodi restano identici. ERC MAIN 18 errori e 8 avvisi, FRONT 4 errori. Prossimo passo: definire la finestra ammessa di tensione sul finale e il comportamento della protezione da sovratensioni. Posizionamento e dimensionamento del rame aperti.
+
 ## Ritorno del finale RX e ingressi DC sulla MAIN · PR #1
 
 Introdotti i morsetti THT candidati J107 per l’uscita in continua dell’alimentatore isolato e J108 per l’ingresso DC già protetto. Il pin 1 di ciascun morsetto alimenta i rispettivi anodi di selezione. Entrambi i pin 2 raggiungono il nodo DC_SOURCE_RETURN. Architettura candidata con negativi comuni sul solo lato bassa tensione. Occorre verificare la compatibilità delle due sorgenti con il negativo comune e i collegamenti esterni a telaio, antenna e accessori.
