@@ -1,4 +1,175 @@
-(kicad_sch (version 20250114)(generator "eeschema")(generator_version "9.0")(uuid "5cb60d42-d8e8-492c-a128-6eea9321ee73")(paper "A2")(title_block (title "Condizionamento in continua dei canali I/Q"))(lib_symbols 
+(kicad_sch (version 20250114)(generator "eeschema")(generator_version "9.0")(uuid "5cb60d42-d8e8-492c-a128-6eea9321ee73")(paper "A2")(title_block (title "Condizionamento in continua dei canali I/Q"))(lib_symbols 	(symbol "Connector_Generic:Conn_01x03"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Conn_01x03_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
 (symbol "Device:Crystal"
 		(pin_numbers
 			(hide yes)
@@ -3945,4 +4116,16 @@
 (junction(at 463.55 335.28)(diameter 0)(color 0 0 0 0)(uuid "22b57c0b-3bf6-452d-bdb5-a5c1ad095d87"))
 (wire(pts(xy 454.66 335.28)(xy 463.55 335.28))(stroke(width 0)(type default))(uuid "4d773912-695b-4a68-9b98-ce0cf8f34192"))
 (wire(pts(xy 463.55 335.28)(xy 474.98 335.28))(stroke(width 0)(type default))(uuid "8373d9e7-1107-4b39-abfb-5c17d5fc3ead"))
+(symbol(lib_id "Connector_Generic:Conn_01x03")(at 502.92 375.92 0)(unit 1)(in_bom yes)(on_board yes)(uuid "2b520ab4-43e8-4cb1-a1c0-de6b1e56f28b")(property "Reference" "J105"(at 511.92 370.92 0)(effects(font(size 1 1))))(property "Value" "RX AF"(at 511.92 373.92 0)(effects(font(size 1 1))))(property "Footprint" "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"(at 502.92 375.92 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "J105")(unit 1)))))
+(wire(pts(xy 497.84 373.38)(xy 477.52 373.38))(stroke(width 0)(type default))(uuid "a9999928-4a96-47e7-a19d-5a3eb36f59a3"))
+(label "RX_AF_LINE"(at 477.52 373.38 0)(effects(font(size 1 1))(justify left bottom))(uuid "48f470c8-7f0e-4c58-8c5f-df881173a0ff"))
+(wire(pts(xy 497.84 375.92)(xy 477.52 375.92))(stroke(width 0)(type default))(uuid "dec69fb4-a09d-46a8-9d79-98a2ecc327b4"))
+(label "RX_RF_RETURN"(at 477.52 375.92 0)(effects(font(size 1 1))(justify left bottom))(uuid "b026749d-01e0-4ad8-a5a3-7bbc41d968c2"))
+(wire(pts(xy 497.84 378.46)(xy 477.52 378.46))(stroke(width 0)(type default))(uuid "a55dbdd7-9011-4f0d-b6a6-3bc1337a99c4"))
+(label "RX_AF_WIPER"(at 477.52 378.46 0)(effects(font(size 1 1))(justify left bottom))(uuid "2c39878b-99c1-4279-87d4-d0ef4b490cff"))
+(symbol(lib_id "Device:R")(at 549.91 373.38 0)(unit 1)(in_bom yes)(on_board yes)(uuid "80274557-f92c-4bf4-8f0c-7dfd81ad96bb")(property "Reference" "R195"(at 558.91 368.38 0)(effects(font(size 1 1))))(property "Value" "470k"(at 558.91 371.38 0)(effects(font(size 1 1))))(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"(at 549.91 373.38 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad/89707d45-45b0-4f78-a85b-f9c9f7e74549"(reference "R195")(unit 1)))))
+(wire(pts(xy 549.91 369.57)(xy 549.91 364.49))(stroke(width 0)(type default))(uuid "66b88293-039e-4780-88cb-f9a0b2a06998"))
+(label "RX_AF_WIPER"(at 549.91 364.49 0)(effects(font(size 1 1))(justify left bottom))(uuid "b2a419b3-0fb5-4d06-9e69-e1d04f762674"))
+(wire(pts(xy 549.91 377.19)(xy 549.91 382.27))(stroke(width 0)(type default))(uuid "2c85a7c5-fce3-488e-ab18-0a2e6fee3581"))
+(label "RX_RF_RETURN"(at 549.91 382.27 0)(effects(font(size 1 1))(justify left bottom))(uuid "1a8c6160-0c2c-4d5e-aea7-e6bbb2e02cff"))
 )

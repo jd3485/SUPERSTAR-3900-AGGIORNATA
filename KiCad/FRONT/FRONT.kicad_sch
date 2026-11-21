@@ -1,6 +1,341 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "cf24d153-b40c-4c32-946c-864ba45498ea") (paper "A4")
 (title_block (title "FRONT - Interfaccia candidata"))
-(lib_symbols 
+(lib_symbols 	(symbol "Connector_Generic:Conn_01x03"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Conn_01x03_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Device:R_Potentiometer"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "RV"
+			(at -4.445 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R_Potentiometer"
+			(at -2.54 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Potentiometer"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "resistor variable"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Potentiometer*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "R_Potentiometer_0_1"
+			(rectangle
+				(start 1.016 2.54)
+				(end -1.016 -2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy 1.524 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_Potentiometer_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 1.27)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
 	(symbol "Connector_Generic:Conn_01x02"
 		(pin_names
 			(offset 1.016)
@@ -731,4 +1066,18 @@
 (label "PTT_SENSE" (at 172.72 127 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "9bc5576c-9d4c-4d79-aac1-dc7b9e6c04c9"))
 (wire (pts (xy 172.72 140.97) (xy 172.72 147.32)) (stroke (width 0) (type default)) (uuid "dced9eb1-3001-4e60-b2ea-a40ab063a3ed"))
 (label "MIC_PTT_KEY" (at 172.72 147.32 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "eb247136-ffaf-4e9f-8d3c-d7d630415c73"))
+(symbol(lib_id "Connector_Generic:Conn_01x03")(at 66.04 165.1 0)(unit 1)(in_bom yes)(on_board yes)(uuid "18cff637-eed7-43dd-b0f5-da0924f83009")(property "Reference" "J203"(at 75.04 160.1 0)(effects(font(size 1 1))))(property "Value" "RX AF"(at 75.04 163.1 0)(effects(font(size 1 1))))(property "Footprint" "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"(at 66.04 165.1 0)(effects(font(size 1 1))(hide yes)))(instances(project "FRONT"(path "/cf24d153-b40c-4c32-946c-864ba45498ea"(reference "J203")(unit 1)))))
+(wire(pts(xy 60.96 162.56)(xy 40.64 162.56))(stroke(width 0)(type default))(uuid "ce6a7175-e6b2-4044-bd60-b91898cd88ea"))
+(label "RX_AF_LINE"(at 40.64 162.56 0)(effects(font(size 1 1))(justify left bottom))(uuid "be99537c-353d-405d-9d3d-e24d71dcfa88"))
+(wire(pts(xy 60.96 165.1)(xy 40.64 165.1))(stroke(width 0)(type default))(uuid "4a59941d-9021-4041-97b3-311b8816dfff"))
+(label "RX_AF_RETURN"(at 40.64 165.1 0)(effects(font(size 1 1))(justify left bottom))(uuid "3ace62c4-2594-4ea6-ae5f-f516df67a991"))
+(wire(pts(xy 60.96 167.64)(xy 40.64 167.64))(stroke(width 0)(type default))(uuid "bda5320f-8d70-4c0f-a2fd-c20a66f44079"))
+(label "RX_AF_WIPER"(at 40.64 167.64 0)(effects(font(size 1 1))(justify left bottom))(uuid "f5d281bc-119d-40f1-a934-101a58543dc2"))
+(symbol(lib_id "Device:R_Potentiometer")(at 124.46 165.1 0)(unit 1)(in_bom yes)(on_board yes)(uuid "a9ea2b69-2524-4aa1-a8c5-62a21a889fde")(property "Reference" "RV201"(at 133.45999999999998 160.1 0)(effects(font(size 1 1))))(property "Value" "50k log"(at 133.45999999999998 163.1 0)(effects(font(size 1 1))))(property "Footprint" "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Horizontal"(at 124.46 165.1 0)(effects(font(size 1 1))(hide yes)))(instances(project "FRONT"(path "/cf24d153-b40c-4c32-946c-864ba45498ea"(reference "RV201")(unit 1)))))
+(wire(pts(xy 124.46 161.29)(xy 124.46 156.21))(stroke(width 0)(type default))(uuid "035f1a13-197d-4ce2-95fe-2acc1502bd28"))
+(label "RX_AF_RETURN"(at 124.46 156.21 0)(effects(font(size 1 1))(justify left bottom))(uuid "be220784-77bc-4819-809b-bc75c29fa829"))
+(wire(pts(xy 124.46 168.91)(xy 124.46 173.99))(stroke(width 0)(type default))(uuid "56389e19-772c-42af-b384-18f25e8623a1"))
+(label "RX_AF_LINE"(at 124.46 173.99 0)(effects(font(size 1 1))(justify left bottom))(uuid "5af7e9a0-5c41-4d8b-9238-347f991ae684"))
+(wire(pts(xy 128.27 165.1)(xy 143.51 165.1))(stroke(width 0)(type default))(uuid "fa86447f-945d-469f-a661-661053b6a0cd"))
+(label "RX_AF_WIPER"(at 143.51 165.1 0)(effects(font(size 1 1))(justify left bottom))(uuid "f218e08b-3f11-4500-9dea-5feddac6b97d"))
 )

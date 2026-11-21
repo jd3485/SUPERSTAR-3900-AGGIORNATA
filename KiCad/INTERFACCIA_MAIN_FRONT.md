@@ -97,3 +97,14 @@ Il modello riproducibile Verifiche/PTT/memoria_rilascio.py ricava reti e valori 
 Nel modello della revisione 08b2440, sei impulsi di rilascio da 1 ms separati da 0,2 ms di pressione bastano a impostare la memoria. R128 (1,5 kΩ) e D103 (candidato Vishay 1N4148-TAP passante DO-35) aggiungono a R126 un percorso parallelo di ricarica. Il catodo, pad 1 con banda, va a C123. Quando il rilascio viene a mancare, la porta alta ricarica rapidamente C123 attraverso il diodo; la scarica che riconosce il rilascio passa ancora da R126. Per 5,25 V e R128 a −1% il limite resistivo di picco del solo ramo rapido è 3,54 mA. La produzione del codice ordinabile e il derating restano da qualificare. [Datasheet Vishay](https://www.vishay.com/docs/81857/1n4148.pdf).
 
 Lo script memoria_rilascio.py controlla pin e polarità dalla netlist. Nel confronto con e senza il ramo aggiunto, la raffica è di 20 impulsi 1 ms / 0,2 ms dopo un reset di 80 ms. Con il ramo aggiunto la raffica resta respinta in 64 combinazioni e il successivo rilascio di 30 ms imposta la memoria. Scenari: resistenze ±1%, C123 ±10%, soglia negativa 0,20 o 0,45 Vcc, livello alto 0,85 o 1 Vcc, caduta diretta 0,10 o 0,21 Vcc. Questi ultimi intervalli sono ipotesi di sensibilità. Modello a diodo a caduta costante, ingresso logico ideale e livello basso nullo. Interruzioni arbitrarie più corte possono ancora accumularsi; restano aperti caratterizzazione dei contatti, temperatura, transitori e prove fisiche. Nessun consenso viene inviato al trasmettitore.
+
+## Volume analogico RX · collegamento candidato J105–J203
+
+| Pin su entrambi i connettori | MAIN | FRONT |
+|---|---|---|
+| 1 | RX_AF_LINE dopo C188 | RV201 terminale 3 |
+| 2 | RX_RF_RETURN | RX_AF_RETURN, RV201 terminale 1 |
+| 3 | RX_AF_WIPER, R195 470 kΩ al ritorno | RV201 cursore 2 |
+
+Cablaggio audio dedicato 1:1, con ritorno distinto dalle reti logiche sulla FRONT. RV201 candidato da 50 kΩ logaritmico. Impronte THT candidate JST XH a tre vie e Alps RK09K orizzontale. Da qualificare codici OEM, legge, verso di rotazione, asse e ingombri a pannello. R195 riferisce l’ingresso futuro a massa anche a cavo scollegato. La scelta dello stadio di amplificazione e la sua impedenza d’ingresso sono aperte.
+

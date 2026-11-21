@@ -115,3 +115,16 @@ if __name__ == "__main__":
             voice_values.append(db(abs(transfer(4000, 47000, stages))*digital_gain(4000, True)))
     print(f"  47 kohm, 128 casi: residuo {min(ripple_values):.2f}..{max(ripple_values):.2f} mV,"
           f" tono 4 kHz {min(voice_values):.2f}..{max(voice_values):.2f} dB")
+
+    # RV201: posizione elettrica del cursore, indipendente dalla legge meccanica.
+    # R195=470 kΩ. Ingresso amplificatore ipotizzato 100 kΩ; cavo 200 pF per linea.
+    for position in (0, .1, .5, 1):
+        for freq in (1000, 4000):
+            s = 2j*pi*freq
+            low = 50000*position
+            high = 50000-low
+            bottom = low/(1 + low*(1/470000 + 1/100000 + s*200e-12))
+            branch = high + bottom
+            load = 1/(1/branch + s*200e-12)
+            gain = abs(transfer(freq, load)*bottom/branch)*digital_gain(freq, True)
+            print(f"  RV201 {position:.0%}, {freq} Hz: {gain:.4f} V/V")

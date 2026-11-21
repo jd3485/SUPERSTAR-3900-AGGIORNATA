@@ -1,5 +1,17 @@
 # Stato operativo
 
+## Volume analogico RX · collegamento candidato J105–J203
+
+| Pin su entrambi i connettori | MAIN | FRONT |
+|---|---|---|
+| 1 | RX_AF_LINE dopo C188 | RV201 terminale 3 |
+| 2 | RX_RF_RETURN | RX_AF_RETURN, RV201 terminale 1 |
+| 3 | RX_AF_WIPER, R195 470 kΩ al ritorno | RV201 cursore 2 |
+
+Cablaggio audio dedicato 1:1, con ritorno distinto dalle reti logiche sulla FRONT. RV201 candidato da 50 kΩ logaritmico. Impronte THT candidate JST XH a tre vie e Alps RK09K orizzontale. Da qualificare codici OEM, legge, verso di rotazione, asse e ingombri a pannello. R195 riferisce l’ingresso futuro a massa anche a cavo scollegato. La scelta dello stadio di amplificazione e la sua impedenza d’ingresso sono aperte.
+
+Netlist esportate dai due master e corrispondenza dei tre pin verificata. Gli ERC conservano gli stessi 17 errori e 8 avvisi su MAIN e 4 errori su FRONT. Con carico ipotizzato di 100 kΩ e capacità di cavo 200 pF per linea, il modello a volume massimo dà 0,807 V/V a 1 kHz e 0,679 V/V a 4 kHz. Al 10% elettrico sono 0,081 e 0,068 V/V. Restano posizionamento, layout e prova con il carico effettivo. Prossimo passo: dimensionare l’ingresso dell’amplificatore audio a valle del cursore.
+
 ## Consegna delle fasi audio a OC1 · variante diagnostica PR #1
 
 Il target opzionale profile-oc1 instrada OC1 su RA0 durante lo stesso sblocco PPS delle SPI. Imposta Timer3 con PR3=255, confronto iniziale 128 e PWM senza ingresso Fault. Il driver scrive OC1RS una volta al servizio del flag Timer2, anche nello slot saltato per riarmo. Le tre fasi del campione a 16 kHz vengono consegnate in ordine su tre slot a 48 kHz. La portante prevista a PBCLK nominale è 144 kHz. Riferimento: Microchip PIC32 Family Reference Manual, Section 16 Output Compare, e datasheet PIC32MX1XX/2XX tabella 11-2.
