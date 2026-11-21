@@ -1,5 +1,11 @@
 # Stato operativo
 
+## Mute temporizzato nel percorso diagnostico RX · PR #1
+
+Il target profile-audio collega il decimatore, la stima della portante, lo squelch e l’interpolatore al ciclo con sovrapposizione SPI. Pubblica per il debugger tre valori di confronto a 9 bit in una parola. Il tempo di arrivo di ciascuna uscita decimata viene letto da CP0. Un errore esplicito o una riacquisizione avvia il mute al primo servizio. Con polling continuo e senza nuovi campioni, la soglia di 1728 tick (93,75 µs) avvia la discesa al primo polling utile. I passi successivi sono riferiti a multipli di 1152 tick (62,5 µs). Dopo una pausa del servizio si ricostruisce la terna corrente a costo costante senza ripetere le terne arretrate. È richiesto almeno un servizio entro un giro di CP0.
+
+Prova host: da duty 192, uguali le terne finali con polling fitto e con un solo servizio tardivo per 255 durate attraverso il wrap CP0. Verificati i due lati della soglia, errore esplicito ripetuto, azzeramento della storia e riapertura in silenzio. Superata la suite UBSan, incluso il main diagnostico con polling simulato. Le tre fasi sono ancora valori per il debugger. Il pin PWM richiede consegna hardware cadenzata, verifica della configurazione PPS e misura del margine temporale su PIC32. Prossimo lavoro: progettare l’aggiornamento di OC1 sincronizzato alle tre fasi e il comportamento in assenza di nuovi dati.
+
 ## Squelch AM con interferente continuo e fading · PR #1
 
 Otto sequenze sintetiche di 2,5 s percorrono prefiltro IIR, demodulatore, decimatore, squelch, livellatore e interpolatore PWM. Portante utile a +180 Hz di 4 codici, AM al 60% a 1 kHz. Interferente da 40 codici (20 dB sopra la desiderata a regime) a ±10 kHz dalla portante utile, AM al 70% a 1,7 kHz. Quattro fasi relative e quattro sequenze deterministiche di rumore RMS 1 codice per ramo. Soglie di apertura/chiusura 3/2 codici.

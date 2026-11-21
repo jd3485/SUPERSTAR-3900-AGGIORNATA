@@ -84,5 +84,12 @@ int main(void)
     assert(count > 100 && errors == 3 && accepted == 1019);
     assert(rx_profile_data.previous_stamp == UINT32_MAX - 4096u + 1022u*384u + 280u);
     assert(rx_profile_data.interval_max == 3*384u && rx_profile_data.long_intervals == 3);
+#ifdef RX_AUDIO_MONITOR
+    assert(rx_profile_data.work_max[RX_FIR] == 2);
+    assert(!monitor.streaming && !monitor.gate.open);
+    assert(rx_audio_duties == (monitor.duty[0] | ((uint32_t)monitor.duty[1] << 9)
+                               | ((uint32_t)monitor.duty[2] << 18)));
+#else
     assert(rx_profile_data.work_max[RX_FIR] == 1);
+#endif
 }

@@ -30,6 +30,13 @@ volatile int32_t rx_am_audio_q7;
 volatile bool rx_am_audio_valid;
 volatile uint32_t rx_am_audio_samples;
 
+#ifdef RX_AUDIO_MONITOR
+#include "audio_monitor.h"
+static struct audio_monitor monitor = {.duty = {128,128,128}};
+/* Parola diagnostica: tre confronti a 9 bit, dal primo nei bit meno significativi. */
+volatile uint32_t rx_audio_duties = 128u | (128u << 9) | (128u << 18);
+#endif
+
 static const struct iq_pair offset = {0, 0};
 static struct am_sync am;
 #ifdef RX_IQ_IIR
@@ -58,11 +65,17 @@ static void process_pair(struct iq_pair pair, uint32_t stamp)
 #ifdef RX_PROFILE
             stage = RX_FIR;
 #endif
+#ifdef RX_AUDIO_MONITOR
+            audio_monitor_sample(&monitor, _CP0_GET_COUNT(), am.dc_q10/1024, filtered);
+#endif
             rx_am_audio_q7 = filtered;
             ++rx_am_audio_samples;
             rx_am_audio_valid = true;
         }
     } else {
+#ifdef RX_AUDIO_MONITOR
+        audio_monitor_poll(&monitor, _CP0_GET_COUNT(), true);
+#endif
         audio_decim_reset(&filter);
         rx_am_audio_valid = false;
     }
@@ -112,6 +125,9 @@ int main(void)
             /* Uno scarto prima del lancio lascia valida la coppia precedente. */
             rx_process_pending();
 #endif
+#ifdef RX_AUDIO_MONITOR
+            audio_monitor_poll(&monitor, _CP0_GET_COUNT(), true);
+#endif
             ++rx_rejected_frames;
 #ifdef RX_IQ_IIR
             iq_iir_reset(&channel);
@@ -120,5 +136,10 @@ int main(void)
             audio_decim_reset(&filter);
             rx_am_audio_valid = false;
         }
+#ifdef RX_AUDIO_MONITOR
+        audio_monitor_poll(&monitor, _CP0_GET_COUNT(), false);
+        rx_audio_duties = monitor.duty[0] | ((uint32_t)monitor.duty[1] << 9)
+                         | ((uint32_t)monitor.duty[2] << 18);
+#endif
     }
 }
