@@ -1,5 +1,11 @@
 # Stato operativo
 
+## Squelch audio AM e ripresa PWM · PR #1
+
+La variante host audio_gate collega il livellatore e l’interpolatore. Riceve a 16 kHz validità del flusso, portante coerente stimata dal demodulatore e soglie indipendenti. Servono 32 campioni consecutivi sopra o alla soglia di apertura e 128 sotto o alla soglia di chiusura. L’apertura applica una rampa di 64 campioni. Dati invalidi o soglie incoerenti chiudono il gate al primo passo. In chiusura si azzerano livellatore e storia FIR e il comando PWM ritorna al centro di un tick per fase a 48 kHz.
+
+Con portante sintetica di 4 codici ADC, scarto 180 Hz, tono a 1 kHz al 60%, rumore uniforme RMS 1 codice per ramo e soglie di prova 3/2 codici, osservate una sola apertura a 39,00 ms e una sola chiusura a 22,31 ms dalla commutazione RF simulata. Il test usa il demodulatore e il decimatore C. Con solo rumore a regime i tre comandi PWM restano a 128; la portante di commutazione analogica permane. Verificate perdita di validità, rampa al centro, riapertura senza residui, soglie incoerenti e permanenze interrotte. Superati host-check e UBSan. Le soglie sono ipotesi di banco. Restano il collegamento al comando squelch, la verifica con interferente e fading e la temporizzazione dell’uscita nelle lacune di acquisizione.
+
 ## Livellatore audio per il convertitore PWM · PR #1
 
 Modulo candidato dopo il decimatore a 16 kHz. L’ingresso usa codici ADC con sette bit frazionari. L’uscita usa tick PWM con otto bit frazionari per l’interpolatore. Il rilevatore segue immediatamente i nuovi picchi e riduce l’inviluppo del 12,5% ogni 64 campioni, rispettando il massimo del blocco. La soglia inferiore di 307 unità Q7 limita il guadagno a circa 26,7 tick per codice. Il livello di prova è ±64 tick prima dell’interpolazione.
