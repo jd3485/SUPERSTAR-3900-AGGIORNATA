@@ -1,5 +1,13 @@
 # Stato operativo
 
+## Alimentazione positiva dedicata al finale RX · PR #1
+
+Per REQ-04 il ramo audio seleziona le due sorgenti sul lato continua. D106 STPS10L60CFP in TO-220FPAB, doppio Schottky THT a catodo comune, porta il positivo al finale senza caricare D101/D102 con la corrente dell’altoparlante. Pin 1 ad AC_SOURCE_ISOLATED_DC, pin 3 ad EXTERNAL_DC_PROTECTED, pin 2 su AF_PROTECTED_DC verso U126 pin 3/13, C196, C197 e R302. MAIN_PROTECTED_DC rimane distinta. Il doppio diodo realizza la selezione fra sorgenti, mentre limitazione di corrente, protezione dai transitori e fusibili a monte restano da progettare.
+
+ST dichiara attivo l’esatto codice STPS10L60CFP. Ciascun ramo ha tensione inversa nominale 60 V e portata media 5 A alle condizioni di datasheet. Nel caso da 5,38 W su 8 Ω, ponte ideale, Iq 65 mA e una sorgente attiva, corrente media stimata 0,803 A. Con corrente della sorgente modellata come seno raddrizzato più Iq, RMS circa 0,88 A. La formula ST per le perdite dirette fornisce circa 0,36 W per il diodo in conduzione. La corrente sul diodo cambia con C196 e impedenza della sorgente. Restano da verificare picco all’inserzione, perdita inversa a caldo, montaggio termico e margini sulle tensioni d’ingresso. Fonti: https://www.st.com/en/diodes-and-rectifiers/stps10l60c.html e https://www.st.com/resource/en/datasheet/stps10l60c.pdf.
+
+Netlist MAIN esportata e confrontata: conservate le connessioni precedenti, verificati i tre pin di D106 e l’arrivo del positivo su entrambi i pin VCC di U126. ERC MAIN 19 errori e 8 avvisi (prima 22 e 8), FRONT 4 errori. I tre errori risolti riguardano il positivo gerarchico del finale e le due etichette delle sorgenti, ora con un secondo carico. I generatori a monte sono ancora assenti. Ritorno AF_POWER_RETURN da portare al punto stella presso l’ingresso DC, con ritorno dedicato e verifica dei percorsi RF e logica. Nessun posizionamento D106 o collaudo fisico.
+
 ## Impronta U126 e margine sul ramo protetto · PR #1
 
 Assegnata a tutte le unità U126 l’impronta THT candidata Multiwatt15V_ST_0016036 nella libreria locale della MAIN. Dal disegno ST 0016036 J (DS0184 rev. 11, figura 15 e tabella 4): passo longitudinale 1,27 mm, 17,78 mm tra 1 e 15, fila dispari anteriore, interasse trasversale nominale scelto 2,54 mm dalle quote M/M1. La diagonale massima della sezione del reoforo è circa 0,99 mm (0,88 × 0,49 mm). Foro finito candidato 1,20 mm, piazzola 1,90 mm. Tolleranze cumulate, montabilità reale, dissipatore e accesso alla vite restano da qualificare. Nessun posizionamento sulla PCB.

@@ -1,6 +1,255 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "022424cc-d46c-40ab-bc68-d35f98a8b2ad") (paper "A1")
 (title_block (title "MAIN - Interfaccia candidata"))
-(lib_symbols 
+(lib_symbols 	(symbol "Device:D_Schottky_Dual_CommonCathode_AKA"
+		(pin_names
+			(offset 0.762)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 1.27 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Schottky_Dual_CommonCathode_AKA"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual Schottky diode, common cathode on pin 2"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "diode"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "D_Schottky_Dual_CommonCathode_AKA_0_1"
+			(polyline
+				(pts
+					(xy -3.81 1.27) (xy -1.27 0) (xy -3.81 -1.27) (xy -3.81 1.27) (xy -3.81 1.27) (xy -3.81 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 1.016) (xy -1.778 1.27) (xy -1.27 1.27) (xy -1.27 1.27) (xy -1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 -1.27) (xy -1.27 1.27) (xy -1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 -1.27) (xy -0.762 -1.27) (xy -0.762 -1.016) (xy -0.762 -1.016)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 0)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27) (xy 0.762 1.27) (xy 0.762 1.016) (xy 0.762 1.016)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -1.27) (xy 1.27 1.27) (xy 1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -1.27) (xy 1.778 -1.27) (xy 1.778 -1.016) (xy 1.778 -1.016)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 0) (xy -3.81 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -1.27) (xy 1.27 0) (xy 3.81 1.27) (xy 3.81 -1.27) (xy 3.81 -1.27) (xy 3.81 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -7.62 0 0)
+				(length 3.81)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -5.08 90)
+				(length 2.54)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 0 180)
+				(length 3.81)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
 	(symbol "Device:C_Polarized"
 		(pin_numbers
 			(hide yes)
@@ -5560,7 +5809,7 @@
 (label "AM_Q_LP" (at 755.65 33.02 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b73e156f-d536-4f50-824e-85ebee20f6b1"))
 (junction (at 707.39 33.02) (diameter 0) (color 0 0 0 0) (uuid "96b80a58-2b78-4772-b425-9f46eac884f8"))
 
-(sheet (at 133.35 393.70) (size 68.58 48.26) (stroke (width 0.1524)(type solid)) (fill (color 0 0 0 0)) (uuid "89707d45-45b0-4f78-a85b-f9c9f7e74549") (property "Sheetname" "Condizionamento IQ" (at 133.35 391.16 0)(effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "IQ_Livello.kicad_sch" (at 133.35 444.50 0)(effects (font (size 1.27 1.27)) (justify left top))) (pin "AM_I_LP" input (at 133.35 401.32 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "6972784b-7d3e-4a15-b9f6-fcc08605b285")) (pin "AM_Q_LP" input (at 133.35 411.48 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "8e19f587-bce9-40a9-b806-be7ce941d5e2")) (pin "AM_LO_5V" input (at 133.35 421.64 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "740d13c6-3c41-4b26-9cd3-fca5c54c5e0e")) (pin "RX_RF_RETURN" input (at 133.35 431.80 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "9a9f728b-e481-4a64-8d5a-15b2c644d551")) (pin "MAIN_PROTECTED_DC" input(at 133.35 438.15 180)(effects(font(size 1 1))(justify left))(uuid "6109a0c3-d259-4a0b-92f9-ba8b4021d772")) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (page "2")))))
+(sheet (at 133.35 393.70) (size 68.58 48.26) (stroke (width 0.1524)(type solid)) (fill (color 0 0 0 0)) (uuid "89707d45-45b0-4f78-a85b-f9c9f7e74549") (property "Sheetname" "Condizionamento IQ" (at 133.35 391.16 0)(effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "IQ_Livello.kicad_sch" (at 133.35 444.50 0)(effects (font (size 1.27 1.27)) (justify left top))) (pin "AM_I_LP" input (at 133.35 401.32 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "6972784b-7d3e-4a15-b9f6-fcc08605b285")) (pin "AM_Q_LP" input (at 133.35 411.48 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "8e19f587-bce9-40a9-b806-be7ce941d5e2")) (pin "AM_LO_5V" input (at 133.35 421.64 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "740d13c6-3c41-4b26-9cd3-fca5c54c5e0e")) (pin "RX_RF_RETURN" input (at 133.35 431.80 180)(effects (font (size 1.27 1.27)) (justify left))(uuid "9a9f728b-e481-4a64-8d5a-15b2c644d551")) (pin "MAIN_PROTECTED_DC" input(at 133.35 438.15 180)(effects(font(size 1 1))(justify left))(uuid "6109a0c3-d259-4a0b-92f9-ba8b4021d772")) (pin "AF_PROTECTED_DC" input(at 201.93 419.10 0)(effects(font(size 1 1))(justify right))(uuid "1b87c80b-41ed-4916-b5de-9940558ffe9e")) (instances (project "MAIN" (path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad" (page "2")))))
 (wire (pts (xy 104.14 401.32) (xy 133.35 401.32)) (stroke (width 0) (type default)) (uuid "f9f683a4-b8a5-47b7-8870-2a1c57277fdd"))
 (label "AM_I_LP" (at 104.14 401.32 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fc80aff7-5b57-4af4-8c6c-2fad7c47fdef"))
 (wire (pts (xy 104.14 411.48) (xy 133.35 411.48)) (stroke (width 0) (type default)) (uuid "a090fbe7-c942-4e06-bf62-94071d96a696"))
@@ -5570,4 +5819,8 @@
 (wire (pts (xy 104.14 431.80) (xy 133.35 431.80)) (stroke (width 0) (type default)) (uuid "4d638399-053d-4f85-92e6-e777bc5dba60"))
 (label "RX_RF_RETURN" (at 104.14 431.80 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fa4847b2-4a8d-41a5-9a95-8730eedffc37"))
 (wire(pts(xy 104.14 438.15)(xy 133.35 438.15))(stroke(width 0)(type default))(uuid "df0db06e-2093-4c79-b5fe-824c69a4954b"))(label "MAIN_PROTECTED_DC"(at 104.14 438.15 0)(effects(font(size 1 1))(justify left bottom))(uuid "41169502-4589-492d-a780-0bd9de8a2e08"))
-)
+(symbol(lib_id "Device:D_Schottky_Dual_CommonCathode_AKA")(at 650.24 528.32 0)(unit 1)(in_bom yes)(on_board yes)(uuid "d0d8f026-f5fb-4189-98ef-1b978f6bca2c")(property "Reference" "D106"(at 659.24 523.32 0)(effects(font(size 1 1))))(property "Value" "STPS10L60CFP"(at 659.24 526.32 0)(effects(font(size 1 1))))(property "Footprint" "Package_TO_SOT_THT:TO-220F-3_Vertical"(at 650.24 528.32 0)(effects(font(size 1 1))(hide yes)))(instances(project "MAIN"(path "/022424cc-d46c-40ab-bc68-d35f98a8b2ad"(reference "D106")(unit 1)))))(wire(pts(xy 642.62 528.32)(xy 612.14 528.32))(stroke(width 0)(type default))(uuid "0e00e190-9b92-4f2f-ba24-f86fbd02063c"))
+(label "AC_SOURCE_ISOLATED_DC"(at 612.14 528.32 0)(effects(font(size 1 1))(justify left bottom))(uuid "66f81b62-c84b-47dd-af9e-abdece8dc0c9"))(wire(pts(xy 657.86 528.32)(xy 668.02 528.32))(stroke(width 0)(type default))(uuid "79411b55-0407-40d3-be79-177badcc7b8e"))
+(label "EXTERNAL_DC_PROTECTED"(at 668.02 528.32 0)(effects(font(size 1 1))(justify left bottom))(uuid "026794b2-72a2-4f66-aa14-2fbbe9657d5b"))(wire(pts(xy 650.24 533.4)(xy 650.24 543.56))(stroke(width 0)(type default))(uuid "8c2d850a-f010-4d9d-b3f3-bb4ae7dba350"))
+(label "AF_PROTECTED_DC"(at 650.24 543.56 0)(effects(font(size 1 1))(justify left bottom))(uuid "c2037dc9-ddee-4a23-9276-440c1f686e36"))(wire(pts(xy 201.93 419.1)(xy 214.63 419.1))(stroke(width 0)(type default))(uuid "7169d1d0-f9c6-4a5f-8294-81a32fb96a56"))
+(label "AF_PROTECTED_DC"(at 214.63 419.1 0)(effects(font(size 1 1))(justify left bottom))(uuid "811ec75f-7ad4-4e05-8a07-09817cc8b4c4")))
