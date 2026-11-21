@@ -1,5 +1,5 @@
 """C196 e R304. Sorgente di Thévenin dopo D106, un ponte ideale su 8 ohm."""
-from math import exp, expm1, pi, sin, sqrt
+from math import exp, expm1, log, pi, sin, sqrt
 
 
 def carica(tensione, capacita, resistenza, sorgente):
@@ -85,3 +85,14 @@ if __name__ == '__main__':
             if residuo > 0:
                 print(f"    Corrente sovrapposta che esaurisce il residuo al 22%: "
                       f"{residuo / (2 * carica_totale):.3f} A")
+
+    # Partitore di U127: estremi a 25 °C nel modello statico.
+    for vref, alto, basso, iref in ((2.47, .999, 1.001, 0.),
+                                    (2.52, 1.001, .999, 4e-6)):
+        r305 = 5760 * alto
+        print("Intersezione REF [V]", vref * (1 + r305/(1000*basso)) + iref*r305)
+    # U126 a riposo: gradino ideale, C196 inizialmente a 16 V.
+    # Tempo per arrivare a 18 V con Q107 ancora pienamente acceso.
+    for gradino in (24., 30., 36.):
+        limite = .95 * 376e-6 * log((gradino - 16.) / (gradino - 18.))
+        print(f"Gradino {gradino:g} V: tempo disponibile {limite*1e6:.1f} µs")

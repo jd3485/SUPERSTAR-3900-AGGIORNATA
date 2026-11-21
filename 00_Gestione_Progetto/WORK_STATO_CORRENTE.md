@@ -1,5 +1,15 @@
 # Stato operativo
 
+## Sezionamento candidato per sovratensione del finale RX · PR #1
+
+Q107 IRF4905PBF in TO-220 interrompe il positivo tra D106 e R304. Source lato sorgente, drain lato finale: il diodo di corpo consente il ritorno dal condensatore verso il nodo a monte in caso di caduta della sorgente. Il selettore D106 resta a monte. R309 porta il gate verso il ritorno per abilitare il ramo; D107 zener 12 V limita la tensione gate-source. U127 TI TL431ACP PDIP-8 sorveglia la tensione prima del MOSFET attraverso R305/R306 (5,76 kΩ/1 kΩ, 0,1%). A sovratensione il catodo assorbe corrente tramite R307 (4,7 kΩ) e porta in conduzione Q106 BC327-25, che riporta il gate verso il source. R308 (10 kΩ) richiama la base all’emettitore. Il taglio è dedicato al finale, la protezione delle altre rail è aperta.
+
+Modello di soglia a 25 °C: assumendo REF 2,47–2,52 V, corrente di riferimento 0–4 µA e tolleranze del partitore, l’intersezione ideale è tra 16,67 e 17,09 V. La commutazione effettiva dipende da corrente di catodo, VKA, caratteristica in anello aperto, temperatura, guadagno del PNP e transitorio del gate. Non vi è isteresi intenzionale. Verificare riarmo con sorgente cedevole, rampa lenta, dissipazione lineare e SOA, interruzione sotto carico, zener a bassa corrente, perdita inversa, avviamento già in sovratensione e guasto drenatore-source. Specifica di transitorio delle sorgenti ancora da definire. Il limite termico del grado TL431AC è 0–70 °C.
+
+Budget dinamico calcolato nel modello spunto_finale_rx.py: inizialmente C196 a 16 V, 376 µF, R304 a 0,95 Ω, carico nullo e Q107 idealmente in conduzione. A fronte di gradini ideali a 24/30/36 V, la rail raggiungerebbe 18 V dopo 102,8/55,1/37,6 µs. Sono tempi disponibili, non ritardi del circuito. Servono modello transitorio dei semiconduttori e verifica del picco su AF_LOCAL_VCC, inclusi spettro/energia del disturbo e parassiti. Per tensioni maggiori verificare anche i limiti del rivelatore stesso.
+
+La netlist conferma pin 8 REF, 6 anodo, 1 catodo di U127 e gate/drain/source 1/2/3 di Q107. Fra i pin preesistenti cambia esclusivamente il lato di ingresso di R304. ERC MAIN invariato a 18 errori e 8 avvisi, FRONT 4 errori. Nessun posizionamento o collaudo fisico. Fonti OEM: https://www.ti.com/lit/ds/symlink/tl431.pdf · https://www.infineon.com/part/IRF4905 · https://www.onsemi.com/pdf/datasheet/bc327-d.pdf .
+
 ## Confronto R304: fusibili e margine audio alla stessa fase · PR #1
 
 Conservata la candidata da 1 Ω. Il modello spunto_finale_rx.py ora calcola la corrente comune nel fusibile per C103+C105+C182 (1,32 µF) e C196+C197 (470,1 µF dopo R304), con un ingresso attivo, diodi ideali, gradino 16 V, capacità a +20%, R304 a −5%. Integra il quadrato della somma delle correnti. I 12 risultati analitici concordano con integrazione numerica indipendente Radau entro 1e-8 A²s. Non comprende il ramo dietro R153, i regolatori, i carichi attivi, ESR e induttanze.
