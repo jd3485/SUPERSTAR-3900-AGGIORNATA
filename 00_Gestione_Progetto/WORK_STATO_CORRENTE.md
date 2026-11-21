@@ -1,5 +1,17 @@
 # Stato operativo
 
+## Limitazione dello spunto audio e margine di alimentazione · PR #1
+
+R304 candidata da 1 Ω ±5%, 3 W impulsiva, è in serie tra D106 e AF_LOCAL_VCC. C196, C197, i pin 3/13 di U126 e il partitore mute rimangono insieme sul lato carico. Il ramo logico conserva la propria alimentazione. Impronta assiale THT passo 20,32 mm. Serie di riferimento Vishay AC03; restano da verificare codice, derating e curva di sovraccarico per impulso ripetitivo a caldo.
+
+Modello ripetibile KiCad/RX/spunto_finale_rx.py. Gradino 16 V dopo D106, sorgente equivalente 0,10 Ω, C196 scarico 470 µF: il contributo ideale del condensatore scende da 0,602 a 0,055 A²s; picco da 160 a 14,55 A. Nel vertice 564 µF, sorgente ideale, R304 0,95 Ω, stima di 16,84 A, 0,076 A²s e 72,2 mJ su R304. Verificare capacità ripetitiva ai cicli e guasti sul resistore. L’I²t nominale di fusione di 0,405 A²s non è la soglia ammessa per impulsi ripetuti. La corrente totale nel fusibile include anche gli altri rami.
+
+Seno ideale a 5,38 W su 8 Ω, 65 mA di riposo, ingresso 11 V dopo D106, R304 1,05 Ω, sorgente equivalente 0,10 Ω, C196 376 µF: a 300 Hz la rail scende a 9,80 V con 0,60 Vpp e 0,71 W su R304; a 1 kHz 9,98 V, 0,20 Vpp e 0,68 W. Il ponte ideale richiede 9,28 V di picco differenziale. Nel caso a 300 Hz rimangono solo 0,52 V confrontando il minimo di rail con il picco richiesto. THD, saturazione reale e potenza a bassa alimentazione restano da verificare. Il modello impone il carico sinusoidale senza simulare clipping o induttanze di cablaggio.
+
+Il TDA7266 dichiara alimentazione operativa fino a 18 V e massimo assoluto 20 V. A carico leggero la caduta su R304 tende a zero. Per la protezione successiva il limite operativo va rispettato anche in standby includendo tolleranze, ritardo e sovraelongazione. Tensione massima di servizio delle sorgenti e profilo dei transitori sono aperti. Fonti OEM: https://www.st.com/resource/en/datasheet/tda7266.pdf e https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf .
+
+Netlist integrale confrontata: R304 è l’unico collegamento tra le due rail, il resto coincide con la revisione precedente. ERC MAIN 18 errori e 8 avvisi, FRONT 4 errori. Nessun posizionamento, collaudo fisico o qualifica del fusibile.
+
 ## Fusibili sui due ingressi DC della MAIN · PR #1
 
 F101 e F102 sono in serie al positivo rispettivamente di J107 e J108, prima della diramazione fra diodo del bus MAIN e doppio diodo del finale. Ciascun ingresso deve sostenere da solo il carico previsto. Fusibile assiale saldato candidato Littelfuse 0251002.MXL, serie 251 PICO II, 2 A molto rapido. Impronta assiale THT candidata a passo 12,70 mm, con inviluppo 9 × 3,2 mm per corpo da 7,11 × 2,8 mm e reoforo 0,64 mm. Scelta preliminare per la configurazione RX; corrente TX e cablaggi finali ancora aperti. La serie OEM riporta per 2 A potere di interruzione 300 A a 125 VDC, resistenza a freddo nominale 47,3 mΩ e integrale nominale di fusione 0,405 A²s. Qualifica del codice e montaggio da completare. Fonte OEM: https://www.littelfuse.com/assetdocs/littelfuse-fuse-251-253-datasheet?assetguid=f47a0bb7-8ede-4679-9646-7114c3787688 .
