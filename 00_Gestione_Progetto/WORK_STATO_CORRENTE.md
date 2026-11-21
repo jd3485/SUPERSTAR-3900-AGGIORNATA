@@ -1,5 +1,22 @@
 # Stato operativo
 
+## Confronto R304: fusibili e margine audio alla stessa fase · PR #1
+
+Conservata la candidata da 1 Ω. Il modello spunto_finale_rx.py ora calcola la corrente comune nel fusibile per C103+C105+C182 (1,32 µF) e C196+C197 (470,1 µF dopo R304), con un ingresso attivo, diodi ideali, gradino 16 V, capacità a +20%, R304 a −5%. Integra il quadrato della somma delle correnti. I 12 risultati analitici concordano con integrazione numerica indipendente Radau entro 1e-8 A²s. Non comprende il ramo dietro R153, i regolatori, i carichi attivi, ESR e induttanze.
+
+| R304 nominale | I²t a Rs=0,05 Ω | Percentuale del nominale 0,405 A²s | Margine audio ideale sincrono |
+|---|---:|---:|---:|
+| 0,68 Ω | 0,1081 A²s | 26,7% | 0,902 V |
+| 0,82 Ω | 0,0914 A²s | 22,6% | 0,787 V |
+| 1,00 Ω | 0,0765 A²s | 18,9% | 0,643 V |
+| 1,20 Ω | 0,0649 A²s | 16,0% | 0,484 V |
+
+Per confronto esplorativo, la guida Littelfuse Fuseology indica il 22% per 100.000 impulsi con almeno 10 s di raffreddamento. Il numero è un riferimento di selezione: durata richiesta della radio e profilo di riaccensione non sono definiti. Nel caso da 1 Ω e 0,05 Ω, 0,699 A costanti sovrapposti alla stessa forma d’onda consumerebbero il residuo con il solo termine incrociato 2 I Q. Corrente effettiva e preriscaldamento del fusibile restano da caratterizzare.
+
+Margine calcolato sottraendo alla rail istantanea la tensione differenziale richiesta alla stessa fase su 8 Ω: 300 Hz, 5,38 W, 11 V dopo D106, resistenza sorgente 0,10 Ω, C196 a −20% e R304 a +5%. Con 1 Ω il margine ideale minimo è 0,643 V (precedente limite conservativo 0,52 V). Convergenza entro 1 mV tra 1000 e 8000 passi per semiperiodo. Il valore deve coprire la caduta interna degli stadi di uscita reali. Il datasheet ST presenta curve tipiche con alimentazione fissa, quindi non dimostra la THD sul bus dinamico. Abbassare R304 a 0,82 Ω recupererebbe 0,14 V e supererebbe il riferimento del 22% in uno dei casi. Restano aperti protezione da sovratensione, caratterizzazione del carico d’avvio completo e distorsione a basso ingresso. Modificato il modello; ultimo ERC sullo schema invariato: MAIN 18 errori e 8 avvisi, FRONT 4 errori.
+
+Fonti: https://www.st.com/resource/en/datasheet/tda7266.pdf e https://www.mouser.com/pdfDocs/Littelfuse_Fuseology_Selection_Guidepdf-3.pdf .
+
 ## Limitazione dello spunto audio e margine di alimentazione · PR #1
 
 R304 candidata da 1 Ω ±5%, 3 W impulsiva, è in serie tra D106 e AF_LOCAL_VCC. C196, C197, i pin 3/13 di U126 e il partitore mute rimangono insieme sul lato carico. Il ramo logico conserva la propria alimentazione. Impronta assiale THT passo 20,32 mm. Serie di riferimento Vishay AC03; restano da verificare codice, derating e curva di sovraccarico per impulso ripetitivo a caldo.
