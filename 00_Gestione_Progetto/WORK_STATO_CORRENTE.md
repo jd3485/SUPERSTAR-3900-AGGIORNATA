@@ -1,5 +1,13 @@
 # Stato operativo
 
+## Livellatore audio per il convertitore PWM · PR #1
+
+Modulo candidato dopo il decimatore a 16 kHz. L’ingresso usa codici ADC con sette bit frazionari. L’uscita usa tick PWM con otto bit frazionari per l’interpolatore. Il rilevatore segue immediatamente i nuovi picchi e riduce l’inviluppo del 12,5% ogni 64 campioni, rispettando il massimo del blocco. La soglia inferiore di 307 unità Q7 limita il guadagno a circa 26,7 tick per codice. Il livello di prova è ±64 tick prima dell’interpolazione.
+
+Su host, con tono a 1 kHz e picchi audio di 2,4 e 108 codici (rapporto 45:1), la prima cresta forte è limitata a 64 tick. Dopo il ritorno al tono debole, la prima cresta al 90% del livello nominale arriva dopo 112,25 ms. Compreso il tratto finale di solo rumore, il confronto PWM interpolato resta fra 64 e 198 su 256. Lo stimolo di solo rumore uniforme a 1 codice RMS genera 26,69 tick RMS prima dell’interpolatore. Con tono debole e rumore insieme, il tono esce a 38,98 tick di picco con rapporto tono/residuo 4,59 dB. Sono stimoli sintetici iniettati dopo la demodulazione.
+
+Superati host-check e UBSan, compresi reset, fondo scala signed e verifica dell’interpolatore. Il modulo è compilato per il confronto host. Prima di inserirlo nel percorso diagnostico occorre coordinare validità audio, mute e ripresa per evitare rumore a canale chiuso e salti di livello. La divisione a 64 bit richiede verifica del costo XC32 sul bersaglio.
+
 ## Ricostruzione PWM a tre poli nel master MAIN · PR #1
 
 Aggiunti R194 e C189 THT a monte di R191. Le tre celle RC caricate in cascata sono 470 Ω/22 nF, 1,5 kΩ/6,8 nF e 3,3 kΩ/2,7 nF. C188 e R193 mantengono accoppiamento e ritorno della linea. Netlist esportata dal master: pin 2 di U123 → R194 → giunzione con C189 e R191. Verificato il ritorno di C189. ERC identico alla revisione precedente, con 17 errori e 8 avvisi aperti. Stato del blocco: schema candidato, impronte THT assegnate, posizionamento e instradamento ancora da eseguire.
