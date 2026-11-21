@@ -1,5 +1,15 @@
 # Stato operativo
 
+## Uscita audio candidata nel master MAIN · PR #1
+
+U123 pin 2 (RA0) alimenta RX_AF_PWM attraverso la funzione OC1 prevista dalla tabella PPS 11-2 del datasheet Microchip PIC32MX1XX/2XX. Timer3 con PR3=255 e PBCLK 36,864 MHz è la proposta per una PWM a 144 kHz, nove periodi per campione audio a 16 kcampioni/s. Configurazione firmware e gestione del livello restano aperte.
+
+R191/C186 (1 kΩ, 15 nF) e R192/C187 (4,7 kΩ, 3,3 nF) formano la rete di ricostruzione. C188 da 1 µF separa la continua dal nodo RX_AF_LINE, riferito al ritorno tramite R193 da 100 kΩ. I sei passivi hanno impronte THT candidate. Il carico effettivo del volume e dell’amplificatore resta da definire. Il nodo termina sulla resistenza di scarica nel foglio IQ_Livello.
+
+Il modello uscita_audio_pwm.py assume generatore ideale e mantenimento dei campioni a 16 kHz. Su 47 kΩ esterni il guadagno previsto è −1,57 dB a 1 kHz e −3,66 dB a 4 kHz. L’immagine a 12 kHz del tono a 4 kHz risulta a −15,48 dBc; la fondamentale PWM a riposo vale 10,94 mV di picco. Prima della scelta finale confrontare interpolazione e filtraggio aggiuntivo, includendo la dinamica dei segnali deboli, il carico del volume e la quantizzazione PWM.
+
+Verificati i cinque nodi nella netlist del master e confrontati gli ERC con identiche librerie configurate: invariati tutti i 17 errori e gli 8 avvisi preesistenti. Stato: schema candidato nel master, nessun trasferimento del nuovo blocco su PCB, nessuna misura fisica.
+
 ## Jitter SPI e picco DSP ogni tre coppie · PR #1
 
 La prova host iq_schedule_test usa il sequenziatore reale con un costo sintetico di 96 tick PBCLK su due coppie e un picco sulla terza. Polling, chiusura e gestione occupano rispettivamente 16, 16 e 32 tick. Il ritardo di lancio può cambiare indipendentemente a ogni slot, con qualunque valore intero nell’intervallo indicato. Si esplorano tutte le fasi di ingresso raggiungibili e tutte le tre posizioni iniziali del picco. Si conserva l’associazione fra il costo del DSP e la coppia originale nel percorso differito.
