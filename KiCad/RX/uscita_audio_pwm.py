@@ -133,3 +133,26 @@ if __name__ == "__main__":
             load = 1/(1/branch + s*200e-12)
             gain = abs(transfer(freq, load)*bottom/branch*zin/(zin+coupling))*digital_gain(freq, True)
             print(f"  RV201 {position:.0%}, {freq} Hz: {gain:.4f} V/V")
+
+            if position == 1:
+                # Un ponte TDA7266. C di ingresso candidato, a valle del partitore.
+                buf_peak = gain * 64 * 3.3 / 256
+                powers = []
+                for rin, gain_db in product((25000, 30000), (25, 26, 27)):
+                    coupling = 1/(s*220e-9)
+                    node = 1/(1/2700 + 1/(rin+coupling))
+                    drive = buf_peak*abs(node/(1500+node)*rin/(rin+coupling))
+                    powers.append((drive * 10**(gain_db/20))**2 / (2*8))
+                    if rin == 30000 and gain_db == 26:
+                        print(f"    ponte nominale: {powers[-1]:.2f} W ideali su 8 ohm")
+                print(f"    ipotesi di guadagno/carico: {min(powers):.2f}..{max(powers):.2f} W")
+
+    # Ponte classe B ideale, un canale pilotato, secondo canale senza carico.
+    # Scenario termico: aggiungere la corrente a riposo dell'intero integrato.
+    for rail in (11, 13.8):
+        watts = 4.27
+        peak_current = (2*watts/8)**.5
+        supply_current = 2*peak_current/pi + .065
+        heat = rail*supply_current-watts
+        print(f"  VCC {rail:g} V, {watts:.2f} W: Ipicco {peak_current:.2f} A,"
+              f" alimentazione {supply_current:.2f} A, calore stimato {heat:.2f} W")

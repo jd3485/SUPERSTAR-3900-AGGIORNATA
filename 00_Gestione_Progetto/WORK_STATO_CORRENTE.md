@@ -1,5 +1,15 @@
 # Stato operativo
 
+## Dimensionamento del pilotaggio del finale RX · PR #1
+
+Il manuale CRT Superstar 3900 FR riporta 8 Ω e 4,5 W massimi. Per il dimensionamento candidato si usa un carico resistivo da 8 Ω. I requisiti di progetto non fissano una potenza continua a una THD specifica. Candidato ST TDA7266 Multiwatt15 THT, in produzione secondo ST. Un ponte alimenta il carico, secondo canale senza carico nel modello. Il datasheet DS0184 rev. 11 specifica guadagno 25–27 dB e resistenza d’ingresso minima 25 kΩ, tipica 30 kΩ. La potenza di targa a THD 10% non è un obiettivo di ascolto.
+
+Inseriti R300 da 1,5 kΩ in serie e R301 da 2,7 kΩ al ritorno sul master, tra U125 e AF_PWR_DRIVE. Verificata la netlist. ERC identico: 18 errori e 8 avvisi. Il modello include capacità di accoppiamento prevista 220 nF dopo il partitore, volume massimo e ampiezza PWM ±64 tick. Su 8 Ω, guadagno tipico e 30 kΩ, potenze lineari ideali di 4,34 W a 300 Hz, 4,27 W a 1 kHz e 3,03 W a 4 kHz. A 1 kHz le combinazioni simulate di guadagno e ingresso danno 3,35–5,38 W prima delle limitazioni di tensione e corrente. Clipping, THD e impedenza complessa del trasduttore da misurare.
+
+Per 4,27 W il picco di corrente è 1,03 A. Con 65 mA di riposo ipotizzati per l’integrato e ponte ideale in classe B, si stimano 3,68 W da dissipare a 11 V e 5,70 W a 13,8 V. Occorre verificare dissipatore, isolamento del tab, temperatura nel mobile e corrente sulla rail protetta. L’uscita a ponte richiede due conduttori isolati dal telaio, incluso il contatto di ritorno della presa esterna. La compatibilità della presa e la commutazione dell’altoparlante interno sono aperte. Prossimo blocco: integrare finale, alimentazione, ritorno di potenza, mute/standby e connessione altoparlante. Il finale e il suo carico non sono ancora a schema.
+
+Fonti: https://www.cbradio.nl/crt/downloads/CRT_Superstar_3900_FR_Manual.pdf · https://www.st.com/en/audio-ics/tda7266.html · https://www.st.com/resource/en/datasheet/tda7266.pdf
+
 ## Ingresso audio ad alta impedenza sulla MAIN · PR #1
 
 U125 MCP601-I/P candidato in PDIP-8 riceve il cursore RV201 attraverso C192 da 100 nF. R199 da 100 kΩ polarizza il pin 3 al riferimento locale formato da R197/R198 da 10 kΩ e C191 da 1 µF. I pin 2 e 6 chiudono la retroazione unitaria su RX_AF_BUFFER. Il segnale a riposo è riferito a circa metà AF_VDD. Il futuro finale deve accettare questa polarizzazione oppure prevedere un accoppiamento in continua bloccata. R196 da 100 Ω, C190 da 1 µF e C193 da 100 nF disaccoppiano la derivazione da AM_LO_5V. Da verificare margini di alimentazione e modo comune, rumore trasferito dalla rail LO e comportamento all’avvio. Fonti OEM: Microchip MCP601, scheda prodotto In Production; datasheet DS20001314, pinout PDIP e stabilità a guadagno unitario. Qualifica puntuale della distinta aperta.
