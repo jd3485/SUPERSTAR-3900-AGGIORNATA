@@ -117,14 +117,19 @@ if __name__ == "__main__":
           f" tono 4 kHz {min(voice_values):.2f}..{max(voice_values):.2f} dB")
 
     # RV201: posizione elettrica del cursore, indipendente dalla legge meccanica.
-    # R195=470 kΩ. Ingresso amplificatore ipotizzato 100 kΩ; cavo 200 pF per linea.
+    # R195 e ingresso U125. Modello AC a inseguitore ideale, rail sorgente
+    # ideale, due capacità del cablaggio ipotizzate da 200 pF.
     for position in (0, .1, .5, 1):
-        for freq in (1000, 4000):
+        for freq in (300, 1000, 4000):
             s = 2j*pi*freq
             low = 50000*position
             high = 50000-low
-            bottom = low/(1 + low*(1/470000 + 1/100000 + s*200e-12))
+            rail = 1/(1/100 + s*1.1e-6)
+            bias = 1/(1/10000 + 1/(10000+rail) + s*1e-6)
+            zin = 100000 + bias
+            coupling = 1/(s*100e-9)
+            bottom = low/(1 + low*(1/470000 + 1/(zin+coupling) + s*200e-12))
             branch = high + bottom
             load = 1/(1/branch + s*200e-12)
-            gain = abs(transfer(freq, load)*bottom/branch)*digital_gain(freq, True)
+            gain = abs(transfer(freq, load)*bottom/branch*zin/(zin+coupling))*digital_gain(freq, True)
             print(f"  RV201 {position:.0%}, {freq} Hz: {gain:.4f} V/V")

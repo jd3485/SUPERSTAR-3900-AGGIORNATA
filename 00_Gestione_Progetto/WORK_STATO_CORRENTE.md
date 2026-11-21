@@ -1,5 +1,11 @@
 # Stato operativo
 
+## Ingresso audio ad alta impedenza sulla MAIN · PR #1
+
+U125 MCP601-I/P candidato in PDIP-8 riceve il cursore RV201 attraverso C192 da 100 nF. R199 da 100 kΩ polarizza il pin 3 al riferimento locale formato da R197/R198 da 10 kΩ e C191 da 1 µF. I pin 2 e 6 chiudono la retroazione unitaria su RX_AF_BUFFER. Il segnale a riposo è riferito a circa metà AF_VDD. Il futuro finale deve accettare questa polarizzazione oppure prevedere un accoppiamento in continua bloccata. R196 da 100 Ω, C190 da 1 µF e C193 da 100 nF disaccoppiano la derivazione da AM_LO_5V. Da verificare margini di alimentazione e modo comune, rumore trasferito dalla rail LO e comportamento all’avvio. Fonti OEM: Microchip MCP601, scheda prodotto In Production; datasheet DS20001314, pinout PDIP e stabilità a guadagno unitario. Qualifica puntuale della distinta aperta.
+
+Modello piccolo segnale a inseguitore ideale con capacità di cavo 200 pF per linea. A volume massimo, trasferimento da comando PWM normalizzato all’uscita di U125: 0,815 a 300 Hz, 0,807 a 1 kHz e 0,679 a 4 kHz. Al 50% elettrico: 0,369, 0,365 e 0,307. Al minimo il segnale utile si annulla. La netlist del master conferma alimentazioni, ingresso e retroazione. ERC MAIN: 18 errori e 8 avvisi; il nuovo errore è il pin di alimentazione 7 a valle della resistenza passiva R196. La connessione elettrica è presente, la segnalazione rimane aperta. Nessun posizionamento o instradamento del blocco. Prossimo passo: dimensionare il finale a partire dall’impedenza dell’altoparlante e dal livello disponibile su RX_AF_BUFFER.
+
 ## Volume analogico RX · collegamento candidato J105–J203
 
 | Pin su entrambi i connettori | MAIN | FRONT |
